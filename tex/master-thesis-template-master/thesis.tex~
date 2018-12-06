@@ -1,0 +1,41 @@
+% 修士論文テンプレート
+% Copyright (c) 2013 Yuki Fujii @fjyuu
+% Licensed under the BSD 2-Clause License
+
+\documentclass[12pt]{jsbook}
+
+\usepackage[dvipdfmx]{hyperref}
+\usepackage{pxjahyper}
+\usepackage{amsmath,amssymb}
+\usepackage[amsmath,thmmarks]{ntheorem}
+\usepackage[full]{textcomp}
+\usepackage{newtxtext}
+\usepackage[scaled]{helvet}
+\usepackage{bm}
+\usepackage[dvipdfmx]{graphicx,color}
+\usepackage{mythesis}
+
+\begin{document}
+
+ % 表紙，目次，図目次，表目次
+ \frontmatter
+ \input{parts/frontmatter}
+
+ % 紙に印刷して校正するために行間を開ける
+ % \setlength{\baselineskip}{1cm}
+
+ % 本文
+ \mainmatter
+ \input{parts/chapter1}
+ \input{parts/chapter2}
+
+ % 付録
+ \appendix
+ \input{parts/appendix1}
+ \input{parts/appendix2}
+
+ % 謝辞，参考文献，研究業績
+ \backmatter
+ \input{parts/backmatter}
+
+\end{document}

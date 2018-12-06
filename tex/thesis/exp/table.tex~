@@ -1,0 +1,12 @@
+\begin{table}[htb]
+  \begin{center}
+    \caption{実験結果}
+    \begin{tabular}{|c||c|c|} \hline
+      被験者 & 実験1 & 実験2 \\ \hline
+      AAA & 3 & 5 \\ \hline
+      BBB & 1 & 2 \\ \hline
+      CCC & 5 & 5 \\ \hline
+      DDD & 5 & 0 \\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}

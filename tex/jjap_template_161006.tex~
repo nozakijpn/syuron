@@ -1,0 +1,87 @@
+\documentclass{jjap3}
+\usepackage{txfonts}
+
+\title{Brief notes on preparing \LaTeX\ manuscript for \textit{Applied Physics Express} and \textit{Japanese Journal of Applied Physics}}
+\author{APEX/JJAP Editorial Division$^{1}$\thanks{E-mail: jjap{\_}edit@jsap.or.jp} and Oyo Buturi$^{2}$}
+\inst{$^{1}$Publication Center for Pure and Applied Physics, The Japan Society of Applied Physics, Bunkyo, Tokyo 113-0034, Japan \\
+$^{2}$Oyo Buturi Gakkai, Bunkyo, Tokyo 113-0034, Japan}
+\abst{This document briefly provides instructions on how to prepare your manuscript in \LaTeX\ format. As regards general instructions for preparing manuscripts, please refer to ``Instructions for Preparation of Manuscript'', which is available at our Web site (\texttt{http://journals.jsap.jp}).}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+You can use this file as a template to prepare your manuscript for \textit{Applied Physics Express} (APEX)\cite{apex} and \textit{Japanese Journal of Applied Physics} (JJAP)\cite{jjap,instructions}. Please note that \verb|apex.cls| has been obsolete and embedded in \verb|jjap3.cls| as a paper type option (see Table \ref{t1}).\cite{newversion}
+
+Copy \verb|jjap3.cls|, \verb|cite.sty|, and \verb|overcite.sty| onto an arbitrary directory under the texmf tree, for example, \verb|$texmf/tex/latex/jjap|. If you have already obtained \verb|cite.sty| and \verb|overcite.sty|, you do not need to copy them.
+
+Many useful commands for equations are available because \verb|jjap3.cls| automatically loads the \verb|amsmath| package. Please refer to reference books on \LaTeX\ for details on the \verb|amsmath| package.
+
+Label figures, tables, and equations appropriately using the \verb|\label| command, and use the \verb|\ref| command to cite them in the text as ``\verb|as shown in Fig. \ref{f1}|". This automatically labels the numbers in numerical order.
+
+The \verb|\citen| command enables you to display reference numbers inline. The usage is the same as that of the \verb|\cite| command.
+
+No footnotes to the text are allowed except for the title page that contains author(s)' information (use the \verb|\thanks| command). You can provide  comments on the reference list by use of the \verb|bibitem| and \verb|\cite(n)| commands.
+
+For the top and bottom lines of a table, the \verb|\Hline| command draws a thiker line than that drawn by \verb|\hline|.
+
+\section{Options}
+
+\subsection{Paper type}
+
+\verb|jjap3.cls| has class options for paper types.  You should choose the appropriate option listed in Table~\ref{t1}.  Default (without option) is for Regular Papers.
+
+\begin{table}
+\caption{List of options for paper types.}
+\label{t1}
+\begin{tabular}{ll}
+\Hline
+\multicolumn{1}{c}{Option} & \multicolumn{1}{c}{Paper type} \\
+\Hline
+\verb|apex| & Applied Physics Express \\ \hline
+\verb|ip| & Invited Reviews \\
+\verb|rv| & Reviews \\
+\verb|stap| & Selected Topics in Applied Physics \\
+\verb|rc| & Rapid Communications \\
+\verb|bn| & Brief Notes \\
+\verb|cr| & Comments and Replies \\
+\verb|er| & Errata \\
+\Hline
+\end{tabular}
+\end{table}
+
+\subsection{Two-column format}
+
+The \verb|twocolumn| option may help estimate the length of your manuscript particularly for APEX, Rapid Communications (RC), and Brief Notes (BN), which have a limitation of \textbf{four} (APEX and RC) and \textbf{three} (BN) printed pages. If the \verb|txfonts| package is available in your \LaTeX\ system, you can estimate the length more accurately. However, prepare a one-column version when you submit your manuscript.
+
+\subsection{Equation numbers}
+
+The \verb|seceq| option resets the equation numbers at the start of each section.
+
+\begin{figure}
+%\includegraphics{fig01.eps}
+\caption{Graphic files can be embedded using the \texttt{\textbackslash includegraphics} command. Basically, figures should appear where they are cited in the text. You do not need to separate figures from the main text when you use \LaTeX\ for preparing your manuscript.}
+\label{f1}
+\end{figure}
+
+\section{BibTeX}
+
+Unfortunately, it is not in the plan to create BibTeX style files for APEX/JJAP. Instead, those for APS or AIP can be used.
+
+\acknowledgment
+If you need acknowledgment(s), use the \verb|\acknowledgment| command. We have prepared variants of this command as \verb|\acknowledgemnts|, \verb|\acknowledgement|, and \verb|\acknowledgements|.
+
+\appendix
+\section{}
+
+Use the \verb|\appendix| command if you need an appendix(es). The \verb|\section| command should follow even though there is no title for the appendix (see above in the source of this file).
+
+\begin{thebibliography}{9}
+\bibitem{apex} The abbreviation for APEX should be ``Appl. Phys. Express'' in the reference list.
+\bibitem{jjap} The abbreviation for JJAP should be ``Jpn. J. Appl. Phys.'' in the reference list.
+\bibitem{instructions} More abbreviations of journal titles are listed in ``Instructions for Preparation of Manuscript", which is available at our Web site.
+\bibitem{newversion} From jjap3.cls version 2.0 released on April 2011.
+\end{thebibliography}
+
+\end{document}
+

@@ -1,0 +1,98 @@
+This is pTeXk, Version 3.141592-p3.1.11 (euc) (Web2C 7.5.4) (format=platex 2012.6.4)  16 MAR 2013 17:33
+ %&-line parsing enabled.
+**.tex
+(/usr/share/texmf-texlive/tex/latex/tools/.tex
+pLaTeX2e <2006/11/10>+0 (based on LaTeX2e <2009/09/24> patch level 0)
+File ignored)
+*
+(Please type a command or say `\end')
+*\end
+
+*
+Runaway argument?
+! Paragraph ended before \end was complete.
+<to be read again> 
+                   \par 
+<*> 
+    
+? 
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*\end
+
+*
+Runaway argument?
+! Paragraph ended before \end was complete.
+<to be read again> 
+                   \par 
+<*> 
+    
+? 
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*q
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+<*> q
+     
+? 
+
+*q
+
+*q
+
+*
+
+Overfull \hbox (25.27779pt too wide) detected at line 0
+[]\OT1/cmr/m/n/10 q
+ []
+
+
+Overfull \hbox (5.27779pt too wide) detected at line 0
+\OT1/cmr/m/n/10 q
+ []
+
+
+Overfull \hbox (5.27779pt too wide) detected at line 0
+\OT1/cmr/m/n/10 q 
+ []
+
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*q
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+<*> q
+     
+? q
+OK, entering \batchmode...
+! Emergency stop.
+<*> q
+     
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 4 strings out of 257674
+ 135 string characters out of 1191154
+ 47221 words of memory out of 3000000
+ 3262 multiletter control sequences out of 10000+50000
+ 7511 words of font info for 31 fonts, out of 2000000 for 2000
+ 14 hyphenation exceptions out of 8191
+ 4i,0n,4p,84b,14s stack positions out of 5000i,500n,6000p,200000b,40000s
+No pages of output.

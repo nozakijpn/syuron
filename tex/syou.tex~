@@ -1,0 +1,23 @@
+\documentclass{jsarticle}
+\begin{document}
+
+\title{情報科学レポート}
+\author{奥村晴彦}
+\maketitle
+
+\part{はじめに}
+まず、このホームページについて説明します。
+
+\section{このホームページについて}
+
+このページでは\LaTeX のコマンドシート、ならびにちょっとしたテクニック（？）について説明しています。
+
+\subsection{特徴}
+
+ただ紹介するのではなくて、ブラウザ上からコピーして、Mule、秀丸エディタ、メモ帳などのエディタにペースト（貼り付け）できます。
+
+\subsubsection{その他}
+
+実際によくつかうものを掲載しています。
+
+\end{document}
