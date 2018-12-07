@@ -1,0 +1,15 @@
+\begin{itemize}
+\item 30分程度のニュース番組の中で複数の多様な話題がある
+\item 1人または複数のアンカーおよび天気予報士など複数の話者が存在する
+\item 話者情報（話者数、性別、話者の声質など）および発話区間が未知である
+\end{itemize}\par\par
+
+\begin{enumerate}
+\item 発話数が多い
+\item ニュース番組の司会および話題の切り替えを行う
+\item ニュース番組の全体にわたって発話している
+\end{enumerate}\par
+
+\begin{equation}
+x = y_1 + z_2
+\end{equation}
