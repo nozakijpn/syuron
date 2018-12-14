@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.7-160201-2.6 (utf8.euc) (TeX Live 2016) (preloaded format=platex 2018.10.19)  10 DEC 2018 16:52
+This is e-pTeX, Version 3.14159265-p3.7-160201-2.6 (utf8.euc) (TeX Live 2016) (preloaded format=platex 2018.10.19)  11 DEC 2018 12:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -292,8 +292,8 @@ Overfull \hbox (13.70119pt too wide) in paragraph at lines 12--14
 mm/m/it/10 O[] \OT1/cmr/m/n/10 = []$\JY1/mc/m/n/10 、
  []
 
-[7] [8] [9]) (./base/clustering.tex) (./base/speach_recognition.tex))
-(./chapter3.tex [10] [11]
+[7] [8] [9]) (./base/clustering.tex [10]) (./base/speach_recognition.tex))
+(./chapter3.tex [11]
 第 3 章
 (./method/figure.tex
 File: ./figure/piano.eps Graphic file (type eps)
@@ -333,4 +333,4 @@ Here is how much of TeX's memory you used:
  929 hyphenation exceptions out of 8191
  28i,17n,26p,831b,305s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.dvi (24 pages, 57732 bytes).
+Output written on thesis.dvi (24 pages, 60160 bytes).
