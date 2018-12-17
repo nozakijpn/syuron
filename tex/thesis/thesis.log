@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.12.11)  18 DEC 2018 01:37
+This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.12.11)  18 DEC 2018 01:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -297,9 +297,9 @@ mm/m/it/10 O[] \OT1/cmr/m/n/10 = []$\JY1/mc/m/n/10 、
 [7] [8] [9]) (./base/clustering.tex [10]) (./base/speach_recognition.tex))
 (./base/pre_test.tex [11]
 第 3 章
-[12
+) (./chapter3.tex [12
 
-]) (./chapter3.tex
+]
 Overfull \hbox (25.40907pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/10 3 \JY1/mc/m/n/10 コサイン類似度を用いた \OT1/cmr/m/n/10 i-vecto
 r \JY1/mc/m/n/10 の性質の調査 \OT1/cmr/m/n/10 3.3. \JY1/mc/m/n/10 比較的長い音
@@ -346,4 +346,4 @@ Here is how much of TeX's memory you used:
  929 hyphenation exceptions out of 8191
  28i,17n,27p,831b,308s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.dvi (27 pages, 77424 bytes).
+Output written on thesis.dvi (27 pages, 77556 bytes).
