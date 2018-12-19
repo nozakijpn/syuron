@@ -41,51 +41,62 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.4.3}音響モデル}{12}}
 \newlabel{acoustic_model}{{2.4.3}{12}}
 \newlabel{eq:mfcc}{{2.42}{13}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.4}DNNの概要}{13}}
+\newlabel{fig:HMM}{{2.4.3}{13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces HMMの例}}{13}}
+\newlabel{fig:HMM}{{2.2}{13}}
+\newlabel{eq:deltac}{{2.43}{14}}
+\newlabel{eq:deltadeltac}{{2.44}{14}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.4}DNNの概要}{14}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces DNNの構造図}}{14}}
+\newlabel{fig:dnn}{{2.3}{14}}
 \citation{ATR}
 \citation{ATR}
-\@writefile{toc}{\contentsline {chapter}{\numberline {第3章}コサイン類似度を用いたi-vectorの性質の調査}{14}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {第3章}コサイン類似度を用いたi-vectorの性質の調査}{15}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {3.1}使用する音声データ}{14}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}UBMモデルの学習に使用する音声データ}{14}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}検証に用いる音声データ}{14}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.2}コサイン類似度の算出条件}{14}}
-\newlabel{val_detail}{{3.1.2}{15}}
-\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces 検証用データの詳細}}{15}}
-\@writefile{lot}{\contentsline {table}{\numberline {3.2}{\ignorespaces 使用する音響特徴パラメータ}}{15}}
-\newlabel{iv_feature}{{3.2}{15}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}比較的長い音声データから抽出したi-vectorの性質}{15}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.4}非常に短い音声データから抽出したi-vectorの性質}{15}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.5}複数話者の発話を含む音声データから抽出したi-vectorの性質}{15}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {第4章}提案手法}{16}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}使用する音声データ}{15}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}UBMモデルの学習に使用する音声データ}{15}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}検証に用いる音声データ}{15}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}コサイン類似度の算出条件}{15}}
+\newlabel{val_detail}{{3.1.2}{16}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces 検証用データの詳細}}{16}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.2}{\ignorespaces 使用する音響特徴パラメータ}}{16}}
+\newlabel{iv_feature}{{3.2}{16}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}比較的長い音声データから抽出したi-vectorの性質}{16}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}非常に短い音声データから抽出したi-vectorの性質}{16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces 比較的長い音声データから抽出した同一話者間のi-vectorのコサイン類似度}}{17}}
+\newlabel{fig:iv_same_long}{{3.1}{17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces 比較的長い音声データから抽出した異なる話者間のi-vectorのコサイン類似度}}{17}}
+\newlabel{fig:iv_other_long}{{3.2}{17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces 非常に短い音声データから抽出した同一話者間のi-vectorのコサイン類似度}}{18}}
+\newlabel{fig:iv_same_short}{{3.3}{18}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces 非常に短い音声データから抽出した異なる話者間のi-vectorのコサイン類似度}}{18}}
+\newlabel{fig:iv_other_short}{{3.4}{18}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {第4章}提案手法}{19}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}発話間の時間情報を考慮した発話区間の結合手法}{16}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}発話環境を考慮した発話区間の結合手法}{16}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces ぴあの}}{17}}
-\newlabel{fig:one}{{4.1}{17}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces ぴあの}}{18}}
-\newlabel{fig:one}{{4.2}{18}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {第5章}評価実験}{19}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}発話間の時間情報を考慮した発話区間の結合手法}{19}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}発話環境を考慮した発話区間の結合手法}{19}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces ぴあの}}{20}}
+\newlabel{fig:one}{{4.1}{20}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces ぴあの}}{21}}
+\newlabel{fig:one}{{4.2}{21}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {第5章}評価実験}{22}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}予備実験}{19}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}実験目的}{19}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}実験条件}{19}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}本実験}{19}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}実験目的}{19}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}実験条件}{19}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces 実験結果}}{19}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}考察}{20}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {第6章}結論}{21}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}予備実験}{22}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}実験目的}{22}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}実験条件}{22}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}本実験}{22}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}実験目的}{22}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}実験条件}{22}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces 実験結果}}{22}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}考察}{23}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {第6章}結論}{24}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{\numberline {第7章}追加}{22}}
-\@writefile{lof}{\addvspace {10\p@ }}
-\@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{謝辞}{23}}
+\@writefile{toc}{\contentsline {chapter}{謝辞}{25}}
 \bibcite{panaiv}{1}
 \bibcite{spectroclus}{2}
 \bibcite{ATR}{3}
-\@writefile{toc}{\contentsline {chapter}{参考文献}{24}}
+\@writefile{toc}{\contentsline {chapter}{参考文献}{26}}
