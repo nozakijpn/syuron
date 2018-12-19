@@ -13,9 +13,9 @@
 \contentsline {subsection}{\numberline {2.2.4}コサイン類似度}{10}
 \contentsline {section}{\numberline {2.3}i-vectorを用いたアンカーの発話区間抽出手法}{10}
 \contentsline {section}{\numberline {2.4}音声認識}{11}
-\contentsline {subsection}{\numberline {2.4.1}音響モデル}{11}
-\contentsline {subsection}{\numberline {2.4.2}言語モデル}{11}
-\contentsline {subsection}{\numberline {2.4.3}単語辞書}{11}
+\contentsline {subsection}{\numberline {2.4.1}音声認識システムの流れ}{11}
+\contentsline {subsection}{\numberline {2.4.2}単語辞書と言語モデル}{11}
+\contentsline {subsection}{\numberline {2.4.3}音響モデル}{11}
 \contentsline {subsection}{\numberline {2.4.4}DNNの概要}{11}
 \contentsline {chapter}{\numberline {第3章}コサイン類似度を用いたi-vectorの性質の調査}{12}
 \contentsline {section}{\numberline {3.1}使用する音声データ}{12}
