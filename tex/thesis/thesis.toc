@@ -19,23 +19,22 @@
 \contentsline {subsection}{\numberline {2.4.4}DNNの概要}{14}
 \contentsline {chapter}{\numberline {第3章}コサイン類似度を用いたi-vectorの性質の調査}{15}
 \contentsline {section}{\numberline {3.1}使用する音声データ}{15}
-\contentsline {subsection}{\numberline {3.1.1}UBMモデルの学習に使用する音声データ}{15}
-\contentsline {subsection}{\numberline {3.1.2}検証に用いる音声データ}{15}
 \contentsline {section}{\numberline {3.2}コサイン類似度の算出条件}{15}
-\contentsline {section}{\numberline {3.3}比較的長い音声データから抽出したi-vectorの性質}{16}
+\contentsline {section}{\numberline {3.3}長い音声データから抽出したi-vectorの性質}{16}
 \contentsline {section}{\numberline {3.4}非常に短い音声データから抽出したi-vectorの性質}{16}
 \contentsline {chapter}{\numberline {第4章}提案手法}{19}
 \contentsline {section}{\numberline {4.1}発話間の時間情報を考慮した発話区間の結合手法}{19}
 \contentsline {section}{\numberline {4.2}発話環境を考慮した発話区間の結合手法}{19}
 \contentsline {chapter}{\numberline {第5章}発話区間の結合実験}{22}
-\contentsline {section}{\numberline {5.1}実験条件}{22}
-\contentsline {section}{\numberline {5.2}実験結果}{22}
-\contentsline {chapter}{\numberline {第6章}アンカーの発話群検出実験}{23}
-\contentsline {section}{\numberline {6.1}実験条件}{23}
-\contentsline {section}{\numberline {6.2}実験結果}{23}
-\contentsline {chapter}{\numberline {第7章}アンカーの発話群検出実験}{24}
-\contentsline {section}{\numberline {7.1}実験条件}{24}
-\contentsline {section}{\numberline {7.2}実験結果}{24}
-\contentsline {chapter}{\numberline {第8章}考察}{25}
-\contentsline {chapter}{謝辞}{26}
-\contentsline {chapter}{参考文献}{27}
+\contentsline {section}{\numberline {5.1}使用する音声データ}{22}
+\contentsline {section}{\numberline {5.2}実験条件}{23}
+\contentsline {section}{\numberline {5.3}実験結果}{23}
+\contentsline {chapter}{\numberline {第6章}アンカーの発話群検出実験}{24}
+\contentsline {section}{\numberline {6.1}実験条件}{24}
+\contentsline {section}{\numberline {6.2}実験結果}{24}
+\contentsline {chapter}{\numberline {第7章}アンカーの発話群検出実験}{25}
+\contentsline {section}{\numberline {7.1}実験条件}{25}
+\contentsline {section}{\numberline {7.2}実験結果}{25}
+\contentsline {chapter}{\numberline {第8章}考察}{26}
+\contentsline {chapter}{謝辞}{27}
+\contentsline {chapter}{参考文献}{28}
