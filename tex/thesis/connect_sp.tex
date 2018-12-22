@@ -1,12 +1,49 @@
 \chapter{発話区間の結合実験}
+本章では、ニュース番組音声の発話区間を対象として、前後の発話区間が同一話者である可能性が高いとき発話区間を結合する。
+\section{実験方法}
+ニュース番組内の発話区間から予め
 \section{使用する音声データ}
-\noindent{\textbf{\underline{パラメータの学習用音声データ}}}\par
-パラメータの学習用にニュース番組の音声データ13個を用いる。各音声データには、事前に人手で4種類（音楽、音声、雑音、無音)の音源ラベルが付与されている。「音声」の音源ラベルが付与された区間においては、更に発話者の情報が付与されている。また「音声」の音源ラベルをもとに対象の音声データから発話区間を抽出し、それを一発話とした。\par
-表\ref{table:val_detail}に検証に用いるデータの詳細を示す。\vspace{0.2in}
+\noindent{\textbf{\underline{評価用音声データ}}}\par
+評価用にニュース番組の音声データ5個を用いる。本来のニュース番組の音声には「音声」の音源ラベルが付与されていない。そこで、音源識別を用いて発話区間を検出、切り出しを行なった。また、切り出された発話区間それぞれを一発話し、各発話区間に人手で発話者の情報が付与した。\par
+表\ref{table:test_detail}に検証に用いるデータの詳細、表\ref{table:train_detail_RPF}に音源識別による発話区間検出精度を示す。
 
 \begin{table}[htb]
   \begin{center}
-  \label{table:val_detail}
+  \label{table:test_detail}
+    \caption{評価用音声データの詳細}
+    \begin{tabular}{|c||c|c|c|} \hline
+      データID & 収録時間 & 話者数 & 全発話数 \\ \hline
+      ニュースA & 30分3秒 & 20 & 337 \\ \hline
+      ニュースB & 30分3秒 & 31 & 312\\ \hline
+      ニュースC & 30分3秒 & 21 & 324 \\ \hline
+      ニュースD & 30分4秒 & 20 & 324\\ \hline
+      ニュースE & 20分3秒 & 13 & 159\\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\begin{table}[htb]
+  \begin{center}
+  \label{table:test_detail}
+    \caption{評価用音声データの発話区間検出精度$[\%]$}
+    \begin{tabular}{|c||c|c|c|} \hline
+      データID & Recall & Precision & F-meature \\ \hline
+      ニュースA & 89.49 & 91.60 & 90.53 \\ \hline
+      ニュースB & 84.09 & 95.54 & 89.45\\ \hline
+      ニュースC & 88.30 & 85.99 & 87.13 \\ \hline
+      ニュースD & 90.06 & 83.33 & 86.56\\ \hline
+      ニュースE & 90.95 & 90.30 & 90.63\\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\noindent{\textbf{\underline{パラメータの学習用音声データ}}}\par
+パラメータの学習用にニュース番組の音声データ13個を用いる。各音声データには、事前に人手で4種類（音楽、音声、雑音、無音)の音源ラベルが付与されている。「音声」の音源ラベルが付与された区間においては、更に発話者の情報が付与されている。また「音声」の音源ラベルをもとに対象の音声データから発話区間を抽出し、それを一発話とした。\par
+表\ref{table:train_detail}に検証に用いるデータの詳細を示す。\vspace{0.2in}
+
+\begin{table}[htb]
+  \begin{center}
+  \label{table:train_detail}
     \caption{パラメータの学習用音声データの詳細}
     \begin{tabular}{|c||c|c|c|} \hline
       データID & 収録時間 & 話者数 & 全発話数 \\ \hline
@@ -27,24 +64,5 @@
   \end{center}
 \end{table}
 
-\noindent{\textbf{\underline{評価用音声データ}}}\par
-評価用にニュース番組の音声データ5個を用いる。本来のニュース番組の音声には「音声」の音源ラベルが付与されていない。そこで、音源識別を用いて発話区間を検出、切り出しを行なった。また、切り出された発話区間それぞれを一発話し、各発話区間に人手で発話者の情報が付与した。\par
-表\ref{table:test_detail}に検証に用いるデータの詳細を示す。
 
-\begin{table}[htb]
-  \begin{center}
-  \label{table:test_detail}
-    \caption{評価用音声データの詳細}
-    \begin{tabular}{|c||c|c|c|} \hline
-      データID & 収録時間 & 話者数 & 全発話数 \\ \hline
-      ニュースF & 30分3秒 & 20 & 337 \\ \hline
-      ニュースG & 30分3秒 & 31 & 312\\ \hline
-      ニュースH & 30分3秒 & 21 & 324 \\ \hline
-      ニュースI & 30分4秒 & 20 & 324\\ \hline
-      ニュースJ & 20分3秒 & 13 & 159\\ \hline
-    \end{tabular}
-  \end{center}
-\end{table}
-
-\section{実験条件}
 \section{実験結果}
