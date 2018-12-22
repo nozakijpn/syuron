@@ -1,0 +1,68 @@
+\chapter{コサイン類似度を用いたi-vectorの性質の調査}
+発話間のi-vectorのコサイン類似度を算出し、発話の長さごとに同一話者の発話間の場合と異なる話者の場合に分けてヒストグラムに表し、性質を調査した。
+\section{使用する音声データ}
+本研究では、UBMモデルの学習データおよびコサイン類似度を用いたi-vectorの性質の調査に読み上げ音声\cite{ATR}を使用した。
+
+\section{コサイン類似度の算出条件}
+対象の音声データからある発話を取り出し、それ以外の発話とのi-vectorのコサイン類似度を算出する。それを同一話者の発話間の場合と異なる話者の発話間の2つの場合に分けてヒストグラムに表し、コサイン類似度の性質の調査を行った。\par
+i-vectorの抽出に使用するUBMモデルの学習には読み上げ音声\cite{ATR}を使用し、発話から抽出する音響特徴パラメータを表\ref{iv_feature}に示す。また混合数は32とした。
+
+\begin{table}[htb]
+  \begin{center}
+    \caption{使用する音響特徴パラメータ}
+    \label{iv_feature}
+    \begin{tabular}{|c||c|} \hline
+      特徴量 & 次元数\\ \hline
+      MFCC & 19  \\ \hline
+      POW & 1  \\ \hline
+      $\Delta$MFCC & 19 \\ \hline
+      $\Delta$POW & 1 \\ \hline
+      $\Delta\Delta$MFCC & 19 \\ \hline
+      $\Delta\Delta$POW & 1 \\ \hline
+      計 & 60 \\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+本研究では、音響特徴量のひとつとしてメル周波数ケプストラム係数(MFCC)を用いる。メル周波数ケプストラム係数（Mel - Frequency Cepstrum Coefficient : MFCC）とは、メル周波数という人間の音の高低に対する感覚尺度を考慮した特徴量であり、音声スペクトルから係数スペクトルを抽出したものである。これは一般的に、音声の特徴を抽出するパラメータとして用いられる。[5]
+
+\section{長い音声データから抽出したi-vectorの性質}
+本節では、比較的長い音声データとして、20秒間の音声データからi-vectorを抽出した。その結果、図\ref{fig:iv_same_long}より、同一話者の発話間の場合はコサイン類似度が高い値に多く分布し、図\ref{fig:iv_other_long}より、異なる話者の発話間の場合はコサイン類似度が全体的に分布していることが分かる。\par
+これより、比較的長い音声データでは、コサイン類似度の値が高いほど、i-vectorを照合した発話の話者が同一の話者である確率が高いということが分かる。
+
+\begin{figure}[htb]
+  \begin{center}
+    \includegraphics{../../image/same_sp_long.eps}
+  \end{center}
+  \caption{長い音声データから抽出した同一話者間のi-vectorのコサイン類似度}
+  \label{fig:iv_same_long}
+\end{figure}
+
+\begin{figure}[htb]
+  \begin{center}
+    \includegraphics{../../image/other_sp_long.eps}
+  \end{center}
+  \caption{長い音声データから抽出した異なる話者間のi-vectorのコサイン類似度}
+  \label{fig:iv_other_long}
+\end{figure}
+
+\section{非常に短い音声データから抽出したi-vectorの性質}
+本節では、非常に音声データとして、0.3秒間の音声データからi-vectorを抽出した。その結果を図\ref{fig:iv_same_short}と図\ref{fig:iv_other_short}に示す。\par
+
+\begin{figure}[htb]
+  \begin{center}
+    \includegraphics{../../image/same_sp_short_0_3.eps}
+  \end{center}
+  \caption{非常に短い音声データから抽出した同一話者間のi-vectorのコサイン類似度}
+  \label{fig:iv_same_short}
+\end{figure}
+
+\begin{figure}[htb]
+  \begin{center}
+    \includegraphics{../../image/other_sp_short_0_3.eps}
+  \end{center}
+  \caption{非常に短い音声データから抽出した異なる話者間のi-vectorのコサイン類似度}
+  \label{fig:iv_other_short}
+\end{figure}
+
+これより、非常に短い音声データから抽出したi-vectorは同一話者間、異なる話者間共に似た形のヒストグラムとなっており、同一話者であっても必ずコサイン類似度が1に近づくということはない。つまり、十分に話者の特徴を抽出できていないことが示されている。
