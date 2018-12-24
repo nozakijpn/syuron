@@ -22,22 +22,24 @@
 \contentsline {section}{\numberline {3.2}コサイン類似度の算出条件}{15}
 \contentsline {section}{\numberline {3.3}長い音声データから抽出したi-vectorの性質}{16}
 \contentsline {section}{\numberline {3.4}非常に短い音声データから抽出したi-vectorの性質}{16}
-\contentsline {chapter}{\numberline {第4章}ニュース音声の性質の調査}{19}
+\contentsline {chapter}{\numberline {第4章}ニュース番組音声における発話の間隔の調査}{19}
 \contentsline {section}{\numberline {4.1}使用する音声データ}{19}
-\contentsline {section}{\numberline {4.2}実験結果}{19}
-\contentsline {chapter}{\numberline {第5章}提案手法}{20}
-\contentsline {section}{\numberline {5.1}発話間の時間情報を考慮した発話区間の結合手法}{20}
-\contentsline {section}{\numberline {5.2}発話環境を考慮した発話区間の結合手法}{20}
-\contentsline {chapter}{\numberline {第6章}発話区間の結合実験}{22}
-\contentsline {section}{\numberline {6.1}実験方法}{22}
-\contentsline {section}{\numberline {6.2}使用する音声データ}{22}
-\contentsline {section}{\numberline {6.3}実験結果}{22}
-\contentsline {chapter}{\numberline {第7章}アンカーの発話群検出実験}{24}
-\contentsline {section}{\numberline {7.1}実験条件}{24}
-\contentsline {section}{\numberline {7.2}実験結果}{24}
-\contentsline {chapter}{\numberline {第8章}アンカーの発話群検出実験}{25}
-\contentsline {section}{\numberline {8.1}実験条件}{25}
-\contentsline {section}{\numberline {8.2}実験結果}{25}
-\contentsline {chapter}{\numberline {第9章}考察}{26}
-\contentsline {chapter}{謝辞}{27}
-\contentsline {chapter}{参考文献}{28}
+\contentsline {section}{\numberline {4.2}実験結果}{20}
+\contentsline {chapter}{\numberline {第5章}提案手法}{21}
+\contentsline {section}{\numberline {5.1}発話間の時間情報を考慮した発話区間の結合手法}{21}
+\contentsline {section}{\numberline {5.2}発話環境を考慮した発話区間の結合手法}{21}
+\contentsline {chapter}{\numberline {第6章}発話区間の結合実験}{23}
+\contentsline {section}{\numberline {6.1}実験方法}{23}
+\contentsline {subsection}{\numberline {6.1.1}使用する音声データ}{23}
+\contentsline {subsection}{\numberline {6.1.2}発話区間結合手法}{24}
+\contentsline {subsection}{\numberline {6.1.3}評価方法}{24}
+\contentsline {section}{\numberline {6.2}実験結果}{24}
+\contentsline {chapter}{\numberline {第7章}アンカーの発話群検出実験}{25}
+\contentsline {section}{\numberline {7.1}実験条件}{25}
+\contentsline {section}{\numberline {7.2}実験結果}{25}
+\contentsline {chapter}{\numberline {第8章}アンカーの発話群検出実験}{26}
+\contentsline {section}{\numberline {8.1}実験条件}{26}
+\contentsline {section}{\numberline {8.2}実験結果}{26}
+\contentsline {chapter}{\numberline {第9章}考察}{27}
+\contentsline {chapter}{謝辞}{28}
+\contentsline {chapter}{参考文献}{29}
