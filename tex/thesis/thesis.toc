@@ -37,7 +37,7 @@
 \contentsline {chapter}{\numberline {第7章}アンカーの発話群検出実験}{25}
 \contentsline {section}{\numberline {7.1}実験条件}{25}
 \contentsline {section}{\numberline {7.2}実験結果}{25}
-\contentsline {chapter}{\numberline {第8章}アンカーの発話群検出実験}{26}
+\contentsline {chapter}{\numberline {第8章}アンカーの発話区間の音声認識実験}{26}
 \contentsline {section}{\numberline {8.1}実験条件}{26}
 \contentsline {section}{\numberline {8.2}実験結果}{26}
 \contentsline {chapter}{\numberline {第9章}考察}{27}

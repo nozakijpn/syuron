@@ -7,9 +7,8 @@
 表\ref{table:test_detail}に検証に用いるデータの詳細、表\ref{table:test_detail_RPF}に音源識別による発話区間検出精度を示す。
 
 \begin{table}[htb]
-\label{table:test_detail}
   \begin{center}
-    \caption{評価用音声データの詳細}
+    \caption{評価用音声データの詳細 \label{table:test_detail}}
     \begin{tabular}{|c||c|c|c|} \hline
       データID & 収録時間 & 話者数 & 全発話数 \\ \hline
       ニュースA & 30分3秒 & 20 & 337 \\ \hline
@@ -22,9 +21,8 @@
 \end{table}
 
 \begin{table}[htb]
-\label{table:test_detail_RPF}
   \begin{center}
-    \caption{評価用音声データの発話区間検出精度$[\%]$}
+    \caption{評価用音声データの発話区間検出精度$[\%]$ \label{table:test_detail_RPF}}
     \begin{tabular}{|c||c|c|c|} \hline
       データID & Recall & Precision & F-meature \\ \hline
       ニュースA & 89.49 & 91.60 & 90.53 \\ \hline
@@ -52,7 +50,7 @@
 
 \begin{table}[htb]
   \begin{center}
-    \caption{評価用音声データの発話区間検出精度$[\%]$}
+    \caption{評価用音声データの発話区間検出精度$[\%]$ \label{table:result_connect}}
     \begin{tabular}{|c||c|c|c|} \hline
       データID & Recall & Precision & F-meature \\ \hline
       ニュースA & 89.49 & 91.60 & 90.53 \\ \hline
@@ -62,5 +60,5 @@
       ニュースE & 90.95 & 90.30 & 90.63\\ \hline
     \end{tabular}
   \end{center}
-   \label{table:result_connect}
+   
 \end{table}

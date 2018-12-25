@@ -13,3 +13,22 @@
 \begin{equation}
 x = y_1 + z_2
 \end{equation}
+
+\begin{figure}[htb]
+  \begin{center}
+    \includegraphics{../../image/flow_sp.eps}
+  \end{center}
+  \caption{音声認識の流れ \label{fig:}}
+\end{figure}
+
+\begin{table}[htb]
+  \begin{center}
+    \caption{単語辞書の例 \label{table:}}
+    \begin{tabular}{|c||c|c|} \hline
+       &  &  \\ \hline
+       &  &  \\ \hline
+       &  &  \\ \hline
+       &  &  \\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
