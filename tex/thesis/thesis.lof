@@ -9,7 +9,12 @@
 \contentsline {figure}{\numberline {3.3}{\ignorespaces 非常に短い音声データから抽出した同一話者間のi-vectorのコサイン類似度}}{17}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces 非常に短い音声データから抽出した異なる話者間のi-vectorのコサイン類似度}}{18}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces 同一話者間の非発話区間の時間情報 }}{20}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces 異なる話者間の非発話区間の時間情報 }}{21}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces ぴあの}}{22}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces 同一話者間の非発話区間の時間情報 }}{23}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces 同一話者間の非発話区間の時間情報 }}{23}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces DNNを用いる際の学習の流れ }}{27}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces 書き起こしテキストの例 }}{29}
 \addvspace {10\p@ }

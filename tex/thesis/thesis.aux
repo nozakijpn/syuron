@@ -32,23 +32,22 @@
 \newlabel{iv5}{{2.28}{9}}
 \newlabel{iv6}{{2.30}{9}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.4}コサイン類似度}{10}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.5}i-vectorを用いたアンカーの発話区間抽出}{10}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.3}音声認識}{11}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}音声認識システムの流れ}{11}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}音声認識}{10}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}音声認識システムの流れ}{10}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces 音声認識の流れ}}{11}}
 \newlabel{fig:flow_sp}{{2.1}{11}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}単語辞書と言語モデル}{11}}
 \newlabel{language_model}{{2.3.2}{11}}
-\@writefile{lot}{\contentsline {table}{\numberline {2.2}{\ignorespaces 単語辞書の例}}{12}}
-\newlabel{table:tango}{{2.2}{12}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.2}{\ignorespaces 単語辞書の例}}{11}}
+\newlabel{table:tango}{{2.2}{11}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3.3}音響モデル}{12}}
 \newlabel{acoustic_model}{{2.3.3}{12}}
 \newlabel{eq:mfcc}{{2.42}{13}}
 \newlabel{fig:HMM}{{2.3.3}{13}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces HMMの例}}{13}}
 \newlabel{fig:HMM}{{2.2}{13}}
-\newlabel{eq:deltac}{{2.43}{14}}
-\newlabel{eq:deltadeltac}{{2.44}{14}}
+\newlabel{eq:deltac}{{2.43}{13}}
+\newlabel{eq:deltadeltac}{{2.44}{13}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3.4}DNNの概要}{14}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces DNNの構造図}}{14}}
 \newlabel{fig:dnn}{{2.3}{14}}
@@ -78,50 +77,72 @@
 \newlabel{table:train_detail}{{4.1}{19}}
 \@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces パラメータの学習用音声データの詳細}}{19}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.2}調査結果}{20}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {第5章}提案手法}{21}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces 同一話者間の非発話区間の時間情報 }}{20}}
+\newlabel{fig:same_sp}{{4.1}{20}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces 異なる話者間の非発話区間の時間情報 }}{21}}
+\newlabel{fig:different_sp}{{4.2}{21}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {第5章}提案手法}{22}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}発話間の時間情報を考慮した発話区間の結合手法}{21}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}発話環境を考慮した発話区間の結合手法}{21}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces ぴあの}}{22}}
-\newlabel{fig:one}{{5.1}{22}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {第6章}実験}{23}}
+\newlabel{chapter:prob_method}{{5}{22}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}発話間の時間情報を考慮した発話区間の結合手法}{22}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}発話環境を考慮した発話区間の結合手法}{22}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces 同一話者間の非発話区間の時間情報 }}{23}}
+\newlabel{fig:flow_prob1}{{5.1}{23}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces 同一話者間の非発話区間の時間情報 }}{23}}
+\newlabel{fig:flow_prob2}{{5.2}{23}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {第6章}実験}{24}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}使用する音声データ}{23}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.1}{\ignorespaces 評価用音声データの詳細 }}{23}}
-\newlabel{table:test_detail}{{6.1}{23}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.2}{\ignorespaces 評価用音声データの発話区間検出精度$[\%]$ }}{23}}
-\newlabel{table:test_detail_RPF}{{6.2}{23}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}発話区間の結合実験}{23}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.1}実験条件}{24}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.2}実験方法}{24}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.3}評価方法}{24}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.4}実験結果}{24}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.3}{\ignorespaces 評価用音声データの発話区間検出精度$[\%]$ }}{24}}
-\newlabel{table:result_connect}{{6.3}{24}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.5}考察}{24}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.3}アンカーの発話群検出実験}{24}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.1}実験条件}{24}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.2}i-vectorを用いたアンカーの発話区間抽出}{24}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.3}評価方法}{25}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.4}実験結果}{25}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.5}考察}{25}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.4}アンカーの発話区間の音声認識実験}{25}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.1}音響モデルの仕様}{25}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.2}言語モデル・単語辞書の仕様}{25}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.3}実験方法}{25}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.4}評価方法}{25}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.5}実験結果}{25}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.6}考察}{25}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {第7章}まとめ}{26}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}使用する音声データ}{24}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.1}{\ignorespaces 評価用音声データの詳細 }}{24}}
+\newlabel{table:test_detail}{{6.1}{24}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.2}{\ignorespaces 評価用音声データの発話区間検出精度$[\%]$ }}{24}}
+\newlabel{table:test_detail_RPF}{{6.2}{24}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}発話区間の結合実験}{24}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.1}実験条件}{25}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.2}実験方法}{25}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.3}評価方法}{25}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.4}実験結果}{25}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.3}{\ignorespaces 評価用音声データの発話区間検出精度$[\%]$ }}{25}}
+\newlabel{table:result_connect}{{6.3}{25}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.5}考察}{25}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}アンカーの発話群検出実験}{25}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.1}実験条件}{25}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.2}i-vectorを用いたアンカーの発話区間抽出方法}{25}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.3}評価方法}{26}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.4}実験結果}{26}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.5}考察}{26}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.4}アンカーの発話区間の音声認識実験}{26}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.1}音響モデルの仕様}{26}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.4}{\ignorespaces 音響モデルの仕様 }}{26}}
+\newlabel{table:acoustic_model_detail}{{6.4}{26}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.5}{\ignorespaces 使用する音響特徴パラメータ }}{26}}
+\newlabel{acoustic_model_feature}{{6.5}{26}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces DNNを用いる際の学習の流れ }}{27}}
+\newlabel{fig:flow_train_dnn}{{6.1}{27}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.6}{\ignorespaces CSJの音声の種類と分量 }}{28}}
+\newlabel{table:detail_csj}{{6.6}{28}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.7}{\ignorespaces 使用した音素 }}{28}}
+\newlabel{fig:used_onso}{{6.7}{28}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.2}言語モデル・単語辞書の仕様}{28}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.2}{\ignorespaces 書き起こしテキストの例 }}{29}}
+\newlabel{fig:kakiokosi}{{6.2}{29}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.3}実験方法}{29}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.4}評価方法}{29}}
+\newlabel{calc:word_acc}{{6.1}{29}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.5}実験結果}{30}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.6}考察}{30}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.8}{\ignorespaces カナ音素対応表 }}{31}}
+\newlabel{fig:kana_onso}{{6.8}{31}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {第7章}まとめ}{32}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{謝辞}{27}}
+\@writefile{toc}{\contentsline {chapter}{謝辞}{33}}
 \bibcite{panaiv}{1}
 \bibcite{spectroclus}{2}
 \bibcite{shimae_9}{3}
 \bibcite{shimae_10}{4}
 \bibcite{shimae_11}{5}
 \bibcite{ATR}{6}
-\@writefile{toc}{\contentsline {chapter}{参考文献}{28}}
+\@writefile{toc}{\contentsline {chapter}{参考文献}{34}}

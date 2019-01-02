@@ -32,3 +32,6 @@ x = y_1 + z_2
     \end{tabular}
   \end{center}
 \end{table}
+
+\vspace{0.2in}
+\noindent{\textbf{\underline{言語モデル}}}\par
