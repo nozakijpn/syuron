@@ -34,16 +34,14 @@ i-vectorの抽出に使用するUBMモデルの学習には読み上げ音声\ci
   \begin{center}
     \includegraphics{../../image/same_sp_long.eps}
   \end{center}
-  \caption{長い音声データから抽出した同一話者間のi-vectorのコサイン類似度}
-  \label{fig:iv_same_long}
+  \caption{長い音声データから抽出した同一話者間のi-vectorのコサイン類似度 \label{fig:iv_same_long}}
 \end{figure}
 
 \begin{figure}[htb]
   \begin{center}
     \includegraphics{../../image/other_sp_long.eps}
   \end{center}
-  \caption{長い音声データから抽出した異なる話者間のi-vectorのコサイン類似度}
-  \label{fig:iv_other_long}
+  \caption{長い音声データから抽出した異なる話者間のi-vectorのコサイン類似度 \label{fig:iv_other_long}}
 \end{figure}
 
 \section{非常に短い音声データから抽出したi-vectorの性質}
@@ -53,16 +51,14 @@ i-vectorの抽出に使用するUBMモデルの学習には読み上げ音声\ci
   \begin{center}
     \includegraphics{../../image/same_sp_short_0_3.eps}
   \end{center}
-  \caption{非常に短い音声データから抽出した同一話者間のi-vectorのコサイン類似度}
-  \label{fig:iv_same_short}
+  \caption{非常に短い音声データから抽出した同一話者間のi-vectorのコサイン類似度 \label{fig:iv_same_short}}
 \end{figure}
 
 \begin{figure}[htb]
   \begin{center}
     \includegraphics{../../image/other_sp_short_0_3.eps}
   \end{center}
-  \caption{非常に短い音声データから抽出した異なる話者間のi-vectorのコサイン類似度}
-  \label{fig:iv_other_short}
+  \caption{非常に短い音声データから抽出した異なる話者間のi-vectorのコサイン類似度 \label{fig:iv_other_short}} 
 \end{figure}
 
-非常に短い音声データから抽出したi-vectorは同一話者間ではコサイン類似度が0.2付近、異なる話者間では0付近に多くのデータが集まっている。しかし、異なる話者間共に似た形のヒストグラムとなっており、本検証で抽出されたi-vectorでは話者の識別をすることは非常に難しい。
+非常に短い音声データから抽出したi-vectorは同一話者間ではコサイン類似度が0.2付近、異なる話者間では0付近に多くのデータが集まっている。しかし、同一話者間のコサイン類似度と異なる話者間のコサイン類似度のヒストグラムは非常に似た形をしており、本検証で抽出されたi-vectorでは話者の識別をすることは非常に難しい。これより、i-vectorを用いた話者照合、話者識別を行う場合はできるだけ長い発話データを用意することが必要である。
