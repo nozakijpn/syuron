@@ -2,7 +2,7 @@
 \subsection{音響モデルの仕様}
 本実験で用いたDNN-HMM音響モデルの仕様を表\ref{table:acoustic_model_detail}に示す。この仕様に関しては小島らの研究[10]で使用されたもので、状態数は3000、音響特徴の次元数は39次元(表\ref{acoustic_model_feature})、隠れ層の数は6層、各層における繰り返し学習数は5回、隠れ層のノード数は1024とした。以下に、DNNを用いた際の学習の手順を示す。
 
-\begin{table}[htb]
+\begin{table}[H]
   \begin{center}
     \caption{音響モデルの仕様 \label{table:acoustic_model_detail}}
     \begin{tabular}{|c|c|c|} \hline
@@ -12,7 +12,7 @@
   \end{center}
 \end{table}
 
-\begin{table}[htb]
+\begin{table}[H]
   \begin{center}
     \caption{使用する音響特徴パラメータ \label{acoustic_model_feature}}
     \begin{tabular}{|c||c|} \hline
@@ -31,7 +31,7 @@
 \vspace{0.2in}\noindent{\textbf{\underline{構築手順}}}\par
 DNNを用いた音響モデルの構築や、この音響モデルを用いた音声認識に必要な学習テキストや言語モデルを作成する為にKaldiツールキットを用いた[11]。このツールキットの大きな流れを図\ref{fig:flow_train_dnn}に示す。まず学習や評価に必要なデータを用意し、言語モデルと単語辞書のWeighted Finite State Transducer （WFST）を作成する。WFSTとは重み付き有限トランスデューサといい、状態遷移機械モデル有限オートマトンの一種である。次に音声データから特徴量を抽出したデータを準備し、このデータと書き起こしを用いてGMM-HMMによる音響モデルのWFSTを作成する。これらのWFSTを、合成等を行ない1つのWFSTとする。このWFSTを用いて音声認識を行ない、学習データのアライメント（フレームごとの音素情報）をとる。このアライメントを用いてDNNを用いた音響モデルの学習（プレトレーニングと微調整）を行ない、最終的な音声認識を行なう。
 
-\begin{figure}[htb]
+\begin{figure}[H]
   \begin{center}
     \includegraphics{./figure/flow_train_dnn.eps}
   \end{center}
@@ -64,7 +64,7 @@ CSJに収録されている音声の種類と分量を表\ref{table:detail_csj}�
 \vspace{0.2in}\noindent{\textbf{\underline{使用した音素}}}\par
 本研究で使用した音素27個を表\ref{fig:used_onso}に示す。また、その音素をもとに記したカナ音素対応表を表\ref{fig:kana_onso}に示す
 
-\begin{table}[htb]
+\begin{table}[H]
   \begin{center}
     \caption{使用した音素 \label{fig:used_onso}}
     \includegraphics[scale=0.7]{./figure/used_onso.eps}
@@ -72,7 +72,7 @@ CSJに収録されている音声の種類と分量を表\ref{table:detail_csj}�
   
 \end{table}
 
-\begin{table}[htb]
+\begin{table}[H]
   \begin{center}
     \caption{カナ音素対応表 \label{fig:kana_onso}}
     \includegraphics[scale=0.7]{./figure/kana_onso.eps}
@@ -87,7 +87,7 @@ CSJに収録されている音声の種類と分量を表\ref{table:detail_csj}�
 
 \vspace{0.2in}\noindent{\textbf{\underline{CSJ}}}\par
 CSJには書き起こしテキストも提供されており、その一部の例を図\ref{fig:kakiokosi}に示す。書き起こしテキストは主に情報部と発話部に区別される。情報部では発話IDや時間情報等を、発話部では発話内容を「＆」の左側に基本形、右側に発音形という形式で記している。発話形はカタカナを用いて実際に発音された音声を忠実に表記したものである。発音の怠けや言い間違い等を書き取れる範囲で忠実に記録している。本研究では、音響モデル構築の際には主に発話部の発音形を用い、このカタカナ表記を音素列に変換し、ラベルファイルとして定義する。
-\begin{figure}[htb]
+\begin{figure}[H]
   \begin{center}
     \includegraphics{./figure/kakiokosi.eps}
   \end{center}
