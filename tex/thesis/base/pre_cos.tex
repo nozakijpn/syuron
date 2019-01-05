@@ -7,7 +7,7 @@
 対象の音声データからある発話を取り出し、それ以外の発話とのi-vectorのコサイン類似度を算出する。それを同一話者の発話間の場合と異なる話者の発話間の2つの場合に分けてヒストグラムに表し、コサイン類似度の性質の調査を行った。\par
 i-vectorの抽出に使用するUBMモデルの学習には読み上げ音声\cite{ATR}を使用し、発話から抽出する音響特徴パラメータを表\ref{iv_feature}に示す。また混合数は32とした。
 
-\begin{table}[htb]
+\begin{table}[H]
   \begin{center}
     \caption{使用する音響特徴パラメータ}
     \label{iv_feature}
@@ -30,14 +30,14 @@ i-vectorの抽出に使用するUBMモデルの学習には読み上げ音声\ci
 本節では、比較的長い音声データとして、20秒間の音声データからi-vectorを抽出した。その結果、図\ref{fig:iv_same_long}より、同一話者の発話間の場合はコサイン類似度が高い値に多く分布し、図\ref{fig:iv_other_long}より、異なる話者の発話間の場合はコサイン類似度が全体的に分布していることが分かる。\par
 これより、比較的長い音声データでは、コサイン類似度の値が高いほど、i-vectorを照合した発話の話者が同一の話者である確率が高いということが分かる。
 
-\begin{figure}[htb]
+\begin{figure}[H]
   \begin{center}
     \includegraphics{../../image/same_sp_long.eps}
   \end{center}
   \caption{長い音声データから抽出した同一話者間のi-vectorのコサイン類似度 \label{fig:iv_same_long}}
 \end{figure}
 
-\begin{figure}[htb]
+\begin{figure}[H]
   \begin{center}
     \includegraphics{../../image/other_sp_long.eps}
   \end{center}
@@ -47,14 +47,14 @@ i-vectorの抽出に使用するUBMモデルの学習には読み上げ音声\ci
 \section{非常に短い音声データから抽出したi-vectorの性質}
 本節では、非常に音声データとして、0.3秒間の音声データからi-vectorを抽出した。その結果を図\ref{fig:iv_same_short}と図\ref{fig:iv_other_short}に示す。\par
 
-\begin{figure}[htb]
+\begin{figure}[H]
   \begin{center}
     \includegraphics{../../image/same_sp_short_0_3.eps}
   \end{center}
   \caption{非常に短い音声データから抽出した同一話者間のi-vectorのコサイン類似度 \label{fig:iv_same_short}}
 \end{figure}
 
-\begin{figure}[htb]
+\begin{figure}[H]
   \begin{center}
     \includegraphics{../../image/other_sp_short_0_3.eps}
   \end{center}

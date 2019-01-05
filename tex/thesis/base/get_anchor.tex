@@ -1,7 +1,42 @@
 \section{アンカーの発話群検出実験}
-\subsection{実験条件}
 \subsection{i-vectorを用いたアンカーの発話区間抽出方法}
 \input{./base/clustering.tex}
+\subsection{実験方法}
 \subsection{評価方法}
+評価は、正解ラベルを用いて検出された話者の発話区間と比較して行う。
+
+\begin{table}[H]
+\begin{center}
+    \caption{アンカーの発話区間の正誤判定 \label{table:clustering}}
+\begin{tabular}{|c|c|c|c|l}
+\cline{1-4}
+\multicolumn{2}{|c|}{\multirow{2}{*}{}} & \multicolumn{2}{c|}{「発話者」のラベルが付与された発話区間} &  \\ \cline{3-4}
+\multicolumn{2}{|c|}{}                  & アンカーの発話区間        & アンカー以外の発話区間        &  \\ \cline{1-4}
+\multirow{2}{*}{判定結果}        & 正        & $TP$                  & $FP$                   &  \\ \cline{2-4}
+& 誤        & $FN$                  & $TN$                   &  \\ \cline{1-4}
+\end{tabular}
+\end{center}
+\end{table}
+
+表\ref{table:clustering}が得られると$P$（適合率（Precision））と$R$（再現率（Recall））は式\ref{calc:precision}と式\ref{calc:recall}のようにそれぞれ定義できる。
+
+\begin{equation}
+\label{calc:precision}
+P = \frac{TP}{TP + FP}
+\end{equation}
+
+\begin{equation}
+\label{calc:recall}
+R = \frac{TP}{TP + FN}
+\end{equation}
+
+すなわち、適合率とは識別結果にどれだけ「ゴミ」がないかを表している。一方、再現率は識別にどれだけ「漏れ」がないかを表している。一方、したがって、適合率と再現率は大きい値ほど性能がよいことになる。ここで、2つのシステムを比較する場合は1次元のスカラ値によって、2値的な判断ができたほうが便利である。適合率と再現率をひとつのスカラ値に変換する手法として$F$値（$F-measure$）がある。
+
+\begin{equation}
+\label{calc:fmeasure}
+F = \frac{1}{\frac{1}{P} + \frac{1}{R}}
+\end{equation}
+
+ここで$P$と$R$はそれぞれ適合率、再現率を表す。本研究では、評価方法として適合率、再現率、$F$値を用いる。
 \subsection{実験結果}
 \subsection{考察}

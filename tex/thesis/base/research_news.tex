@@ -3,16 +3,16 @@
 
 \section{使用する音声データ}
 パラメータの学習用にニュース番組の音声データ13個を用いる。各音声データには、事前に人手で4種類（音楽、音声、雑音、無音)の音源ラベルが付与されている。「音声」の音源ラベルが付与された区間においては、更に発話者の情報が付与されている。図\ref{fig:example_label}は音声の音源ラベルの一例である。また「音声」の音源ラベルをもとに対象の音声データから発話区間を抽出し、それを一発話とした。\par
-表\ref{table:train_detail}に検証に用いるデータの詳細を示す。\vspace{0.2in}
+表\ref{table:train_detail}に調査に用いるデータの詳細を示す。\vspace{0.2in}
 
-\begin{figure}[htb]
+\begin{figure}[H]
   \begin{center}
     \includegraphics{./figure/same_sp.eps}
   \end{center}
   \caption{「音声」の音源ラベルの例 \label{fig:example_label}}
 \end{figure}
 
-\begin{table}[htb]
+\begin{table}[H]
   \begin{center}
   \label{table:train_detail}
     \caption{パラメータの学習用音声データの詳細}
@@ -41,14 +41,14 @@
 \section{調査結果}
 調査結果を図\ref{fig:same_sp}、図\ref{fig:different_sp}に示す。
 
-\begin{figure}[htb]
+\begin{figure}[H]
   \begin{center}
     \includegraphics{./figure/same_sp.eps}
   \end{center}
   \caption{同一話者間の非発話区間の時間情報 \label{fig:same_sp}}
 \end{figure}
 
-\begin{figure}[htb]
+\begin{figure}[H]
   \begin{center}
     \includegraphics{./figure/different_sp.eps}
   \end{center}
