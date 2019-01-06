@@ -4,18 +4,17 @@
 \contentsline {figure}{\numberline {2.2}{\ignorespaces HMMの例}}{13}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces DNNの構造図}}{14}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces 長い音声データから抽出した同一話者間のi-vectorのコサイン類似度 }}{16}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces 長い音声データから抽出した異なる話者間のi-vectorのコサイン類似度 }}{17}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces 非常に短い音声データから抽出した同一話者間のi-vectorのコサイン類似度 }}{18}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces 非常に短い音声データから抽出した異なる話者間のi-vectorのコサイン類似度 }}{18}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces 「音声」の音源ラベルの例 }}{16}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces 同一話者間の非発話区間の時間情報 }}{17}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces 異なる話者間の非発話区間の時間情報 }}{18}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces 長い音声データから抽出した同一話者間のi-vectorのコサイン類似度 }}{20}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces 長い音声データから抽出した異なる話者間のi-vectorのコサイン類似度 }}{20}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces 非常に短い音声データから抽出した同一話者間のi-vectorのコサイン類似度 }}{21}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces 非常に短い音声データから抽出した異なる話者間のi-vectorのコサイン類似度 }}{22}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces 「音声」の音源ラベルの例 }}{21}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces 同一話者間の非発話区間の時間情報 }}{22}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces 異なる話者間の非発話区間の時間情報 }}{23}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces 同一話者間の非発話区間の時間情報 }}{24}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces 同一話者間の非発話区間の時間情報 }}{24}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces 同一話者間の非発話区間の時間情報 }}{25}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces 同一話者間の非発話区間の時間情報 }}{25}
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces DNNを用いる際の学習の流れ }}{31}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces 書き起こしテキストの例 }}{34}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces DNNを用いる際の学習の流れ }}{31}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces 書き起こしテキストの例 }}{34}
 \addvspace {10\p@ }

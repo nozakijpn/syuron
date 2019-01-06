@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.12.11)  5 JAN 2019 23:21
+This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.12.11)  7 JAN 2019 01:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -289,86 +289,64 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 ])
 (./chapter2.tex [2]
 第 2 章
-(./base/devide_audio.tex
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 36.
-LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 36.
- [3
+(./base/devide_audio.tex [3
 
-] [4] [5]) (./base/ivector.tex [6]
+]
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 47.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 47.
+ [4] [5]) (./base/ivector.tex [6]
 Overfull \hbox (13.70119pt too wide) in paragraph at lines 12--14
 []\JY1/mc/m/n/10 準備として 、 \OT1/cmr/m/n/10 UBM \JY1/mc/m/n/10 に対する \OT1
 /cmr/m/n/10 Baum-Welch \JY1/mc/m/n/10 統計量を計算することから始める 。 $\OML/c
 mm/m/it/10 O[] \OT1/cmr/m/n/10 = []$\JY1/mc/m/n/10 、
  []
 
-[7] [8] [9]) (./base/speach_recognition.tex
+[7] [8] [9]) (./base/speach_recognition.tex [10]
 File: ../../image/flow_sp.eps Graphic file (type eps)
  <../../image/flow_sp.eps>
 Overfull \hbox (8.59375pt too wide) in paragraph at lines 6--7
  [] 
  []
 
-[10] [11] [12]
+[11] [12]
 File: ../../image/HMM.eps Graphic file (type eps)
  <../../image/HMM.eps> [13]
 File: ../../image/image_dnn.eps Graphic file (type eps)
  <../../image/image_dnn.eps>))
-(./base/pre_cos.tex [14]
+(./pre_research.tex [14]
 第 3 章
-[15
+(./base/research_news.tex
+File: ./figure/same_sp.eps Graphic file (type eps)
+ <./figure/same_sp.eps> [15
 
-]
+] [16]
+File: ./figure/same_sp.eps Graphic file (type eps)
+
+<./figure/same_sp.eps>
+File: ./figure/different_sp.eps Graphic file (type eps)
+ <./figure/different_sp.eps> [17]) (./base/pre_cos.tex
+[18]
 File: ../../image/same_sp_long.eps Graphic file (type eps)
- <../../image/same_sp_long.eps>
+ <../../image/same_sp_long.eps> [19]
 File: ../../image/other_sp_long.eps Graphic file (type eps)
- <../../image/other_sp_long.eps> [16]
+ <../../image/other_sp_long.eps>
 File: ../../image/same_sp_short_0_3.eps Graphic file (type eps)
 
-<../../image/same_sp_short_0_3.eps>
-Overfull \hbox (25.40907pt too wide) has occurred while \output is active
-\OT1/cmr/m/n/10 3 \JY1/mc/m/n/10 コサイン類似度を用いた \OT1/cmr/m/n/10 i-vecto
-r \JY1/mc/m/n/10 の性質の調査 \OT1/cmr/m/n/10 3.4. \JY1/mc/m/n/10 非常に短い音
-声デ ータから抽出した \OT1/cmr/m/n/10 i-vector \JY1/mc/m/n/10 の性質
- []
-
-[17]
+<../../image/same_sp_short_0_3.eps> [20]
 File: ../../image/other_sp_short_0_3.eps Graphic file (type eps)
- <../../image/other_sp_short_0_3.eps>) (./base/research_news.tex
-Overfull \hbox (25.40907pt too wide) has occurred while \output is active
-\OT1/cmr/m/n/10 3 \JY1/mc/m/n/10 コサイン類似度を用いた \OT1/cmr/m/n/10 i-vecto
-r \JY1/mc/m/n/10 の性質の調査 \OT1/cmr/m/n/10 3.4. \JY1/mc/m/n/10 非常に短い音
-声デ ータから抽出した \OT1/cmr/m/n/10 i-vector \JY1/mc/m/n/10 の性質
- []
-
-[18]
-Overfull \hbox (25.40907pt too wide) has occurred while \output is active
-\OT1/cmr/m/n/10 3 \JY1/mc/m/n/10 コサイン類似度を用いた \OT1/cmr/m/n/10 i-vecto
-r \JY1/mc/m/n/10 の性質の調査 \OT1/cmr/m/n/10 3.4. \JY1/mc/m/n/10 非常に短い音
-声デ ータから抽出した \OT1/cmr/m/n/10 i-vector \JY1/mc/m/n/10 の性質
- []
-
-[19]
+ <../../image/other_sp_short_0_3.eps>
+[21])) (./prob_method.tex [22]
 第 4 章
-File: ./figure/same_sp.eps Graphic file (type eps)
-<./figure/same_sp.eps> [20
-
-] [21]
-File: ./figure/same_sp.eps Graphic file (type eps)
- <./figure/same_sp.eps>
-File: ./figure/different_sp.eps Graphic file (type eps)
-
-<./figure/different_sp.eps> [22]) (./prob_method.tex [23]
-第 5 章
 File: ./figure/same_sp.eps Graphic file (type eps)
 <./figure/same_sp.eps>
 File: ./figure/same_sp.eps Graphic file (type eps)
- <./figure/same_sp.eps>) (./test.tex [24
+ <./figure/same_sp.eps>) (./test.tex [23
 
-] [25]
-第 6 章
-(./base/connect_sp.tex [26
+] [24]
+第 5 章
+(./base/connect_sp.tex [25
 
 ]
 
@@ -407,23 +385,24 @@ LaTeX Warning: Command \textcircled invalid in math mode on input line 38.
 
 LaTeX Warning: Command \textcircled invalid in math mode on input line 38.
 
-[27]) (./base/get_anchor.tex (./base/clustering.tex [28]) [29])
-(./base/speach_recog.tex [30]
+[26] [27]) (./base/get_anchor.tex (./base/clustering.tex) [28])
+(./base/speach_recog.tex [29]
 File: ./figure/flow_train_dnn.eps Graphic file (type eps)
  <./figure/flow_train_dnn.eps>
 Overfull \hbox (5.58249pt too wide) in paragraph at lines 36--37
  [] 
  []
 
-[31]
+[30]
 File: ./figure/used_onso.eps Graphic file (type eps)
  <./figure/used_onso.eps>
 Overfull \hbox (4.9784pt too wide) in paragraph at lines 70--71
  [] 
  []
 
+[31]
 File: ./figure/kana_onso.eps Graphic file (type eps)
-<./figure/kana_onso.eps>
+ <./figure/kana_onso.eps>
 Overfull \hbox (7.08626pt too wide) in paragraph at lines 78--79
  [] 
  []
@@ -431,7 +410,7 @@ Overfull \hbox (7.08626pt too wide) in paragraph at lines 78--79
 [32] [33]
 File: ./figure/kakiokosi.eps Graphic file (type eps)
  <./figure/kakiokosi.eps> [34])) (./matome.tex [35]
-第 7 章
+第 6 章
 ) (./ack.tex [36
 
 ]) (./ref.tex [37
@@ -449,12 +428,12 @@ LaTeX Warning: There were multiply-defined labels.
 ### simple group (level 1) entered at line 86 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 2288 strings out of 493281
- 28604 string characters out of 6145040
+ 2292 strings out of 493281
+ 28678 string characters out of 6145040
  98528 words of memory out of 5000000
- 6101 multiletter control sequences out of 15000+600000
+ 6102 multiletter control sequences out of 15000+600000
  25700 words of font info for 103 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  28i,17n,27p,871b,401s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.dvi (43 pages, 137296 bytes).
+Output written on thesis.dvi (43 pages, 140752 bytes).
