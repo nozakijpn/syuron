@@ -1,7 +1,13 @@
 \section{アンカーの発話群検出実験}
-\subsection{i-vectorを用いたアンカーの発話区間抽出方法}
-\input{./base/clustering.tex}
+本節では、i-vectorを用いてアンカーの発話区間検出を行う。
+\label{chapter:get_anchor}
 \subsection{実験方法}
+本節では、\ref{chapter:connect_sp}節の手法1で得られたi-vectorを用いてアンカーの発話区間検出を行う。i-vectorを用いたアンカーの発話区間抽出方法を\ref{section:clustering}節に示す。
+
+\subsection{i-vectorを用いたアンカーの発話区間抽出方法}
+\label{section:clustering}
+\input{./base/clustering.tex}
+
 \subsection{評価方法}
 評価は、正解ラベルを用いて検出された話者の発話区間と比較して行う。
 
@@ -39,4 +45,5 @@ F = \frac{1}{\frac{1}{P} + \frac{1}{R}}
 
 ここで$P$と$R$はそれぞれ適合率、再現率を表す。本研究では、評価方法として適合率、再現率、$F$値を用いる。
 \subsection{実験結果}
+
 \subsection{考察}
