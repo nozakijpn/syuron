@@ -3,7 +3,7 @@
 評価用にニュース番組の音声データ5個を用いる。本来のニュース番組の音声には「音声」の音源ラベルが付与されていない。そこで、音源識別を用いて発話区間を検出、切り出しを行なった。また、切り出された発話区間それぞれを一発話し、各発話区間に人手で発話者の情報が付与した。\par
 表\ref{table:test_detail}に検証に用いるデータの詳細、表\ref{table:test_detail_RPF}に音源識別による発話区間検出精度を示す。
 
-\begin{table}[htb]
+\begin{table}[H]
   \begin{center}
     \caption{評価用音声データの詳細 \label{table:test_detail}}
     \begin{tabular}{|c||c|c|c|} \hline
@@ -17,7 +17,7 @@
   \end{center}
 \end{table}
 
-\begin{table}[htb]
+\begin{table}[H]
   \begin{center}
     \caption{評価用音声データの発話区間検出精度$[\%]$ \label{table:test_detail_RPF}}
     \begin{tabular}{|c||c|c|c|} \hline
@@ -31,6 +31,6 @@
   \end{center}
 \end{table}
 
-\input{base/connect_sp}    % 発話区間の結合実験
-\input{base/get_anchor}  % アンカーの発話群検出実験
-\input{base/speach_recog}  % 音声認識実験
+\input{base/connect_sp.tex}    % 発話区間の結合実験
+\input{base/get_anchor.tex}  % アンカーの発話群検出実験
+\input{base/speach_recog.tex}  % 音声認識実験

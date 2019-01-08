@@ -26,9 +26,9 @@
 \contentsline {subsection}{\numberline {3.2.2}コサイン類似度の算出条件}{19}
 \contentsline {subsection}{\numberline {3.2.3}長い音声データから抽出したi-vectorの性質}{19}
 \contentsline {subsection}{\numberline {3.2.4}非常に短い音声データから抽出したi-vectorの性質}{21}
-\contentsline {chapter}{\numberline {第4章}i-vectorを用いたアンカーの発話区間抽出方法とその課題点}{23}
-\contentsline {section}{\numberline {4.1}アンカーの発話区間抽出方法}{23}
-\contentsline {section}{\numberline {4.2}課題点}{23}
+\contentsline {chapter}{\numberline {第4章}i-vectorを用いたアンカーの発話区間検出手法とその課題}{23}
+\contentsline {section}{\numberline {4.1}アンカーの発話区間検出手法}{23}
+\contentsline {section}{\numberline {4.2}課題}{23}
 \contentsline {chapter}{\numberline {第5章}i-vectorの抽出精度向上のための発話区間結合手法}{24}
 \contentsline {section}{\numberline {5.1}発話間の時間情報を考慮した発話区間の結合手法}{24}
 \contentsline {section}{\numberline {5.2}発話環境を考慮した発話区間の結合手法}{24}
