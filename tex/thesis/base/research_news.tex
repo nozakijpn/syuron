@@ -2,20 +2,33 @@
 本章では、ニュース番組音声の発話間隔の調査を行う。
 
 \subsection{使用する音声データ}
-パラメータの学習用にニュース番組の音声データ13個を用いる。各音声データには、事前に人手で4種類（音楽、音声、雑音、無音)の音源ラベルが付与されている。「音声」の音源ラベルが付与された区間においては、更に発話者の情報が付与されている。図\ref{fig:example_label}は音声の音源ラベルの一例である。また「音声」の音源ラベルをもとに対象の音声データから発話区間を抽出し、それを一発話とした。\par
+パラメータの学習用にニュース番組の音声データ13個を用いる。各音声データには、事前に人手で4種類（音楽、音声、雑音、無音)の音源ラベルが付与されている。「音声」の音源ラベルが付与された区間においては、更に発話者の情報が付与されている。表\ref{fig:example_label}は音声の音源ラベルの一例である。また「音声」の音源ラベルをもとに対象の音声データから発話区間を抽出し、それを一発話とした。\par
 表\ref{table:train_detail}に調査に用いるデータの詳細を示す。\vspace{0.2in}
 
-\begin{figure}[H]
-  \begin{center}
-    \includegraphics{./figure/same_sp.eps}
-  \end{center}
-  \caption{「音声」の音源ラベルの例 \label{fig:example_label}}
-\end{figure}
+
+\begin{table}[H]
+\begin{center}
+\caption{「音声」の音源ラベルの例 \label{fig:example_label}}
+\begin{tabular}{|c|c|}
+\hline
+time      & speaker          \\ \hline
+18.526910 & -1 male1\_INT\_S \\ \hline
+20.793192 & -1 male1\_INT\_E \\ \hline
+21.293665 & -1 male1\_INT\_S \\ \hline
+23.116141 & -1 male1\_INT\_E \\ \hline
+23.654385 & -1 male1\_INT\_S \\ \hline
+26.270058 & -1 male1\_INT\_E \\ \hline
+27.799800 & -1 male\_S       \\ \hline
+29.811134 & -1 male\_E       \\ \hline
+30.368265 & -1 male\_S       \\ \hline
+34.277610 & -1 male\_E       \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
 
 \begin{table}[H]
   \begin{center}
-  \label{table:train_detail}
-    \caption{パラメータの学習用音声データの詳細}
+    \caption{パラメータの学習用音声データの詳細　\label{table:train_detail}}
     \begin{tabular}{|c||c|c|c|} \hline
       データID & 収録時間 & 話者数 & 全発話数 \\ \hline
       ニュースA & 30分3秒 & 20 & 337 \\ \hline

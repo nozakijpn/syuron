@@ -35,3 +35,6 @@ x = y_1 + z_2
 
 \vspace{0.2in}
 \noindent{\textbf{\underline{言語モデル}}}\par
+
+\cite{name}
+\bibitem{name}aaa
