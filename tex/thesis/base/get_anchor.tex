@@ -5,7 +5,7 @@
 本節では、\ref{chapter:connect_sp}節の手法1で得られたi-vectorを用いてアンカーの発話区間検出を行う。i-vectorを用いたアンカーの発話区間抽出方法を\ref{section:clustering}節に示す。
 
 \subsection{評価方法}
-評価は、正解ラベルを用いて検出された話者の発話区間と比較して行う。
+評価は、検出されたアンカーの発話区間と正解ラベルを比較して行う。
 
 \begin{table}[H]
 \begin{center}
@@ -40,6 +40,103 @@ F = \frac{1}{\frac{1}{P} + \frac{1}{R}}
 \end{equation}
 
 ここで$P$と$R$はそれぞれ適合率、再現率を表す。本研究では、評価方法として適合率、再現率、$F$値を用いる。
-\subsection{実験結果}
 
+また、検出したアンカーの発話区間の割合を式のように定義して評価する。
+
+\begin{equation}
+\label{calc:anchor_acc}
+Acc_{anchor} = \frac{TP * 発話区間の時間数}{(TP + FN) * 発話区間の時間数}
+\end{equation}
+
+\subsection{実験結果}
+アンカーの発話区間検出精度を以下に示す。
+
+\begin{table}[H]
+  \begin{center}
+    \caption{アンカーの発話区間検出精度($Th_{time}=0.8)$ \label{table:result_get_anchor08}}
+    \begin{tabular}{|c||c|c|c|c|} \hline
+      $Th_{cos}$ & $Recall$ & $Precision$ & $F-measure$ & $Acc_{time}$\\ \hline
+
+
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\begin{table}[H]
+  \begin{center}
+    \caption{アンカーの発話区間検出精度($Th_{time}=0.9$) \label{table:result_get_anchor09}}
+    \begin{tabular}{|c||c|c|c|c|} \hline
+      $Th_{cos}$ & $Recall$ & $Precision$ & $F-measure$ & $Acc_{time}$\\ \hline
+
+
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\begin{table}[H]
+  \begin{center}
+    \caption{アンカーの発話区間検出精度($Th_{time}=1.0$) \label{table:result_get_anchor10}}
+    \begin{tabular}{|c||c|c|c|c|} \hline
+      $Th_{cos}$ & $Recall$ & $Precision$ & $F-measure$ & $Acc_{time}$\\ \hline
+
+
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\begin{table}[H]
+  \begin{center}
+    \caption{アンカーの発話区間検出精度($Th_{time}=1.1$) \label{table:result_get_anchor11}}
+    \begin{tabular}{|c||c|c|c|c|} \hline
+      $Th_{cos}$ & $Recall$ & $Precision$ & $F-measure$ & $Acc_{time}$\\ \hline
+
+
+    \end{tabular}
+  \end{center}
+\end{table}
+
+
+\begin{table}[H]
+  \begin{center}
+    \caption{アンカーの発話区間検出精度($Th_{time}=1.2$) \label{table:result_get_anchor12}}
+    \begin{tabular}{|c||c|c|c|c|} \hline
+      $Th_{cos}$ & $Recall$ & $Precision$ & $F-measure$ & $Acc_{time}$\\ \hline
+
+
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\begin{table}[H]
+  \begin{center}
+    \caption{アンカーの発話区間検出精度($Th_{time}=1.3$) \label{table:result_get_anchor13}}
+    \begin{tabular}{|c||c|c|c|c|} \hline
+      $Th_{cos}$ & $Recall$ & $Precision$ & $F-measure$ & $Acc_{time}$\\ \hline
+
+
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\begin{table}[H]
+  \begin{center}
+    \caption{アンカーの発話区間検出精度($Th_{time}=1.4$) \label{table:result_get_anchor14}}
+    \begin{tabular}{|c||c|c|c|c|} \hline
+      $Th_{cos}$ & $Recall$ & $Precision$ & $F-measure$ & $Acc_{time}$\\ \hline
+
+
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\begin{table}[H]
+  \begin{center}
+    \caption{アンカーの発話区間検出精度($Th_{time}=1.5$) \label{table:result_get_anchor15}}
+    \begin{tabular}{|c||c|c|c|c|} \hline
+      $Th_{cos}$ & $Recall$ & $Precision$ & $F-measure$ & $Acc_{time}$\\ \hline
+
+
+    \end{tabular}
+  \end{center}
+\end{table}
 \subsection{考察}

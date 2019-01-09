@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.12.11)  8 JAN 2019 15:42
+This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.12.11)  9 JAN 2019 11:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -350,7 +350,7 @@ File: ./figure/same_sp.eps Graphic file (type eps)
 
 ] [25]
 第 6 章
-(./base/connect_sp.tex [26
+(./base/search_speech_time.tex) (./base/connect_sp.tex [26
 
 ]
 
@@ -389,7 +389,7 @@ LaTeX Warning: Command \textcircled invalid in math mode on input line 39.
 
 LaTeX Warning: Command \textcircled invalid in math mode on input line 39.
 
-[27] [28]) (./base/get_anchor.tex [29]) (./base/speach_recog.tex [30]
+[27] [28]) (./base/get_anchor.tex [29] [30]) (./base/speach_recog.tex [31]
 File: ./figure/flow_train_dnn.eps Graphic file (type eps)
 
 <./figure/flow_train_dnn.eps>
@@ -397,28 +397,29 @@ Overfull \hbox (5.58249pt too wide) in paragraph at lines 39--40
  [] 
  []
 
-[31]
+[32]
 File: ./figure/used_onso.eps Graphic file (type eps)
  <./figure/used_onso.eps>
 Overfull \hbox (4.9784pt too wide) in paragraph at lines 73--74
  [] 
  []
 
+[33]
 File: ./figure/kana_onso.eps Graphic file (type eps)
-<./figure/kana_onso.eps>
+ <./figure/kana_onso.eps>
 Overfull \hbox (7.08626pt too wide) in paragraph at lines 81--82
  [] 
  []
 
-[32] [33]
+[34] [35]
 File: ./figure/kakiokosi.eps Graphic file (type eps)
- <./figure/kakiokosi.eps> [34])) (./matome.tex [35]
+ <./figure/kakiokosi.eps> [36])) (./matome.tex [37]
 第 7 章
-) (./ack.tex [36
+) (./ack.tex [38
 
-]) (./ref.tex [37
+]) (./ref.tex [39
 
-]) [38
+]) [40
 
 ] (./thesis.aux)
 
@@ -431,12 +432,12 @@ LaTeX Warning: There were multiply-defined labels.
 ### simple group (level 1) entered at line 86 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 2298 strings out of 493281
- 28778 string characters out of 6145040
+ 2310 strings out of 493281
+ 29085 string characters out of 6145040
  98528 words of memory out of 5000000
- 6105 multiletter control sequences out of 15000+600000
+ 6114 multiletter control sequences out of 15000+600000
  25700 words of font info for 103 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  28i,17n,27p,879b,401s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.dvi (43 pages, 143452 bytes).
+Output written on thesis.dvi (45 pages, 151400 bytes).
