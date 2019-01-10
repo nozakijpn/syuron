@@ -29,36 +29,34 @@
 \contentsline {chapter}{\numberline {第4章}i-vectorを用いたアンカーの発話区間検出手法および音声認識とその課題}{23}
 \contentsline {section}{\numberline {4.1}i-vectorを用いたアンカーの発話区間検出手法\cite {nozaki_gakuseikai}}{23}
 \contentsline {section}{\numberline {4.2}i-vectorを用いた音声認識手法}{23}
-\contentsline {section}{\numberline {4.3}課題}{23}
-\contentsline {chapter}{\numberline {第5章}i-vectorの抽出精度向上のための発話区間結合手法}{24}
-\contentsline {section}{\numberline {5.1}発話間の時間情報を考慮した発話区間の結合手法}{24}
-\contentsline {section}{\numberline {5.2}発話環境を考慮した発話区間の結合手法}{24}
-\contentsline {chapter}{\numberline {第6章}実験}{26}
-\contentsline {section}{\numberline {6.1}使用する音声データ}{26}
-\contentsline {subsection}{\numberline {6.1.1}学習データ}{26}
-\contentsline {subsection}{\numberline {6.1.2}評価データ}{29}
-\contentsline {section}{\numberline {6.2}発話区間検出実験}{29}
-\contentsline {subsection}{\numberline {6.2.1}実験方法}{29}
-\contentsline {subsection}{\numberline {6.2.2}評価方法}{29}
-\contentsline {subsection}{\numberline {6.2.3}実験結果}{30}
-\contentsline {subsection}{\numberline {6.2.4}考察}{30}
-\contentsline {section}{\numberline {6.3}発話区間の結合実験}{30}
-\contentsline {subsection}{\numberline {6.3.1}実験方法}{30}
-\contentsline {subsection}{\numberline {6.3.2}評価方法}{31}
-\contentsline {subsection}{\numberline {6.3.3}実験結果}{31}
-\contentsline {subsection}{\numberline {6.3.4}考察}{32}
-\contentsline {section}{\numberline {6.4}アンカーの発話群検出実験}{32}
-\contentsline {subsection}{\numberline {6.4.1}実験方法}{33}
-\contentsline {subsection}{\numberline {6.4.2}評価方法}{33}
-\contentsline {subsection}{\numberline {6.4.3}実験結果}{33}
-\contentsline {subsection}{\numberline {6.4.4}考察}{35}
-\contentsline {section}{\numberline {6.5}アンカーの発話区間の音声認識実験}{35}
-\contentsline {subsection}{\numberline {6.5.1}実験方法}{35}
-\contentsline {subsection}{\numberline {6.5.2}音響モデルの仕様}{35}
-\contentsline {subsection}{\numberline {6.5.3}言語モデル・単語辞書の仕様}{37}
-\contentsline {subsection}{\numberline {6.5.4}評価方法}{38}
-\contentsline {subsection}{\numberline {6.5.5}実験結果}{39}
-\contentsline {subsection}{\numberline {6.5.6}考察}{39}
-\contentsline {chapter}{\numberline {第7章}結論}{40}
-\contentsline {chapter}{謝辞}{41}
-\contentsline {chapter}{参考文献}{42}
+\contentsline {section}{\numberline {4.3}課題}{24}
+\contentsline {chapter}{\numberline {第5章}i-vectorの抽出精度向上のための発話区間結合手法}{25}
+\contentsline {section}{\numberline {5.1}発話間の時間情報を考慮した発話区間の結合手法}{25}
+\contentsline {section}{\numberline {5.2}発話環境を考慮した発話区間の結合手法}{25}
+\contentsline {chapter}{\numberline {第6章}実験}{27}
+\contentsline {section}{\numberline {6.1}使用する音声データ}{27}
+\contentsline {section}{\numberline {6.2}発話区間検出実験}{27}
+\contentsline {subsection}{\numberline {6.2.1}実験方法}{27}
+\contentsline {subsection}{\numberline {6.2.2}評価方法}{27}
+\contentsline {subsection}{\numberline {6.2.3}実験結果}{28}
+\contentsline {subsection}{\numberline {6.2.4}考察}{28}
+\contentsline {section}{\numberline {6.3}発話区間の結合実験}{28}
+\contentsline {subsection}{\numberline {6.3.1}実験方法}{29}
+\contentsline {subsection}{\numberline {6.3.2}評価方法}{29}
+\contentsline {subsection}{\numberline {6.3.3}実験結果}{29}
+\contentsline {subsection}{\numberline {6.3.4}考察}{30}
+\contentsline {section}{\numberline {6.4}アンカーの発話群検出実験}{31}
+\contentsline {subsection}{\numberline {6.4.1}実験方法}{31}
+\contentsline {subsection}{\numberline {6.4.2}評価方法}{31}
+\contentsline {subsection}{\numberline {6.4.3}実験結果}{32}
+\contentsline {subsection}{\numberline {6.4.4}考察}{34}
+\contentsline {section}{\numberline {6.5}アンカーの発話区間の音声認識実験}{34}
+\contentsline {subsection}{\numberline {6.5.1}実験方法}{34}
+\contentsline {subsection}{\numberline {6.5.2}音響モデルの仕様}{34}
+\contentsline {subsection}{\numberline {6.5.3}言語モデル・単語辞書の仕様}{39}
+\contentsline {subsection}{\numberline {6.5.4}評価方法}{40}
+\contentsline {subsection}{\numberline {6.5.5}実験結果}{40}
+\contentsline {subsection}{\numberline {6.5.6}考察}{40}
+\contentsline {chapter}{\numberline {第7章}結論}{41}
+\contentsline {chapter}{謝辞}{42}
+\contentsline {chapter}{参考文献}{43}

@@ -12,10 +12,10 @@
 \contentsline {figure}{\numberline {3.6}{\ignorespaces 非常に短い音声データから抽出した異なる話者間のi-vectorのコサイン類似度 }}{22}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces 同一話者間の非発話区間の時間情報 }}{25}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces 同一話者間の非発話区間の時間情報 }}{25}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces 同一話者間の非発話区間の時間情報 }}{26}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces 同一話者間の非発話区間の時間情報 }}{26}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces 各話者クラスタに含まれる発話データ数 }}{35}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces DNNを用いる際の学習の流れ }}{37}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces 書き起こしテキストの例 }}{38}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces 各話者クラスタに含まれる発話データ数 }}{34}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces DNNを用いる際の学習の流れ }}{36}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces 書き起こしテキストの例 }}{39}
 \addvspace {10\p@ }
