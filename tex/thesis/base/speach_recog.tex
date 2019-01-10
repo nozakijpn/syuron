@@ -1,8 +1,19 @@
 \section{アンカーの発話区間の音声認識実験}
 
 \subsection{実験方法}
+本実験では、\ref{section:yoshimura_pre_clustering}節で述べた話者クラスタを作成、音響モデルを作成して音声認識実験を行う。各話者クラスタに含まれる男女の発話データ数を図\ref{fig:yoshimura_kikouzou}に示す。
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics{./figure/kakiokosi.eps}
+  \end{center}
+  \caption{各話者クラスタに含まれる発話データ数 \label{fig:yoshimura_kikouzou}}
+\end{figure}
+
+本実験で使用した音響モデル、言語モデル、単語辞書の仕様は\ref{section:experiment_acoustic_model}節、\ref{section:experiment_language_model}節で述べる。
 
 \subsection{音響モデルの仕様}
+\label{section:experiment_acoustic_model}
 本実験で用いたDNN-HMM音響モデルの仕様を表\ref{table:acoustic_model_detail}に示す。この仕様に関しては小島らの研究\cite{kojima}で使用されたもので、状態数は3000、音響特徴の次元数は39次元(表\ref{acoustic_model_feature})、隠れ層の数は6層、各層における繰り返し学習数は5回、隠れ層のノード数は1024とした。以下に、DNNを用いた際の学習の手順を示す。
 
 \begin{table}[H]
@@ -46,6 +57,7 @@ DNNを用いた音響モデルの構築や、この音響モデルを用いた�
 
 
 \subsection{言語モデル・単語辞書の仕様}
+\label{section:experiment_language_model}
 言語モデルはトライグラムモデルを構築した。以下、使用した学習テキストを説明する。
 
 \vspace{0.2in}\noindent{\textbf{\underline{CSJ}}}\par

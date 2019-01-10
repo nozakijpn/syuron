@@ -20,35 +20,33 @@
 \end{center}
 \end{table}
 
-表\ref{table:clustering}が得られると$P$（適合率（Precision））と$R$（再現率（Recall））は式\ref{calc:precision}と式\ref{calc:recall}のようにそれぞれ定義できる。
+表\ref{table:clustering}を用いて、$P$（適合率（Precision））と$R$（再現率（Recall））を式\ref{calc:precision2}と式\ref{calc:recall2}のようにそれぞれ定義する。また、$F$値（$F-measure$）を式\ref{calc:fmeasure2}のように定義する。
 
 \begin{equation}
-\label{calc:precision}
+\label{calc:precision2}
 P = \frac{TP}{TP + FP}
 \end{equation}
 
 \begin{equation}
-\label{calc:recall}
+\label{calc:recall2}
 R = \frac{TP}{TP + FN}
 \end{equation}
 
-すなわち、適合率とは識別結果にどれだけ「ゴミ」がないかを表している。一方、再現率は識別にどれだけ「漏れ」がないかを表している。一方、したがって、適合率と再現率は大きい値ほど性能がよいことになる。ここで、2つのシステムを比較する場合は1次元のスカラ値によって、2値的な判断ができたほうが便利である。適合率と再現率をひとつのスカラ値に変換する手法として$F$値（$F-measure$）がある。
-
 \begin{equation}
-\label{calc:fmeasure}
+\label{calc:fmeasure2}
 F = \frac{1}{\frac{1}{P} + \frac{1}{R}}
 \end{equation}
 
 ここで$P$と$R$はそれぞれ適合率、再現率を表す。
 
-また、検出したアンカーの発話区間の割合を式のように定義して評価する。
+また、検出したアンカーの発話区間の割合を式\ref{calc:anchor_acc}のように定義して評価する。
 
 \begin{equation}
 \label{calc:anchor_acc}
 Acc_{time} = \frac{検出したアンカーの発話区間の時間数}{アンカーの発話区間の時間数}
 \end{equation}
 
-本研究では、評価方法として適合率、再現率、$F$値、$Acc_{time}$を用いる。
+本実験では、評価方法として適合率、再現率、$F$値、$Acc_{time}$を用いる。
 
 \subsection{実験結果}
 アンカーの発話区間検出精度を以下に示す。

@@ -1,5 +1,57 @@
 \section{発話区間検出実験}
 \subsection{実験方法}
+\ref{section:devide_audio}で述べた音源分離を用いて、\ref{section:test_audio}節で述べた5つのニュース番組音声の発話区間検出を行う。
 \subsection{評価方法}
+評価は、検出された発話区間と正解ラベルを比較して行う。
+
+\begin{table}[H]
+\begin{center}
+    \caption{検出した発話区間の正誤判定 \label{table:search_table}}
+\begin{tabular}{|c|c|c|c|l}
+\cline{1-4}
+\multicolumn{2}{|c|}{\multirow{2}{*}{}} & \multicolumn{2}{c|}{「音声」のラベルが付与された区間} &  \\ \cline{3-4}
+\multicolumn{2}{|c|}{}                  & 発話区間        & 発話区間以外        &  \\ \cline{1-4}
+\multirow{2}{*}{判定結果}        & 正        & $TP$                  & $FP$                   &  \\ \cline{2-4}
+& 誤        & $FN$                  & $TN$                   &  \\ \cline{1-4}
+\end{tabular}
+\end{center}
+\end{table}
+
+表\ref{table:search_table}が得られると$P$（適合率（Precision））と$R$（再現率（Recall））は式\ref{calc:precision}と式\ref{calc:recall}のようにそれぞれ定義できる。
+
+\begin{equation}
+\label{calc:precision}
+P = \frac{TP}{TP + FP}
+\end{equation}
+
+\begin{equation}
+\label{calc:recall}
+R = \frac{TP}{TP + FN}
+\end{equation}
+
+すなわち、適合率とは識別結果にどれだけ「ゴミ」がないかを表している。一方、再現率は識別にどれだけ「漏れ」がないかを表している。一方、したがって、適合率と再現率は大きい値ほど性能がよいことになる。ここで、2つのシステムを比較する場合は1次元のスカラ値によって、2値的な判断ができたほうが便利である。適合率と再現率をひとつのスカラ値に変換する手法として$F$値（$F-measure$）がある。
+
+\begin{equation}
+\label{calc:fmeasure}
+F = \frac{1}{\frac{1}{P} + \frac{1}{R}}
+\end{equation}
+
+ここで$P$と$R$はそれぞれ適合率、再現率を表す。\par
+本実験では、評価方法として適合率、再現率、$F$値を用いる。
 \subsection{実験結果}
+表\ref{table:test_detail_RPF}に音源識別による発話区間検出精度を示す。
+
+\begin{table}[H]
+  \begin{center}
+    \caption{発話区間検出精度$[\%]$ \label{table:test_detail_RPF}}
+    \begin{tabular}{|c||c|c|c|} \hline
+      データID & Recall & Precision & F-meature \\ \hline
+      ニュース1 & 89.49 & 91.60 & 90.53 \\ \hline
+      ニュース2 & 84.09 & 95.54 & 89.45\\ \hline
+      ニュース3 & 88.30 & 85.99 & 87.13 \\ \hline
+      ニュース4 & 90.06 & 83.33 & 86.56\\ \hline
+      ニュース5 & 90.95 & 90.30 & 90.63\\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
 \subsection{考察}
