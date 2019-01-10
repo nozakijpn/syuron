@@ -27,7 +27,7 @@
 \contentsline {subsection}{\numberline {3.2.3}長い音声データから抽出したi-vectorの性質}{19}
 \contentsline {subsection}{\numberline {3.2.4}非常に短い音声データから抽出したi-vectorの性質}{21}
 \contentsline {chapter}{\numberline {第4章}i-vectorを用いたアンカーの発話区間検出手法および音声認識とその課題}{23}
-\contentsline {section}{\numberline {4.1}i-vectorを用いたアンカーの発話区間検出手法\cite {nozaki_gakuseikai}}{23}
+\contentsline {section}{\numberline {4.1}i-vectorを用いたアンカーの発話区間検出手法}{23}
 \contentsline {section}{\numberline {4.2}i-vectorを用いた音声認識手法}{23}
 \contentsline {section}{\numberline {4.3}課題}{24}
 \contentsline {chapter}{\numberline {第5章}i-vectorの抽出精度向上のための発話区間結合手法}{25}
