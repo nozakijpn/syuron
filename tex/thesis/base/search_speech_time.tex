@@ -1,6 +1,19 @@
 \section{発話区間検出実験}
 \subsection{実験方法}
 \ref{section:devide_audio}で述べた音源分離を用いて、\ref{section:test_audio}節で述べた5つのニュース番組音声の発話区間検出を行う。
+表\ref{table:detail_identification_method}は音源識別の実験条件である。
+
+\begin{table}[H]
+  \begin{center}
+    \caption{音源識別実験の実験条件 \label{table:detail_identification_method}}
+    \begin{tabular}{|c||c|} \hline
+      FFTの窓幅(フレーム長) & 2048point(約0.046[sec])   \\ \hline
+      FFTのシフト幅(フレーム間隔) &  2048point(約0.023[sec]) \\ \hline
+      窓関数 & ハミング窓  \\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
 \subsection{評価方法}
 評価は、検出された発話区間と正解ラベルを比較して行う。
 
@@ -54,4 +67,8 @@ F = \frac{1}{\frac{1}{P} + \frac{1}{R}}
     \end{tabular}
   \end{center}
 \end{table}
+
+ニュース番組によって発話区間の検出精度に差が生じた。ニュース2は$Recall$が低く、ニュース3とニュース4では$Precision$が低い結果となった。
+
 \subsection{考察}
+発話区間検出の誤識別が発生した大きな理由として、発話区間と雑音の区別が難しいためであると考えられる。人間が発話区間であると認識するには、「人の声」+「意味」の両方が必要である。「音声」の音源ラベルも明確な意味を持つ「人の声」が存在する範囲にのみ付与されている。しかし、本実験で用いた音源識別のシステムでは音響的特徴のみを考慮しているため「人の声」の判別は可能であるが、「意味」が存在するか否かの判別は不可能である。以上の理由により、発話区間を正確に検出できなかったと考えられる。
