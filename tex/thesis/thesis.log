@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.12.11)  13 JAN 2019 22:35
+This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.12.11)  14 JAN 2019 23:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -406,22 +406,22 @@ Overfull \hbox (5.58249pt too wide) in paragraph at lines 50--51
  [] 
  []
 
-[38]
+[38] [39]
 File: ./figure/kana_onso.eps Graphic file (type eps)
  <./figure/kana_onso.eps>
 Overfull \hbox (7.08626pt too wide) in paragraph at lines 99--100
  [] 
  []
 
-[39] [40]
+[40] [41]
 File: ./figure/kakiokosi.eps Graphic file (type eps)
- <./figure/kakiokosi.eps> [41])) (./matome.tex [42]
+ <./figure/kakiokosi.eps> [42])) (./matome.tex [43]
 第 7 章
-) (./ack.tex [43
+) (./ack.tex [44
 
-]) (./ref.tex [44
+]) (./ref.tex [45
 
-]) [45
+]) [46
 
 ] (./thesis.aux)
 
@@ -434,12 +434,12 @@ LaTeX Warning: There were multiply-defined labels.
 ### simple group (level 1) entered at line 86 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 2331 strings out of 493281
- 29539 string characters out of 6145040
+ 2332 strings out of 493281
+ 29572 string characters out of 6145040
  100528 words of memory out of 5000000
- 6137 multiletter control sequences out of 15000+600000
+ 6138 multiletter control sequences out of 15000+600000
  25700 words of font info for 103 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  28i,17n,27p,890b,407s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.dvi (50 pages, 174672 bytes).
+Output written on thesis.dvi (51 pages, 177000 bytes).

@@ -2,7 +2,22 @@
 本節では、i-vectorを用いてアンカーの発話区間検出を行う。
 \label{chapter:get_anchor}
 \subsection{実験方法}
-本節では、\ref{chapter:connect_sp}節の手法1で得られたi-vectorを用いてアンカーの発話区間検出を行う。i-vectorを用いたアンカーの発話区間抽出方法を\ref{section:clustering}節に示す。
+本節では、\ref{chapter:connect_sp}節の手法1で得られたi-vectorを用いてアンカーの発話区間検出を行う。i-vectorを用いたアンカーの発話区間抽出は\ref{section:clustering}節の手法を用いる。$Th_{cos}$は0.8から1.5までの範囲を0.1刻みで検証を行う。また、Baselineとしてi-vectorの再抽出を行わずにアンカーの発話区間検出を行う。\par
+使用するパラメータを以下に示す。
+
+\begin{table}[H]
+  \begin{center}
+    \caption{アンカーの発話区間検出に用いる特徴パラメータ \label{table:detail_feature_get_anchor}}
+    \begin{tabular}{|c||c|c|c|c|} \hline
+      $Th_{cos}$ & $Recall$ & $Precision$ & $F-measure$ & $Acc_{time}$\\ \hline
+0.5 & 0.836 & 0.632 & 0.720 & 0.794 \\ \hline
+0.6 & 0.812 & 0.768 & 0.789 & 0.774 \\ \hline
+0.7 & 0.778 & 0.866 & 0.820 & 0.747 \\ \hline
+0.8 & 0.656 & 0.920 & 0.766 & 0.655 \\ \hline
+
+    \end{tabular}
+  \end{center}
+\end{table}
 
 \subsection{評価方法}
 評価は、検出されたアンカーの発話区間と正解ラベルを比較して行う。
@@ -179,4 +194,5 @@ Acc_{time} = \frac{検出したアンカーの発話区間の時間数}{アン�
 提案手法での発話区間検出精度の中では、$Th_{time}$が1.0かつ、$Th_{cos}$が0.7のとき、F値が最大となった。また、$Th_{cos}$が小さい時には$Recall$が高く、大きい時には$Precision$が高くなる傾向が全ての$Th_{time}$の閾値の場合で確認された。
 
 \subsection{考察}
-$Th_{time}$によって$F-measure$の大きな変化は確認できなかった。
+Baselineの発話区間検出精度と比較して、再抽出したi-vectorを用いた手法の方が$Th_{cos}$の閾値を高くした時精度が向上している。このことから、i-vectorの抽出精度が向上したと考えられる。\par
+再抽出したi-vectorを用いた手法の$Th_{time}$を変更した場合を比較した場合、明確な違いは見られなかった。
