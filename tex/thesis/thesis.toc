@@ -49,7 +49,7 @@
 \contentsline {section}{\numberline {6.4}アンカーの発話群検出実験}{33}
 \contentsline {subsection}{\numberline {6.4.1}実験方法}{33}
 \contentsline {subsection}{\numberline {6.4.2}評価方法}{34}
-\contentsline {subsection}{\numberline {6.4.3}実験結果}{35}
+\contentsline {subsection}{\numberline {6.4.3}実験結果}{34}
 \contentsline {subsection}{\numberline {6.4.4}考察}{37}
 \contentsline {section}{\numberline {6.5}アンカーの発話区間の音声認識実験}{37}
 \contentsline {subsection}{\numberline {6.5.1}実験方法}{37}
