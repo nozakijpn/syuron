@@ -2,11 +2,11 @@
 \label{section:pre_cos}
 発話データの長さを変更してi-vectorを抽出、コサイン類似度を算出してヒストグラムにすることで、発話の長さによるi-vectorの性質を調査する。
 \subsection{使用する音声データ}
-本研究では、UBMモデルの学習データおよびコサイン類似度を用いたi-vectorの性質の調査に読み上げ音声\cite{ATR}を使用した。
+本研究では、UBMモデルの学習データおよびコサイン類似度を用いたi-vectorの性質の調査に読み上げ音声\cite{ATR}を使用した。読み上げ音声には、男女各110人×50発話分が収録されている。
 
 \subsection{コサイン類似度の算出条件}
 対象の音声データからある発話を取り出し、それ以外の発話とのi-vectorのコサイン類似度を算出する。それを同一話者の発話間の場合と異なる話者の発話間の2つの場合に分けてヒストグラムに表し、コサイン類似度の性質の調査を行った。\par
-i-vectorの抽出に使用するUBMモデルの学習には読み上げ音声\cite{ATR}を使用し、発話から抽出する音響特徴パラメータを表\ref{iv_feature}に示す。また混合数は32とした。
+i-vectorの抽出に使用するUBMモデルの学習には読み上げ音声\cite{ATR}を使用する。読み上げ音声に収録されている各発話データからi-vectorを抽出する。発話データから抽出する音響特徴パラメータを表\ref{iv_feature}に示す。また混合数は32とした。
 
 \begin{table}[H]
   \begin{center}
@@ -14,11 +14,11 @@ i-vectorの抽出に使用するUBMモデルの学習には読み上げ音声\ci
     \label{iv_feature}
     \begin{tabular}{|c||c|} \hline
       特徴量 & 次元数\\ \hline
-      MFCC & 19  \\ \hline
-      POW & 1  \\ \hline
-      $\Delta$MFCC & 19 \\ \hline
-      $\Delta$POW & 1 \\ \hline
-      $\Delta\Delta$MFCC & 19 \\ \hline
+      MFCC & 19  \\ 
+      POW & 1  \\ 
+      $\Delta$MFCC & 19 \\ 
+      $\Delta$POW & 1 \\ 
+      $\Delta\Delta$MFCC & 19 \\ 
       $\Delta\Delta$POW & 1 \\ \hline
       計 & 60 \\ \hline
     \end{tabular}

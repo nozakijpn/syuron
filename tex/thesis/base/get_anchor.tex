@@ -2,8 +2,24 @@
 本節では、i-vectorを用いてアンカーの発話区間検出を行う。
 \label{chapter:get_anchor}
 \subsection{実験方法}
-本節では、\ref{chapter:connect_sp}節の手法1で得られたi-vectorを用いてアンカーの発話区間検出を行う。i-vectorを用いたアンカーの発話区間抽出は\ref{section:clustering}節の手法を用いる。$Th_{cos}$は0.8から1.5までの範囲を0.1刻みで検証を行う。また、Baselineとしてi-vectorの再抽出を行わずにアンカーの発話区間検出を行う。\par
-使用するパラメータを以下に示す。
+本節では、\ref{chapter:connect_sp}節の手法1で結合した発話区間から再抽出したi-vectorを用いてアンカーの発話区間検出を行う。i-vectorを用いたアンカーの発話区間抽出は\ref{section:clustering}節の手法を用いる。$Th_{cos}$は0.8から1.5までの範囲を0.1刻みで検証を行う。また、Baselineとしてi-vectorの再抽出を行わずにアンカーの発話区間検出を行う。\par
+i-vectorの抽出には、ALIZEとLIR　RALを用いる。i-vectorの抽出に使用するUBMモデルの学習には読み上げ音声\cite{ATR}を使用する。読み上げ音声に収録されている各発話データからi-vectorを抽出する。発話データから抽出する音響特徴パラメータを表\ref{iv_feature2}に示す。また混合数は32とした。
+
+\begin{table}[H]
+  \begin{center}
+    \caption{使用する音響特徴パラメータ \label{iv_feature2}}
+    \begin{tabular}{|c||c|} \hline
+      特徴量 & 次元数\\ \hline
+      MFCC & 19  \\ 
+      POW & 1  \\ 
+      $\Delta$MFCC & 19 \\ 
+      $\Delta$POW & 1 \\ 
+      $\Delta\Delta$MFCC & 19 \\ 
+      $\Delta\Delta$POW & 1 \\ \hline
+      計 & 60 \\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
 
 \begin{table}[H]
   \begin{center}
