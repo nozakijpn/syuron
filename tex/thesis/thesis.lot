@@ -10,28 +10,28 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces 評価用音声データの詳細 }}{29}
-\contentsline {table}{\numberline {6.2}{\ignorespaces 音源識別実験の実験条件 }}{29}
-\contentsline {table}{\numberline {6.3}{\ignorespaces 検出した発話区間の正誤判定 }}{30}
-\contentsline {table}{\numberline {6.4}{\ignorespaces 発話区間検出精度$[\%]$ }}{30}
-\contentsline {table}{\numberline {6.5}{\ignorespaces 発話区間の結合の正誤判定 }}{31}
-\contentsline {table}{\numberline {6.6}{\ignorespaces 手法1による発話区間の結合結果 }}{32}
-\contentsline {table}{\numberline {6.7}{\ignorespaces 手法2による発話区間の結合結果 }}{32}
-\contentsline {table}{\numberline {6.8}{\ignorespaces 手法3による発話区間の結合結果 }}{32}
-\contentsline {table}{\numberline {6.9}{\ignorespaces 使用する音響特徴パラメータ }}{34}
-\contentsline {table}{\numberline {6.10}{\ignorespaces アンカーの発話区間の正誤判定 }}{34}
-\contentsline {table}{\numberline {6.11}{\ignorespaces アンカーの発話区間検出精度(Baseline) }}{35}
-\contentsline {table}{\numberline {6.12}{\ignorespaces アンカーの発話区間検出精度($Th_{time}=0.8)$ }}{35}
-\contentsline {table}{\numberline {6.13}{\ignorespaces アンカーの発話区間検出精度($Th_{time}=0.9$) }}{35}
-\contentsline {table}{\numberline {6.14}{\ignorespaces アンカーの発話区間検出精度($Th_{time}=1.0$) }}{35}
-\contentsline {table}{\numberline {6.15}{\ignorespaces アンカーの発話区間検出精度($Th_{time}=1.1$) }}{35}
-\contentsline {table}{\numberline {6.16}{\ignorespaces アンカーの発話区間検出精度($Th_{time}=1.2$) }}{36}
-\contentsline {table}{\numberline {6.17}{\ignorespaces アンカーの発話区間検出精度($Th_{time}=1.3$) }}{36}
-\contentsline {table}{\numberline {6.18}{\ignorespaces アンカーの発話区間検出精度($Th_{time}=1.4$) }}{36}
-\contentsline {table}{\numberline {6.19}{\ignorespaces アンカーの発話区間検出精度($Th_{time}=1.5$) }}{36}
-\contentsline {table}{\numberline {6.20}{\ignorespaces 音響モデルの仕様 }}{37}
-\contentsline {table}{\numberline {6.21}{\ignorespaces 使用する音響特徴パラメータ }}{38}
-\contentsline {table}{\numberline {6.22}{\ignorespaces CSJの音声の種類と分量 }}{40}
-\contentsline {table}{\numberline {6.23}{\ignorespaces 使用した音素 }}{40}
-\contentsline {table}{\numberline {6.24}{\ignorespaces カナ音素対応表 }}{41}
+\contentsline {table}{\numberline {6.1}{\ignorespaces CSJの音声の種類と分量 }}{28}
+\contentsline {table}{\numberline {6.2}{\ignorespaces 評価用音声データの詳細 }}{29}
+\contentsline {table}{\numberline {6.3}{\ignorespaces 音源識別実験の実験条件 }}{29}
+\contentsline {table}{\numberline {6.4}{\ignorespaces 検出した発話区間の正誤判定 }}{30}
+\contentsline {table}{\numberline {6.5}{\ignorespaces 発話区間検出精度$[\%]$ }}{30}
+\contentsline {table}{\numberline {6.6}{\ignorespaces 発話区間の結合の正誤判定 }}{31}
+\contentsline {table}{\numberline {6.7}{\ignorespaces 手法1による発話区間の結合結果 }}{32}
+\contentsline {table}{\numberline {6.8}{\ignorespaces 手法2による発話区間の結合結果 }}{32}
+\contentsline {table}{\numberline {6.9}{\ignorespaces 手法3による発話区間の結合結果 }}{32}
+\contentsline {table}{\numberline {6.10}{\ignorespaces 使用する音響特徴パラメータ }}{34}
+\contentsline {table}{\numberline {6.11}{\ignorespaces アンカーの発話区間の正誤判定 }}{34}
+\contentsline {table}{\numberline {6.12}{\ignorespaces アンカーの発話区間検出精度(Baseline) }}{35}
+\contentsline {table}{\numberline {6.13}{\ignorespaces アンカーの発話区間検出精度($Th_{time}=0.8)$ }}{35}
+\contentsline {table}{\numberline {6.14}{\ignorespaces アンカーの発話区間検出精度($Th_{time}=0.9$) }}{35}
+\contentsline {table}{\numberline {6.15}{\ignorespaces アンカーの発話区間検出精度($Th_{time}=1.0$) }}{35}
+\contentsline {table}{\numberline {6.16}{\ignorespaces アンカーの発話区間検出精度($Th_{time}=1.1$) }}{35}
+\contentsline {table}{\numberline {6.17}{\ignorespaces アンカーの発話区間検出精度($Th_{time}=1.2$) }}{36}
+\contentsline {table}{\numberline {6.18}{\ignorespaces アンカーの発話区間検出精度($Th_{time}=1.3$) }}{36}
+\contentsline {table}{\numberline {6.19}{\ignorespaces アンカーの発話区間検出精度($Th_{time}=1.4$) }}{36}
+\contentsline {table}{\numberline {6.20}{\ignorespaces アンカーの発話区間検出精度($Th_{time}=1.5$) }}{36}
+\contentsline {table}{\numberline {6.21}{\ignorespaces 音響モデルの仕様 }}{37}
+\contentsline {table}{\numberline {6.22}{\ignorespaces 使用する音響特徴パラメータ }}{38}
+\contentsline {table}{\numberline {6.23}{\ignorespaces 使用した音素 }}{39}
+\contentsline {table}{\numberline {6.24}{\ignorespaces カナ音素対応表 }}{40}
 \addvspace {10\p@ }
