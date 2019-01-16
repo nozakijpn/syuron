@@ -5,12 +5,11 @@
 \begin{enumerate}
 \item 音声区間: アナウンサーやインタビューの声
 \item 音楽区間: オープニングやエンディングなどの音楽、BGM
-\item 背景雑音区間: 自動車走行音や鳥の泣き声
+\item 背景雑音区間: 自動車走行音や鳥の泣き声、喧騒
 \item 無音区間: 音量が極めて小さい区間
 \end{enumerate}
 
-また、音源識別システムは音響データを各種別へ識別するための音響特徴パラメータの分布に混合ガウス分布を用いている。本研究では、混合数8のガウス分布を使用している。本研究の音響特徴パラメータを表\ref{table:feature_devide_audio}、各音源種別の識別性能F 値を表\ref{ad_F} に示す。ただし、表の評価値とは、音源種別間のデータ数を考慮するために、各音源種別のF 値に各音源種別の割合をかけ、合計したものである。
-
+また、音源識別システムは音響データを各種別へ識別するための音響特徴パラメータの分布に混合ガウス分布を用いている。本研究では、混合数8のガウス分布を使用している。本研究の音響特徴パラメータを表\ref{table:feature_devide_audio}に示す。
 \begin{table}[H]
   \begin{center}
     \caption{音源識別のための音響特徴パラメータ}
@@ -23,23 +22,6 @@
     \end{tabular}
   \end{center}
 \end{table}
-
-\begin{table}[H]
-  \begin{center}
-    \caption{音源識別システムのF値}
-    \label{ad_F}
-    \begin{tabular}{|c||c|} \hline
-       & F値$[\%]$\\ \hline
-      Speech & 94.84  \\ \hline
-      Music & 83.32 \\ \hline
-      Noise & 63.73  \\ \hline
-      Pause & 77.43 \\ \hline
-      評価値 & 87.19 \\ \hline
-    \end{tabular}
-  \end{center}
-\end{table}
-
-
 
 以下に、音源識別のためのスペクトル解析と音響特徴パラメータについて説明する。\par
 

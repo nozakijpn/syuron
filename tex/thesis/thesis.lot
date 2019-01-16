@@ -1,8 +1,7 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {2.1}{\ignorespaces 音源識別のための音響特徴パラメータ}}{4}
-\contentsline {table}{\numberline {2.2}{\ignorespaces 音源識別システムのF値}}{4}
-\contentsline {table}{\numberline {2.3}{\ignorespaces 単語辞書の例}}{12}
+\contentsline {table}{\numberline {2.2}{\ignorespaces 単語辞書の例}}{11}
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {3.1}{\ignorespaces 「音声」の音源ラベルの例 }}{16}
 \contentsline {table}{\numberline {3.2}{\ignorespaces パラメータの学習用音声データの詳細　}}{17}
@@ -14,24 +13,28 @@
 \contentsline {table}{\numberline {6.2}{\ignorespaces 評価用音声データの詳細 }}{29}
 \contentsline {table}{\numberline {6.3}{\ignorespaces 音源識別実験の実験条件 }}{29}
 \contentsline {table}{\numberline {6.4}{\ignorespaces 検出した発話区間の正誤判定 }}{30}
-\contentsline {table}{\numberline {6.5}{\ignorespaces 発話区間検出精度$[\%]$ }}{30}
-\contentsline {table}{\numberline {6.6}{\ignorespaces 発話区間の結合の正誤判定 }}{31}
-\contentsline {table}{\numberline {6.7}{\ignorespaces 手法1による発話区間の結合結果 }}{32}
-\contentsline {table}{\numberline {6.8}{\ignorespaces 手法2による発話区間の結合結果 }}{32}
-\contentsline {table}{\numberline {6.9}{\ignorespaces 手法3による発話区間の結合結果 }}{32}
-\contentsline {table}{\numberline {6.10}{\ignorespaces 使用する音響特徴パラメータ }}{34}
-\contentsline {table}{\numberline {6.11}{\ignorespaces アンカーの発話区間の正誤判定 }}{34}
-\contentsline {table}{\numberline {6.12}{\ignorespaces アンカーの発話区間検出精度(Baseline) }}{35}
-\contentsline {table}{\numberline {6.13}{\ignorespaces アンカーの発話区間検出精度($Th_{time}=0.8)$ }}{35}
-\contentsline {table}{\numberline {6.14}{\ignorespaces アンカーの発話区間検出精度($Th_{time}=0.9$) }}{35}
-\contentsline {table}{\numberline {6.15}{\ignorespaces アンカーの発話区間検出精度($Th_{time}=1.0$) }}{35}
-\contentsline {table}{\numberline {6.16}{\ignorespaces アンカーの発話区間検出精度($Th_{time}=1.1$) }}{35}
-\contentsline {table}{\numberline {6.17}{\ignorespaces アンカーの発話区間検出精度($Th_{time}=1.2$) }}{36}
-\contentsline {table}{\numberline {6.18}{\ignorespaces アンカーの発話区間検出精度($Th_{time}=1.3$) }}{36}
-\contentsline {table}{\numberline {6.19}{\ignorespaces アンカーの発話区間検出精度($Th_{time}=1.4$) }}{36}
-\contentsline {table}{\numberline {6.20}{\ignorespaces アンカーの発話区間検出精度($Th_{time}=1.5$) }}{36}
-\contentsline {table}{\numberline {6.21}{\ignorespaces 音響モデルの仕様 }}{37}
-\contentsline {table}{\numberline {6.22}{\ignorespaces 使用する音響特徴パラメータ }}{38}
-\contentsline {table}{\numberline {6.23}{\ignorespaces 使用した音素 }}{39}
-\contentsline {table}{\numberline {6.24}{\ignorespaces カナ音素対応表 }}{40}
+\contentsline {table}{\numberline {6.5}{\ignorespaces 発話区間検出精度 }}{31}
+\contentsline {table}{\numberline {6.6}{\ignorespaces 音楽区間検出精度 }}{31}
+\contentsline {table}{\numberline {6.7}{\ignorespaces 背景雑音区間検出精度 }}{32}
+\contentsline {table}{\numberline {6.8}{\ignorespaces 無音区間検出精度 }}{32}
+\contentsline {table}{\numberline {6.9}{\ignorespaces 発話区間検出精度 }}{33}
+\contentsline {table}{\numberline {6.10}{\ignorespaces 発話区間の結合の正誤判定 }}{34}
+\contentsline {table}{\numberline {6.11}{\ignorespaces 手法1による発話区間の結合結果 }}{34}
+\contentsline {table}{\numberline {6.12}{\ignorespaces 手法2による発話区間の結合結果 }}{35}
+\contentsline {table}{\numberline {6.13}{\ignorespaces 手法3による発話区間の結合結果 }}{35}
+\contentsline {table}{\numberline {6.14}{\ignorespaces 使用する音響特徴パラメータ }}{36}
+\contentsline {table}{\numberline {6.15}{\ignorespaces アンカーの発話区間の正誤判定 }}{36}
+\contentsline {table}{\numberline {6.16}{\ignorespaces アンカーの発話区間検出精度(Baseline) }}{37}
+\contentsline {table}{\numberline {6.17}{\ignorespaces アンカーの発話区間検出精度($Th_{time}=0.8)$ }}{37}
+\contentsline {table}{\numberline {6.18}{\ignorespaces アンカーの発話区間検出精度($Th_{time}=0.9$) }}{37}
+\contentsline {table}{\numberline {6.19}{\ignorespaces アンカーの発話区間検出精度($Th_{time}=1.0$) }}{38}
+\contentsline {table}{\numberline {6.20}{\ignorespaces アンカーの発話区間検出精度($Th_{time}=1.1$) }}{38}
+\contentsline {table}{\numberline {6.21}{\ignorespaces アンカーの発話区間検出精度($Th_{time}=1.2$) }}{38}
+\contentsline {table}{\numberline {6.22}{\ignorespaces アンカーの発話区間検出精度($Th_{time}=1.3$) }}{38}
+\contentsline {table}{\numberline {6.23}{\ignorespaces アンカーの発話区間検出精度($Th_{time}=1.4$) }}{38}
+\contentsline {table}{\numberline {6.24}{\ignorespaces アンカーの発話区間検出精度($Th_{time}=1.5$) }}{39}
+\contentsline {table}{\numberline {6.25}{\ignorespaces 音響モデルの仕様 }}{40}
+\contentsline {table}{\numberline {6.26}{\ignorespaces 使用する音響特徴パラメータ }}{40}
+\contentsline {table}{\numberline {6.27}{\ignorespaces 使用した音素 }}{42}
+\contentsline {table}{\numberline {6.28}{\ignorespaces カナ音素対応表 }}{43}
 \addvspace {10\p@ }

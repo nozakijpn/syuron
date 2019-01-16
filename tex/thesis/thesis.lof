@@ -15,7 +15,7 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces 提案手法を組み込んだインデクシング手法 }}{27}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces 各話者クラスタに含まれる発話データ数 }}{37}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces DNNを用いる際の学習の流れ }}{39}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces 書き起こしテキストの例 }}{41}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces 各話者クラスタに含まれる発話データ数 }}{40}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces DNNを用いる際の学習の流れ }}{41}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces 書き起こしテキストの例 }}{44}
 \addvspace {10\p@ }
