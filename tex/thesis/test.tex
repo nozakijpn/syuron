@@ -28,26 +28,28 @@ CSJに収録されている音声の種類と分量を表\ref{table:detail_csj}�
 i-vector抽出のためのUBMの学習には、\ref{section:detail_ATR}節で述べた読み上げ音声を用いる。
 
 \subsection{評価音声}
-\noindent{\textbf{\underline{音源識別に用いる評価音声}}}\par
-音源識別精度の評価には\ref{section:detail_train_news}節で示したニュース番組13番組を用いる。これは、下で述べるニュース番組音声に「音楽」「雑音」「無音」の音源ラベルが付与されていないためである。
+本稿では、2つのデータセットを用いて実験を行う。
+\noindent{\textbf{\underline{データセット1}}}\par
+\ref{section:detail_train_news}節で示した「音声」「背景雑音」「音楽」の音源ラベルが付与されているニュース番組13番組分。
 
-\vspace{0.2in}\noindent{\textbf{\underline{アンカーの発話区間の音声認識に用いる評価音声}}}\par
-発話区間検出、アンカーの発話区間検出、および音声認識の評価データとして、ニュース番組の音声データ5個を用いる。評価データのニュース音声には、「音声」の音源ラベルと「発話者」の音源ラベル、発話の書き起こしが付与されている。しかし、本来のニュース番組の音声には音源ラベルなどが付与されていないため、音源ラベル、および書き起こし文は評価にのみ使用する。\par
-表\ref{table:test_detail}に検証に用いるデータの詳細を示す。
+\vspace{0.2in}\noindent{\textbf{\underline{データセット2}}}\par
+「音声」の音源ラベルと発話の書き起こしが付与されているニュース番組5番組分。表\ref{table:test_detail}に検証に用いるデータの詳細を示す。
 
 \begin{table}[H]
   \begin{center}
     \caption{評価用音声データの詳細 \label{table:test_detail}}
     \begin{tabular}{|c||c|c|c|} \hline
       データID & 収録時間 & 話者数 & 全発話数 \\ \hline
-      ニュース1 & 30分3秒 & 20 & 337 \\ \hline
+      ニュース1 & 20分3秒 & 13 & 159 \\ \hline
       ニュース2 & 30分3秒 & 31 & 312\\ \hline
       ニュース3 & 30分3秒 & 21 & 324 \\ \hline
       ニュース4 & 30分4秒 & 20 & 324\\ \hline
-      ニュース5 & 20分3秒 & 13 & 159\\ \hline
+      ニュース5 & 30分3秒 & 20 & 337\\ \hline
     \end{tabular}
   \end{center}
 \end{table}
+
+本実験では、データセット1
 
 \input{base/search_speech_time.tex}
 \input{base/connect_sp.tex}    % 発話区間の結合実験
