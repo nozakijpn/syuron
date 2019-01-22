@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.12.11)  18 JAN 2019 15:15
+This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.12.11)  21 JAN 2019 18:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -210,16 +210,22 @@ LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
 (Font)              scaled to size 11.53198pt on input line 24.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 11.53198pt on input line 24.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 33.
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 33.
  [1
 
-] (./title_0121.aux) ) 
+] [2] (./title_0121.aux) ) 
 Here is how much of TeX's memory you used:
- 1801 strings out of 493281
- 20825 string characters out of 6145040
- 90133 words of memory out of 5000000
- 5754 multiletter control sequences out of 15000+600000
+ 1818 strings out of 493281
+ 21127 string characters out of 6145040
+ 91133 words of memory out of 5000000
+ 5768 multiletter control sequences out of 15000+600000
  10802 words of font info for 49 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  27i,5n,27p,221b,146s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on title_0121.dvi (1 page, 1416 bytes).
+Output written on title_0121.dvi (2 pages, 2476 bytes).

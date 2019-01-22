@@ -28,7 +28,7 @@ time      & speaker          \\ \hline
 
 \begin{table}[H]
   \begin{center}
-    \caption{パラメータの学習用音声データの詳細　\label{table:train_detail}}
+    \caption{調査音声データの詳細　\label{table:train_detail}}
     \begin{tabular}{|c||c|c|c|} \hline
       データID & 収録時間 & 話者数 & 全発話数 \\ \hline
       ニュースA & 30分3秒 & 20 & 337 \\ \hline
@@ -48,7 +48,7 @@ time      & speaker          \\ \hline
 \end{table}
 
 \subsection{調査方法}
-本調査は、表\ref{table:train_detail}のニュース番組音声と付与された「音声」の音源ラベルを用いて行う。ラベル付けがされていない区間を非発話区間として、発話が終了後、次の発話までの時間を計測する。また、発話が重なっている場合は発話が終了していなくても次の発話が開始されるため、非発話区間を0秒とした。
+本調査は、表\ref{table:train_detail}のニュース番組音声と付与された「音声」の音源ラベルを用いて行う。ラベル付けがされていない区間を非発話区間として、発話が終了後、次の発話までの非発話区間の長さを計測する。また、発話が重なっている場合は発話が終了していなくても次の発話が開始されるため、非発話区間を0秒とした。
 
 \subsection{調査結果}
 調査結果を図\ref{fig:same_sp}、図\ref{fig:different_sp}に示す。

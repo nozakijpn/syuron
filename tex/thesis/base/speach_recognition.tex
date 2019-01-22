@@ -1,7 +1,7 @@
 \subsection{音声認識システムの流れ}
 音声認識の流れを図\ref{fig:flow_sp}に示す。まず、入力された音声データから前処理として雑音区間と無音区間を除去し、発話区間を検出する。次に検出した発話区間の音響的特徴量を抽出し、デコーダへと渡す。デコーダではこの音響的特徴量をもとに、音響モデルと言語モデル、単語辞書を参照しながら単語列の尤度を算出し、最も尤度の高いものを認識結果として出力する。言語モデルと単語辞書については\ref{language_model}節、音響モデルについては\ref{acoustic_model}節で説明する。
 
-\begin{figure}[htb]
+\begin{figure}[H]
   \begin{center}
     \includegraphics{../../image/flow_sp.eps}
   \end{center}
@@ -15,7 +15,7 @@
 \noindent{\textbf{\underline{単語辞書}}}\par
 単語辞書には、一般的に学習データに出現する単語のなかで出現頻度の高い単語を登録する\cite{sp_recognition_shikano}。言語モデルもその単語辞書に登録された単語を用いて構築する。単語辞書の例を表\ref{table:tango}に示す。単語辞書には表記、発音形、原型、品詞番号、出現表記、音素表記などを登録する。\par
 
-\begin{table}[htb]
+\begin{table}[H]
   \begin{center}
     \caption{単語辞書の例}
     \begin{tabular}{|c||c|c|} \hline
@@ -86,7 +86,7 @@ c_{mfcc}(i)=\sqrt{\frac{2}{N}}\sum_{i=1}^{L}\log ml \cos \left\{ \left( l-\frac{
 \noindent{{\textbf{\underline{隠れマルコフモデル(HMM)}}}\par
 HMMは時系列信号の確率モデルであり、複数の定常信号源の間を遷移することで、時系列に適応させ、音響モデルを構築する\cite{sp_recognition_shikano}。図\label{fig:HMM}にHMMの例を示す。a、b、cは状態、矢印は状態遷移を示す。HMMは次の状態への遷移と現在の状態の遷移を行なう。このように現在の状態への遷移があるため、様々な長さの時系列信号に対応できる。
 
-\begin{figure}[htb]
+\begin{figure}[H]
   \begin{center}
     \includegraphics{../../image/HMM.eps}
   \end{center}
@@ -110,7 +110,7 @@ MFCCは、フレームと呼ばれる数十ms程度の音声区間を定常と�
 \subsection{DNNの概要}
 本研究ではDNNをベースとした会議音声認識を行なう。DNNとは、多層ニューラルネットワークを使った機械学習のことである。DNNは図\ref{fig:dnn}のように、auto-encoderまたはRestricted Boltzmann Machines (RBM)などを積み重ねた深い構造をもつ。入力に近い層では、単純に特徴抽出しかできないが、それらの重み付け和をとると表現能力が上がり、それをさらに上位の層の入力にしていくことで、モデルの表現力がさらに上がるとされている。\par
 
-\begin{figure}[htb]
+\begin{figure}[H]
   \begin{center}
     \includegraphics{../../image/image_dnn.eps}
   \end{center}
