@@ -5,17 +5,21 @@
 \contentsline {figure}{\numberline {2.3}{\ignorespaces HMMの例}}{14}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces DNNの構造図}}{15}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces 同一話者間の非発話区間の時間情報 }}{18}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces 異なる話者間の非発話区間の時間情報 }}{19}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces 長い音声データから抽出した同一話者間のi-vectorのコサイン類似度 }}{21}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces 長い音声データから抽出した異なる話者間のi-vectorのコサイン類似度 }}{21}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces 非常に短い音声データから抽出した同一話者間のi-vectorのコサイン類似度 }}{22}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces 非常に短い音声データから抽出した異なる話者間のi-vectorのコサイン類似度 }}{23}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces 長い音声データから抽出した同一話者間のi-vectorのコサイン類似度 }}{17}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces 長い音声データから抽出した異なる話者間のi-vectorのコサイン類似度 }}{18}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces 非常に短い音声データから抽出した同一話者間のi-vectorのコサイン類似度 }}{19}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces 非常に短い音声データから抽出した異なる話者間のi-vectorのコサイン類似度 }}{19}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces 同一話者間の非発話区間の時間情報 }}{22}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces 異なる話者間の非発話区間の時間情報 }}{23}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces 提案手法を組み込んだインデクシング手法 }}{27}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces 各話者クラスタに含まれる発話データ数 }}{41}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces DNNを用いる際の学習の流れ }}{42}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces 書き起こしテキストの例 }}{45}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces 提案手法1によるアンカーの発話区間検出精度 }}{35}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces 提案手法1によるアンカーの発話区間検出精度 ($Th_{time}=1.0$) }}{36}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces 提案手法2によるアンカーの発話区間検出精度 }}{36}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces 提案手法3によるアンカーの発話区間検出精度　($Th_{time}=1.2$) }}{37}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces 各話者クラスタに含まれる発話データ数 }}{38}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces DNNを用いる際の学習の流れ }}{39}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces 書き起こしテキストの例 }}{42}
 \addvspace {10\p@ }

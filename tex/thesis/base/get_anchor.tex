@@ -1,9 +1,30 @@
 \section{アンカーの発話群検出実験}
-本節では、i-vectorを用いてアンカーの発話区間検出を行う。
 \label{chapter:get_anchor}
 \subsection{実験方法}
-本節では、\ref{chapter:connect_sp}節の手法1で結合した発話区間から再抽出したi-vectorを用いてアンカーの発話区間検出を行う。i-vectorを用いたアンカーの発話区間抽出は\ref{section:clustering}節の手法を用いる。$Th_{cos}$は0.8から1.5までの範囲を0.1刻みで検証を行う。また、Baselineとしてi-vectorの再抽出を行わずにアンカーの発話区間検出を行う。\par
-i-vectorの抽出には、ALIZEとLIR RALを用いる。i-vectorの抽出に使用するUBMモデルの学習には読み上げ音声\cite{ATR}を使用する。読み上げ音声に収録されている各発話データからi-vectorを抽出する。発話データから抽出する音響特徴パラメータを表\ref{iv_feature2}に示す。また混合数は32とした。
+本節では同一話者の可能性が高い発話区間を結合、i-vectorを再抽出してアンカーの発話区間検出を行う。手法は以下の通りである。
+
+\begin{itemize}
+\item 手法1 : 発話間の時間情報を考慮した発話区間の結合手法
+\item 手法2 : 発話環境を考慮した発話区間の結合手法
+\item 手法3 : 手法1 + 手法2
+\end{itemize}
+
+前後の発話区間を結合する際にi-vectorのコサイン類似度を用いるが、同一話者間の発話であっても発話の長さによってとりうるコサイン類似度が大きく異なる。そのため、発話の長さによって結合するか否かのコサイン類似度の閾値を変更する必要がある。これは、図〜を用いて決定した。発話の長さを$T$[sec]としたとき、決定した閾値を表\ref{table:decide_thcos}に示す。。また、手法1では非発話区間の長さの閾値$T_{time}$によって結合するか否かを決定するため、閾値$Th_{time}$によって発話区間の結合精度が変化する。本実験では図\ref{fig:same_sp}より、$Th_{time}$を0.8秒から1.5秒までを0.1秒刻みで行なった。
+
+\begin{table}[H]
+  \begin{center}
+    \caption{結合の閾値 \label{table:decide_thcos}}
+    \begin{tabular}{|c||c|} \hline
+時間条件 & コサイン類似度の閾値  \\ \hline
+$T <$ 3 &  0.0 \\ \hline
+3 $\leqq T <$ 6 &  0.3  \\ \hline
+6 $< T$ &  0.7 \\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+i-vectorを用いたアンカーの発話区間抽出は\ref{section:clustering}節の手法を用いる。i-vectorの抽出には、ALIZEとLIR RALを用いる。i-vectorの抽出に使用するUBMモデルの学習には読み上げ音声\cite{ATR}を使用する。読み上げ音声に収録されている各発話データからi-vectorを抽出する。発話データから抽出する音響特徴パラメータを表\ref{iv_feature2}に示す。また混合数は32とした。$Th_{cos}$は0.8から1.5までの範囲を0.1刻みで検証を行う。また、Baselineとしてi-vectorの再抽出を行わずにアンカーの発話区間検出を行う。\par
+
 
 \begin{table}[H]
   \begin{center}
@@ -66,138 +87,39 @@ Acc_{time} = \frac{検出したアンカーの発話区間の時間数}{アン�
 本実験では、評価方法として適合率、再現率、$F$値、$Acc_{time}$を用いる。
 
 \subsection{実験結果}
-アンカーの発話区間検出精度を以下に示す。
+アンカーの発話区間検出精度を以下に示す。本節では各手法で最も良いF値を示した条件の結果を記載している。その他の条件の結果は付録で記載する。
 
-
-\begin{table}[H]
+\begin{figure}[H]
   \begin{center}
-    \caption{アンカーの発話区間検出精度(Baseline) \label{table:result_get_anchor_baseline}}
-    \begin{tabular}{|c||c|c|c|c|} \hline
-      $Th_{cos}$ & $Recall$ & $Precision$ & $F-measure$ & $Acc_{time}$\\ \hline
-0.5 & 0.778 & 0.646 & 0.706 & 0.732 \\ \hline
-0.6 & 0.649 & 0.765 & 0.702 & 0.637 \\ \hline
-0.7 & 0.402 & 0.871 & 0.55 & 0.45 \\ \hline
-0.8 & & & & \\ \hline
-    \end{tabular}
+    \includegraphics[scale=0.8]{./figure/get_anchor_baseline.eps}
   \end{center}
-\end{table}
+  \caption{アンカーの発話区間検出精度のBaseline \label{fig:result_anchor_baseline}}
+\end{figure}
 
-\begin{table}[H]
+\begin{figure}[H]
   \begin{center}
-    \caption{アンカーの発話区間検出精度($Th_{time}=0.8)$ \label{table:result_get_anchor08}}
-    \begin{tabular}{|c||c|c|c|c|} \hline
-      $Th_{cos}$ & $Recall$ & $Precision$ & $F-measure$ & $Acc_{time}$\\ \hline
-0.5 & 0.836 & 0.632 & 0.720 & 0.794 \\ \hline
-0.6 & 0.812 & 0.768 & 0.789 & 0.774 \\ \hline
-0.7 & 0.778 & 0.866 & 0.820 & 0.747 \\ \hline
-0.8 & 0.656 & 0.920 & 0.766 & 0.655 \\ \hline
-
-    \end{tabular}
+    \includegraphics[scale=0.8]{./figure/get_anchor_prob1.eps}
   \end{center}
-\end{table}
+  \caption{提案手法1によるアンカーの発話区間検出精度 ($Th_{time}=1.0$) \label{fig:result_anchor_prob1}}
+\end{figure}
 
-\begin{table}[H]
+\begin{figure}[H]
   \begin{center}
-    \caption{アンカーの発話区間検出精度($Th_{time}=0.9$) \label{table:result_get_anchor09}}
-    \begin{tabular}{|c||c|c|c|c|} \hline
-      $Th_{cos}$ & $Recall$ & $Precision$ & $F-measure$ & $Acc_{time}$\\ \hline
-0.5 & 0.839 & 0.636 & 0.723 & 0.794 \\ \hline
-0.6 & 0.810 & 0.775 & 0.792 & 0.771 \\ \hline
-0.7 & 0.782 & 0.865 & 0.821 & 0.747 \\ \hline
-0.8 & 0.681 & 0.915 & 0.781 & 0.671 \\ \hline
-
-    \end{tabular}
+    \includegraphics[scale=0.8]{./figure/get_anchor_prob2.eps}
   \end{center}
-\end{table}
+  \caption{提案手法2によるアンカーの発話区間検出精度 \label{fig:result_anchor_prob2}}
+\end{figure}
 
-\begin{table}[H]
+\begin{figure}[H]
   \begin{center}
-    \caption{アンカーの発話区間検出精度($Th_{time}=1.0$) \label{table:result_get_anchor10}}
-    \begin{tabular}{|c||c|c|c|c|} \hline
-      $Th_{cos}$ & $Recall$ & $Precision$ & $F-measure$ & $Acc_{time}$\\ \hline
-0.5 & 0.837 & 0.638 & 0.724 & 0.793 \\ \hline
-0.6 & 0.811 & 0.764 & 0.787 & 0.768 \\ \hline
-0.7 & 0.784 & 0.867 & 0.824 & 0.747 \\ \hline
-0.8 & 0.683 & 0.912 & 0.781 & 0.668 \\ \hline
-
-    \end{tabular}
+    \includegraphics[scale=0.8]{./figure/get_anchor_prob3.eps}
   \end{center}
-\end{table}
+  \caption{提案手法3によるアンカーの発話区間検出精度　($Th_{time}=1.2$) \label{fig:result_anchor_prob3}}
+\end{figure}
 
-\begin{table}[H]
-  \begin{center}
-    \caption{アンカーの発話区間検出精度($Th_{time}=1.1$) \label{table:result_get_anchor11}}
-    \begin{tabular}{|c||c|c|c|c|} \hline
-      $Th_{cos}$ & $Recall$ & $Precision$ & $F-measure$ & $Acc_{time}$\\ \hline
-0.5 & 0.840 & 0.609 & 0.706 & 0.793 \\ \hline
-0.6 & 0.815 & 0.714 & 0.761 & 0.772 \\ \hline
-0.7 & 0.773 & 0.871 & 0.819 & 0.740 \\ \hline
-0.8 & 0.688 & 0.910 & 0.783 & 0.675 \\ \hline
-
-    \end{tabular}
-  \end{center}
-\end{table}
-
-
-\begin{table}[H]
-  \begin{center}
-    \caption{アンカーの発話区間検出精度($Th_{time}=1.2$) \label{table:result_get_anchor12}}
-    \begin{tabular}{|c||c|c|c|c|} \hline
-      $Th_{cos}$ & $Recall$ & $Precision$ & $F-measure$ & $Acc_{time}$\\ \hline
-0.5 & 0.841 & 0.587 & 0.692 & 0.793 \\ \hline
-0.6 & 0.811 & 0.734 & 0.771 & 0.768 \\ \hline
-0.7 & 0.774 & 0.877 & 0.822 & 0.741 \\ \hline
-0.8 & 0.687 & 0.907 & 0.782 & 0.673 \\ \hline
-
-    \end{tabular}
-  \end{center}
-\end{table}
-
-\begin{table}[H]
-  \begin{center}
-    \caption{アンカーの発話区間検出精度($Th_{time}=1.3$) \label{table:result_get_anchor13}}
-    \begin{tabular}{|c||c|c|c|c|} \hline
-      $Th_{cos}$ & $Recall$ & $Precision$ & $F-measure$ & $Acc_{time}$\\ \hline
-0.5 & 0.841 & 0.589 & 0.693 & 0.793 \\ \hline
-0.6 & 0.809 & 0.699 & 0.750 & 0.769 \\ \hline
-0.7 & 0.776 & 0.868 & 0.819 & 0.741 \\ \hline
-0.8 & 0.686 & 0.902 & 0.779 & 0.672 \\ \hline
-
-    \end{tabular}
-  \end{center}
-\end{table}
-
-\begin{table}[H]
-  \begin{center}
-    \caption{アンカーの発話区間検出精度($Th_{time}=1.4$) \label{table:result_get_anchor14}}
-    \begin{tabular}{|c||c|c|c|c|} \hline
-      $Th_{cos}$ & $Recall$ & $Precision$ & $F-measure$ & $Acc_{time}$\\ \hline
-0.5 & 0.840 & 0.609 & 0.706 & 0.792 \\ \hline
-0.6 & 0.793 & 0.714 & 0.751 & 0.753 \\ \hline
-0.7 & 0.760 & 0.868 & 0.810 & 0.725 \\ \hline
-0.8 & 0.679 & 0.917 & 0.781 & 0.667 \\ \hline
-
-    \end{tabular}
-  \end{center}
-\end{table}
-
-\begin{table}[H]
-  \begin{center}
-    \caption{アンカーの発話区間検出精度($Th_{time}=1.5$) \label{table:result_get_anchor15}}
-    \begin{tabular}{|c||c|c|c|c|} \hline
-      $Th_{cos}$ & $Recall$ & $Precision$ & $F-measure$ & $Acc_{time}$\\ \hline
-0.5 & 0.835 & 0.590 & 0.691 & 0.786 \\ \hline
-0.6 & 0.795 & 0.680 & 0.733 & 0.751 \\ \hline
-0.7 & 0.735 & 0.856 & 0.791 & 0.701 \\ \hline
-0.8 & 0.661 & 0.890 & 0.759 & 0.646 \\ \hline
-
-    \end{tabular}
-  \end{center}
-\end{table}
-
-実験の結果、発話区間を結合して再抽出したi-vectorを用いた手法が全体的に高い精度を示した。Baselineは$Th_{cos}$が0.8のときクラスタが小さくなりすぎたためアンカーの発話区間を検出出来なかった。また、Baselineは$Th_{cos}$が0.5のときが$F-measure$が最も高い値をとるのに対して、本提案手法では$Th_{cos}$が0.7のとき、$F-measure$が最も高い値をとった。\par
-提案手法での発話区間検出精度の中では、$Th_{time}$が1.0かつ、$Th_{cos}$が0.7のとき、$F-measure$が最大となった。また、$Th_{time}$がどの値をとった場合でも$Th_{cos}$が小さい時には$Recall$が高く、大きい時には$Precision$が高くなる傾向が確認された。
+実験の結果、発話区間を結合して再抽出したi-vectorを用いた手法が全体的に高い精度を示した。Baselineは$Th_{cos}$が0.8のときクラスタが小さくなりすぎたためアンカーの発話区間を検出出来なかった。また、Baselineは$Th_{cos}$が0.5のときがF-measureが最も高い値をとるのに対して、本提案手法では$Th_{cos}$が0.7のとき、F-measureが最も高い値をとった。\par
+本実験の提案手法では、手法1が最も発話区間検出精度が高く、F値が0.795であった。また、いずれの手法においても$Th_{cos}$が小さい時にはRecallが高く、大きい時にはPrecisionが高くなる傾向が確認された。
 
 \subsection{考察}
-Baselineと再抽出したi-vectorを用いた手法を比較したとき、再抽出したi-vectorを用いた手法の方が$Th_{cos}$を高くした時に発話区間検出精度が向上している。このことから、i-vectorの抽出精度が向上したと考えられる。\par
-再抽出したi-vectorを用いた手法の$Th_{time}$を変更した場合を比較した場合、明確な違いは見られなかった。
+Baselineと再抽出したi-vectorを用いた各提案手法を比較したとき、再抽出したi-vectorを用いた手法の方が$Th_{cos}$を高くした時に発話区間検出精度が向上している。このことから、i-vectorの抽出精度が向上したと考えられる。\par
+

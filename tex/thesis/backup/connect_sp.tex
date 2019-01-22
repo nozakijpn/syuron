@@ -1,0 +1,113 @@
+\section{発話区間の結合実験}
+\label{chapter:connect_sp}
+本節では、ニュース番組音声の発話区間を対象として前後の発話区間が同一話者である可能性が高いとき発話区間を結合し、i-vector抽出精度の向上を目指す。
+
+\subsection{実験方法}
+\ref{chapter:prob_method}章で述べた手法を用いて結合実験を行う。手法は以下の通りである。
+
+\begin{itemize}
+\item 手法1 : 発話間の時間情報を考慮した発話区間の結合手法
+\item 手法2 : 発話環境を考慮した発話区間の結合手法
+\item 手法3 : 手法1 + 手法2
+\end{itemize}\par\par
+
+また、手法1では非発話区間の長さの閾値$T_{time}$によって結合するか否かを決定するため、閾値$Th_{time}$によって発話区間の結合精度が変化する。本実験では図\ref{fig:same_sp}より、$Th_{time}$を0.8秒から1.5秒までを0.1秒刻みで、i-vectorのコサイン類似度の閾値$Th_{cos}$を0から0.6までを0.1刻みで変更して発話区間結合実験を行なった。
+
+\subsection{評価方法}
+表\ref{table:connect_calc}を用いて、同一話者の発話区間の結合精度$Acc_{same}$(式\ref{calc:calc_same_sp})と話者の切り替わりの検出精度$Acc_{diff}$(式\ref{calc:calc_different_sp})を定義する。
+
+\begin{table}[H]
+\begin{center}
+    \caption{発話区間の結合の正誤判定 \label{table:connect_calc}}
+\begin{tabular}{|c|c|c|c|l}
+\cline{1-4}
+\multicolumn{2}{|c|}{\multirow{2}{*}{}} & \multicolumn{2}{c|}{「発話者」のラベルが付与された発話区間} &  \\ \cline{3-4}
+\multicolumn{2}{|c|}{}                  & 前の発話が同一話者        & 前の発話が異なる話者        &  \\ \cline{1-4}
+\multirow{2}{*}{判定結果}        & 正        & \textcircled{\scriptsize 1}                  & \textcircled{\scriptsize 2}                   &  \\ \cline{2-4}
+& 誤        & \textcircled{\scriptsize 3}                  & \textcircled{\scriptsize 4}                   &  \\ \cline{1-4}
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{equation}
+\label{calc:calc_same_sp}
+Acc_{same} = \frac{\textcircled{\scriptsize 1}}{\textcircled{\scriptsize 1} + \textcircled{\scriptsize 3}}
+\end{equation}
+
+\begin{equation}
+\label{calc:calc_different_sp}
+Acc_{diff} = \frac{\textcircled{\scriptsize 2}}{\textcircled{\scriptsize 2} + \textcircled{\scriptsize 4}}
+\end{equation}
+
+また、同一話者の発話区間の結合精度$Acc_{same}$に対して、結合した発話区間の時間の合計を$Acc_{time}$を式\ref{calc:acc_time}として定義する。
+
+\begin{equation}
+\label{calc:acc_time}
+Acc_{time} = \frac{結合した発話区間の時間の合計}{発話区間の時間の合計}
+\end{equation}
+
+\subsection{実験結果}
+発話区間の結合精度の結果を表\ref{table:result_prob1}、表\ref{table:result_prob2}、表\ref{table:result_prob3}に示す。
+
+\begin{table}[H]
+\begin{center}
+\caption{手法1による発話区間の結合結果 \label{table:result_prob1}}
+\begin{tabular}{|c||c|c|c|}
+\hline
+$Th_{time}$   & $Acc_{same}$ & $Acc_{time}$ & $Acc_{diff}$ \\ \hline
+0.8 & 0.634    & 0.679    & 0.877    \\ \hline
+0.9 & 0.660    & 0.706    & 0.869    \\ \hline
+1.0 & 0.680    & 0.724    & 0.853    \\ \hline
+1.1 & 0.699    & 0.745    & 0.845    \\ \hline
+1.2 & 0.710    & 0.756    & 0.834    \\ \hline
+1.3 & 0.717    & 0.766    & 0.826    \\ \hline
+1.4 & 0.727    & 0.722    & 0.815    \\ \hline
+1.5 & 0.736    & 0.783    & 0.796    \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+\caption{手法2による発話区間の結合結果 \label{table:result_prob2}}
+\begin{tabular}{|c|c|c|c|}
+\hline
+$Acc_{same}$ & $Acc_{time}$ & $Acc_{diff}$ \\ \hline
+0.827 & 0.831    & 0.259    \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+\caption{手法3による発話区間の結合結果 \label{table:result_prob3}}
+\begin{tabular}{|c||c|c|c|}
+\hline
+$Th_{time}$   & $Acc_{same}$ & $Acc_{time}$ & $Acc_{diff}$ \\ \hline
+0.8 & 0.566    & 0.601    & 0.886    \\ \hline
+0.9 & 0.584    & 0.619    & 0.883    \\ \hline
+1.0 & 0.597    & 0.631    & 0.877    \\ \hline
+1.1 & 0.611    & 0.648    & 0.879    \\ \hline
+1.2 & 0.622    & 0.658    & 0.869    \\ \hline
+1.3 & 0.626    & 0.663    & 0.861    \\ \hline
+1.4 & 0.631    & 0.668    & 0.856    \\ \hline
+1.5 & 0.636    & 0.674    & 0.847    \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+手法1、手法3はともに、閾値$Th_{time}$を上げると$Acc_{same}$($Acc_{time}$)が向上するが、$Acc_{diff}$は低下する傾向にある。また、$Acc_{diff}$が同じ値をとる時、$Acc_{same}$($Acc_{time}$)は手法1の方が高い精度で発話区間を結合できている。\par
+手法2は手法1や手法3と比較して同一話者の発話区間の結合精度が高いが、話者の切り替わりの検出精度が大きく低下している。
+
+\subsection{考察}
+手法2は他の手法と比較して大きく$Acc_{diff}$が低下したが、これは話者の切り替わりが起こる時、必ずしも発話環境が変化するわけではないためである。例として、以下の場合がある。
+
+\begin{enumerate}
+\item インタビューイの切り替わり
+\item アンカーから天気アナウンサーへの切り替わり
+\item アンカーから屋内にいる中継アナウンサーへの切り替わり
+\end{enumerate}
+
+(1)の場合、街中など人が多い場所、かつ同じ場所で発話していることが多い。また、(2)と(3)の場合、同じスタジオもしくは雑音が殆どない環境で発話している。以上のことから、音源識別による発話環境の変化のみで話者の切り替わりの検出は難しいと考えられる。\par
+また、手法3は手法1と比較して$Acc_{diff}$が向上しているが、$Acc_{same}$($Acc_{time}$)が大きく低下している。これは、アンカーの発話中に映し出される映像の音が重なることによって発話環境が変化したと判別し、話者の切り替わりであると誤識別したためであると考えられる。また、同じ$Acc_{diff}$の値に対して$Acc_{same}$($Acc_{time}$)は手法1が高い数値を示していることから、発話区間の結合、および話者の切り替わりの検出は手法1が最も有効であると考えられる。\par
+$Acc_{diff}$と$Acc_{same}$($Acc_{time}$)は反比例の関係になっていることから、発話区間を多く結合したい場合は$Th_{time}$を下げ、話者の切り替わりを多く検出したい場合は$Th_{time}$を上げるなど、使い分けができると考えられる。
