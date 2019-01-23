@@ -19,10 +19,10 @@
 \contentsline {table}{\numberline {6.8}{\ignorespaces 無音区間検出精度 }}{32}
 \contentsline {table}{\numberline {6.9}{\ignorespaces 発話区間検出精度 }}{33}
 \contentsline {table}{\numberline {6.10}{\ignorespaces 結合の閾値 }}{34}
-\contentsline {table}{\numberline {6.11}{\ignorespaces 使用する音響特徴パラメータ }}{34}
-\contentsline {table}{\numberline {6.12}{\ignorespaces アンカーの発話区間の正誤判定 }}{34}
+\contentsline {table}{\numberline {6.11}{\ignorespaces 使用する音響特徴パラメータ }}{35}
+\contentsline {table}{\numberline {6.12}{\ignorespaces アンカーの発話区間の正誤判定 }}{35}
 \contentsline {table}{\numberline {6.13}{\ignorespaces 音響モデルの仕様 }}{38}
-\contentsline {table}{\numberline {6.14}{\ignorespaces 使用する音響特徴パラメータ }}{38}
+\contentsline {table}{\numberline {6.14}{\ignorespaces 使用する音響特徴パラメータ }}{39}
 \contentsline {table}{\numberline {6.15}{\ignorespaces 使用した音素 }}{40}
 \contentsline {table}{\numberline {6.16}{\ignorespaces カナ音素対応表 }}{41}
 \addvspace {10\p@ }

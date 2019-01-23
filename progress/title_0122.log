@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.12.11)  22 JAN 2019 18:44
+This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.12.11)  23 JAN 2019 11:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -210,12 +210,12 @@ LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
 (Font)              scaled to size 11.53198pt on input line 24.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 11.53198pt on input line 24.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 33.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 34.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 33.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 34.
  [1
 
 ] (./title_0122.aux) ) 
@@ -228,4 +228,4 @@ Here is how much of TeX's memory you used:
  934 hyphenation exceptions out of 8191
  27i,5n,27p,221b,146s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on title_0122.dvi (1 page, 2208 bytes).
+Output written on title_0122.dvi (1 page, 2460 bytes).

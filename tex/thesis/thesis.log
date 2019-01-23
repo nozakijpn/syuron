@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.12.11)  23 JAN 2019 02:57
+This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.12.11)  23 JAN 2019 19:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -277,12 +277,12 @@ LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 3.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 3.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 13.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 10.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 13.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 10.
  [1
 
 
@@ -347,33 +347,34 @@ File: ./figure/indexing2.eps Graphic file (type eps)
 <./figure/indexing2.eps> [26
 
 ]) (./test.tex
-Overfull \hbox (31.5142pt too wide) has occurred while \output is active
+Overfull \hbox (22.39204pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/10 5 i-vector \JY1/mc/m/n/10 の抽出精度向上のための発話区間結合手
-法 \OT1/cmr/m/n/10 5.1. \JY1/mc/m/n/10 発話間の時間情報を考慮した発話区間の結合
-手法
+法 \OT1/cmr/m/n/10 5.1. \JY1/mc/m/n/10 発話の時間間隔を考慮した発話区間の結合手
+法
  []
 
 [27]
 第 6 章
 [28
 
-] (./base/search_speech_time.tex [29] [30] [31] [32]) (./base/get_anchor.tex [3
-3] [34]
+] (./base/search_speech_time.tex [29] [30] [31] [32]) (./base/get_anchor.tex
+File: ./figure/time_cos.eps Graphic file (type eps)
+<./figure/time_cos.eps> [33] [34]
 File: ./figure/get_anchor_baseline.eps Graphic file (type eps)
- <./figure/get_anchor_baseline.eps>
+ <./figure/get_anchor_baseline.eps> [35]
 File: ./figure/get_anchor_prob1.eps Graphic file (type eps)
- <./figure/get_anchor_prob1.eps>
-[35]
-File: ./figure/get_anchor_prob2.eps Graphic file (type eps)
- <./figure/get_anchor_prob2.eps>
-File: ./figure/get_anchor_prob3.eps Graphic file (type eps)
- <./figure/get_anchor_prob3.eps> [36])
-(./base/speach_recog.tex
-File: ./figure/kakiokosi.eps Graphic file (type eps)
- <./figure/kakiokosi.eps> [37] [38]
-File: ./figure/flow_train_dnn.eps Graphic file (type eps)
 
-<./figure/flow_train_dnn.eps>
+<./figure/get_anchor_prob1.eps>
+File: ./figure/get_anchor_prob2.eps Graphic file (type eps)
+ <./figure/get_anchor_prob2.eps> [36]
+File: ./figure/get_anchor_prob3.eps Graphic file (type eps)
+
+<./figure/get_anchor_prob3.eps> [37]) (./base/speach_recog.tex
+File: ./figure/kakiokosi.eps Graphic file (type eps)
+
+<./figure/kakiokosi.eps> [38]
+File: ./figure/flow_train_dnn.eps Graphic file (type eps)
+ <./figure/flow_train_dnn.eps>
 Overfull \hbox (5.58249pt too wide) in paragraph at lines 50--51
  [] 
  []
@@ -406,12 +407,12 @@ LaTeX Warning: There were multiply-defined labels.
 ### simple group (level 1) entered at line 86 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 2333 strings out of 493281
- 29708 string characters out of 6145040
+ 2337 strings out of 493281
+ 29789 string characters out of 6145040
  100528 words of memory out of 5000000
- 6138 multiletter control sequences out of 15000+600000
+ 6141 multiletter control sequences out of 15000+600000
  25700 words of font info for 103 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  28i,17n,27p,887b,369s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.dvi (51 pages, 166840 bytes).
+Output written on thesis.dvi (51 pages, 165916 bytes).

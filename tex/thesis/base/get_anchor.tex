@@ -1,30 +1,40 @@
 \section{アンカーの発話群検出実験}
 \label{chapter:get_anchor}
 \subsection{実験方法}
-本節では同一話者の可能性が高い発話区間を結合、i-vectorを再抽出してアンカーの発話区間検出を行う。手法は以下の通りである。
+同一話者の可能性が高い発話区間を結合、i-vectorを再抽出してアンカーの発話区間検出を行った。発話区間の結合手法は以下の通りである。
 
 \begin{itemize}
-\item 手法1 : 発話間の時間情報を考慮した発話区間の結合手法
+\item 手法1 : 発話の間隔情報を考慮した発話区間の結合手法
 \item 手法2 : 発話環境を考慮した発話区間の結合手法
 \item 手法3 : 手法1 + 手法2
 \end{itemize}
 
-前後の発話区間を結合する際にi-vectorのコサイン類似度を用いるが、同一話者間の発話であっても発話の長さによってとりうるコサイン類似度が大きく異なる。そのため、発話の長さによって結合するか否かのコサイン類似度の閾値を変更する必要がある。これは、図〜を用いて決定した。発話の長さを$T$[sec]としたとき、決定した閾値を表\ref{table:decide_thcos}に示す。。また、手法1では非発話区間の長さの閾値$T_{time}$によって結合するか否かを決定するため、閾値$Th_{time}$によって発話区間の結合精度が変化する。本実験では図\ref{fig:same_sp}より、$Th_{time}$を0.8秒から1.5秒までを0.1秒刻みで行なった。
+前後の発話区間を結合する際にi-vectorのコサイン類似度を用いるが、同一話者間の発話であっても発話の長さによってとりうるコサイン類似度が大きく異なる。そのため、発話の長さによって結合するか否かのコサイン類似度の閾値を変更する必要がある。これは、図\ref{fig:time_cos}を用いて決定した。
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[scale=0.8]{./figure/time_cos.eps}
+  \end{center}
+  \caption{発話の長さに対するコサイン類似度の平均 \label{fig:time_cos}}
+\end{figure}
+
+発話長が2秒以下までは発話長が長くなるごとに急激にコサイン類似度が上昇している。次に、発話長が7秒までのとき、なだらかにコサイン類似度が上昇している。発話長が7秒以上になるとコサイン類似度は停滞する。以上のことから、発話の長さを$T$[sec]としたとき、決定した閾値を表\ref{table:decide_thcos}に示す。
 
 \begin{table}[H]
   \begin{center}
     \caption{結合の閾値 \label{table:decide_thcos}}
     \begin{tabular}{|c||c|} \hline
 時間条件 & コサイン類似度の閾値  \\ \hline
-$T <$ 3 &  0.0 \\ \hline
-3 $\leqq T <$ 6 &  0.3  \\ \hline
-6 $< T$ &  0.7 \\ \hline
+$T <$ 2 &  0.1 \\ \hline
+2 $\leqq T <$ 7 &  0.3  \\ \hline
+7 $< T$ &  0.7 \\ \hline
     \end{tabular}
   \end{center}
 \end{table}
 
-i-vectorを用いたアンカーの発話区間抽出は\ref{section:clustering}節の手法を用いる。i-vectorの抽出には、ALIZEとLIR RALを用いる。i-vectorの抽出に使用するUBMモデルの学習には読み上げ音声\cite{ATR}を使用する。読み上げ音声に収録されている各発話データからi-vectorを抽出する。発話データから抽出する音響特徴パラメータを表\ref{iv_feature2}に示す。また混合数は32とした。$Th_{cos}$は0.8から1.5までの範囲を0.1刻みで検証を行う。また、Baselineとしてi-vectorの再抽出を行わずにアンカーの発話区間検出を行う。\par
+また、手法1では非発話区間の長さの閾値$T_{time}$によって結合するか否かを決定するため、閾値$Th_{time}$によって発話区間の結合精度が変化する。本実験では図\ref{fig:same_sp}より、$Th_{time}$を0.8秒から1.5秒までを0.1秒刻みで行なった。
 
+i-vectorを用いたアンカーの発話区間抽出は\ref{section:clustering}節の手法を用いる。i-vectorの抽出には、ALIZEとLIR RALを用いる。i-vectorの抽出に使用するUBMモデルの学習には読み上げ音声\cite{ATR}を使用する。読み上げ音声に収録されている各発話データからi-vectorを抽出する。発話データから抽出する音響特徴パラメータを表\ref{iv_feature2}に示す。また混合数は32とした。$Th_{cos}$は0.8から1.5までの範囲を0.1刻みで検証を行う。また、Baselineとしてi-vectorの再抽出を行わずにアンカーの発話区間検出を行う。\par
 
 \begin{table}[H]
   \begin{center}
