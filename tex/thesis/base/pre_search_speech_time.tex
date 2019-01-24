@@ -1,0 +1,193 @@
+\section{音源分離精度の調査}
+\subsection{使用する音声データ}
+\label{section:detail_train_news}
+本調査では、ニュース番組の音声データ12個を用いる。各音声データには、事前に人手で3種類（音楽、音声、雑音)の音源ラベルが付与されている。「音声」の音源ラベルが付与された区間においては、更に発話者の情報が付与されている。表\ref{fig:example_label}は音声の音源ラベルの一例である。また「音声」の音源ラベルをもとに対象の音声データから発話区間を抽出し、それを一発話とした。\par
+表\ref{table:train_detail}に調査に用いるデータの詳細を示す。\vspace{0.2in}
+
+\begin{table}[H]
+\begin{center}
+\caption{「音声」の音源ラベルの例 \label{fig:example_label}}
+\begin{tabular}{|c|c|}
+\hline
+time      & speaker          \\ \hline
+18.526910 & -1 male1\_INT\_S \\ \hline
+20.793192 & -1 male1\_INT\_E \\ \hline
+21.293665 & -1 male1\_INT\_S \\ \hline
+23.116141 & -1 male1\_INT\_E \\ \hline
+23.654385 & -1 male1\_INT\_S \\ \hline
+26.270058 & -1 male1\_INT\_E \\ \hline
+27.799800 & -1 male\_S       \\ \hline
+29.811134 & -1 male\_E       \\ \hline
+30.368265 & -1 male\_S       \\ \hline
+34.277610 & -1 male\_E       \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]
+  \begin{center}
+    \caption{調査音声データの詳細　\label{table:train_detail}}
+    \begin{tabular}{|c||c|c|c|} \hline
+      データID & 収録時間 & 話者数 & 全発話数 \\ \hline
+      ニュースA & 30分3秒 & 20 & 337 \\ \hline
+      ニュースB & 30分3秒 & 31 & 312\\ \hline
+      ニュースC & 30分3秒 & 21 & 324 \\ \hline
+      ニュースD & 30分4秒 & 20 & 324\\ \hline
+      ニュースE & 20分3秒 & 13 & 159\\ \hline
+      ニュースF & 30分3秒 & 22 & 343\\ \hline
+      ニュースG & 30分4秒 & 22 & 313\\ \hline
+      ニュースH & 30分4秒 & 20 & 315\\ \hline
+      ニュースI & 30分4秒 & 17 & 321\\ \hline
+      ニュースJ & 30分4秒 & 16 & 337\\ \hline
+      ニュースK & 30分4秒 & 20 & 363\\ \hline
+      ニュースL & 30分4秒 & 26 & 345\\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\subsection{調査方法}
+\ref{section:devide_audio}節で述べた音源分離を用いての音源分離を行う。
+表\ref{table:detail_identification_method}は音源識別の実験条件である。
+
+\begin{table}[H]
+  \begin{center}
+    \caption{音源識別実験の実験条件 \label{table:detail_identification_method}}
+    \begin{tabular}{|c||c|} \hline
+      FFTの窓幅(フレーム長) & 2048point(約0.046[sec])   \\ \hline
+      FFTのシフト幅(フレーム間隔) &  2048point(約0.023[sec]) \\ \hline
+      窓関数 & ハミング窓  \\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\subsection{評価方法}
+評価は、検出された区間と正解ラベルを比較して行う。
+
+\begin{table}[H]
+\begin{center}
+    \caption{検出した区間の正誤判定 \label{table:search_table}}
+\begin{tabular}{|c|c|c|c|l}
+\cline{1-4}
+\multicolumn{2}{|c|}{\multirow{2}{*}{}} & \multicolumn{2}{c|}{正解ラベル} &  \\ \cline{3-4}
+\multicolumn{2}{|c|}{}                  & ラベルが付与された区間        &    ラベルが付与されていない区間     &  \\ \cline{1-4}
+\multirow{2}{*}{判定結果}        & 正        & $TP$                  & $FP$                   &  \\ \cline{2-4}
+& 誤        & $FN$                  & $TN$                   &  \\ \cline{1-4}
+\end{tabular}
+\end{center}
+\end{table}
+
+表\ref{table:search_table}が得られると$P$（適合率（Precision））と$R$（再現率（Recall））は式\ref{calc:precision}と式\ref{calc:recall}のようにそれぞれ定義できる。
+
+\begin{equation}
+\label{calc:precision}
+P = \frac{TP}{TP + FP}
+\end{equation}
+
+\begin{equation}
+\label{calc:recall}
+R = \frac{TP}{TP + FN}
+\end{equation}
+
+すなわち、適合率とは識別結果にどれだけ「ゴミ」がないかを表している。一方、再現率は識別にどれだけ「漏れ」がないかを表している。一方、したがって、適合率と再現率は大きい値ほど性能がよいことになる。ここで、2つのシステムを比較する場合は1次元のスカラ値によって、2値的な判断ができたほうが便利である。適合率と再現率をひとつのスカラ値に変換する手法としてF値（F-measure）がある。
+
+\begin{equation}
+\label{calc:fmeasure}
+F = \frac{1}{\frac{1}{P} + \frac{1}{R}}
+\end{equation}
+
+ここで$P$と$R$はそれぞれ適合率、再現率を表す。\par
+本実験では、評価方法として適合率、再現率、F値を用いる。
+
+\subsection{調査結果}
+表\ref{table:NHK_speach_RPF} $\sim$ 表\ref{table:NHK_pause_RPF}に音源識別による識別精度を示す。
+\begin{table}[H]
+  \begin{center}
+    \caption{発話区間検出精度 \label{table:NHK_speach_RPF}}
+    \begin{tabular}{|c||c|c|c|} \hline
+データID & Recall & Precision & F-meature \\ \hline
+ニュースA & 0.892 & 0.966 & 0.928 \\ \hline
+ニュースB & 0.888 & 0.963 & 0.924 \\ \hline
+ニュースC & 0.883 & 0.963 & 0.921 \\ \hline
+ニュースD & 0.902 & 0.952 & 0.927 \\ \hline
+ニュースE & 0.884 & 0.970 & 0.925 \\ \hline
+ニュースF & 0.907 & 0.974 & 0.939 \\ \hline
+ニュースG & 0.907 & 0.961 & 0.933 \\ \hline
+ニュースH & 0.843 & 0.966 & 0.900 \\ \hline
+ニュースI & 0.886 & 0.982 & 0.932 \\ \hline
+ニュースJ & 0.902 & 0.980 & 0.939 \\ \hline
+ニュースK & 0.875 & 0.963 & 0.917 \\ \hline
+ニュースL & 0.886 & 0.963 & 0.923 \\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\begin{table}[H]
+  \begin{center}
+    \caption{音楽区間検出精度 \label{table:NHK_music_RPF}}
+    \begin{tabular}{|c||c|c|c|} \hline
+データID & Recall & Precision & F-meature \\ \hline
+ニュースA & 0.467 & 0.565 & 0.511 \\ \hline
+ニュースB & 0.508 & 0.64 & 0.566 \\ \hline
+ニュースC & 0.507 & 0.687 & 0.583 \\ \hline
+ニュースD & 0.429 & 0.661 & 0.52 \\ \hline
+ニュースE & 0.481 & 0.633 & 0.547 \\ \hline
+ニュースF & 0.627 & 0.699 & 0.661 \\ \hline
+ニュースG & 0.611 & 0.936 & 0.74 \\ \hline
+ニュースH & 0.57 & 0.406 & 0.474 \\ \hline
+ニュースI & 0.481 & 0.648 & 0.552 \\ \hline
+ニュースJ & 0.531 & 0.776 & 0.631 \\ \hline
+ニュースK & 0.718 & 0.381 & 0.498 \\ \hline
+ニュースL & 0.672 & 0.471 & 0.554 \\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\begin{table}[H]
+  \begin{center}
+    \caption{背景雑音区間検出精度 \label{table:NHK_noise_RPF}}
+    \begin{tabular}{|c||c|c|c|} \hline
+データID & Recall & Precision & F-meature \\ \hline
+ニュースA & 0.259 & 0.835 & 0.395 \\ \hline
+ニュースB & 0.406 & 0.681 & 0.509 \\ \hline
+ニュースC & 0.199 & 0.857 & 0.323 \\ \hline
+ニュースD & 0.225 & 0.678 & 0.338 \\ \hline
+ニュースE & 0.282 & 0.783 & 0.414 \\ \hline
+ニュースF & 0.145 & 0.587 & 0.233 \\ \hline
+ニュースG & 0.192 & 0.855 & 0.313 \\ \hline
+ニュースH & 0.235 & 0.803 & 0.364 \\ \hline
+ニュースI & 0.338 & 0.817 & 0.478 \\ \hline
+ニュースJ & 0.268 & 0.746 & 0.395 \\ \hline
+ニュースK & 0.268 & 0.906 & 0.413 \\ \hline
+ニュースL & 0.349 & 0.511 & 0.415 \\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\begin{table}[H]
+  \begin{center}
+    \caption{無音区間検出精度 \label{table:NHK_pause_RPF}}
+    \begin{tabular}{|c||c|c|c|} \hline
+データID & Recall & Precision & F-meature \\ \hline
+ニュースA & 0.883 & 0.659 & 0.755 \\ \hline
+ニュースB & 0.334 & 0.685 & 0.449 \\ \hline
+ニュースC & 0.923 & 0.669 & 0.776 \\ \hline
+ニュースD & 0.581 & 0.587 & 0.584 \\ \hline
+ニュースE & 0.807 & 0.693 & 0.745 \\ \hline
+ニュースF & 0.859 & 0.564 & 0.681 \\ \hline
+ニュースG & 0.934 & 0.659 & 0.773 \\ \hline
+ニュースH & 0.788 & 0.626 & 0.698 \\ \hline
+ニュースI & 0.907 & 0.708 & 0.795 \\ \hline
+ニュースJ & 0.763 & 0.645 & 0.699 \\ \hline
+ニュースK & 0.887 & 0.615 & 0.726 \\ \hline
+ニュースL & 0.602 & 0.702 & 0.648 \\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+
+「音声」区間の検出精度は高い精度を示した。「背景雑音」の区間はRecallが非常に低いがPrecisionが非常に高い結果となった。
+また、ニュース番組によって発話区間の検出精度に差が生じた。
+
+\subsection{考察}
+背景雑音区間の検出精度が大きく下がっているが、その理由として1つ目に、人とシステムの感覚の相違が考えられる。雑音の定義上、人手でのラベル付けにおいて雑音の判断は難しい。例えば、背景雑音は無音との区別が難しい場合が多く、人がラベルで雑音とつけていてもシステムでは無音と識別する場合がよくある。ここに、システムを人間の感覚に近づける難しさがある。本実験で無音区間の検出精度が背景雑音区間の検出精度よりも比較的高いことも上記の問題によるものであると考えられる。\par
+2つ目に、発話区間と喧騒を含んだ背景雑音の区別が難しいためであると考えられる。人間が発話区間であると認識するには、「人の声」+「意味」の両方が必要である。「音声」の音源ラベルも明確な意味を持つ「人の声」が存在する範囲にのみ付与されている。しかし、本実験で用いた音源識別のシステムでは音響的特徴のみを考慮しているため「人の声」の判別は可能であるが、「意味」が存在するか否かの判別は不可能である。以上の理由により、背景雑音区間の検出精度が比較的低くなったと考えられる。

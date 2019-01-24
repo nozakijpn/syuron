@@ -11,30 +11,23 @@
 
 前後の発話区間を結合する際にi-vectorのコサイン類似度を用いるが、同一話者間の発話であっても発話の長さによってとりうるコサイン類似度が大きく異なる。そのため、発話の長さによって結合するか否かのコサイン類似度の閾値を変更する必要がある。これは、図\ref{fig:time_cos}を用いて決定した。
 
-\begin{figure}[H]
-  \begin{center}
-    \includegraphics[scale=0.8]{./figure/time_cos.eps}
-  \end{center}
-  \caption{発話の長さに対するコサイン類似度の平均 \label{fig:time_cos}}
-\end{figure}
-
-発話長が2秒以下までは発話長が長くなるごとに急激にコサイン類似度が上昇している。次に、発話長が7秒までのとき、なだらかにコサイン類似度が上昇している。発話長が7秒以上になるとコサイン類似度は停滞する。以上のことから、発話の長さを$T$[sec]としたとき、決定した閾値を表\ref{table:decide_thcos}に示す。
+以上のことから、発話の長さを$T$[sec]としたとき、決定した閾値を表\ref{table:decide_thcos}に示す。
 
 \begin{table}[H]
   \begin{center}
     \caption{結合の閾値 \label{table:decide_thcos}}
     \begin{tabular}{|c||c|} \hline
 時間条件 & コサイン類似度の閾値  \\ \hline
-$T <$ 2 &  0.1 \\ \hline
-2 $\leqq T <$ 7 &  0.3  \\ \hline
-7 $< T$ &  0.7 \\ \hline
+$T <$ 3.5 &  0.2 \\ \hline
+3.5 $\leqq T <$ 7 &  0.6  \\ \hline
+7 $< T$ &  0.75 \\ \hline
     \end{tabular}
   \end{center}
 \end{table}
 
-また、手法1では非発話区間の長さの閾値$T_{time}$によって結合するか否かを決定するため、閾値$Th_{time}$によって発話区間の結合精度が変化する。本実験では図\ref{fig:same_sp}より、$Th_{time}$を0.8秒から1.5秒までを0.1秒刻みで行なった。
+また、手法1では非発話区間の長さの閾値$T_{time}$によって結合するか否かを決定するため、閾値$Th_{time}$によって発話区間の結合精度が変化する。そのため、$Th_{time}$を0.8秒から1.5秒までを0.1秒刻みで行なった。
 
-i-vectorを用いたアンカーの発話区間抽出は\ref{section:clustering}節の手法を用いる。i-vectorの抽出には、ALIZEとLIR RALを用いる。i-vectorの抽出に使用するUBMモデルの学習には読み上げ音声\cite{ATR}を使用する。読み上げ音声に収録されている各発話データからi-vectorを抽出する。発話データから抽出する音響特徴パラメータを表\ref{iv_feature2}に示す。また混合数は32とした。$Th_{cos}$は0.8から1.5までの範囲を0.1刻みで検証を行う。また、Baselineとしてi-vectorの再抽出を行わずにアンカーの発話区間検出を行う。\par
+i-vectorを用いたアンカーの発話区間抽出は\ref{section:clustering}節の手法を用いる。i-vectorの抽出には、ALIZEとLIR RALを用いる。i-vectorの抽出に使用するUBMモデルの学習には読み上げ音声\cite{ATR}を使用する。読み上げ音声に収録されている各発話データからi-vectorを抽出する。発話データから抽出する音響特徴パラメータを表\ref{iv_feature2}に示す。また混合数は32とした。$Th_{cos}$は0.5から0.8までの範囲を0.1刻みで検証を行う。また、Baselineとしてi-vectorの再抽出を行わずにアンカーの発話区間検出を行う。\par
 
 \begin{table}[H]
   \begin{center}
@@ -132,4 +125,13 @@ Acc_{time} = \frac{検出したアンカーの発話区間の時間数}{アン�
 
 \subsection{考察}
 Baselineと再抽出したi-vectorを用いた各提案手法を比較したとき、再抽出したi-vectorを用いた手法の方が$Th_{cos}$を高くした時に発話区間検出精度が向上している。このことから、i-vectorの抽出精度が向上したと考えられる。\par
+また、図\ref{fig:time_cos}はニュース音声のアンカーの発話間のコサイン類似度の平均を発話の長さごとに集計したものである。
 
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[scale=0.8]{./figure/time_cos.eps}
+  \end{center}
+  \caption{発話の長さに対するコサイン類似度の平均 \label{fig:time_cos}}
+\end{figure}
+
+\ref{fig:time_cos}で示された傾向は、\ref{fig:same_cos_hist}で示したバランス文で調査したコサイン類似度と似た傾向にある。しかし、発話の長さが同じ時、アンカーのi-vectorを用いたコサイン類似度は若干低い値を示している。これは、ニュース番組内で流れるBGMや参考映像などの音が発話中に流れているため、i-vectorの値を十分に抽出するための発話の長さが発話のみのバランス文と比較して長く必要になったためであると考えられる。また、これによってコサイン類似度の閾値を高く設定した場合、コサイン類似度が閾値を下回ってしまい、十分な量の発話区間を結合できなかったため、発話区間の検出精度が低下したと考えられる。
