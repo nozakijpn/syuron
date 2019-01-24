@@ -27,4 +27,6 @@
 \contentsline {table}{\numberline {6.10}{\ignorespaces 使用する音響特徴パラメータ }}{37}
 \contentsline {table}{\numberline {6.11}{\ignorespaces 使用した音素 }}{39}
 \contentsline {table}{\numberline {6.12}{\ignorespaces カナ音素対応表 }}{40}
+\contentsline {table}{\numberline {6.13}{\ignorespaces アンカーの発話区間が既知の場合の音声認識結果 }}{42}
+\contentsline {table}{\numberline {6.14}{\ignorespaces アンカーの発話区間が未知の場合の音声認識結果 }}{42}
 \addvspace {10\p@ }
