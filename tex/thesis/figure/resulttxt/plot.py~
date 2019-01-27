@@ -1,0 +1,47 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+def main():
+    # プロットデータ
+    site=np.array(['L1','K ','M ','Q ','K1 ','J ','J1','G ','H ','I '])
+    hdam=np.array([ 189, 108,  94, 186, 145, 138, 169, 108, 95,  90])
+    lway=np.array([2304,4312,4300,2195,3999,3808,2987,3193,5034,5838])
+
+    # データの並び替え
+    ii=np.argsort(hdam)
+    sp=site[ii]
+    hp=hdam[ii]
+    lp=lway[ii]
+
+    x=np.arange(len(sp)) # ｘ座標
+    w=0.3 # 棒の幅
+
+    fsz=16
+    fig=plt.figure(figsize=(12,6),facecolor='w')
+    plt.rcParams["font.size"] = fsz
+    # 左軸グラフの描画
+    plt.ylim(0,300)
+    plt.ylabel('Dam height (m)')
+    plt.xlabel('Site name')
+    plt.xticks(x+w/2,sp,rotation=0)
+    plt.grid(color='#999999',linestyle='--')
+    g1=plt.bar(x,hp,width=w,align='center',label='Dam height (m)',fill=None,hatch='xx')
+    # 右軸グラフの描画
+    plt.twinx()
+    plt.ylim(0,6000)
+    plt.ylabel('Waterway length (m)')
+    g2=plt.bar(x+w,lp,width=w,align='center',label='Waterway length (m)',fill=None,hatch='/')
+    # 凡例をまとめて描画
+    plt.legend(handles=[g1,g2],loc='best',shadow=True)
+
+    plt.tight_layout()
+    fnameF='fig_bar2.jpg'
+    plt.savefig(fnameF, dpi=100, bbox_inches="tight", pad_inches=0.1)
+    plt.show()
+
+
+#---------------
+# Execute
+#---------------
+if __name__ == '__main__': main()
