@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.12.11)  27 JAN 2019 13:25
+This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.12.11)  27 JAN 2019 18:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -219,6 +219,18 @@ LaTeX Warning: Label `calc:recall' multiply defined.
 
 LaTeX Warning: Label `calc:fmeasure' multiply defined.
 
+
+LaTeX Warning: Label `table:NHK_pause_RPF' multiply defined.
+
+
+LaTeX Warning: Label `table:NHK_pause_RPF' multiply defined.
+
+
+LaTeX Warning: Label `table:NHK_pause_RPF' multiply defined.
+
+
+LaTeX Warning: Label `table:NHK_pause_RPF' multiply defined.
+
 )
 \openout1 = `thesis.aux'.
 
@@ -277,7 +289,23 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
 
  [3
 
-] (./thesis.lot)
+] (./thesis.lot
+Overfull \hbox (11.4969pt too wide) in paragraph at lines 27--27
+ [][] []\JY1/mc/m/n/10 手法 \OT1/cmr/m/n/10 1 \JY1/mc/m/n/10 による各ニ ュ ース
+番組音声のアンカ ーの発話区間検出精度 \OT1/cmr/m/n/10 ($\OML/cmm/m/it/10 Th[] \
+OT1/cmr/m/n/10 = 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 6\OML/cmm/m/it/10 ; Th[] \O
+T1/cmr/m/n/10 = 
+ []
+
+
+Overfull \hbox (11.4969pt too wide) in paragraph at lines 29--29
+ [][] []\JY1/mc/m/n/10 手法 \OT1/cmr/m/n/10 3 \JY1/mc/m/n/10 による各ニ ュ ース
+番組音声のアンカ ーの発話区間検出精度 \OT1/cmr/m/n/10 ($\OML/cmm/m/it/10 Th[] \
+OT1/cmr/m/n/10 = 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 6\OML/cmm/m/it/10 ; Th[] \O
+T1/cmr/m/n/10 = 
+ []
+
+)
 \tf@lot=\write5
 \openout5 = `thesis.lot'.
 
@@ -372,26 +400,20 @@ Overfull \hbox (22.39204pt too wide) has occurred while \output is active
 第 6 章
 [30
 
-] (./base/search_speech_time.tex [31]) (./base/get_anchor.tex [32]
-
-LaTeX Warning: Reference `fig:time_cos' on page 33 undefined on input line 16.
-
-
-LaTeX Warning: Reference `fig:time_cos' on page 33 undefined on input line 16.
-
-[33]
+] (./base/search_speech_time.tex [31]) (./base/get_anchor.tex [32] [33]
 File: ./figure/get_anchor_baseline.eps Graphic file (type eps)
- <./figure/get_anchor_baseline.eps> [34]
+
+<./figure/get_anchor_baseline.eps> [34]
 File: ./figure/get_anchor_prob1.eps Graphic file (type eps)
  <./figure/get_anchor_prob1.eps>
+[35]
 File: ./figure/get_anchor_prob2.eps Graphic file (type eps)
-
-<./figure/get_anchor_prob2.eps> [35]
+ <./figure/get_anchor_prob2.eps> [36]
 File: ./figure/get_anchor_prob3.eps Graphic file (type eps)
- <./figure/get_anchor_prob3.eps> [36])
-(./base/speach_recog.tex
+ <./figure/get_anchor_prob3.eps>
+[37] [38]) (./base/speach_recog.tex
 File: ./figure/kakiokosi.eps Graphic file (type eps)
- <./figure/kakiokosi.eps> [37]
+ <./figure/kakiokosi.eps> [39]
 File: ./figure/kana_onso.eps Graphic file (type eps)
 
 <./figure/kana_onso.eps>
@@ -399,41 +421,38 @@ Overfull \hbox (7.08626pt too wide) in paragraph at lines 68--69
  [] 
  []
 
-[38] [39]
+[40] [41]
 File: ./figure/kakiokosi.eps Graphic file (type eps)
- <./figure/kakiokosi.eps> [40]
+ <./figure/kakiokosi.eps> [42]
 File: ./figure/baseline_clustering.eps Graphic file (type eps)
  <./figure/baseline_clustering.eps>
 File: ./figure/prob1_clustering.eps Graphic file (type eps)
 
-<./figure/prob1_clustering.eps> [41]
+<./figure/prob1_clustering.eps> [43]
 File: ./figure/prob2_clustering.eps Graphic file (type eps)
  <./figure/prob2_clustering.eps>
 File: ./figure/prob3_clustering.eps Graphic file (type eps)
 
-<./figure/prob3_clustering.eps> [42])) (./matome.tex [43]
+<./figure/prob3_clustering.eps> [44])) (./matome.tex [45]
 第 7 章
-) (./ack.tex [44
+) (./ack.tex [46
 
-]) (./ref.tex [45
+]) (./ref.tex [47
 
-]) [46
+]) [48
 
 ] (./thesis.aux)
-
-LaTeX Warning: There were undefined references.
-
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2346 strings out of 493281
- 30073 string characters out of 6145040
+ 2345 strings out of 493281
+ 30059 string characters out of 6145040
  100528 words of memory out of 5000000
- 6149 multiletter control sequences out of 15000+600000
+ 6148 multiletter control sequences out of 15000+600000
  25700 words of font info for 103 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 28i,17n,27p,1156b,340s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 28i,17n,27p,1175b,340s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.dvi (51 pages, 182208 bytes).
+Output written on thesis.dvi (53 pages, 188960 bytes).
