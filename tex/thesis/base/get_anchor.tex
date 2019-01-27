@@ -1,33 +1,34 @@
-\section{アンカーの発話群検出実験}
+\section{アンカーの発話区間検出実験}
 \label{chapter:get_anchor}
-\subsection{実験方法}
-同一話者の可能性が高い発話区間を結合、i-vectorを再抽出してアンカーの発話区間検出を行った。発話区間の結合手法は以下の通りである。
+
+\subsection{実験条件}
+同一話者の可能性が高い発話区間を結合し、結合した発話区間を用いてi-vectorを再抽出した。次に、再抽出したi-vectorを用いてアンカーの発話区間検出を行った。発話区間の結合手法は以下の通りである。
 
 \begin{itemize}
-\item 手法1 : 発話の間隔情報を考慮した発話区間の結合手法
-\item 手法2 : 発話環境を考慮した発話区間の結合手法
+\item 手法1 : 発話の間隔情報を考慮して発話区間の結合する
+\item 手法2 : 発話環境を考慮して発話区間の結合する
 \item 手法3 : 手法1 + 手法2
 \end{itemize}
 
-前後の発話区間を結合する際にi-vectorのコサイン類似度を用いるが、同一話者間の発話であっても発話の長さによってとりうるコサイン類似度が大きく異なる。そのため、発話の長さによって結合するか否かのコサイン類似度の閾値を変更する必要がある。これは、図\ref{fig:time_cos}を用いて決定した。
+各手法を用いて結合した発話データからi-vectorを抽出し、抽出したi-vectorを用いてアンカーの発話区間検出を行う。アンカーの発話区間検出手法は\ref{section:clustering}節の手法を用いる。また、Baselineとして、音源分離によって得られた発話区間から得られたi-vectorを用いたアンカーの発話区間検出を行う。
 
-以上のことから、発話の長さを$T$[sec]としたとき、決定した閾値を表\ref{table:decide_thcos}に示す。
+
+前後の発話区間を結合する際のi-vectorのコサイン類似度の閾値を表\ref{table:decide_thcos}に示す。ここで、$T$は発話区間の秒数である。これは、図\ref{fig:time_cos}で示されるように、同一話者間の発話であっても発話の長さによってコサイン類似度の値が大きく異なり、図\ref{fig:time_cos}で示されるように発話が短い時、同一話者間のi-vectorのコサイン類似度の標準偏差が非常に大きいためである。そのため、本実験では、3.5秒と7秒で閾値を変更し、発話区間の結合に用いた。
 
 \begin{table}[H]
   \begin{center}
-    \caption{結合の閾値 \label{table:decide_thcos}}
+    \caption{発話区間の結合の閾値 \label{table:decide_thcos}}
     \begin{tabular}{|c||c|} \hline
 時間条件 & コサイン類似度の閾値  \\ \hline
 $T <$ 3.5 &  0.2 \\ \hline
 3.5 $\leqq T <$ 7 &  0.6  \\ \hline
-7 $< T$ &  0.75 \\ \hline
+7 $\leqq T$ &  0.75 \\ \hline
     \end{tabular}
   \end{center}
 \end{table}
 
-また、手法1では非発話区間の長さの閾値$T_{time}$によって結合するか否かを決定するため、閾値$Th_{time}$によって発話区間の結合精度が変化する。そのため、$Th_{time}$を0.8秒から1.5秒までを0.1秒刻みで行なった。
-
-i-vectorを用いたアンカーの発話区間抽出は\ref{section:clustering}節の手法を用いる。i-vectorの抽出には、ALIZEとLIR RALを用いる。i-vectorの抽出に使用するUBMモデルの学習には読み上げ音声\cite{ATR}を使用する。読み上げ音声に収録されている各発話データからi-vectorを抽出する。発話データから抽出する音響特徴パラメータを表\ref{iv_feature2}に示す。また混合数は32とした。$Th_{cos}$は0.5から0.8までの範囲を0.1刻みで検証を行う。また、Baselineとしてi-vectorの再抽出を行わずにアンカーの発話区間検出を行う。\par
+手法1、および手法3で用いる非発話区間の長さの閾値$Th_{time}$は0.8秒から1.5秒までの範囲を0.1秒刻みで、i-vectorを用いたアンカーの発話区間検出はアンカーか否かを判別する$Th_{cos}$を0.5から0.8までの範囲を0.1刻みで実験を行う\par
+i-vectorの抽出には、ALIZEとLIR RALを用いる。i-vectorの抽出に使用するUBMモデルの学習には読み上げ音声\cite{ATR}を使用する。読み上げ音声に収録されている各発話データからi-vectorを抽出する。発話データから抽出する音響特徴パラメータを表\ref{iv_feature2}に示す。また混合数は32とした。\par
 
 \begin{table}[H]
   \begin{center}
@@ -61,7 +62,7 @@ i-vectorを用いたアンカーの発話区間抽出は\ref{section:clustering}
 \end{center}
 \end{table}
 
-表\ref{table:clustering}を用いて、$P$（適合率（Precision））と$R$（再現率（Recall））を式\ref{calc:precision2}と式\ref{calc:recall2}のようにそれぞれ定義する。また、$F$値（$F-measure$）を式\ref{calc:fmeasure2}のように定義する。
+表\ref{table:clustering}に示すアンカーの発話区間の正誤判定を行い、$P$（適合率（Precision））と$R$（再現率（Recall））を式\ref{calc:precision2}と式\ref{calc:recall2}のようにそれぞれ計算する。また、$F$値（$F-measure$）を式\ref{calc:fmeasure2}のように計算する。
 
 \begin{equation}
 \label{calc:precision2}
@@ -80,7 +81,7 @@ F = \frac{1}{\frac{1}{P} + \frac{1}{R}}
 
 ここで$P$と$R$はそれぞれ適合率、再現率を表す。
 
-また、検出したアンカーの発話区間の割合を式\ref{calc:anchor_acc}のように定義して評価する。
+また、検出したアンカーの発話区間の割合を式\ref{calc:anchor_acc}を用いて評価する。
 
 \begin{equation}
 \label{calc:anchor_acc}
@@ -90,13 +91,13 @@ Acc_{time} = \frac{検出したアンカーの発話区間の時間数}{アン�
 本実験では、評価方法として適合率、再現率、$F$値、$Acc_{time}$を用いる。
 
 \subsection{実験結果}
-アンカーの発話区間検出精度を以下に示す。本節では各手法で最も良いF値を示した条件の結果を記載している。その他の条件の結果は付録で記載する。
+アンカーの発話区間検出精度を図\ref{fig:result_anchor_baseline} $\sim$ 図\ref{fig:result_anchor_prob3}に示す。本節では各手法で最も良いF値を示した条件の結果を記載している。その他の条件の結果は付録で記載する。
 
 \begin{figure}[H]
   \begin{center}
     \includegraphics[scale=0.8]{./figure/get_anchor_baseline.eps}
   \end{center}
-  \caption{アンカーの発話区間検出精度のBaseline \label{fig:result_anchor_baseline}}
+  \caption{Baselineによる発話区間検出精度 \label{fig:result_anchor_baseline}}
 \end{figure}
 
 \begin{figure}[H]
@@ -120,18 +121,8 @@ Acc_{time} = \frac{検出したアンカーの発話区間の時間数}{アン�
   \caption{提案手法3によるアンカーの発話区間検出精度　($Th_{time}=1.2$) \label{fig:result_anchor_prob3}}
 \end{figure}
 
-実験の結果、発話区間を結合して再抽出したi-vectorを用いた手法が全体的に高い精度を示した。Baselineは$Th_{cos}$が0.8のときクラスタが小さくなりすぎたためアンカーの発話区間を検出出来なかった。また、Baselineは$Th_{cos}$が0.5のときがF-measureが最も高い値をとるのに対して、本提案手法では$Th_{cos}$が0.7のとき、F-measureが最も高い値をとった。\par
+実験の結果、発話区間を結合して再抽出したi-vectorを用いた手法が全体的に高い精度を示した。Baselineは$Th_{cos}$が0.8のときアンカーの発話区間を検出できなかった。また、Baselineは$Th_{cos}$が0.5のときがF-measureが最も高い値をとるのに対して、本提案手法では$Th_{cos}$が0.7のとき、F-measureが最も高い値をとった。\par
 本実験の提案手法では、手法1が最も発話区間検出精度が高く、F値が0.795であった。また、いずれの手法においても$Th_{cos}$が小さい時にはRecallが高く、大きい時にはPrecisionが高くなる傾向が確認された。
 
 \subsection{考察}
-Baselineと再抽出したi-vectorを用いた各提案手法を比較したとき、再抽出したi-vectorを用いた手法の方が$Th_{cos}$を高くした時に発話区間検出精度が向上している。このことから、i-vectorの抽出精度が向上したと考えられる。\par
-また、図\ref{fig:time_cos}はニュース音声のアンカーの発話間のコサイン類似度の平均を発話の長さごとに集計したものである。
-
-\begin{figure}[H]
-  \begin{center}
-    \includegraphics[scale=0.8]{./figure/time_cos.eps}
-  \end{center}
-  \caption{発話の長さに対するコサイン類似度の平均 \label{fig:time_cos}}
-\end{figure}
-
-\ref{fig:time_cos}で示された傾向は、\ref{fig:same_cos_hist}で示したバランス文で調査したコサイン類似度と似た傾向にある。しかし、発話の長さが同じ時、アンカーのi-vectorを用いたコサイン類似度は若干低い値を示している。これは、ニュース番組内で流れるBGMや参考映像などの音が発話中に流れているため、i-vectorの値を十分に抽出するための発話の長さが発話のみのバランス文と比較して長く必要になったためであると考えられる。また、これによってコサイン類似度の閾値を高く設定した場合、コサイン類似度が閾値を下回ってしまい、十分な量の発話区間を結合できなかったため、発話区間の検出精度が低下したと考えられる。
+Baselineと再抽出したi-vectorを用いた各提案手法を比較したときアンカーの発話区間検出精度が向上したことから、従来と比較してi-vectorが話者の特徴をより抽出できたと考えられる。また、いずれの手法でもニュース2はアンカーの発話区間検出の精度が他のニュースと比較して低い。これは、ニュース2のアンカーの発話数と天気アナウンサーの発話数が影響していると考えられる。ニュース2の2人のアンカーのうち、一人は27発話、天気アナウンサーは36発話であった。よって、天気アナウンサーをアンカーとして認識したことによりP値が低下し、結果として検出精度が低下したと考えらえる。これに関連して、Baselineでアンカーとして検出したクラスタ数は2であったが、そのうち一つはアンカーではなく天気アナウンサーの発話のクラスタとなっており、正確なアンカーの発話のクラスタリング、発話区間検出ができたとは言えない。対して、手法1に関してはアンカーとして検出したクラスタ数が3となっているが、発話数が少ないアンカーの検出にも成功している。しかし、こちらも天気アナウンサーの発話をアンカーとして誤識別しているため、さらなるアンカーの発話区間の検出精度向上には天気アナウンサーの発話か否かを識別する手法が必要であると考えられる。

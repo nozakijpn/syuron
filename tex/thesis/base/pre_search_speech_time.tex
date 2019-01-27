@@ -47,21 +47,21 @@ time      & speaker          \\ \hline
 
 \subsection{調査方法}
 \ref{section:devide_audio}節で述べた音源分離を用いての音源分離を行う。
-表\ref{table:detail_identification_method}は音源識別の実験条件である。
+表\ref{table:detail_identification_method1}は音源識別の調査条件である。
 
 \begin{table}[H]
   \begin{center}
-    \caption{音源識別実験の実験条件 \label{table:detail_identification_method}}
+    \caption{音源識別実験の実験条件 \label{table:detail_identification_method1}}
     \begin{tabular}{|c||c|} \hline
       FFTの窓幅(フレーム長) & 2048point(約0.046[sec])   \\ \hline
-      FFTのシフト幅(フレーム間隔) &  2048point(約0.023[sec]) \\ \hline
+      FFTのシフト幅(フレーム間隔) &  1024point(約0.023[sec]) \\ \hline
       窓関数 & ハミング窓  \\ \hline
     \end{tabular}
   \end{center}
 \end{table}
 
 \subsection{評価方法}
-評価は、検出された区間と正解ラベルを比較して行う。
+評価は、検出された区間と正解ラベルを比較して行う。検出する区間は、「音声」「背景雑音」「音楽」「無音」の4つである。
 
 \begin{table}[H]
 \begin{center}
@@ -96,7 +96,7 @@ F = \frac{1}{\frac{1}{P} + \frac{1}{R}}
 \end{equation}
 
 ここで$P$と$R$はそれぞれ適合率、再現率を表す。\par
-本実験では、評価方法として適合率、再現率、F値を用いる。
+本調査では、評価方法として適合率、再現率、F値を用いる。
 
 \subsection{調査結果}
 表\ref{table:NHK_speach_RPF} $\sim$ 表\ref{table:NHK_pause_RPF}に音源識別による識別精度を示す。

@@ -4,21 +4,24 @@
 \contentsline {figure}{\numberline {2.2}{\ignorespaces 音声認識の流れ}}{12}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces HMMの例}}{14}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces DNNの構造図}}{15}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces DNNを用いる際の学習の流れ }}{16}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces 同一話者間のi-vectorのコサイン類似度 }}{17}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces 同一話者間のi-vectorのコサイン類似度の標準偏差 }}{18}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces 異なる話者間のi-vectorのコサイン類似度 }}{18}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces 異なる話者間のi-vectorのコサイン類似度の標準偏差 }}{19}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces 同一話者間のi-vectorのコサイン類似度 }}{18}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces 同一話者間のi-vectorのコサイン類似度の標準偏差 }}{19}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces 異なる話者間のi-vectorのコサイン類似度 }}{19}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces 異なる話者間のi-vectorのコサイン類似度の標準偏差 }}{20}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces 提案手法を組み込んだインデクシング手法 }}{28}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces アンカーの発話区間検出精度のBaseline }}{34}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces 提案手法1によるアンカーの発話区間検出精度 ($Th_{time}=1.0$) }}{34}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces 提案手法2によるアンカーの発話区間検出精度 }}{35}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces 提案手法3によるアンカーの発話区間検出精度　($Th_{time}=1.2$) }}{35}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces 発話の長さに対するコサイン類似度の平均 }}{36}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces 各話者クラスタに含まれる発話データ数 }}{37}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces DNNを用いる際の学習の流れ }}{38}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces 書き起こしテキストの例 }}{41}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Baselineによる発話区間検出精度 }}{35}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces 提案手法1によるアンカーの発話区間検出精度 ($Th_{time}=1.0$) }}{35}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces 提案手法2によるアンカーの発話区間検出精度 }}{36}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces 提案手法3によるアンカーの発話区間検出精度　($Th_{time}=1.2$) }}{36}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces 各話者クラスタに含まれる発話データ数 }}{37}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces 書き起こしテキストの例 }}{40}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Baselineによる音響モデルの選択結果 }}{41}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces 手法1による音響モデルの選択結果 }}{42}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces 手法2による音響モデルの選択結果 }}{42}
+\contentsline {figure}{\numberline {6.10}{\ignorespaces 手法3による音響モデルの選択結果 }}{42}
 \addvspace {10\p@ }

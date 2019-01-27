@@ -76,10 +76,10 @@ S_{u,c}=diag\left[\sum_{t=1}^L\gamma_c(c)(o_c-m_c)(o_t-m_c)^\prime\right]
 
 \begin{itemize}
 \item 事前分布\par
-$ｗ$の事前分布は$p(w)$平均0、共分散行列を持つガウス分布であり、以下のように書ける。
+$w$の事前分布は$p(w)$平均0、共分散行列を持つガウス分布であり、以下のように書ける。
 \begin{equation}
 \label{iv1}
-p(w)\propto exp(-\frac{1}{2}w^{\prime}w)
+p(w)\propto \exp(-\frac{1}{2}w^{\prime}w)
 \end{equation}
 
 \item 条件付き分布\par
@@ -87,7 +87,7 @@ $M_{u,c}$を混合要素に対する$M_u$の部分ベクトルとする。直感
 
 \begin{equation}
 \label{iv2}
-P(O_u|w_u)=etp\left(\sum_{t=1}^{L}\sum_{c=1}^{C}\gamma_t(c)log(2\pi )^{-\frac{D_F}{2}}\left|\Sigma_{c}\right|^{-\frac{1}{2}}-\frac{1}{2}\sum_{t=1}^{L}\sum_{c=1}^{C}\gamma_t(c)D(o_t;\theta_c) \right)
+P(O_u|w_u)=\exp\left(\sum_{t=1}^{L}\sum_{c=1}^{C}\gamma_t(c)log(2\pi )^{-\frac{D_F}{2}}\left|\Sigma_{c}\right|^{-\frac{1}{2}}-\frac{1}{2}\sum_{t=1}^{L}\sum_{c=1}^{C}\gamma_t(c)D(o_t;\theta_c) \right)
 \end{equation}
 のように書ける。ここで、
 
@@ -108,7 +108,7 @@ M_{u,c}=m_c+T_cw_u
 
 ここで、$G_u^\Sigma$及び$H_u^{\Sigma T}$は、
 \begin{equation}
-G_u^\Sigma=\sum_{c=1}^c\left[\frac{1}{2}N_{u,c}log\left|\Sigma_c^{-1}\right|-\frac{1}{2}tr\left(\Sigma_c^{-1}S_{u,c}\right)\right]
+G_u^\Sigma=\sum_{c=1}^c\left[\frac{1}{2}N_{u,c}\log\left|\Sigma_c^{-1}\right|-\frac{1}{2}tr\left(\Sigma_c^{-1}S_{u,c}\right)\right]
 \end{equation}
 
 \begin{equation}
@@ -121,7 +121,7 @@ $w$の事後分布は(\ref{iv2})〜(\ref{iv3})を用いると、
 
 \begin{equation}
 \begin{split}
-p(w_u|O_u)\propto p(O_u|w_u)p(w_u)\propto exp(w_u^\prime T^\prime \Sigma^\prime Tw_u-\frac{1}{2}w_u^\prime w_u)\\ \propto exp(w_u^\prime T^\prime \Sigma^\prime F_u-\frac{1}{2}w_u^\prime N_u\Sigma^{-1}Tw_u-\frac{1}{2}w_u^\prime w_u)\\ \propto exp(-\frac{1}{2}(w_u-G_uT^\prime\Sigma^{-1}F_u)^\prime G_u^{-1}(w_u-G_uT^\prime \Sigma^\prime F_u))
+p(w_u|O_u)\propto p(O_u|w_u)p(w_u)\propto \exp(w_u^\prime T^\prime \Sigma^\prime Tw_u-\frac{1}{2}w_u^\prime w_u)\\ \propto exp(w_u^\prime T^\prime \Sigma^\prime F_u-\frac{1}{2}w_u^\prime N_u\Sigma^{-1}Tw_u-\frac{1}{2}w_u^\prime w_u)\\ \propto \exp(-\frac{1}{2}(w_u-G_uT^\prime\Sigma^{-1}F_u)^\prime G_u^{-1}(w_u-G_uT^\prime \Sigma^\prime F_u))
 \end{split}
 \end{equation}
 と書ける。ここで、
