@@ -8,11 +8,13 @@
     \caption{音源識別実験の実験条件 \label{table:detail_identification_method}}
     \begin{tabular}{|c||c|} \hline
       FFTの窓幅(フレーム長) & 2048point(約0.046[sec])   \\ \hline
-      FFTのシフト幅(フレーム間隔) &  2048point(約0.023[sec]) \\ \hline
+      FFTのシフト幅(フレーム間隔) &  1024point(約0.023[sec]) \\ \hline
       窓関数 & ハミング窓  \\ \hline
     \end{tabular}
   \end{center}
 \end{table}
+
+また、音声区間として検出された時点から音声区間以外の区間として検出された時点までを１発話とした。
 
 \subsection{評価方法}
 評価は、検出された区間と正解ラベルを比較して行う。
@@ -30,7 +32,7 @@
 \end{center}
 \end{table}
 
-表\ref{table:search_table}が得られると$P$（適合率（Precision））と$R$（再現率（Recall））は式\ref{calc:precision}と式\ref{calc:recall}のようにそれぞれ定義できる。
+表\ref{table:search_table}が得られると$P$（適合率（Precision））と$R$（再現率（Recall））は式\ref{calc:precision}と式\ref{calc:recall}のようにそれぞれ計算する。
 
 \begin{equation}
 \label{calc:precision}
@@ -42,7 +44,7 @@ P = \frac{TP}{TP + FP}
 R = \frac{TP}{TP + FN}
 \end{equation}
 
-すなわち、適合率とは識別結果にどれだけ「ゴミ」がないかを表している。一方、再現率は識別にどれだけ「漏れ」がないかを表している。一方、したがって、適合率と再現率は大きい値ほど性能がよいことになる。ここで、2つのシステムを比較する場合は1次元のスカラ値によって、2値的な判断ができたほうが便利である。適合率と再現率をひとつのスカラ値に変換する手法としてF値（F-measure）がある。
+適合率とは識別結果にどれだけ「ゴミ」がないかを表している。一方、再現率は識別にどれだけ「漏れ」がないかを表している。したがって、適合率と再現率は大きい値ほど性能がよいことになる。ここで、2つのシステムを比較する場合は1次元のスカラ値によって、2値的な判断ができたほうが便利である。適合率と再現率をひとつのスカラ値に変換する手法としてF値（F-measure）がある。
 
 \begin{equation}
 \label{calc:fmeasure}
@@ -52,18 +54,32 @@ F = \frac{1}{\frac{1}{P} + \frac{1}{R}}
 ここで$P$と$R$はそれぞれ適合率、再現率を表す。\par
 本実験では、評価方法として適合率、再現率、F値を用いる。
 \subsection{実験結果}
-表\ref{table:test_detail_RPF}に音源識別による発話区間検出精度を示す。
+表\ref{table:test_detail_RPF}に音源識別による発話区間検出精度、表\ref{table:num_of_anchor}に検出した発話区間数とアンカーの発話区間数を示す。
 
 \begin{table}[H]
   \begin{center}
     \caption{発話区間検出精度 \label{table:test_detail_RPF}}
     \begin{tabular}{|c||c|c|c|} \hline
       データID & Recall & Precision & F-meature \\ \hline
-      ニュース1 & 89.49 & 91.60 & 90.53 \\ \hline
-      ニュース2 & 84.09 & 95.54 & 89.45\\ \hline
-      ニュース3 & 88.30 & 85.99 & 87.13 \\ \hline
-      ニュース4 & 90.06 & 83.33 & 86.56\\ \hline
-      ニュース5 & 90.95 & 90.30 & 90.63\\ \hline
+      ニュース1 & 0.895 & 0.916 & 0.905 \\ \hline
+      ニュース2 & 0.841 & 0.955 & 0.895\\ \hline
+      ニュース3 & 0.883 & 0.860 & 0.871 \\ \hline
+      ニュース4 & 0.901 & 0.833 & 0.866\\ \hline
+      ニュース5 & 0.910 & 0.930 & 0.906\\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\begin{table}[H]
+  \begin{center}
+    \caption{検出した発話区間数とアンカーの発話区間数 \label{table:num_of_anchor}}
+    \begin{tabular}{|c||c|c|} \hline
+ニュースID & 発話区間数 & アンカーの発話区間数 \\ \hline
+ニュース1  & 345   & 165 \\ \hline
+ニュース2  & 519   & 149 \\ \hline
+ニュース3  & 608   & 258 \\ \hline
+ニュース4  & 518   & 219 \\ \hline
+ニュース5  & 520   & 285 \\ \hline
     \end{tabular}
   \end{center}
 \end{table}
@@ -71,4 +87,4 @@ F = \frac{1}{\frac{1}{P} + \frac{1}{R}}
 実験の結果、「音声」区間の検出精度は高い精度を示した。また、ニュース番組によって発話区間の検出精度に差が生じた。ニュース2はRecallが低く、ニュース3とニュース4ではPrecisionが低い結果となった。
 
 \subsection{考察}
-ニュース番組ごとに発話区間の検出精度の差が生じた原因として、街頭騒音の多さの違いが挙げられる。検出精度が低かったニュース番組は街頭インタビューやスポーツの歓声などが比較的多く存在しており、それらの区間を音声区間として誤検出していた。よって、音声区間の検出精度を向上させるためには、事前処理として街頭騒音、歓声などの音源分離、除去が必要であると考えられる。\par
+ニュース番組ごとに発話区間の検出精度の差が生じた原因として、街頭騒音の多さの違いが挙げられる。検出精度が低かったニュース番組は街頭インタビューやスポーツの歓声が多く存在しており、それらの区間を音声区間として誤検出していた。よって、音声区間の検出精度を向上させるためには、事前処理として街頭騒音、歓声などの音源分離、除去が必要であると考えられる。\par
