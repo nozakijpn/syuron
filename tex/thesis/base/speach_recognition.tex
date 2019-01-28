@@ -107,12 +107,12 @@ MFCCは、フレームと呼ばれる数十ms程度の音声区間を定常と�
 \label{eq:deltadeltac}
 \Delta\Delta c(n;l)=\frac{\Sigma_{K=-K}^{K}k_c(n;l+k)}{\Sigma_{K}^{K=-K}K^2}
 \end{equation}
-\subsection{DNNの概要}
+\subsection{DNNの概要\cite{audio_textbook}}
 本研究ではDNNをベースとした会議音声認識を行なう。DNNとは、多層ニューラルネットワークを使った機械学習のことである。DNNは図\ref{fig:dnn}のように、auto-encoderまたはRestricted Boltzmann Machines (RBM)などを積み重ねた深い構造をもつ。入力に近い層では、単純に特徴抽出しかできないが、それらの重み付け和をとると表現能力が上がり、それをさらに上位の層の入力にしていくことで、モデルの表現力がさらに上がるとされている。\par
 
 \begin{figure}[H]
   \begin{center}
-    \includegraphics{./figure/image_dnn.eps}
+    \includegraphics[scale=0.5]{./figure/structure_dnn.eps}
   \end{center}
   \caption{DNNの構造図}
   \label{fig:dnn}
@@ -125,7 +125,7 @@ DNNを用いた音響モデルの構築や、この音響モデルを用いた�
 
 \begin{figure}[H]
   \begin{center}
-    \includegraphics{./figure/flow_train_dnn.eps}
+    \includegraphics[scale=0.5]{./figure/train_dnn.eps}
   \end{center}
   \caption{DNNを用いる際の学習の流れ \label{fig:flow_train_dnn}}
 \end{figure}
