@@ -1,7 +1,7 @@
-\section{アンカーの発話区間検出実験}
+\chapter{アンカーの発話区間検出実験}
 \label{chapter:get_anchor}
 
-\subsection{実験条件}
+\section{実験条件}
 同一話者の可能性が高い発話区間を結合し、結合した発話区間からi-vectorを再抽出した。次に、再抽出したi-vectorを用いてアンカーの発話区間検出を行った。発話区間の結合手法は以下の通りである。
 
 \begin{itemize}
@@ -46,7 +46,24 @@ i-vectorの抽出には、ALIZEとLIR RAL\cite{alize}を用いる。i-vectorの�
   \end{center}
 \end{table}
 
-\subsection{評価方法}
+\section{ニュース番組音声}
+「音声」の音源ラベルと発話の書き起こしが付与されているニュース番組5番組分を用いてアンカーの発話区間検出を行う。ニュース番組音声の詳細を表\ref{table:num_of_anchor}に示す。
+
+\begin{table}[H]
+  \begin{center}
+    \caption{検出した発話区間数とアンカーの発話区間数 \label{table:num_of_anchor}}
+    \begin{tabular}{|c||c|c|c|} \hline
+ニュースID & アンカー数 & 発話区間数 & アンカーの発話区間数 \\ \hline
+ニュース1  & 1 & 345   & 165 \\ \hline
+ニュース2  & 2 & 519   & 149 \\ \hline
+ニュース3  & 2 & 608   & 258 \\ \hline
+ニュース4  & 2 & 518   & 219 \\ \hline
+ニュース5  & 2 & 520   & 285 \\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\section{評価方法}
 評価は、検出されたアンカーの発話区間と正解ラベルを比較して行う。
 
 \begin{table}[H]
@@ -88,9 +105,9 @@ F = \frac{1}{\frac{1}{P} + \frac{1}{R}}
 Acc_{time} = \frac{検出したアンカーの発話区間の時間数}{アンカーの発話区間の時間数}
 \end{equation}
 
-本実験では、評価方法として適合率、再現率、$F$値、$Acc_{time}$を用いる。
+本実験では、評価指標として適合率、再現率、$F$値、$Acc_{time}$を用いる。
 
-\subsection{実験結果}
+\section{実験結果}
 $Th_{time}$を変更してアンカーの発話区間検出精度が最も高いF値を示した条件の結果を図\ref{fig:result_anchor_baseline} $\sim$ 図\ref{fig:result_anchor_prob3}に示す。その他の条件の結果は付録で記載する。また、図\ref{fig:result_anchor_baseline} $\sim$ 図\ref{fig:result_anchor_prob3}に示された結果の中で、最も高いF値をとった条件のときの各ニュース番組のアンカーの検出精度を表\ref{table:baseline_eachnews} $\sim$ 表\label{table:prob3_eachnews}に示す。
 
 \begin{figure}[H]
@@ -181,6 +198,6 @@ $Th_{time}$を変更してアンカーの発話区間検出精度が最も高い
 本実験の提案手法では、手法1が最も発話区間検出精度が高く、F値が0.772であった。また、いずれの手法においても$Th_{cos}$が小さい時にはRecallが高く、大きい時にはPrecisionが高くなる傾向が確認された。\par
 殆どの手法でニュース2のアンカーの発話区間検出精度が最も低くなった。
 
-\subsection{考察}
+\section{考察}
 Baselineと再抽出したi-vectorを用いた各提案手法を比較したときアンカーの発話区間検出精度が向上したことから、従来と比較してi-vectorが話者の特徴をより抽出できたと考えられる。また、いずれの手法でもニュース2はアンカーの発話区間検出の精度が他のニュースと比較して低い。これは、アンカーの発話の割合が少ないためであると考えられる。それによって、インタビューイや天気アナウンサーの割合が高くなり、アンカーの発話を検出することが難しかったと考えられる。\par
 提案手法の中では手法１が最も高いF値を示し、手法2および手法3は手法1と比較してアンカーの発話区間検出精度が低下した。これは手法2において、アンカーが発話中に参考映像などの背景雑音、音楽が鳴った場合、発話環境の変化と誤認識してしまい、十分な長さの発話を結合できなかったためであると考えられる。

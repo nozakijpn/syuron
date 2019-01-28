@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.7-160201-2.6 (utf8.euc) (TeX Live 2016) (preloaded format=platex 2018.10.19)  28 JAN 2019 16:41
+This is e-pTeX, Version 3.14159265-p3.7-160201-2.6 (utf8.euc) (TeX Live 2016) (preloaded format=platex 2018.10.19)  28 JAN 2019 23:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -197,13 +197,17 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks25
 \@floatcapt=\box44
 )
+(/usr/local/texlive/2016/texmf-dist/tex/latex/comment/comment.sty
+\CommentStream=\write3
+
+Excluding comment 'comment')
 
 LaTeX Warning: Unused global option(s):
     [16pt].
 
 (./thesis.aux
 
-LaTeX Warning: Label `fig:HMM' multiply defined.
+LaTeX Warning: Label `table:prob3_eachnews' multiply defined.
 
 
 LaTeX Warning: Label `table:search_table' multiply defined.
@@ -218,45 +222,45 @@ LaTeX Warning: Label `calc:recall' multiply defined.
 LaTeX Warning: Label `calc:fmeasure' multiply defined.
 
 
-LaTeX Warning: Label `table:prob3_eachnews' multiply defined.
+LaTeX Warning: Label `fig:HMM' multiply defined.
 
 )
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Try loading font information for U+msa on input line 25.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Try loading font information for U+msa on input line 26.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 25.
+LaTeX Font Info:    Try loading font information for U+msb on input line 26.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 25.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 26.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <20.74> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 25.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 26.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <20.74> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 25.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 26.
  [0
 
 ] (./thesis.toc
@@ -269,17 +273,17 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
 
 
 ])
-\tf@toc=\write3
-\openout3 = `thesis.toc'.
+\tf@toc=\write4
+\openout4 = `thesis.toc'.
 
  [2] (./thesis.lof [3
 
 ])
-\tf@lof=\write4
-\openout4 = `thesis.lof'.
+\tf@lof=\write5
+\openout5 = `thesis.lof'.
 
  [4] (./thesis.lot
-Overfull \hbox (11.4969pt too wide) in paragraph at lines 28--28
+Overfull \hbox (11.4969pt too wide) in paragraph at lines 11--11
  [][] []\JY1/mc/m/n/10 手法 \OT1/cmr/m/n/10 1 \JY1/mc/m/n/10 による各ニ ュ ース
 番組音声のアンカ ーの発話区間検出精度 \OT1/cmr/m/n/10 ($\OML/cmm/m/it/10 Th[] \
 OT1/cmr/m/n/10 = 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 6\OML/cmm/m/it/10 ; Th[] \O
@@ -287,7 +291,7 @@ T1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (11.4969pt too wide) in paragraph at lines 30--30
+Overfull \hbox (11.4969pt too wide) in paragraph at lines 13--13
  [][] []\JY1/mc/m/n/10 手法 \OT1/cmr/m/n/10 3 \JY1/mc/m/n/10 による各ニ ュ ース
 番組音声のアンカ ーの発話区間検出精度 \OT1/cmr/m/n/10 ($\OML/cmm/m/it/10 Th[] \
 OT1/cmr/m/n/10 = 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 6\OML/cmm/m/it/10 ; Th[] \O
@@ -295,8 +299,8 @@ T1/cmr/m/n/10 =
  []
 
 )
-\tf@lot=\write5
-\openout5 = `thesis.lot'.
+\tf@lot=\write6
+\openout6 = `thesis.lot'.
 
  [5
 
@@ -306,248 +310,261 @@ LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 2.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 2.
-) (./chapter2.tex [1
+[1
 
 
-] [2]
+]) (./chapter2.tex [2]
 第 2 章
 File: ./figure/indexing.eps Graphic file (type eps)
 <./figure/indexing.eps> [3
 
-] (./base/devide_audio.tex
+] (./base/ivector.tex
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 29.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 11.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 29.
- [4] [5] [6])
-(./base/ivector.tex
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 11.
+
 Overfull \hbox (13.70119pt too wide) in paragraph at lines 12--14
 []\JY1/mc/m/n/10 準備として 、 \OT1/cmr/m/n/10 UBM \JY1/mc/m/n/10 に対する \OT1
 /cmr/m/n/10 Baum-Welch \JY1/mc/m/n/10 統計量を計算することから始める 。 $\OML/c
 mm/m/it/10 O[] \OT1/cmr/m/n/10 = []$\JY1/mc/m/n/10 、
  []
 
-[7]
+[4]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 78.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 78.
- [8] [9]
-[10]) (./base/speach_recognition.tex
-File: ./figure/flow_sp.eps Graphic file (type eps)
- <./figure/flow_sp.eps>
-Overfull \hbox (8.59375pt too wide) in paragraph at lines 6--7
+ [5] [6]))
+(./pre_method.tex [7]
+第 3 章
+Excluding 'comment' comment.) (./prob_method.tex [8
+
+]
+第 4 章
+File: ./figure/indexing2.eps Graphic file (type eps)
+<./figure/indexing2.eps> [9
+
+]) (./base/get_anchor.tex
+Overfull \hbox (22.39204pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 4 i-vector \JY1/mc/m/n/10 の抽出精度向上のための発話区間結合手
+法 \OT1/cmr/m/n/10 4.1. \JY1/mc/m/n/10 発話の時間間隔を考慮した発話区間の結合手
+法
+ []
+
+[10]
+第 5 章
+[11
+
+] [12]
+File: ./figure/baseline.eps Graphic file (type eps)
+ <./figure/baseline.eps>
+Overfull \hbox (48.24187pt too wide) in paragraph at lines 115--116
  [] 
  []
 
-[11] [12]
-File: ./figure/HMM.eps Graphic file (type eps)
- <./figure/HMM.eps> [13]
-File: ./figure/structure_dnn.eps Graphic file (type eps)
- <./figure/structure_dnn.eps> [14]
-File: ./figure/train_dnn.eps Graphic file (type eps)
+[13]
+File: ./figure/prob1_12.eps Graphic file (type eps)
+ <./figure/prob1_12.eps>
+Overfull \hbox (48.24187pt too wide) in paragraph at lines 136--137
+ [] 
+ []
 
-<./figure/train_dnn.eps>)) (./pre_research.tex [15]
-第 3 章
-(./base/pre_cos.tex [16
+File: ./figure/prob2.eps Graphic file (type eps)
+<./figure/prob2.eps>
+Overfull \hbox (48.24187pt too wide) in paragraph at lines 157--158
+ [] 
+ []
+
+[14]
+File: ./figure/prob3_13.eps Graphic file (type eps)
+ <./figure/prob3_13.eps>
+Overfull \hbox (48.24187pt too wide) in paragraph at lines 178--179
+ [] 
+ []
+
+[15] [16]) (./matome.tex [17]
+第 6 章
+) (./ack.tex [18
+
+]) (./ref.tex [19
+
+]) (./appendix.tex (./base/pre_cos.tex
+[20
+
+]
+付録 A  
+[21
 
 ]
 File: ./figure/same_cos_hist.eps Graphic file (type eps)
  <./figure/same_cos_hist.eps>
 File: ./figure/same_cos_vari.eps Graphic file (type eps)
-
-<./figure/same_cos_vari.eps> [17]
+ <./figure/same_cos_vari.eps> [22]
 File: ./figure/other_cos_hist.eps Graphic file (type eps)
- <./figure/other_cos_hist.eps>
+
+<./figure/other_cos_hist.eps>
 File: ./figure/other_cos_vari.eps Graphic file (type eps)
+ <./figure/other_cos_vari.eps> [23])
+(./base/pre_search_speech_time.tex [24]
+付録 B  
+(./base/devide_audio.tex [25
 
-<./figure/other_cos_vari.eps> [18]) (./base/pre_search_speech_time.tex [19]
-[20] [21] [22] [23])) (./pre_method.tex [24]
-第 4 章
-) (./prob_method.tex [25
-
-] [26]
-第 5 章
-File: ./figure/indexing2.eps Graphic file (type eps)
-<./figure/indexing2.eps> [27
-
-]) (./test.tex
-Overfull \hbox (22.39204pt too wide) has occurred while \output is active
-\OT1/cmr/m/n/10 5 i-vector \JY1/mc/m/n/10 の抽出精度向上のための発話区間結合手
-法 \OT1/cmr/m/n/10 5.1. \JY1/mc/m/n/10 発話の時間間隔を考慮した発話区間の結合手
-法
- []
-
-[28]
-第 6 章
-[29
-
-] (./base/search_speech_time.tex [30] [31]) (./base/get_anchor.tex [32]
-[33]
-File: ./figure/baseline.eps Graphic file (type eps)
- <./figure/baseline.eps>
-Overfull \hbox (48.24187pt too wide) in paragraph at lines 98--99
- [] 
- []
-
-File: ./figure/prob1_12.eps Graphic file (type eps)
-<./figure/prob1_12.eps>
-Overfull \hbox (48.24187pt too wide) in paragraph at lines 119--120
- [] 
- []
-
-[34]
-File: ./figure/prob2.eps Graphic file (type eps)
- <./figure/prob2.eps>
-Overfull \hbox (48.24187pt too wide) in paragraph at lines 140--141
- [] 
- []
-
-[35]
-File: ./figure/prob3_13.eps Graphic file (type eps)
- <./figure/prob3_13.eps>
-Overfull \hbox (48.24187pt too wide) in paragraph at lines 161--162
- [] 
- []
-
-[36] [37]) (./base/speach_recog.tex
-File: ./figure/yoshimura.eps Graphic file (type eps)
- <./figure/yoshimura.eps> [38]
-File: ./figure/kana_onso.eps Graphic file (type eps)
-
-<./figure/kana_onso.eps>
-Overfull \hbox (7.08626pt too wide) in paragraph at lines 71--72
- [] 
- []
-
-[39] [40]
-File: ./figure/kakiokosi.eps Graphic file (type eps)
- <./figure/kakiokosi.eps> [41]
-File: ./figure/baseline_clustering.eps Graphic file (type eps)
- <./figure/baseline_clustering.eps>
-File: ./figure/prob1_clustering.eps Graphic file (type eps)
-
-<./figure/prob1_clustering.eps> [42]
-File: ./figure/prob2_clustering.eps Graphic file (type eps)
- <./figure/prob2_clustering.eps>
-File: ./figure/prob3_clustering.eps Graphic file (type eps)
-
-<./figure/prob3_clustering.eps> [43])) (./matome.tex [44] [45]
-第 7 章
-) (./ack.tex [46
-
-]) (./ref.tex [47
-
-]) (./appendix.tex [48
-
-]
+] [26] [27]) [28] [29] [30] [31] [32])
+(./base/search_speech_time.tex [33]) (./result_anchor_append.tex [34]
+付録 C  
 File: ./figure/prob1_08.eps Graphic file (type eps)
-
 <./figure/prob1_08.eps>
-Overfull \hbox (48.24187pt too wide) in paragraph at lines 6--7
+Overfull \hbox (48.24187pt too wide) in paragraph at lines 5--6
  [] 
  []
 
 File: ./figure/prob1_09.eps Graphic file (type eps)
 <./figure/prob1_09.eps>
-Overfull \hbox (48.24187pt too wide) in paragraph at lines 13--14
+Overfull \hbox (48.24187pt too wide) in paragraph at lines 12--13
  [] 
  []
 
-[49
+[35
 
 ]
 File: ./figure/prob1_10.eps Graphic file (type eps)
  <./figure/prob1_10.eps>
-Overfull \hbox (48.24187pt too wide) in paragraph at lines 20--21
+Overfull \hbox (48.24187pt too wide) in paragraph at lines 19--20
  [] 
  []
 
 File: ./figure/prob1_11.eps Graphic file (type eps)
 <./figure/prob1_11.eps>
-Overfull \hbox (48.24187pt too wide) in paragraph at lines 27--28
+Overfull \hbox (48.24187pt too wide) in paragraph at lines 26--27
  [] 
  []
 
-[50]
+[36]
 File: ./figure/prob1_13.eps Graphic file (type eps)
  <./figure/prob1_13.eps>
-Overfull \hbox (48.24187pt too wide) in paragraph at lines 34--35
+Overfull \hbox (48.24187pt too wide) in paragraph at lines 33--34
  [] 
  []
 
 File: ./figure/prob1_14.eps Graphic file (type eps)
 <./figure/prob1_14.eps>
-Overfull \hbox (48.24187pt too wide) in paragraph at lines 41--42
+Overfull \hbox (48.24187pt too wide) in paragraph at lines 40--41
  [] 
  []
 
-[51]
+[37]
 File: ./figure/prob1_15.eps Graphic file (type eps)
  <./figure/prob1_15.eps>
-Overfull \hbox (48.24187pt too wide) in paragraph at lines 48--49
+Overfull \hbox (48.24187pt too wide) in paragraph at lines 47--48
  [] 
  []
 
 File: ./figure/prob3_08.eps Graphic file (type eps)
 <./figure/prob3_08.eps>
-Overfull \hbox (48.24187pt too wide) in paragraph at lines 55--56
+Overfull \hbox (48.24187pt too wide) in paragraph at lines 54--55
  [] 
  []
 
-[52]
+[38]
 File: ./figure/prob3_09.eps Graphic file (type eps)
  <./figure/prob3_09.eps>
-Overfull \hbox (48.24187pt too wide) in paragraph at lines 62--63
+Overfull \hbox (48.24187pt too wide) in paragraph at lines 61--62
  [] 
  []
 
 File: ./figure/prob3_10.eps Graphic file (type eps)
 <./figure/prob3_10.eps>
-Overfull \hbox (48.24187pt too wide) in paragraph at lines 69--70
+Overfull \hbox (48.24187pt too wide) in paragraph at lines 68--69
  [] 
  []
 
-[53]
+[39]
 File: ./figure/prob3_11.eps Graphic file (type eps)
  <./figure/prob3_11.eps>
-Overfull \hbox (48.24187pt too wide) in paragraph at lines 76--77
+Overfull \hbox (48.24187pt too wide) in paragraph at lines 75--76
  [] 
  []
 
 File: ./figure/prob3_12.eps Graphic file (type eps)
 <./figure/prob3_12.eps>
-Overfull \hbox (48.24187pt too wide) in paragraph at lines 83--84
+Overfull \hbox (48.24187pt too wide) in paragraph at lines 82--83
  [] 
  []
 
-[54]
+[40]
 File: ./figure/prob3_14.eps Graphic file (type eps)
  <./figure/prob3_14.eps>
-Overfull \hbox (48.24187pt too wide) in paragraph at lines 90--91
+Overfull \hbox (48.24187pt too wide) in paragraph at lines 89--90
  [] 
  []
 
 File: ./figure/prob3_15.eps Graphic file (type eps)
 <./figure/prob3_15.eps>
-Overfull \hbox (48.24187pt too wide) in paragraph at lines 97--98
+Overfull \hbox (48.24187pt too wide) in paragraph at lines 96--97
  [] 
  []
 
-) [55] [56] (./thesis.aux)
+) (./base/speach_recog.tex [41] [42]
+付録 D  
+(./base/speach_recognition.tex
+File: ./figure/flow_sp.eps Graphic file (type eps)
+ <./figure/flow_sp.eps>
+Overfull \hbox (8.59375pt too wide) in paragraph at lines 7--8
+ [] 
+ []
+
+[43
+
+] [44]
+File: ./figure/HMM.eps Graphic file (type eps)
+ <./figure/HMM.eps> [45]
+File: ./figure/structure_dnn.eps Graphic file (type eps)
+ <./figure/structure_dnn.eps> [46]
+File: ./figure/train_dnn.eps Graphic file (type eps)
+
+<./figure/train_dnn.eps> [47])
+
+LaTeX Warning: Reference `section:yoshimura_pre_clustering' on page 48 undefine
+d on input line 4.
+
+File: ./figure/yoshimura.eps Graphic file (type eps)
+<./figure/yoshimura.eps> [48] [49]
+File: ./figure/kana_onso.eps Graphic file (type eps)
+ <./figure/kana_onso.eps>
+Overfull \hbox (7.08626pt too wide) in paragraph at lines 71--72
+ [] 
+ []
+
+[50] [51]
+File: ./figure/kakiokosi.eps Graphic file (type eps)
+ <./figure/kakiokosi.eps> [52]
+File: ./figure/baseline_clustering.eps Graphic file (type eps)
+ <./figure/baseline_clustering.eps>
+File: ./figure/prob1_clustering.eps Graphic file (type eps)
+
+<./figure/prob1_clustering.eps> [53]
+File: ./figure/prob2_clustering.eps Graphic file (type eps)
+ <./figure/prob2_clustering.eps>
+File: ./figure/prob3_clustering.eps Graphic file (type eps)
+
+<./figure/prob3_clustering.eps> [54])) [55] [56] (./thesis.aux)
+
+LaTeX Warning: There were undefined references.
+
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2324 strings out of 493683
- 29244 string characters out of 6149652
- 93093 words of memory out of 5000000
- 5747 multiletter control sequences out of 15000+600000
+ 2359 strings out of 493683
+ 29867 string characters out of 6149652
+ 93611 words of memory out of 5000000
+ 5781 multiletter control sequences out of 15000+600000
  25700 words of font info for 103 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 28i,17n,26p,1723b,352s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 28i,17n,26p,1014b,352s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.dvi (62 pages, 196832 bytes).
+Output written on thesis.dvi (62 pages, 187704 bytes).

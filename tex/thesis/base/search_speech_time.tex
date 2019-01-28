@@ -1,5 +1,8 @@
 \section{発話区間検出実験}
 
+
+
+
 \subsection{実験条件}
 \ref{section:devide_audio}節で述べた音源分離を用いて、発話区間検出を行う。表\ref{table:detail_identification_method}に音源識別の実験条件を示す。
 
@@ -70,19 +73,7 @@ F = \frac{1}{\frac{1}{P} + \frac{1}{R}}
   \end{center}
 \end{table}
 
-\begin{table}[H]
-  \begin{center}
-    \caption{検出した発話区間数とアンカーの発話区間数 \label{table:num_of_anchor}}
-    \begin{tabular}{|c||c|c|} \hline
-ニュースID & 発話区間数 & アンカーの発話区間数 \\ \hline
-ニュース1  & 345   & 165 \\ \hline
-ニュース2  & 519   & 149 \\ \hline
-ニュース3  & 608   & 258 \\ \hline
-ニュース4  & 518   & 219 \\ \hline
-ニュース5  & 520   & 285 \\ \hline
-    \end{tabular}
-  \end{center}
-\end{table}
+
 
 実験の結果、「音声」区間の検出精度は高い精度を示した。また、ニュース番組によって発話区間の検出精度に差が生じた。ニュース2はRecallが低く、ニュース3とニュース4ではPrecisionが低い結果となった。
 

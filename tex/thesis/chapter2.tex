@@ -1,6 +1,6 @@
 \chapter{基礎知識}
-本章では、ニュース番組からインデックス作成までの流れと、ニュースアンカーの発話区間検出、音声認識に必要な知識について説明する。
-\section{ニュース番組のインデクシング}\cite{indexing_flow}
+本章では、ニュース番組からインデックス作成までの流れと、ニュースアンカーの発話区間検出に必要な知識について説明する。
+\section{ニュース番組のインデクシング\cite{indexing_flow}}
 ニュース音声のインデクシングは図\ref{fig:indexing}の手順で行われる。
 
 \begin{figure}[H]
@@ -10,14 +10,15 @@
   \caption{インデクシングの手順 \label{fig:indexing}}
 \end{figure}
 
-入力であるニュース音声はどの区間で発話されているか未知であるため、まず音源識別によって発話区間検出を行う。次に検出した発話区間の中からアンカーの発話区間を検出するために、発話から話者特徴量を抽出し、発話をクラスタリングすることでアンカーの発話区間を検出する。検出されたアンカーの発話区間の音声認識を行い、認識結果の要約処理を行うことでインデックスが作成される。本稿では、ニュース音声の発話区間検出から音声認識までを行う。本稿で使用する技術について、本節以降で説明を行う。
+入力であるニュース音声はどの区間で発話されているか未知であるため、まず音源識別によって発話区間検出を行う。次に検出した発話区間の中からアンカーの発話区間を検出するために、発話から話者特徴量を抽出し、発話をクラスタリングすることでアンカーの発話区間を検出する。検出されたアンカーの発話区間の音声認識を行い、認識結果の要約処理を行うことでインデックスが作成される。ニュースアンカーの発話区間検出に使用するi-vectorについて、\ref{chapter:iv}節で説明を行う。
 
-\section{音源識別}
-\label{section:devide_audio}
-\input{./base/devide_audio.tex}
+%\section{音源識別}
+%\label{section:devide_audio}
+%\input{./base/devide_audio.tex}
 
 \section{i-vectorの概要}
+\label{chapter:iv}
 \input{./base/ivector.tex}
 
-\section{音声認識}
-\input{./base/speach_recognition.tex}
+%\section{音声認識}
+%\input{./base/speach_recognition.tex}
