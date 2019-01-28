@@ -5,47 +5,6 @@
 \label{section:detail_train_news}
 本調査では、ニュース番組の音声データ12個を用いる。各音声データには、事前に人手で3種類（音楽、音声、雑音)の音源ラベルが付与されている。「音声」の音源ラベルが付与された区間においては、更に発話者の情報が付与されている。表\ref{fig:example_label}は音声の音源ラベルの一例である。また「音声」の音源ラベルをもとに対象の音声データから発話区間を抽出し、それを一発話とした。表\ref{table:train_detail}に調査に用いるデータの詳細を示す。\vspace{0.2in}
 
-\begin{table}[H]
-\begin{center}
-\caption{「音声」の音源ラベルの例 \label{fig:example_label}}
-\begin{tabular}{|c|c|}
-\hline
-time      & speaker          \\ \hline
-18.526910 & -1 male1\_INT\_S \\ \hline
-20.793192 & -1 male1\_INT\_E \\ \hline
-21.293665 & -1 male1\_INT\_S \\ \hline
-23.116141 & -1 male1\_INT\_E \\ \hline
-23.654385 & -1 male1\_INT\_S \\ \hline
-26.270058 & -1 male1\_INT\_E \\ \hline
-27.799800 & -1 male\_S       \\ \hline
-29.811134 & -1 male\_E       \\ \hline
-30.368265 & -1 male\_S       \\ \hline
-34.277610 & -1 male\_E       \\ \hline
-\end{tabular}
-\end{center}
-\end{table}
-
-\begin{table}[H]
-  \begin{center}
-    \caption{調査音声データの詳細　\label{table:train_detail}}
-    \begin{tabular}{|c||c|c|c|} \hline
-      データID & 収録時間 & 話者数 & 全発話数 \\ \hline
-      ニュースA & 30分3秒 & 20 & 337 \\ \hline
-      ニュースB & 30分3秒 & 31 & 312\\ \hline
-      ニュースC & 30分3秒 & 21 & 324 \\ \hline
-      ニュースD & 30分4秒 & 20 & 324\\ \hline
-      ニュースE & 20分3秒 & 13 & 159\\ \hline
-      ニュースF & 30分3秒 & 22 & 343\\ \hline
-      ニュースG & 30分4秒 & 22 & 313\\ \hline
-      ニュースH & 30分4秒 & 20 & 315\\ \hline
-      ニュースI & 30分4秒 & 17 & 321\\ \hline
-      ニュースJ & 30分4秒 & 16 & 337\\ \hline
-      ニュースK & 30分4秒 & 20 & 363\\ \hline
-      ニュースL & 30分4秒 & 26 & 345\\ \hline
-    \end{tabular}
-  \end{center}
-\end{table}
-
 \section{調査方法}
 \ref{section:devide_audio}節で述べた音源分離を用いての音源分離を行う。
 表\ref{table:detail_identification_method1}は音源識別の調査条件である。
@@ -191,6 +150,19 @@ F = \frac{2 \times P \times R}{P + R}
   \end{center}
 \end{table}
 
+\begin{table}[H]
+  \begin{center}
+    \caption{発話区間検出精度 \label{table:test_detail_RPF}}
+    \begin{tabular}{|c||c|c|c|} \hline
+      データID & Recall & Precision & F-meature \\ \hline
+      ニュース1 & 0.895 & 0.916 & 0.905 \\ \hline
+      ニュース2 & 0.841 & 0.955 & 0.895\\ \hline
+      ニュース3 & 0.883 & 0.860 & 0.871 \\ \hline
+      ニュース4 & 0.901 & 0.833 & 0.866\\ \hline
+      ニュース5 & 0.910 & 0.930 & 0.906\\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
 
 音声区間の検出精度は高い精度を示した。背景雑音の区間はRecallが非常に低いがPrecisionが非常に高い結果となった。
 また、ニュース番組によって発話区間の検出精度に差が生じた。

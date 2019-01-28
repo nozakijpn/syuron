@@ -1,7 +1,4 @@
-\section{発話区間検出実験}
-
-
-
+\section{発話区間検出精度の検証}
 
 \subsection{実験条件}
 \ref{section:devide_audio}節で述べた音源分離を用いて、発話区間検出を行う。表\ref{table:detail_identification_method}に音源識別の実験条件を示す。
@@ -55,7 +52,7 @@ F = \frac{1}{\frac{1}{P} + \frac{1}{R}}
 \end{equation}
 
 ここで$P$と$R$はそれぞれ適合率、再現率を表す。\par
-本実験では、評価方法として適合率、再現率、F値を用いる。
+本実験では、評価指標として適合率、再現率、F値を用いる。
 \subsection{実験結果}
 表\ref{table:test_detail_RPF}に音源識別による発話区間検出精度、表\ref{table:num_of_anchor}に検出した発話区間数とアンカーの発話区間数を示す。
 
@@ -72,7 +69,6 @@ F = \frac{1}{\frac{1}{P} + \frac{1}{R}}
     \end{tabular}
   \end{center}
 \end{table}
-
 
 
 実験の結果、「音声」区間の検出精度は高い精度を示した。また、ニュース番組によって発話区間の検出精度に差が生じた。ニュース2はRecallが低く、ニュース3とニュース4ではPrecisionが低い結果となった。
