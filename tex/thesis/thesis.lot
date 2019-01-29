@@ -1,35 +1,36 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces 使用する音響特徴パラメータ}}{10}
-\contentsline {table}{\numberline {3.2}{\ignorespaces 「音声」の音源ラベルの例 }}{13}
-\contentsline {table}{\numberline {3.3}{\ignorespaces 調査音声データの詳細　}}{13}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces 使用する音響特徴パラメータ }}{17}
-\contentsline {table}{\numberline {4.2}{\ignorespaces 評価データの詳細 }}{18}
-\contentsline {table}{\numberline {4.3}{\ignorespaces 検出した発話区間数とニュースアンカーの発話区間数 }}{18}
-\contentsline {table}{\numberline {4.4}{\ignorespaces 発話区間の結合の閾値 }}{21}
-\contentsline {table}{\numberline {4.5}{\ignorespaces ニュースアンカーの発話区間の正誤判定 }}{21}
-\contentsline {table}{\numberline {4.6}{\ignorespaces Baselineによる各ニュース番組音声のニュースアンカーの発話検出精度($Th_{cos}=0.5$) }}{22}
-\contentsline {table}{\numberline {4.7}{\ignorespaces 手法1による各ニュース番組音声のニュースアンカーの発話検出精度($Th_{cos}=0.6,Th_{time}=1.2$) }}{23}
-\contentsline {table}{\numberline {4.8}{\ignorespaces 手法2による各ニュース番組音声のニュースアンカーの発話検出精度($Th_{cos}=0.6$) }}{24}
-\contentsline {table}{\numberline {4.9}{\ignorespaces 手法3による各ニュース番組音声のニュースアンカーの発話検出精度($Th_{cos}=0.6,Th_{time}=1.3$) }}{25}
+\contentsline {table}{\numberline {4.1}{\ignorespaces 使用する音響特徴パラメータ}}{11}
+\contentsline {table}{\numberline {4.2}{\ignorespaces 「音声」の音源ラベルの例 }}{14}
+\contentsline {table}{\numberline {4.3}{\ignorespaces 調査音声データの詳細　}}{14}
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {table}{\numberline {A.1}{\ignorespaces 音源識別のための音響特徴パラメータ}}{30}
-\contentsline {table}{\numberline {A.2}{\ignorespaces 音源識別実験の実験条件 }}{33}
-\contentsline {table}{\numberline {A.3}{\ignorespaces 検出した区間の正誤判定 }}{33}
-\contentsline {table}{\numberline {A.4}{\ignorespaces 音声区間検出精度 }}{34}
-\contentsline {table}{\numberline {A.5}{\ignorespaces 音楽区間検出精度 }}{35}
-\contentsline {table}{\numberline {A.6}{\ignorespaces 背景雑音区間検出精度 }}{35}
-\contentsline {table}{\numberline {A.7}{\ignorespaces 無音区間検出精度 }}{36}
+\contentsline {table}{\numberline {5.1}{\ignorespaces 使用する音響特徴パラメータ }}{18}
+\contentsline {table}{\numberline {5.2}{\ignorespaces 評価データの詳細 }}{19}
+\contentsline {table}{\numberline {5.3}{\ignorespaces 検出した発話区間数とニュースアンカーの発話区間数 }}{19}
+\contentsline {table}{\numberline {5.4}{\ignorespaces 発話区間の結合の閾値 }}{22}
+\contentsline {table}{\numberline {5.5}{\ignorespaces ニュースアンカーの発話区間の正誤判定 }}{22}
+\contentsline {table}{\numberline {5.6}{\ignorespaces Baselineによる各ニュース番組音声のニュースアンカーの発話検出精度($Th_{cos}=0.5$) }}{23}
+\contentsline {table}{\numberline {5.7}{\ignorespaces 手法1による各ニュース番組音声のニュースアンカーの発話検出精度($Th_{cos}=0.6,Th_{time}=1.2$) }}{24}
+\contentsline {table}{\numberline {5.8}{\ignorespaces 手法2による各ニュース番組音声のニュースアンカーの発話検出精度($Th_{cos}=0.6$) }}{25}
+\contentsline {table}{\numberline {5.9}{\ignorespaces 手法3による各ニュース番組音声のニュースアンカーの発話検出精度($Th_{cos}=0.6,Th_{time}=1.3$) }}{26}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {C.1}{\ignorespaces 単語辞書の例}}{46}
-\contentsline {table}{\numberline {C.2}{\ignorespaces CSJの音声の種類と分量 }}{52}
-\contentsline {table}{\numberline {C.3}{\ignorespaces 音響モデルの仕様 }}{52}
-\contentsline {table}{\numberline {C.4}{\ignorespaces 使用する音響特徴パラメータ }}{52}
-\contentsline {table}{\numberline {C.5}{\ignorespaces 使用した音素 }}{53}
-\contentsline {table}{\numberline {C.6}{\ignorespaces カナ音素対応表 }}{54}
-\contentsline {table}{\numberline {C.7}{\ignorespaces ニュースアンカーの発話区間が既知の場合の音声認識結果 }}{58}
-\contentsline {table}{\numberline {C.8}{\ignorespaces アンカーの発話区間が未知の場合の音声認識結果 }}{58}
+\contentsline {table}{\numberline {A.1}{\ignorespaces 音源識別のための音響特徴パラメータ}}{31}
+\contentsline {table}{\numberline {A.2}{\ignorespaces 音源識別実験の実験条件 }}{34}
+\contentsline {table}{\numberline {A.3}{\ignorespaces 検出した区間の正誤判定 }}{34}
+\contentsline {table}{\numberline {A.4}{\ignorespaces 音声区間検出精度 }}{35}
+\contentsline {table}{\numberline {A.5}{\ignorespaces 音楽区間検出精度 }}{36}
+\contentsline {table}{\numberline {A.6}{\ignorespaces 背景雑音区間検出精度 }}{36}
+\contentsline {table}{\numberline {A.7}{\ignorespaces 無音区間検出精度 }}{37}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {C.1}{\ignorespaces 単語辞書の例}}{47}
+\contentsline {table}{\numberline {C.2}{\ignorespaces CSJの音声の種類と分量 }}{53}
+\contentsline {table}{\numberline {C.3}{\ignorespaces 音響モデルの仕様 }}{53}
+\contentsline {table}{\numberline {C.4}{\ignorespaces 使用する音響特徴パラメータ }}{53}
+\contentsline {table}{\numberline {C.5}{\ignorespaces 使用した音素 }}{54}
+\contentsline {table}{\numberline {C.6}{\ignorespaces カナ音素対応表 }}{55}
+\contentsline {table}{\numberline {C.7}{\ignorespaces ニュースアンカーの発話区間が既知の場合の音声認識結果 }}{59}
+\contentsline {table}{\numberline {C.8}{\ignorespaces アンカーの発話区間が未知の場合の音声認識結果 }}{59}
