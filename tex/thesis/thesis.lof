@@ -6,9 +6,9 @@
 \contentsline {figure}{\numberline {3.2}{\ignorespaces 同一話者間のi-vectorのコサイン類似度の標準偏差 }}{10}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces 異なる話者間のi-vectorのコサイン類似度 }}{10}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces 異なる話者間のi-vectorのコサイン類似度の標準偏差 }}{11}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces 同一話者間の非発話区間の時間情報 }}{13}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces 異なる話者間の非発話区間の時間情報 }}{14}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces 異なる話者間の非発話区間の時間情報 }}{15}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces 同一話者間の発話の時間間隔 }}{13}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces 異なる話者間の発話の時間間隔 }}{14}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces 異なる話者間の発話の時間間隔 }}{15}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces 提案手法を組み込んだインデクシング手法 }}{18}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Baselineによる発話区間検出精度 }}{21}
