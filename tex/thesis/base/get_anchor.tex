@@ -21,9 +21,6 @@ i-vectorの抽出には、ALIZEとLIR RAL\cite{alize}を用いる。i-vectorの�
   \end{center}
 \end{table}
 
-\noindent{\textbf{\underline{学習データ}}\par
-UBMモデルの学習データに読み上げ音声\cite{ATR}を使用した。
-
 \vspace{0.2in}\noindent{\textbf{\underline{評価データ}}}\par
 「音声」の音源ラベルと発話の書き起こしが付与されているニュース番組5番組分を用いてアンカーの発話区間検出を行う。ニュース番組音声の詳細を表\ref{table:test_detail}に示す。また、ニュース番組5番組分に音源識別を用いて検出した発話区間の詳細を\ref{table:num_of_anchor}に示す。音源識別の詳細は付録\ref{section:devide_audio}に記載する。
 
@@ -137,7 +134,7 @@ Acc_{time} = \frac{検出したアンカーの発話区間の時間数}{アン�
 本実験では、評価指標として適合率、再現率、$F$値、$Acc_{time}$を用いる。
 
 \section{実験結果}
-$Th_{time}$を変更してアンカーの発話区間検出精度が最も高いF値を示した条件の結果を図\ref{fig:result_anchor_baseline} $\sim$ 図\ref{fig:result_anchor_prob3}に示す。その他の条件の結果は付録で記載する。また、図\ref{fig:result_anchor_baseline} $\sim$ 図\ref{fig:result_anchor_prob3}に示された結果の中で、最も高いF値をとった条件のときの各ニュース番組のアンカーの検出精度を表\ref{table:baseline_eachnews} $\sim$ 表\ref{table:prob3_eachnews}に示す。
+$Th_{time}$を変更してニュースアンカーの発話検出精度が最も高いF値を示した条件の結果を図\ref{fig:result_anchor_baseline} $\sim$ 図\ref{fig:result_anchor_prob3}に示す。その他の条件の結果は付録で記載する。また、図\ref{fig:result_anchor_baseline} $\sim$ 図\ref{fig:result_anchor_prob3}に示された結果の中で、最も高いF値をとった条件のときの各ニュース番組のニュースアンカーの発話検出精度を表\ref{table:baseline_eachnews} $\sim$ 表\ref{table:prob3_eachnews}に示す。
 
 \begin{figure}[H]
   \begin{center}
@@ -148,7 +145,7 @@ $Th_{time}$を変更してアンカーの発話区間検出精度が最も高い
 
 \begin{table}[H]
   \begin{center}
-    \caption{Baselineによる各ニュース番組音声のアンカーの発話区間検出精度($Th_{cos}=0.5$) \label{table:baseline_eachnews}}
+    \caption{Baselineによる各ニュース番組音声のニュースアンカーの発話検出精度($Th_{cos}=0.5$) \label{table:baseline_eachnews}}
     \begin{tabular}{|c||c|c|c|c|} \hline
 データID & Recall & Precision & F-meature & 作成したクラスタ数\\ \hline
 ニュース1 & 0.970 & 0.623 & 0.758 & 1 \\ \hline
@@ -169,7 +166,7 @@ $Th_{time}$を変更してアンカーの発話区間検出精度が最も高い
 
 \begin{table}[H]
   \begin{center}
-    \caption{手法1による各ニュース番組音声のアンカーの発話区間検出精度($Th_{cos}=0.6,Th_{time}=1.2$) }
+    \caption{手法1による各ニュース番組音声のニュースアンカーの発話検出精度($Th_{cos}=0.6,Th_{time}=1.2$) }
     \begin{tabular}{|c||c|c|c|c|} \hline
 データID & Recall & Precision & F-meature & 作成したクラスタ数\\ \hline
 ニュース1 & 0.964 & 0.707 & 0.815 & 1 \\ \hline
@@ -185,12 +182,12 @@ $Th_{time}$を変更してアンカーの発話区間検出精度が最も高い
   \begin{center}
     \includegraphics[scale=0.5]{./figure/prob2.eps}
   \end{center}
-  \caption{手法2によるアンカーの発話区間検出精度 \label{fig:result_anchor_prob2}}
+  \caption{手法2によるニュースアンカーの発話検出精度 \label{fig:result_anchor_prob2}}
 \end{figure}
 
 \begin{table}[H]
   \begin{center}
-    \caption{手法2による各ニュース番組音声のアンカーの発話区間検出精度($Th_{cos}=0.6$) }
+    \caption{手法2による各ニュース番組音声のニュースアンカーの発話検出精度($Th_{cos}=0.6$) }
     \begin{tabular}{|c||c|c|c|c|} \hline
 データID & Recall & Precision & F-meature & 作成したクラスタ数\\ \hline
 ニュース1 & 0.958 & 0.617 & 0.751 & 1 \\ \hline
@@ -206,12 +203,12 @@ $Th_{time}$を変更してアンカーの発話区間検出精度が最も高い
   \begin{center}
     \includegraphics[scale=0.5]{./figure/prob3_13.eps}
   \end{center}
-  \caption{手法3によるアンカーの発話区間検出精度　($Th_{time}=1.3$) \label{fig:result_anchor_prob3}}
+  \caption{手法3によるニュースアンカーの発話検出精度　($Th_{time}=1.3$) \label{fig:result_anchor_prob3}}
 \end{figure}
 
 \begin{table}[H]
   \begin{center}
-    \caption{手法3による各ニュース番組音声のアンカーの発話区間検出精度($Th_{cos}=0.6,Th_{time}=1.3$) \label{table:prob3_eachnews}}
+    \caption{手法3による各ニュース番組音声のニュースアンカーの発話検出精度($Th_{cos}=0.6,Th_{time}=1.3$) \label{table:prob3_eachnews}}
     \begin{tabular}{|c||c|c|c|c|} \hline
 データID & Recall & Precision & F-meature & 作成したクラスタ数\\ \hline
 ニュース1 & 0.958 & 0.702 & 0.810 & 1 \\ \hline
@@ -224,10 +221,10 @@ $Th_{time}$を変更してアンカーの発話区間検出精度が最も高い
 \end{table}
 
 実験の結果、発話区間を結合して再抽出したi-vectorを用いた手法が全体的に高い精度を示した。Baselineは$Th_{cos}$が0.8のときアンカーの発話区間を検出できなかった。また、Baselineは$Th_{cos}$が0.5のときがF-measureが最も高い値をとるのに対して、手法1 $\sim$ 手法3では$Th_{cos}$が0.6のとき、F-measureが最も高い値をとった。\par
-本実験の提案手法では、手法1が最も発話区間検出精度が高く、F値が0.772であった。また、いずれの手法においても$Th_{cos}$が小さい時にはRecallが高く、大きい時にはPrecisionが高くなる傾向が確認された。\par
-手法1を除く全ての手法でニュース2のアンカーの発話検出精度が最も低い。
+本実験の提案手法では、手法1が最もニュースアンカーの発話検出精度が高く、F値が0.772であった。また、いずれの手法においても$Th_{cos}$が小さい時にはRecallが高く、大きい時にはPrecisionが高くなる傾向が確認された。\par
+手法1を除く全ての手法においてニュース2のアンカーの発話検出精度が最も低い。
 
 \section{考察}
-Baselineと再抽出したi-vectorを用いた各提案手法を比較したときアンカーの発話区間検出精度が向上したことから、従来と比較してi-vectorが話者の特徴をより抽出できたと考えられる。また、いずれの手法でもニュース2はアンカーの発話区間検出の精度が他のニュースと比較して低い。これは、アンカーの発話の割合が少ないためであると考えられる。それによって、インタビューイや天気アナウンサーの割合が高くなり、アンカーの発話を検出することが難しかったと考えられる。\par
-提案手法の中では手法１が最も高いF値を示し、手法2および手法3は手法1と比較してアンカーの発話区間検出精度が低下した。これは手法2、手法3において、アンカーが発話中に参考映像などの背景雑音、音楽が鳴った場合、発話環境の変化と誤認識してしまい、話者の切り替わりと判別して発話区間の結合ができなかったためであると考えられる。\par
-また、結合した発話区間から抽出されたi-vectorを用いて、アンカーの発話区間が未知の場合と既知の場合でアンカーの発話の音声認識を行った。音声認識手法としてi-vectorと木構造話者クラスタを用いた音声認識手法\cite{yoshimura_clustering}を用いた。音声認識システムの概要、実験の詳細は付録\ref{chapter:speech_recog}に記載する。実験の結果、アンカーの発話区間が未知であった場合、アンカーの発話の音声認識精度が向上した。これは、アンカー以外の発話を音声認識した場合、全て誤りと認めである。アンカーの発話区間が既知であった場合、提案手法による音声認識精度への効果が確認されなかった。これは、BGMや背景雑音が発話に含まれていた場合、いずれの提案手法を用いた場合でも認識できなかったためである。よって、認識精度向上のためには、雑音除去や雑音に頑健な音声認識システムが必要である。
+Baselineと再抽出したi-vectorを用いた各提案手法を比較したときニュースアンカーの発話検出精度が向上したことから、従来と比較してi-vectorが話者の特徴をより抽出できたと考えられる。また、いずれの手法でもニュース2はニュースアンカーの発話検出の精度が他のニュースと比較して低い。これは、アンカーの発話の割合が少ないためであると考えられる。それによって、インタビューイや天気アナウンサーの割合が高くなり、アンカーの発話を検出することが難しかったと考えられる。\par
+提案手法の中では手法１が最も高いF値を示した。これは手法2、手法3において、アンカーが発話中に参考映像などの背景雑音、音楽が鳴った場合、発話環境の変化と誤認識してしまい、話者の切り替わりと判別して発話区間の結合ができなかったためであると考えられる。\par
+また、結合した発話区間から抽出されたi-vectorを用いて、アンカーの発話区間が未知の場合と既知の場合でアンカーの発話の音声認識を行った。音声認識手法としてi-vectorと木構造話者クラスタを用いた音声認識手法\cite{yoshimura_clustering}を用いた。音声認識システムの概要、実験の詳細は付録\ref{chapter:speech_recog}に記載する。実験の結果、アンカーの発話区間が未知であった場合、Baselineと比較してアンカーの発話の音声認識精度が向上した。これは、アンカー以外の発話を音声認識した場合、全て誤りと計算したためである。アンカーの発話区間が既知であった場合、提案手法による音声認識精度への効果が確認されなかった。これは、BGMや背景雑音が発話に含まれていた場合、いずれの提案手法を用いた場合でも認識できなかったためである。しかしいずれの手法にしても認識精度が非常に低いため、認識精度向上のために、雑音除去や雑音に頑健な音声認識システムが必要である。
