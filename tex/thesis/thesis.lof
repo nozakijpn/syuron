@@ -1,21 +1,20 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces インデクシングの手順 }}{3}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces インデクシングの手順 }}{4}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces 同一話者間のi-vectorのコサイン類似度 }}{10}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces 同一話者間のi-vectorのコサイン類似度の標準偏差 }}{11}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces 異なる話者間のi-vectorのコサイン類似度 }}{11}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces 異なる話者間のi-vectorのコサイン類似度の標準偏差 }}{12}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces 同一話者間の発話の時間間隔 }}{14}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces 異なる話者間の発話の時間間隔 }}{15}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces 異なる話者間の発話の時間間隔 }}{16}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces 同一話者間のi-vectorのコサイン類似度 }}{11}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces 同一話者間のi-vectorのコサイン類似度の標準偏差 }}{12}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces 異なる話者間のi-vectorのコサイン類似度 }}{12}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces 異なる話者間のi-vectorのコサイン類似度の標準偏差 }}{13}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces 同一話者間の発話の時間間隔 }}{15}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces 異なる話者間の発話の時間間隔 }}{16}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces 異なる話者間の発話の時間間隔 }}{17}
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces 提案手法を組み込んだインデクシング手法 }}{20}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Baselineによる発話区間検出精度 }}{23}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=1.2$) }}{24}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces 手法2によるニュースアンカーの発話検出精度 }}{25}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces 手法3によるニュースアンカーの発話検出精度　($Th_{time}=1.3$) }}{26}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces 提案手法を組み込んだインデクシング手法 }}{19}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Baselineによる発話区間検出精度 }}{22}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=1.2$) }}{23}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces 手法2によるニュースアンカーの発話検出精度 }}{24}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces 手法3によるニュースアンカーの発話検出精度　($Th_{time}=1.3$) }}{25}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

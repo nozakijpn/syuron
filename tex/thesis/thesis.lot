@@ -1,20 +1,19 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces 使用する音響特徴パラメータ}}{10}
+\contentsline {table}{\numberline {3.2}{\ignorespaces 「音声」の音源ラベルの例 }}{13}
+\contentsline {table}{\numberline {3.3}{\ignorespaces 調査音声データの詳細　}}{13}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces 使用する音響特徴パラメータ}}{11}
-\contentsline {table}{\numberline {4.2}{\ignorespaces 「音声」の音源ラベルの例 }}{14}
-\contentsline {table}{\numberline {4.3}{\ignorespaces 調査音声データの詳細　}}{14}
-\addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces 使用する音響特徴パラメータ }}{18}
-\contentsline {table}{\numberline {5.2}{\ignorespaces 評価データの詳細 }}{19}
-\contentsline {table}{\numberline {5.3}{\ignorespaces 検出した発話区間数とニュースアンカーの発話区間数 }}{19}
-\contentsline {table}{\numberline {5.4}{\ignorespaces 発話区間の結合の閾値 }}{22}
-\contentsline {table}{\numberline {5.5}{\ignorespaces ニュースアンカーの発話区間の正誤判定 }}{22}
-\contentsline {table}{\numberline {5.6}{\ignorespaces Baselineによる各ニュース番組音声のニュースアンカーの発話検出精度($Th_{cos}=0.5$) }}{23}
-\contentsline {table}{\numberline {5.7}{\ignorespaces 手法1による各ニュース番組音声のニュースアンカーの発話検出精度($Th_{cos}=0.6,Th_{time}=1.2$) }}{24}
-\contentsline {table}{\numberline {5.8}{\ignorespaces 手法2による各ニュース番組音声のニュースアンカーの発話検出精度($Th_{cos}=0.6$) }}{25}
-\contentsline {table}{\numberline {5.9}{\ignorespaces 手法3による各ニュース番組音声のニュースアンカーの発話検出精度($Th_{cos}=0.6,Th_{time}=1.3$) }}{26}
+\contentsline {table}{\numberline {4.1}{\ignorespaces 使用する音響特徴パラメータ }}{17}
+\contentsline {table}{\numberline {4.2}{\ignorespaces 評価データの詳細 }}{18}
+\contentsline {table}{\numberline {4.3}{\ignorespaces 検出した発話区間数とニュースアンカーの発話区間数 }}{18}
+\contentsline {table}{\numberline {4.4}{\ignorespaces 発話区間の結合の閾値 }}{21}
+\contentsline {table}{\numberline {4.5}{\ignorespaces ニュースアンカーの発話区間の正誤判定 }}{21}
+\contentsline {table}{\numberline {4.6}{\ignorespaces Baselineによる各ニュース番組音声のニュースアンカーの発話検出精度($Th_{cos}=0.5$) }}{22}
+\contentsline {table}{\numberline {4.7}{\ignorespaces 手法1による各ニュース番組音声のニュースアンカーの発話検出精度($Th_{cos}=0.6,Th_{time}=1.2$) }}{23}
+\contentsline {table}{\numberline {4.8}{\ignorespaces 手法2による各ニュース番組音声のニュースアンカーの発話検出精度($Th_{cos}=0.6$) }}{24}
+\contentsline {table}{\numberline {4.9}{\ignorespaces 手法3による各ニュース番組音声のニュースアンカーの発話検出精度($Th_{cos}=0.6,Th_{time}=1.3$) }}{25}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {A.1}{\ignorespaces 音源識別のための音響特徴パラメータ}}{31}
