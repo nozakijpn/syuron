@@ -38,3 +38,23 @@ x = y_1 + z_2
 
 \cite{name}
 \bibitem{name}aaa
+
+
+・式も文章の一部なので、, . を式の最後に入れる。
+
+
+equationをつかわず、基本的にはalignで。
+example)
+
+\begin{align}
+Q=&\frac{1}{2}\sum_{u=1}^{U}\sum_{c=1}^{C}(N_{u,c} \log\left|\Sigma_c^{-1}\right|-tr(\Sigma_c^{-1}S_{u,c})) \notag  \\
+&+\sum_{u=1}^{U}tr\left( \Sigma^{-1}\left( F_uE[w_u^\prime]T^\prime -\frac{1}{2}N_uTE[w_uw_u^\prime]T^\prime \right) \right) -\sum_{u=1}^{U}\frac{1}{2}tr(E[w_uW_u^\prime]) \label{iv6}
+\end{align}
+
+ここで、二行目の&文の頭で切り分けるための改行コマンド(一行に一つまで)
+
+式で小さくなるので
+
+・ハニング窓の係数が変
+
+・式の後に、「このため」ではなく、「ここで」

@@ -157,19 +157,20 @@ Q=\sum_{u=1}^{U}E[log p(O_ww_u|\theta)]
 の最大化問題を解くことで求める。ここで、$\theta$はパラメータ$T$、$\Sigma$を表す。完全データの対数尤度は、
 
 \begin{equation}
-logp(O_w w_u)=logp(O_u|w_u,\theta)+logp(w_u)
+\log p(O_w w_u)=logp(O_u|w_u,\theta)+logp(w_u)
 \end{equation}
 
 と書けるので、式 (\ref{iv2})〜(\ref{iv3}) を用いると、式(\ref{iv5})は以下のように整理できる。
 
-\begin{equation}
-\label{iv6}
-\begin{split}
-Q=\frac{1}{2}\sum_{u=1}^{U}\sum_{c=1}^{C}(N_{u,c} log\left|\Sigma_c^{-1}\right|-tr(\Sigma_c^{-1}S_{u,c}))\\
-+\sum_{u=1}^{U}tr\left( \Sigma^{-1}\left( F_uE[w_u^\prime]T^\prime -\frac{1}{2}N_uTE[w_uw_u^\prime]T^\prime \right) \right)\\
--\sum_{u=1}^{U}\frac{1}{2}tr(E[w_uW_u^\prime])
-\end{split}
-\end{equation}
+%\begin{equation}
+%\label{iv6}
+%\begin{split}
+\begin{align}
+Q=&\frac{1}{2}\sum_{u=1}^{U}\sum_{c=1}^{C}(N_{u,c} \log\left|\Sigma_c^{-1}\right|-tr(\Sigma_c^{-1}S_{u,c})) \notag  \\
+&+\sum_{u=1}^{U}tr\left( \Sigma^{-1}\left( F_uE[w_u^\prime]T^\prime -\frac{1}{2}N_uTE[w_uw_u^\prime]T^\prime \right) \right) -\sum_{u=1}^{U}\frac{1}{2}tr(E[w_uW_u^\prime]) \label{iv6}
+\end{align}
+%\end{split}
+%\end{equation}
 
 以上より、Eステップにおいては古いパラメータを使って、$w$空間の事後分布の統計量を以下のように計算する。
 
