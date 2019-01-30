@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1548770664 "/home/nozaki/github/syuron/tex/thesis/thesis.tex" "thesis.pdf" "thesis" 1548770664
+["pdflatex"] 1548817376 "/home/nozaki/github/syuron/tex/thesis/thesis.tex" "thesis.pdf" "thesis" 1548817376
   "/home/nozaki/github/syuron/tex/thesis/thesis.tex" 1548724389 1505 14a86824967e9803e24571355301b191 ""
   "/usr/local/texlive/2016/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1246382020 1120 1e8878807317373affa7f7bba4cf2f6a ""
@@ -72,7 +72,7 @@
   "base/research_news.tex" 1548743218 4709 31cb664c712492ad185f50343b9e002d ""
   "base/speach_recog.tex" 1548746992 16536 db1f409836a71a2e7f1aab17d660347b ""
   "base/speach_recognition.tex" 1548677178 11711 d3b27413773ea58e86c272f0a228e59e ""
-  "chapter1.tex" 1548767875 10023 b083935359ee38e279ccdad4b5e7ff79 ""
+  "chapter1.tex" 1548817371 11710 9bbb1b5f6e6e1a7453e806618fc114af ""
   "chapter2.tex" 1548746457 1497 bbd837ae9691e0b6478b68ed798c6eea ""
   "figure/HMM.eps" 1548724388 613274 92860f72d8ca401184d9b2bb990a93a3 ""
   "figure/baseline.eps" 1548724388 1494115 06d1d1cc4fc77d1be1dcccd03941ff0a ""
@@ -116,11 +116,11 @@
   "nagasaki.cls" 1544084812 4852 b5c7673c39a8639b993ddc5f621dbfa3 ""
   "pre_research.tex" 1548736552 237 469a164f303b5f8f4f2a93f563337edc ""
   "prob_method.tex" 1548724389 2765 ebf50b9b916737d9d0ef6ccb2400a143 ""
-  "ref.tex" 1548739806 2682 7d3ce9c0d62f95a50ad27bf6a275f750 ""
+  "ref.tex" 1548776309 2862 2ab4ff28b3347f03c84525c56a17b05a ""
   "result_anchor_append.tex" 1548745655 3041 cb0fc9908648b90640b1e140b333dd96 ""
-  "thesis.aux" 1548770664 8 a94a2480d3289e625eea47cd1b285758 ""
+  "thesis.aux" 1548817376 8 a94a2480d3289e625eea47cd1b285758 ""
   "thesis.tex" 1548724389 1505 14a86824967e9803e24571355301b191 ""
   (generated)
-  "thesis.aux"
   "thesis.log"
+  "thesis.aux"
   "thesis.pdf"
