@@ -38,7 +38,7 @@
 $N$グラムモデルとは、与えられた単語列$\omega_1,\omega_2,\cdots,\omega_n$に対して、その出現確率$p(\omega_1,\omega_2,\cdots,\omega_n)$を推定する場合に、
 
 \begin{equation}
-P(\omega_1,\omega_2,\cdots,\omega_n)=\prod_{i=1}^{n}p(\omega_{i}\mid \omega_{i-N+1}\cdots \omega_{i-1})
+P(\omega_1,\omega_2,\cdots,\omega_n)=\prod_{i=1}^{n}p(\omega_{i}\mid \omega_{i-N+1}\cdots \omega_{i-1}) \notag
 \end{equation}
 
 のような近似を行なうモデルである。$N$グラムモデルでは、$i$番目の単語$ω_i$の生成確率が、直前の$N-1$単語$ω_{i-N+1}\cdots ω_{i-2}ω_{i-1}$だけに依存すると考える。特に$N = 1$のときユニグラム（unigram）、$N = 2$のときバイグラム（bigram）、$N = 3$のときトライグラム（trigram）という。\par
@@ -52,37 +52,32 @@ P(\omega_1,\omega_2,\cdots,\omega_n)=\prod_{i=1}^{n}p(\omega_{i}\mid \omega_{i-N
 以下に音響モデルを構築する際に、必要となる知識について述べる。\vspace{0.2in}
 
 \noindent{\textbf{\underline{MFCC}}}\par
-メル周波数ケプストラム係数（Mel - Frequency Cepstrum Coefficient : MFCC）とは、メル周波数という人間の音の高低に対する感覚尺度で音声スペクトルから係数スペクトルを抽出したものである\cite{sp_recognition_shikano}。これは一般的に、音声の特徴を抽出するパラメータとして用いられる。
-　MFCCの計算では、スペクトル分析は周波数軸上に$L$個の三角窓を配置し、フィルタバンク分析により行なう。すなわち、窓の幅に対応する周波数帯域の信号のパワーを、単一スペクトルチャネルの振幅スペクトル $|S^\prime (k)|$ の重み付けの和$m(l)$ で求める。
+メル周波数ケプストラム係数（Mel - Frequency Cepstrum Coefficient : MFCC）とは、メル周波数という人間の音の高低に対する感覚尺度で音声スペクトルから係数スペクトルを抽出したものである\cite{sp_recognition_shikano}。これは一般的に、音声の特徴を抽出するパラメータとして用いられる。MFCCの計算では、スペクトル分析は周波数軸上に$L$個の三角窓を配置し、フィルタバンク分析により行なう。すなわち、窓の幅に対応する周波数帯域の信号のパワーを、単一スペクトルチャネルの振幅スペクトル $|S^\prime (k)|$ の重み付けの和$m(l)$ で求める。
 
-\begin{equation}
-m(l)=\sum_{k=lo}^{hi}W(k;l)\mid S^\prime(k)\mid \quad (l=1,\cdots,L)
-\end{equation}
-
-\begin{equation}
-W(k;l)=\begin{cases}\displaystyle\frac{k-k_{lo}(l)}{k_c(l)-k_{lo}(l)}\quad \{k_{lo}\leq k \leq k_c(l)\} \\ 
-\displaystyle\frac{k_hi(l)-k}{k_{hi}(l)-k_{l}(l)}\quad \{k_{c}\leq k \leq k_{hi}(l)\} \end{cases}
-\end{equation}
+\begin{align}
+m(l) &=\sum_{k=lo}^{hi}W(k;l)\mid S^\prime(k)\mid \quad (l=1,\cdots,L) \notag \\
+W(k;l) &=\begin{cases}\displaystyle\frac{k-k_{lo}(l)}{k_c(l)-k_{lo}(l)}\quad \{k_{lo}\leq k \leq k_c(l)\} \\ 
+\displaystyle\frac{k_hi(l)-k}{k_{hi}(l)-k_{l}(l)}\quad \{k_{c}\leq k \leq k_{hi}(l)\} \end{cases} \notag
+\end{align}
 
 ただし、$W(k;l)$ は重み、$k_{lo}(l)、k_c(l)、k_{hi}(l)$ はそれぞれ$l$番目のフィルタの下限、中心、上限のスペクトルチャネル番号であり、隣り合うフィルタ間で
 
 \begin{equation}
-k_c=k_{hi}(l-1)=k_{lo}(l+1)
+k_c=k_{hi}(l-1)=k_{lo}(l+1) \notag
 \end{equation}
 
 なる関係がある。さらに、$k_c(l)$はメル周波数軸上で等間隔に配置される。メル周波数は
 
 \begin{equation}
-Mel(f)=2595\log_{10}(1+\frac{f}{700})
+Mel(f)=2595\log_{10}(1+\frac{f}{700}) \notag
 \end{equation}
 
 により計算される。ただし、$f$の単位は[Hz]にとる。\par
 最終的にフィルタバンク分析により得られた$L$個の帯域におけるパワースペクトルを離散コサイン変換することで、式(\ref{eq:mfcc})のようにMFCCが得られる。
 
-\begin{equation}
-\label{eq:mfcc}
-c_{mfcc}(i)=\sqrt{\frac{2}{N}}\sum_{i=1}^{L}\log ml \cos \left\{ \left( l-\frac{1}{2}\frac{i\pi}{L} \right)\right\}
-\end{equation}
+\begin{align}
+c_{mfcc}(i)=\sqrt{\frac{2}{N}}\sum_{i=1}^{L}\log ml \cos \left\{ \left( l-\frac{1}{2}\frac{i\pi}{L} \right)\right\} \label{eq:mfcc}
+\end{align}
 
 \vspace{0.2in}
 \noindent{{\textbf{\underline{隠れマルコフモデル(HMM)}}}\par
@@ -100,15 +95,11 @@ HMMは時系列信号の確率モデルであり、複数の定常信号源の�
 音素の音響的な特徴は、周辺前後の音素の影響を受けて同じ音素でも様々に変化することが知られている\cite{sp_recognition_shikano}。この現象を調音結合という。特に、音素から音素への渡りの部分ではスペクトル特徴が時間とともに連続して大きく変化するため、音声を扱う分野ではこの調音結合への対応が重要である。この調音結合に対する最も直接的な対応策として、前後の音素を考慮した3つ組音素（トライフォン）を認識の処理単位として用いるものがある。\par
 MFCCは、フレームと呼ばれる数十ms程度の音声区間を定常とみなした上で得られる静的な特徴量である。しかし調音結合があるため、フレーム分析により得られた静的な特徴に加え、時間とともに変化する動的な特徴を特徴量に加えて音声認識を行なうことで、認識の精度が大きく向上することが知られている。動的な特徴には式\ref{eq:deltac}や式\ref{eq:deltadeltac}で示される一次差分か二次差分を利用することが多い。ここで、$K$は回帰係数を計算する範囲であり、一般的に20$\sim$40msである。
 
-\begin{equation}
-\label{eq:deltac}
-\Delta c(n;l)=\frac{\Sigma_{K=-K}^{K}k_c(n;l+k)}{\Sigma_{K}^{K=-K}K^2}
-\end{equation}
+\begin{align}
+\Delta c(n;l) &= \frac{\Sigma_{K=-K}^{K}k_c(n;l+k)}{\Sigma_{K}^{K=-K}K^2} \label{eq:deltac} \\
+\Delta\Delta c(n;l) &= \frac{\Sigma_{K=-K}^{K}k_c(n;l+k)}{\Sigma_{K}^{K=-K}K^2} \label{eq:deltadeltac}
+\end{align}
 
-\begin{equation}
-\label{eq:deltadeltac}
-\Delta\Delta c(n;l)=\frac{\Sigma_{K=-K}^{K}k_c(n;l+k)}{\Sigma_{K}^{K=-K}K^2}
-\end{equation}
 \subsection{DNNの概要\cite{audio_textbook}}
 本研究ではDNNをベースとした会議音声認識を行なう。DNNとは、多層ニューラルネットワークを使った機械学習のことである。DNNは図\ref{fig:dnn}のように、auto-encoderまたはRestricted Boltzmann Machines (RBM)などを積み重ねた深い構造をもつ。入力に近い層では、単純に特徴抽出しかできないが、それらの重み付け和をとると表現能力が上がり、それをさらに上位の層の入力にしていくことで、モデルの表現力がさらに上がるとされている。\par
 

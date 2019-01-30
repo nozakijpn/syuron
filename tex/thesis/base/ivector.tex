@@ -1,40 +1,34 @@
 近年の話者認識システムの多くは i-vector\cite{iv}に基づいて構成されおり、この領域における最高水準の技術となっている。i-vectorとは、ある発話から得られた音響特徴量を因子分析を用いて、話者固有の特徴を抽出したものである。i-vectorの抽出においては、因子分析の入力として、発話毎にGMM(Gaussian Mixture Model)の平均ベクトルを結合したGMMスーパーベクトルを用いる。発話$u$から作成された GMM スーパーベクトル$M_u∈R^{CD_F}$は以下で定義される。
 
 \begin{equation}
-M_u=T w_u + m
+M_u=T w_u + m, \notag
 \end{equation}
 
 ここで$M_u$は大量の不特定話者の発話データから作成されるUBM（Universal Background Model）を事前情報として事後確率最大化（MAP）法により推定されたGMMを用いる。
 また$m$はUBMから得られる話者及びチャネル非依存のGMMスーパーベクトルである。
 $C$は GMM (UBM)の混合数，$D_F$は音響パラメータの次元数、$T∈R^{CD_F*D_r}$は低ランクの矩形行列$D_r \ll CD_F$で、全変動空間を張る基底ベクトルで構成される固有声行列である。$W_u \in R^{D_r}$は発話ごとに与えられる潜在変数であり、平均ベクトルが$0 \in R^{D_T}$で共分散行列行列が単位行列$I \in R^{D_T*D_T}$のガウス分布$N(w ; 0,I)$に従う。この$w$はtotal factor(全因子)と呼ばれ、各発話に対するi-vector である。つまり、i-vectorはGMM スーパーベクトル空間における平均的な話者(UBM の平均)から「差(を次元圧縮したもの)」として各話者を表現したものと言える。
 
-\subsection{UBMに対するBaum-Welch統計量}
+\subsection{UBMに対するBaum-Welch統計}
 準備として、UBMに対するBaum-Welch統計量を計算することから始める。
 $O_u={o_1,o_2,o_3,\cdots,o_L}$、$o_t\in R^{D_F}$、を発話$u$から得られる$L$フレームの音響パラメータ系列$c=1,2,3\cdots,C$、をUBM (GMM) の混合要素を表す添え字、$\Omega=\left\{\pi_c,m_c,\sum_{c}\right\}_{c=1}^{C}$をUBMのパラメータ(混合重み、平均ベクトル、対角共分散行列)とする。このとき、発話$u$に対する0次、1次、2次のBaum-Welch統計量は、
 
-\begin{equation}
-N_{u,c}=\sum_{t=1}^{L}\gamma_t(t)
-\end{equation}
-
-\begin{equation}
-F_{u,c}=\sum_{t=1}^{L}\gamma_t(c)(o_t-m_c)
-\end{equation}
-
-\begin{equation}
-S_{u,c}=diag\left[\sum_{t=1}^L\gamma_c(c)(o_c-m_c)(o_t-m_c)^\prime\right]
-\end{equation}
+\begin{align}
+N_{u,c} &=\sum_{t=1}^{L}\gamma_t(t), \notag \\
+F_{u,c} &=\sum_{t=1}^{L}\gamma_t(c)(o_t-m_c), \notag \\
+S_{u,c} &=diag\left[\sum_{t=1}^L\gamma_c(c)(o_c-m_c)(o_t-m_c)^\prime\right] \notag ,
+\end{align}
 
 
 
 と書ける。ここで、$y_c(c)$は、$o_t$がUBMの$c$番目の要素分布から生成される事後確率
 
 \begin{equation}
-\gamma_c(c)=p(c\mid o_t,Ω)=\frac{\pi_cp(o_t\mid m_c,\sum c)}{\sum_{k=1}^C \pi_kp(o_t\mid m_k,\sum k)}
+\gamma_c(c)=\displaystyle p(c\mid o_t,Ω)=\frac{\pi_cp(o_t\mid m_c,\sum c)}{\sum_{k=1}^C \pi_kp(o_t\mid m_k,\sum k)}, \notag
 \end{equation}
 
 である。更にこれらを用いて、
-\begin{equation}
-  N_u = \left(
+\begin{align}
+  N_u &= \left(
     \begin{array}{cccc}
       N_{u,1},I_{D_F} & 0 & \ldots & 0 \\
       0 & 0 & \ldots & \vdots \\
@@ -42,11 +36,8 @@ S_{u,c}=diag\left[\sum_{t=1}^L\gamma_c(c)(o_c-m_c)(o_t-m_c)^\prime\right]
       0 & 0 & \ldots & N_{u,C},I_{D_F}
     \end{array}
   \right)
-\text{  $\in R^{CD_F\times CD_F}$}\\
-\end{equation}
-
-\begin{equation}
-  F_u = \left(
+\text{  $\in R^{CD_F\times CD_F}$},\\
+  F_u &= \left(
     \begin{array}{cccc}
       F_{u,1} \\
       F_{u,2} \\
@@ -54,11 +45,8 @@ S_{u,c}=diag\left[\sum_{t=1}^L\gamma_c(c)(o_c-m_c)(o_t-m_c)^\prime\right]
       F_{u,C}
     \end{array}
   \right)
-\text{  $\in R^{CD_F}$}\\
-\end{equation}
-
-\begin{equation}
-  S_u = \left(
+\text{  $\in R^{CD_F}$},\\
+  S_u &= \left(
     \begin{array}{cccc}
       S_{u,1},0 & 0 & \ldots & 0 \\
       0 & S_{u,2} & \ldots & \vdots \\
@@ -66,8 +54,8 @@ S_{u,c}=diag\left[\sum_{t=1}^L\gamma_c(c)(o_c-m_c)(o_t-m_c)^\prime\right]
       0 & 0 & \ldots & S_{u,C}
     \end{array}
   \right)
-\text{  $\in R^{CD_F\times CD_F}$}\\
-\end{equation}
+\text{  $\in R^{CD_F\times CD_F}$},
+\end{align}
 
 ここで、$I_{D_F}\in R^{D_F\times D_F}$である。
 
@@ -79,7 +67,7 @@ S_{u,c}=diag\left[\sum_{t=1}^L\gamma_c(c)(o_c-m_c)(o_t-m_c)^\prime\right]
 $w$の事前分布は$p(w)$平均0、共分散行列を持つガウス分布であり、以下のように書ける。
 \begin{equation}
 \label{iv1}
-p(w)\propto \exp(-\frac{1}{2}w^{\prime}w)
+p(w)\propto \exp(-\frac{1}{2}w^{\prime}w).
 \end{equation}
 
 \item 条件付き分布\par
@@ -87,17 +75,14 @@ $M_{u,c}$を混合要素に対する$M_u$の部分ベクトルとする。直感
 
 \begin{equation}
 \label{iv2}
-P(O_u|w_u)=\exp\left(\sum_{t=1}^{L}\sum_{c=1}^{C}\gamma_t(c)\log(2\pi )^{-\frac{D_F}{2}}\left|\Sigma_{c}\right|^{-\frac{1}{2}}-\frac{1}{2}\sum_{t=1}^{L}\sum_{c=1}^{C}\gamma_t(c)D(o_t;\theta_c) \right)
+P(O_u|w_u)=\exp\left(\sum_{t=1}^{L}\sum_{c=1}^{C}\gamma_t(c)\log(2\pi )^{-\frac{D_F}{2}}\left|\Sigma_{c}\right|^{-\frac{1}{2}}-\frac{1}{2}\sum_{t=1}^{L}\sum_{c=1}^{C}\gamma_t(c)D(o_t;\theta_c) \right),
 \end{equation}
 のように書ける。ここで、
 
-\begin{equation}
-D(o_t;\theta_t)=(o_t-M_{u,c})^\prime \Sigma_{c}^{-1}(o_t-M_{u,c})
-\end{equation}
-
-\begin{equation}
-M_{u,c}=m_c+T_cw_u
-\end{equation}
+\begin{align}
+D(o_t;\theta_t) &=(o_t-M_{u,c})^\prime \Sigma_{c}^{-1}(o_t-M_{u,c}), \\
+M_{u,c} &=m_c+T_cw_u.
+\end{align}
 である。$T_c\in R^{D_F\times D_T}$は、混合要素$c$に対する$T$の部分行列である。式(\ref{iv2})のexpの内部をBaum-Welch統計量を用いて整理すると、
 
 \begin{equation}
@@ -107,39 +92,34 @@ M_{u,c}=m_c+T_cw_u
 \end{equation}
 
 ここで、$G_u^\Sigma$及び$H_u^{\Sigma T}$は、
-\begin{equation}
-G_u^\Sigma=\sum_{c=1}^C\left[\frac{1}{2}N_{u,c}\log\left|\Sigma_c^{-1}\right|-\frac{1}{2}tr\left(\Sigma_c^{-1}S_{u,c}\right)\right]
-\end{equation}
-
-\begin{equation}
-\label{iv3}
-H_u^{\Sigma T}=w_u^\prime T^\prime \Sigma^{-1}F_u-\frac{1}{2}w_u^\prime T^\prime N_u\Sigma^{-1}Tw_u
-\end{equation}
+\begin{align}
+G_u^\Sigma &=\sum_{c=1}^C\left[\frac{1}{2}N_{u,c}\log\left|\Sigma_c^{-1}\right|-\frac{1}{2}tr\left(\Sigma_c^{-1}S_{u,c}\right)\right], \\
+H_u^{\Sigma T} &=w_u^\prime T^\prime \Sigma^{-1}F_u-\frac{1}{2}w_u^\prime T^\prime N_u\Sigma^{-1}Tw_u. \label{iv3}
+\end{align}
 
 \item 事後分布\par
 $w$の事後分布は(\ref{iv2})〜(\ref{iv3})を用いると、
 
-\begin{equation}
-\begin{split}
-p(w_u|O_u)\propto p(O_u|w_u)p(w_u)\propto \exp(w_u^\prime T^\prime \Sigma^\prime Tw_u-\frac{1}{2}w_u^\prime w_u)\\ \propto exp(w_u^\prime T^\prime \Sigma^\prime F_u-\frac{1}{2}w_u^\prime N_u\Sigma^{-1}Tw_u-\frac{1}{2}w_u^\prime w_u)\\ \propto \exp(-\frac{1}{2}(w_u-G_uT^\prime\Sigma^{-1}F_u)^\prime G_u^{-1}(w_u-G_uT^\prime \Sigma^\prime F_u))
-\end{split}
-\end{equation}
+\begin{align}
+%\begin{split}
+p(w_u|O_u) &\propto p(O_u|w_u)p(w_u)\propto \exp(w_u^\prime T^\prime \Sigma^\prime Tw_u-\frac{1}{2}w_u^\prime w_u)\\ \notag
+ &\propto exp(w_u^\prime T^\prime \Sigma^\prime F_u-\frac{1}{2}w_u^\prime N_u\Sigma^{-1}Tw_u-\frac{1}{2}w_u^\prime w_u)\\ \notag
+ &\propto \exp(-\frac{1}{2}(w_u-G_uT^\prime\Sigma^{-1}F_u)^\prime G_u^{-1}(w_u-G_uT^\prime \Sigma^\prime F_u)).
+%\end{split}
+\end{align}
 と書ける。ここで、
 
 \begin{equation}
-G_u=(I+T^\prime \Sigma^{-1}N_u T)^{-1}
+G_u=(I+T^\prime \Sigma^{-1}N_u T)^{-1}.
 \end{equation}
 
 である。$w$の事後分布もガウス分布であることに注意すると、平均及び分散は、
 
-\begin{equation}
+\begin{align}
 \label{iv4}
-E[w_u]=G_uT^\prime \Sigma^{-1}F_u
-\end{equation}
-
-\begin{equation}
-cov[w_u]=G_u
-\end{equation}
+E[w_u] &=G_uT^\prime \Sigma^{-1}F_u, \\
+cov[w_u] &=G_u.
+\end{align}
 
 となる。前述のとおり、確率的潜在変数モデルのもと、i-vectorは$w$の事後分布の平均として得られる。つまり、発話$u$のi-vectorは、Baum-Welch統計量$N_u$、$F_u$及び推定済みのパラメータ$T$,$\Sigma$を用いて、式(\ref{iv4})により計算することができる。
 
@@ -151,13 +131,13 @@ cov[w_u]=G_u
 
 \begin{equation}
 \label{iv5}
-Q=\sum_{u=1}^{U}E[log p(O_ww_u|\theta)]
+Q=\sum_{u=1}^{U}E[log p(O_ww_u|\theta)],
 \end{equation}
 
 の最大化問題を解くことで求める。ここで、$\theta$はパラメータ$T$、$\Sigma$を表す。完全データの対数尤度は、
 
 \begin{equation}
-\log p(O_w w_u)=logp(O_u|w_u,\theta)+logp(w_u)
+\log p(O_w w_u)=logp(O_u|w_u,\theta)+logp(w_u), \notag
 \end{equation}
 
 と書けるので、式 (\ref{iv2})〜(\ref{iv3}) を用いると、式(\ref{iv5})は以下のように整理できる。
@@ -166,38 +146,35 @@ Q=\sum_{u=1}^{U}E[log p(O_ww_u|\theta)]
 %\label{iv6}
 %\begin{split}
 \begin{align}
-Q=&\frac{1}{2}\sum_{u=1}^{U}\sum_{c=1}^{C}(N_{u,c} \log\left|\Sigma_c^{-1}\right|-tr(\Sigma_c^{-1}S_{u,c})) \notag  \\
-&+\sum_{u=1}^{U}tr\left( \Sigma^{-1}\left( F_uE[w_u^\prime]T^\prime -\frac{1}{2}N_uTE[w_uw_u^\prime]T^\prime \right) \right) -\sum_{u=1}^{U}\frac{1}{2}tr(E[w_uW_u^\prime]) \label{iv6}
+Q=&\frac{1}{2}\sum_{u=1}^{U}\sum_{c=1}^{C}(N_{u,c} \log\left|\Sigma_c^{-1}\right|-tr(\Sigma_c^{-1}S_{u,c})), \notag  \\
+&+\sum_{u=1}^{U}tr\left( \Sigma^{-1}\left( F_uE[w_u^\prime]T^\prime -\frac{1}{2}N_uTE[w_uw_u^\prime]T^\prime \right) \right) -\sum_{u=1}^{U}\frac{1}{2}tr(E[w_uW_u^\prime]). \label{iv6}
 \end{align}
 %\end{split}
 %\end{equation}
 
 以上より、Eステップにおいては古いパラメータを使って、$w$空間の事後分布の統計量を以下のように計算する。
 
-\begin{equation}
-E[w_u]=G_uT^\prime\Sigma^{-1}F_u
-\end{equation}
-
-\begin{equation}
-E[w_uw_u^\prime]=G_u+E[w_u]E[w_u^\prime]
-\end{equation}
+\begin{align}
+E[w_u] &=G_uT^\prime\Sigma^{-1}F_u, \\
+E[w_uw_u^\prime] &=G_u+E[w_u]E[w_u^\prime].
+\end{align}
 
 Mステップでは、式(\ref{iv6})をパラメータに関して最大化する。まず、(\ref{iv6})を$T$に関して微分して0と置くことで、以下の関係式を得る。
 
 \begin{equation}
-\sum_{u=1}^{U}\Sigma^{-1}F_uE[w_u^\prime]=\sum_{u=1}^{U}\Sigma^{-1}N_uTE[w_uw_u^\prime]
+\sum_{u=1}^{U}\Sigma^{-1}F_uE[w_u^\prime]=\sum_{u=1}^{U}\Sigma^{-1}N_uTE[w_uw_u^\prime].
 \end{equation}
 
 これより、$T$の推定式が、
 
 \begin{equation}
-T^i=\left(\sum_{u=1}^{U}F_u^iE[w_u^\prime] \right)\left(\sum_{u=1}^{U}N_{u,c}E[w_uw_u^\prime] \right)^{-1}
+T^i=\left(\sum_{u=1}^{U}F_u^iE[w_u^\prime] \right)\left(\sum_{u=1}^{U}N_{u,c}E[w_uw_u^\prime] \right)^{-1}.
 \end{equation}
 
 のように得られる。ここで、$T^i$、$F_u^i$は、おのおの$T$、$F_u$の$i$行目を表し、$i=(c-1)\times D_F+f$、$1\leq f\leq D_F$である。また、$\Sigma$の推定式は、
 
 \begin{equation}
-\Sigma=N^{-1}\left(\sum_{u=1}^{U}S_u-diag\left[\sum_{u=1}^{U}F_uE[w_u^\prime]T^\prime \right] \right)
+\Sigma=N^{-1}\left(\sum_{u=1}^{U}S_u-diag\left[\sum_{u=1}^{U}F_uE[w_u^\prime]T^\prime \right] \right).
 \end{equation}
 となる。ここで、$N=\Sigma_{u=1}^{U}N_u$である。
 
@@ -205,7 +182,7 @@ T^i=\left(\sum_{u=1}^{U}F_u^iE[w_u^\prime] \right)\left(\sum_{u=1}^{U}N_{u,c}E[w
 発話$x$から抽出したi-vector$w_x$と発話$y$から抽出したi-vector$w_y$の比較を行うための方法としてコサイン類似度を用いる。
 
 \begin{equation}
-\cos(w_x,w_y)=\frac{w_x\cdot w_y}{\parallel w_x\parallel\parallel w_y\parallel}
+\cos(w_x,w_y)=\frac{w_x\cdot w_y}{\parallel w_x\parallel\parallel w_y\parallel}.
 \end{equation}
 
 類似度の値の範囲は、$-1\leq \cos(w_x,w_y)\leq 1$であり、類似度が最も高い値は1である。
