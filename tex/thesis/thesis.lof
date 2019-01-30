@@ -18,28 +18,28 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {B.1}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=0.8$)}}{39}
-\contentsline {figure}{\numberline {B.2}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=0.9$)}}{40}
-\contentsline {figure}{\numberline {B.3}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=1.0$)}}{40}
-\contentsline {figure}{\numberline {B.4}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=1.1$)}}{41}
-\contentsline {figure}{\numberline {B.5}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=1.3$)}}{41}
-\contentsline {figure}{\numberline {B.6}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=1.4$)}}{42}
-\contentsline {figure}{\numberline {B.7}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=1.5$)}}{42}
-\contentsline {figure}{\numberline {B.8}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=0.8$)}}{43}
-\contentsline {figure}{\numberline {B.9}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=0.9$)}}{43}
-\contentsline {figure}{\numberline {B.10}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=1.0$)}}{44}
-\contentsline {figure}{\numberline {B.11}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=1.1$)}}{44}
-\contentsline {figure}{\numberline {B.12}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=1.3$)}}{45}
-\contentsline {figure}{\numberline {B.13}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=1.4$)}}{45}
-\contentsline {figure}{\numberline {B.14}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=1.5$)}}{46}
+\contentsline {figure}{\numberline {B.1}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=0.8$)}}{38}
+\contentsline {figure}{\numberline {B.2}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=0.9$)}}{39}
+\contentsline {figure}{\numberline {B.3}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=1.0$)}}{39}
+\contentsline {figure}{\numberline {B.4}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=1.1$)}}{40}
+\contentsline {figure}{\numberline {B.5}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=1.3$)}}{40}
+\contentsline {figure}{\numberline {B.6}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=1.4$)}}{41}
+\contentsline {figure}{\numberline {B.7}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=1.5$)}}{41}
+\contentsline {figure}{\numberline {B.8}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=0.8$)}}{42}
+\contentsline {figure}{\numberline {B.9}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=0.9$)}}{42}
+\contentsline {figure}{\numberline {B.10}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=1.0$)}}{43}
+\contentsline {figure}{\numberline {B.11}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=1.1$)}}{43}
+\contentsline {figure}{\numberline {B.12}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=1.3$)}}{44}
+\contentsline {figure}{\numberline {B.13}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=1.4$)}}{44}
+\contentsline {figure}{\numberline {B.14}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=1.5$)}}{45}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {C.1}{\ignorespaces 音声認識の流れ}}{47}
-\contentsline {figure}{\numberline {C.2}{\ignorespaces HMMの例}}{50}
-\contentsline {figure}{\numberline {C.3}{\ignorespaces DNNの構造図}}{51}
-\contentsline {figure}{\numberline {C.4}{\ignorespaces DNNを用いる際の学習の流れ }}{52}
-\contentsline {figure}{\numberline {C.5}{\ignorespaces 各話者クラスタに含まれる発話データ数 }}{53}
-\contentsline {figure}{\numberline {C.6}{\ignorespaces 書き起こしテキストの例 }}{57}
-\contentsline {figure}{\numberline {C.7}{\ignorespaces Baselineによる音響モデルの選択結果 }}{58}
-\contentsline {figure}{\numberline {C.8}{\ignorespaces 手法1による音響モデルの選択結果 }}{59}
-\contentsline {figure}{\numberline {C.9}{\ignorespaces 手法2による音響モデルの選択結果 }}{59}
-\contentsline {figure}{\numberline {C.10}{\ignorespaces 手法3による音響モデルの選択結果 }}{59}
+\contentsline {figure}{\numberline {C.1}{\ignorespaces 音声認識の流れ}}{46}
+\contentsline {figure}{\numberline {C.2}{\ignorespaces HMMの例}}{49}
+\contentsline {figure}{\numberline {C.3}{\ignorespaces DNNの構造図}}{50}
+\contentsline {figure}{\numberline {C.4}{\ignorespaces DNNを用いる際の学習の流れ }}{51}
+\contentsline {figure}{\numberline {C.5}{\ignorespaces 各話者クラスタに含まれる発話データ数 }}{52}
+\contentsline {figure}{\numberline {C.6}{\ignorespaces 書き起こしテキストの例 }}{56}
+\contentsline {figure}{\numberline {C.7}{\ignorespaces Baselineによる音響モデルの選択結果 }}{57}
+\contentsline {figure}{\numberline {C.8}{\ignorespaces 手法1による音響モデルの選択結果 }}{58}
+\contentsline {figure}{\numberline {C.9}{\ignorespaces 手法2による音響モデルの選択結果 }}{58}
+\contentsline {figure}{\numberline {C.10}{\ignorespaces 手法3による音響モデルの選択結果 }}{58}

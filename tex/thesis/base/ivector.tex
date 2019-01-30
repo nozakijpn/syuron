@@ -36,7 +36,7 @@ S_{u,c} &=diag\left[\sum_{t=1}^L\gamma_c(c)(o_c-m_c)(o_t-m_c)^\prime\right] \not
       0 & 0 & \ldots & N_{u,C},I_{D_F}
     \end{array}
   \right)
-\text{  $\in R^{CD_F\times CD_F}$},\\
+\text{  $\in R^{CD_F\times CD_F}$}, \notag \\
   F_u &= \left(
     \begin{array}{cccc}
       F_{u,1} \\
@@ -45,7 +45,7 @@ S_{u,c} &=diag\left[\sum_{t=1}^L\gamma_c(c)(o_c-m_c)(o_t-m_c)^\prime\right] \not
       F_{u,C}
     \end{array}
   \right)
-\text{  $\in R^{CD_F}$},\\
+\text{  $\in R^{CD_F}$}, \notag \\
   S_u &= \left(
     \begin{array}{cccc}
       S_{u,1},0 & 0 & \ldots & 0 \\
@@ -54,7 +54,7 @@ S_{u,c} &=diag\left[\sum_{t=1}^L\gamma_c(c)(o_c-m_c)(o_t-m_c)^\prime\right] \not
       0 & 0 & \ldots & S_{u,C}
     \end{array}
   \right)
-\text{  $\in R^{CD_F\times CD_F}$},
+\text{  $\in R^{CD_F\times CD_F}$} \notag ,
 \end{align}
 
 ここで、$I_{D_F}\in R^{D_F\times D_F}$である。
@@ -66,8 +66,8 @@ S_{u,c} &=diag\left[\sum_{t=1}^L\gamma_c(c)(o_c-m_c)(o_t-m_c)^\prime\right] \not
 \item 事前分布\par
 $w$の事前分布は$p(w)$平均0、共分散行列を持つガウス分布であり、以下のように書ける。
 \begin{equation}
-\label{iv1}
-p(w)\propto \exp(-\frac{1}{2}w^{\prime}w).
+%\label{iv1}
+p(w)\propto \exp(-\frac{1}{2}w^{\prime}w). \notag
 \end{equation}
 
 \item 条件付き分布\par
@@ -102,15 +102,15 @@ $w$の事後分布は(\ref{iv2})〜(\ref{iv3})を用いると、
 
 \begin{align}
 %\begin{split}
-p(w_u|O_u) &\propto p(O_u|w_u)p(w_u)\propto \exp(w_u^\prime T^\prime \Sigma^\prime Tw_u-\frac{1}{2}w_u^\prime w_u)\\ \notag
- &\propto exp(w_u^\prime T^\prime \Sigma^\prime F_u-\frac{1}{2}w_u^\prime N_u\Sigma^{-1}Tw_u-\frac{1}{2}w_u^\prime w_u)\\ \notag
- &\propto \exp(-\frac{1}{2}(w_u-G_uT^\prime\Sigma^{-1}F_u)^\prime G_u^{-1}(w_u-G_uT^\prime \Sigma^\prime F_u)).
+p(w_u|O_u) &\propto p(O_u|w_u)p(w_u)\propto \exp(w_u^\prime T^\prime \Sigma^\prime Tw_u-\frac{1}{2}w_u^\prime w_u) \notag \\ 
+ &\propto exp(w_u^\prime T^\prime \Sigma^\prime F_u-\frac{1}{2}w_u^\prime N_u\Sigma^{-1}Tw_u-\frac{1}{2}w_u^\prime w_u) \notag \\ 
+ &\propto \exp(-\frac{1}{2}(w_u-G_uT^\prime\Sigma^{-1}F_u)^\prime G_u^{-1}(w_u-G_uT^\prime \Sigma^\prime F_u)). \notag
 %\end{split}
 \end{align}
 と書ける。ここで、
 
 \begin{equation}
-G_u=(I+T^\prime \Sigma^{-1}N_u T)^{-1}.
+G_u=(I+T^\prime \Sigma^{-1}N_u T)^{-1}. \notag
 \end{equation}
 
 である。$w$の事後分布もガウス分布であることに注意すると、平均及び分散は、
@@ -118,7 +118,7 @@ G_u=(I+T^\prime \Sigma^{-1}N_u T)^{-1}.
 \begin{align}
 \label{iv4}
 E[w_u] &=G_uT^\prime \Sigma^{-1}F_u, \\
-cov[w_u] &=G_u.
+cov[w_u] &=G_u. \notag
 \end{align}
 
 となる。前述のとおり、確率的潜在変数モデルのもと、i-vectorは$w$の事後分布の平均として得られる。つまり、発話$u$のi-vectorは、Baum-Welch統計量$N_u$、$F_u$及び推定済みのパラメータ$T$,$\Sigma$を用いて、式(\ref{iv4})により計算することができる。
@@ -155,26 +155,26 @@ Q=&\frac{1}{2}\sum_{u=1}^{U}\sum_{c=1}^{C}(N_{u,c} \log\left|\Sigma_c^{-1}\right
 以上より、Eステップにおいては古いパラメータを使って、$w$空間の事後分布の統計量を以下のように計算する。
 
 \begin{align}
-E[w_u] &=G_uT^\prime\Sigma^{-1}F_u, \\
-E[w_uw_u^\prime] &=G_u+E[w_u]E[w_u^\prime].
+E[w_u] &=G_uT^\prime\Sigma^{-1}F_u, \notag \\
+E[w_uw_u^\prime] &=G_u+E[w_u]E[w_u^\prime]. \notag
 \end{align}
 
 Mステップでは、式(\ref{iv6})をパラメータに関して最大化する。まず、(\ref{iv6})を$T$に関して微分して0と置くことで、以下の関係式を得る。
 
 \begin{equation}
-\sum_{u=1}^{U}\Sigma^{-1}F_uE[w_u^\prime]=\sum_{u=1}^{U}\Sigma^{-1}N_uTE[w_uw_u^\prime].
+\sum_{u=1}^{U}\Sigma^{-1}F_uE[w_u^\prime]=\sum_{u=1}^{U}\Sigma^{-1}N_uTE[w_uw_u^\prime]. \notag
 \end{equation}
 
 これより、$T$の推定式が、
 
 \begin{equation}
-T^i=\left(\sum_{u=1}^{U}F_u^iE[w_u^\prime] \right)\left(\sum_{u=1}^{U}N_{u,c}E[w_uw_u^\prime] \right)^{-1}.
+T^i=\left(\sum_{u=1}^{U}F_u^iE[w_u^\prime] \right)\left(\sum_{u=1}^{U}N_{u,c}E[w_uw_u^\prime] \right)^{-1}. \notag
 \end{equation}
 
 のように得られる。ここで、$T^i$、$F_u^i$は、おのおの$T$、$F_u$の$i$行目を表し、$i=(c-1)\times D_F+f$、$1\leq f\leq D_F$である。また、$\Sigma$の推定式は、
 
 \begin{equation}
-\Sigma=N^{-1}\left(\sum_{u=1}^{U}S_u-diag\left[\sum_{u=1}^{U}F_uE[w_u^\prime]T^\prime \right] \right).
+\Sigma=N^{-1}\left(\sum_{u=1}^{U}S_u-diag\left[\sum_{u=1}^{U}F_uE[w_u^\prime]T^\prime \right] \right). \notag
 \end{equation}
 となる。ここで、$N=\Sigma_{u=1}^{U}N_u$である。
 
@@ -182,7 +182,7 @@ T^i=\left(\sum_{u=1}^{U}F_u^iE[w_u^\prime] \right)\left(\sum_{u=1}^{U}N_{u,c}E[w
 発話$x$から抽出したi-vector$w_x$と発話$y$から抽出したi-vector$w_y$の比較を行うための方法としてコサイン類似度を用いる。
 
 \begin{equation}
-\cos(w_x,w_y)=\frac{w_x\cdot w_y}{\parallel w_x\parallel\parallel w_y\parallel}.
+\cos(w_x,w_y)=\frac{w_x\cdot w_y}{\parallel w_x\parallel\parallel w_y\parallel}. \notag
 \end{equation}
 
 類似度の値の範囲は、$-1\leq \cos(w_x,w_y)\leq 1$であり、類似度が最も高い値は1である。

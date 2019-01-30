@@ -2,7 +2,7 @@
 \label{chapter:speech_recog}
 \input{base/speach_recognition.tex}
 
-\section{i-vectorを用いた音声認識手法\cite{yoshimura_clustering}}
+\section{話者特徴を考慮した音声認識手法\cite{yoshimura_clustering}}
 \label{section:yoshimura_pre_clustering}
 学習データに含まれる話者の音響特徴を考慮して木構造話者クラスタを作成し、各話者クラスタに含まれる学習データを用いて音響モデルを学習した。この木構造話者クラスタは、母音の定常状態であるHMMの中央の状態の平均と分散を用いたBhattacharyya距離によるk-means法によって作成した。クラスタの個数は、最上位のクラスタを2分割し、作成された2つのクラスタをさらに2分割した計７つのクラスタを使用する。\par
 認識の際は、学習データに用いた話者のi-vectorと評価データのi-vectorのコサイン類似度を求める。求めたコサイン類似度の高い上位$n$人の学習データを全て含んでいるクラスタを選択し、選択したクラスタに含まれる学習データで学習した音響モデルを用いて音声認識を行なった。\par
@@ -130,7 +130,7 @@ CSJには書き起こしテキストも提供されており、その一部の�
 
 \begin{equation}
 \label{calc:word_acc}
-Acc=\frac{(W-S-D-I)}{W}
+Acc=\frac{(W-S-D-I)}{W}. \notag
 \end{equation}
 
           

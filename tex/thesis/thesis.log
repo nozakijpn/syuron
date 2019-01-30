@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.7-160201-2.6 (utf8.euc) (TeX Live 2016) (preloaded format=platex 2018.10.19)  31 JAN 2019 03:54
+This is e-pTeX, Version 3.14159265-p3.7-160201-2.6 (utf8.euc) (TeX Live 2016) (preloaded format=platex 2018.10.19)  31 JAN 2019 05:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -377,26 +377,21 @@ Overfull \hbox (48.24187pt too wide) in paragraph at lines 204--205
  [] 
  []
 
-[24] [25]
-
-LaTeX Warning: Reference `nozaki_gakuseikai' on page 26 undefined on input line
- 229.
-
-) (./matome.tex [26]
+[24] [25]) (./matome.tex [26]
 第 5 章
 [27
 
 ] Excluding 'comment' comment.) (./ack.tex [28]) (./ref.tex [29
 
-] [30
-
 ])
-(./appendix.tex (./base/pre_search_speech_time.tex [31]
-付録 A  
-(./base/devide_audio.tex [32
+(./appendix.tex (./base/pre_search_speech_time.tex [30
 
-] [33] [34]) [35] [36] [37]
-Excluding 'comment' comment.) (./result_anchor_append.tex [38]
+]
+付録 A  
+(./base/devide_audio.tex [31
+
+] [32] [33]) [34] [35] [36]
+Excluding 'comment' comment.) (./result_anchor_append.tex [37]
 付録 B  
 File: ./figure/prob1_08.eps Graphic file (type eps)
 <./figure/prob1_08.eps>
@@ -410,7 +405,7 @@ Overfull \hbox (48.24187pt too wide) in paragraph at lines 14--15
  [] 
  []
 
-[39
+[38
 
 ]
 File: ./figure/prob1_10.eps Graphic file (type eps)
@@ -425,7 +420,7 @@ Overfull \hbox (48.24187pt too wide) in paragraph at lines 28--29
  [] 
  []
 
-[40]
+[39]
 File: ./figure/prob1_13.eps Graphic file (type eps)
  <./figure/prob1_13.eps>
 Overfull \hbox (48.24187pt too wide) in paragraph at lines 35--36
@@ -438,7 +433,7 @@ Overfull \hbox (48.24187pt too wide) in paragraph at lines 42--43
  [] 
  []
 
-[41]
+[40]
 File: ./figure/prob1_15.eps Graphic file (type eps)
  <./figure/prob1_15.eps>
 Overfull \hbox (48.24187pt too wide) in paragraph at lines 49--50
@@ -451,7 +446,7 @@ Overfull \hbox (48.24187pt too wide) in paragraph at lines 56--57
  [] 
  []
 
-[42]
+[41]
 File: ./figure/prob3_09.eps Graphic file (type eps)
  <./figure/prob3_09.eps>
 Overfull \hbox (48.24187pt too wide) in paragraph at lines 63--64
@@ -464,7 +459,7 @@ Overfull \hbox (48.24187pt too wide) in paragraph at lines 70--71
  [] 
  []
 
-[43]
+[42]
 File: ./figure/prob3_11.eps Graphic file (type eps)
  <./figure/prob3_11.eps>
 Overfull \hbox (48.24187pt too wide) in paragraph at lines 77--78
@@ -477,7 +472,7 @@ Overfull \hbox (48.24187pt too wide) in paragraph at lines 84--85
  [] 
  []
 
-[44]
+[43]
 File: ./figure/prob3_14.eps Graphic file (type eps)
  <./figure/prob3_14.eps>
 Overfull \hbox (48.24187pt too wide) in paragraph at lines 91--92
@@ -490,7 +485,7 @@ Overfull \hbox (48.24187pt too wide) in paragraph at lines 98--99
  [] 
  []
 
-) (./base/speach_recog.tex [45] [46]
+) (./base/speach_recog.tex [44] [45]
 付録 C  
 (./base/speach_recognition.tex
 File: ./figure/flow_sp.eps Graphic file (type eps)
@@ -499,18 +494,18 @@ Overfull \hbox (8.59375pt too wide) in paragraph at lines 7--8
  [] 
  []
 
-[47
+[46
 
-] [48]
+] [47]
 File: ./figure/HMM.eps Graphic file (type eps)
- <./figure/HMM.eps> [49]
+ <./figure/HMM.eps> [48]
 File: ./figure/structure_dnn.eps Graphic file (type eps)
- <./figure/structure_dnn.eps> [50]
+ <./figure/structure_dnn.eps> [49]
 File: ./figure/train_dnn.eps Graphic file (type eps)
 
-<./figure/train_dnn.eps> [51])
+<./figure/train_dnn.eps> [50])
 File: ./figure/yoshimura.eps Graphic file (type eps)
- <./figure/yoshimura.eps> [52] [53] [54]
+ <./figure/yoshimura.eps> [51] [52] [53]
 File: ./figure/kana_onso.eps Graphic file (type eps)
 
 <./figure/kana_onso.eps>
@@ -518,33 +513,30 @@ Overfull \hbox (7.08626pt too wide) in paragraph at lines 101--102
  [] 
  []
 
-[55] [56]
+[54] [55]
 File: ./figure/kakiokosi.eps Graphic file (type eps)
- <./figure/kakiokosi.eps> [57]
+ <./figure/kakiokosi.eps> [56]
 File: ./figure/baseline_clustering.eps Graphic file (type eps)
  <./figure/baseline_clustering.eps>
 File: ./figure/prob1_clustering.eps Graphic file (type eps)
 
-<./figure/prob1_clustering.eps> [58]
+<./figure/prob1_clustering.eps> [57]
 File: ./figure/prob2_clustering.eps Graphic file (type eps)
  <./figure/prob2_clustering.eps>
 File: ./figure/prob3_clustering.eps Graphic file (type eps)
 
-<./figure/prob3_clustering.eps> [59])) [60] [61] (./thesis.aux)
-
-LaTeX Warning: There were undefined references.
-
+<./figure/prob3_clustering.eps> [58])) [59] [60] (./thesis.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2376 strings out of 493683
- 30148 string characters out of 6149652
- 93719 words of memory out of 5000000
- 5795 multiletter control sequences out of 15000+600000
+ 2371 strings out of 493683
+ 30081 string characters out of 6149652
+ 93691 words of memory out of 5000000
+ 5790 multiletter control sequences out of 15000+600000
  25700 words of font info for 103 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  28i,17n,26p,1113b,352s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.dvi (67 pages, 204628 bytes).
+Output written on thesis.dvi (66 pages, 203404 bytes).
