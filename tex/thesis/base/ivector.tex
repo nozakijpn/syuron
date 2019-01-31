@@ -15,7 +15,7 @@ $O_u={o_1,o_2,o_3,\cdots,o_L}$、$o_t\in R^{D_F}$、を発話$u$から得られ�
 \begin{align}
 N_{u,c} &=\sum_{t=1}^{L}\gamma_t(t), \notag \\
 F_{u,c} &=\sum_{t=1}^{L}\gamma_t(c)(o_t-m_c), \notag \\
-S_{u,c} &=diag\left[\sum_{t=1}^L\gamma_c(c)(o_c-m_c)(o_t-m_c)^\prime\right] \notag ,
+S_{u,c} &=\diag\left[\sum_{t=1}^L\gamma_c(c)(o_c-m_c)(o_t-m_c)^\prime\right] \notag ,
 \end{align}
 
 
@@ -87,13 +87,13 @@ M_{u,c} &=m_c+T_cw_u.
 
 \begin{equation}
 \begin{split}
-\sum_{t=1}^{L}\sum_{c=1}^{C}\gamma_t(c)log(2\pi )^{-\frac{D_F}{2}}\left|\Sigma_{c}\right|^{-\frac{1}{2}}-\frac{1}{2}\sum_{t=1}^{L}\sum_{c=1}^{C}\gamma_t(c)D(o_t;\theta_c)=G_u^\Sigma+H_u^{\Sigma T}+\text{Const.}
+\sum_{t=1}^{L}\sum_{c=1}^{C}\gamma_t(c)\log(2\pi )^{-\frac{D_F}{2}}\left|\Sigma_{c}\right|^{-\frac{1}{2}}-\frac{1}{2}\sum_{t=1}^{L}\sum_{c=1}^{C}\gamma_t(c)D(o_t;\theta_c)=G_u^\Sigma+H_u^{\Sigma T}+\text{Const.}
 \end{split}
 \end{equation}
 
 ここで、$G_u^\Sigma$及び$H_u^{\Sigma T}$は、
 \begin{align}
-G_u^\Sigma &=\sum_{c=1}^C\left[\frac{1}{2}N_{u,c}\log\left|\Sigma_c^{-1}\right|-\frac{1}{2}tr\left(\Sigma_c^{-1}S_{u,c}\right)\right], \\
+G_u^\Sigma &=\sum_{c=1}^C\left[\frac{1}{2}N_{u,c}\log\left|\Sigma_c^{-1}\right|-\frac{1}{2}\tr\left(\Sigma_c^{-1}S_{u,c}\right)\right], \\
 H_u^{\Sigma T} &=w_u^\prime T^\prime \Sigma^{-1}F_u-\frac{1}{2}w_u^\prime T^\prime N_u\Sigma^{-1}Tw_u. \label{iv3}
 \end{align}
 
@@ -146,8 +146,8 @@ Q=\sum_{u=1}^{U}E[\log p(O_ww_u|\theta)],
 %\label{iv6}
 %\begin{split}
 \begin{align}
-Q=&\frac{1}{2}\sum_{u=1}^{U}\sum_{c=1}^{C}(N_{u,c} \log\left|\Sigma_c^{-1}\right|-tr(\Sigma_c^{-1}S_{u,c})), \notag  \\
-&+\sum_{u=1}^{U}tr\left( \Sigma^{-1}\left( F_uE[w_u^\prime]T^\prime -\frac{1}{2}N_uTE[w_uw_u^\prime]T^\prime \right) \right) -\sum_{u=1}^{U}\frac{1}{2}tr(E[w_uW_u^\prime]). \label{iv6}
+Q=&\frac{1}{2}\sum_{u=1}^{U}\sum_{c=1}^{C}(N_{u,c} \log\left|\Sigma_c^{-1}\right|-\tr(\Sigma_c^{-1}S_{u,c})), \notag  \\
+&+\sum_{u=1}^{U}\tr\left( \Sigma^{-1}\left( F_uE[w_u^\prime]T^\prime -\frac{1}{2}N_uTE[w_uw_u^\prime]T^\prime \right) \right) -\sum_{u=1}^{U}\frac{1}{2}\tr(E[w_uW_u^\prime]). \label{iv6}
 \end{align}
 %\end{split}
 %\end{equation}
@@ -174,7 +174,7 @@ T^i=\left(\sum_{u=1}^{U}F_u^iE[w_u^\prime] \right)\left(\sum_{u=1}^{U}N_{u,c}E[w
 のように得られる。ここで、$T^i$、$F_u^i$は、おのおの$T$、$F_u$の$i$行目を表し、$i=(c-1)\times D_F+f$、$1\leq f\leq D_F$である。また、$\Sigma$の推定式は、
 
 \begin{equation}
-\Sigma=N^{-1}\left(\sum_{u=1}^{U}S_u-diag\left[\sum_{u=1}^{U}F_uE[w_u^\prime]T^\prime \right] \right). \notag
+\Sigma=N^{-1}\left(\sum_{u=1}^{U}S_u-\diag\left[\sum_{u=1}^{U}F_uE[w_u^\prime]T^\prime \right] \right). \notag
 \end{equation}
 となる。ここで、$N=\Sigma_{u=1}^{U}N_u$である。
 
