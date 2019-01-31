@@ -175,6 +175,7 @@ Baselineと比較して、いずれの手法も最上位の音響モデルを選
 \noindent{\textbf{\underline{ニュースアンカーの発話区間が既知の場合}}}\par
 ニュースアンカーの発話区間が既知の場合の音声認識結果を表\ref{table:result_sprecog1}に示す。
 
+\begin{comment}
 \begin{table}[H]
   \begin{center}
     \caption{ニュースアンカーの発話区間が既知の場合の音声認識結果 \label{table:result_sprecog1}}
@@ -187,12 +188,27 @@ Baselineと比較して、いずれの手法も最上位の音響モデルを選
     \end{tabular}
   \end{center}
 \end{table}
+\end{comment}
 
-Baselineと比較して、いずれの手法も認識精度の向上は確認できなかった。
+\begin{table}[H]
+  \begin{center}
+    \caption{ニュースアンカーの発話区間が既知の場合の音声認識結果 \label{table:result_sprecog1}}
+    \begin{tabular}{|c||c|} \hline
+     手法  & $Acc$  \\ \hline
+     Baseline  & 61.6 \\ \hline
+     手法1  & 61.6 \\ \hline
+     手法2  & 61.7 \\ \hline
+     手法3  & 61.6  \\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+Baselineと比較して、いずれの手法も認識精度の変化は確認できなかった。
 
 \vspace{0.2in}\noindent{\textbf{\underline{ニュースアンカーの発話区間が未知の場合}}}  \par
 アンカーの発話区間が未知の場合の音声認識結果を表\ref{table:result_sprecog2}に示す。
 
+\begin{comment}
 \begin{table}[H]
   \begin{center}
     \caption{アンカーの発話区間が未知の場合の音声認識結果 \label{table:result_sprecog2}}
@@ -205,8 +221,21 @@ Baselineと比較して、いずれの手法も認識精度の向上は確認で
     \end{tabular}
   \end{center}
 \end{table}
+\end{comment}
 
-アンカーの発話区間が未知の場合はいずれも発話区間が既知の場合と比較して大きく音声認識精度が低下した。また、いずれの手法もBaselineと比較して音声認識精度は向上している。
+\begin{table}[H]
+  \begin{center}
+    \caption{アンカーの発話区間が未知の場合の音声認識結果 \label{table:result_sprecog2}}
+    \begin{tabular}{|c||c|} \hline
+     手法  & $Acc$  \\ \hline
+     Baseline & 26.7 \\ \hline
+     手法1  & 35.4  \\ \hline
+     手法2  & 29.9  \\ \hline  
+     手法3  & 35.4  \\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+アンカーの発話区間が未知の場合はいずれも発話区間が既知の場合と比較して音声認識精度が低下した。また、いずれの手法もBaselineと比較して音声認識精度が向上している。
 
 \section{考察}
 本研究で提案した手法はいずれもBaselineと比較して下位のクラスタを選択する発話データが増加した。これは、発話区間を結合したことで、i-vectorが性別の違いを判別できる程度の特徴を抽出できたためであると考えられる。\par

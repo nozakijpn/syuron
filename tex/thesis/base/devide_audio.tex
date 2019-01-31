@@ -41,17 +41,17 @@ S_w(m;l)=\sum_{m=0}^{N-1}\omega(m)s(l+m)\qquad(l=0,T,2T,\cdots), \notag
 
 \begin{equation}
 \label{da1}
-ハニング窓:\omega(n)=0.5-0.5\cos(\frac{2\pi n}{N-1}).\qquad(n=0,1,\cdots,N-1) \notag
+ハニング窓:\omega(n)=0.5-0.5\cos\left(\frac{2\pi n}{N-1}\right),\qquad(n=0,1,\cdots,N-1) \notag
 \end{equation}
 
 \begin{equation}
 \label{da2}
-ハミング窓:\omega(n)=0.54-0.54\cos(\frac{2\pi n}{N-1}).\qquad(n=0,1,\cdots,N-1) \notag
+ハミング窓:\omega(n)=0.54-0.46\cos\left(\frac{2\pi n}{N-1}\right).\qquad(n=0,1,\cdots,N-1) \notag
 \end{equation}
 
 \item スペクトル分析（離散時間フーリエ変換、高速フーリエ変換):フレーム化処理によって得られた信号系列の短時間フーリエスペクトルは、離散時間フーリエ変換により以下の式で与えられる。
 \begin{equation}
-S(n)=\sum s_\omega(n)e^{-j2\pi \frac{nk}{N}}, \qquad (k=0,1,\cdots,N-1) \notag
+S(n)=\sum s_\omega(n)e^{-j2\pi \frac{nk}{N}}. \qquad (k=0,1,\cdots,N-1) \notag
 \end{equation}
 
 離散フーリエ変換(DFT) は、離散的なデータをフーリエ変換する際に、通常のフーリエ変換の無限区間積分を有限の和で書き換えたもので、時間領域、周波数領域ともに離散化されたフーリエ変換のことであり、時間領域の表現を周波数領域における表現に変換する。また、逆に周波数領域の表現を時間領域の表現に変換する、つまり元の音響データに戻す変換を離散フーリエ逆変換(IDFT) と呼び以下の式で与えられる。
