@@ -33,24 +33,24 @@
 \end{center}
 \end{table}
 
-表\ref{table:search_table_ap}が得られると$P$（適合率（Precision））と$R$（再現率（Recall））、F値(適合率と再現率の調和平均)は式\ref{calc:precision_ap}と式\ref{calc:recall_ap}、式\ref{calc:fmeasure_ap}のようにそれぞれ計算する。
+表\ref{table:search_table_ap}が得られると$P$（Precision）と$R$(Recall）、F-measure(PrecisionとRecallの調和平均)は式\ref{calc:precision_ap}と式\ref{calc:recall_ap}、式\ref{calc:fmeasure_ap}のようにそれぞれ計算する。
 
 \begin{equation}
 \label{calc:precision_ap}
-P = \frac{TP}{TP + FP}
+P = \frac{TP}{TP + FP},
 \end{equation}
 
 \begin{equation}
 \label{calc:recall_ap}
-R = \frac{TP}{TP + FN}
+R = \frac{TP}{TP + FN},
 \end{equation}
 
 \begin{equation}
 \label{calc:fmeasure_ap}
-F = \frac{2 \times P \times R}{P + R}
+F = \frac{2 \times P \times R}{P + R}.
 \end{equation}
 
-本実験では、評価指標として適合率、再現率、F値を用いる。
+本実験では、評価指標としてPrecision、Recall、F-measureを用いる。
 
 \subsection{調査結果}
 表\ref{table:NHK_speech_RPF} $\sim$ 表\ref{table:NHK_pause_RPF}に音源識別による識別精度を示す。
@@ -142,7 +142,7 @@ F = \frac{2 \times P \times R}{P + R}
   \end{center}
 \end{table}
 
-表\ref{table:NHK_speech_RPF}より、音声区間の検出精度のF値の平均が0.926で、他の区間と比較して最も精度よく検出できた。対して、表\ref{table:NHK_noise_RPF}より、背景雑音区間の検出精度はF値の平均が0.390で、次に検出精度が低い音楽区間と比較してもF値の平均に0.186の差が生じた。また、背景雑音区間の検出において、Recallは0.263で全ての音源識別精度で最も精度が低かったが、Precisionに関しては0.756であり、これは音声区間に次いで2番目に精度が高かった。
+表\ref{table:NHK_speech_RPF}より、音声区間の検出精度のF-measureの平均が0.926で、他の区間と比較して最も精度よく検出できた。対して、表\ref{table:NHK_noise_RPF}より、背景雑音区間の検出精度はF-measureの平均が0.390で、次に検出精度が低い音楽区間と比較してもF値の平均に0.186の差が生じた。また、背景雑音区間の検出において、Recallは0.263で全ての音源識別精度で最も精度が低かったが、Precisionに関しては0.756であり、これは音声区間に次いで2番目に精度が高かった。
 
 \begin{comment}
 次に、本研究で評価に用いたニュース音声5番組分の発話区間検出精度を表\ref{table:test_detail_RPF}に示す。
