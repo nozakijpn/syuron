@@ -17,15 +17,11 @@ N_{u,c} &=\sum_{t=1}^{L}\gamma_t(t), \notag \\
 F_{u,c} &=\sum_{t=1}^{L}\gamma_t(c)(o_t-m_c), \notag \\
 S_{u,c} &=\diag\left[\sum_{t=1}^L\gamma_c(c)(o_c-m_c)(o_t-m_c)^\prime\right] \notag 
 \end{align}
-
-
-
 と書ける。ここで、$y_c(c)$は、$o_t$がUBMの$c$番目の要素分布から生成される事後確率
 
 \begin{equation}
 \gamma_c(c)=\displaystyle p(c\mid o_t,Ω)=\frac{\pi_cp(o_t\mid m_c,\sum c)}{\sum_{k=1}^C \pi_kp(o_t\mid m_k,\sum k)} \notag
 \end{equation}
-
 である。更にこれらを用いて、
 \begin{align}
   N_u &= \left(
@@ -90,7 +86,6 @@ M_{u,c} &=m_c+T_cw_u.
 \sum_{t=1}^{L}\sum_{c=1}^{C}\gamma_t(c)\log(2\pi )^{-\frac{D_F}{2}}\left|\Sigma_{c}\right|^{-\frac{1}{2}}-\frac{1}{2}\sum_{t=1}^{L}\sum_{c=1}^{C}\gamma_t(c)D(o_t;\theta_c)=G_u^\Sigma+H_u^{\Sigma T}+\text{Const.}
 \end{split}
 \end{equation}
-
 ここで、$G_u^\Sigma$及び$H_u^{\Sigma T}$は、
 \begin{align}
 G_u^\Sigma &=\sum_{c=1}^C\left[\frac{1}{2}N_{u,c}\log\left|\Sigma_c^{-1}\right|-\frac{1}{2}\tr\left(\Sigma_c^{-1}S_{u,c}\right)\right], \\
@@ -112,7 +107,6 @@ p(w_u|O_u) &\propto p(O_u|w_u)p(w_u)\propto \exp(w_u^\prime T^\prime \Sigma^\pri
 \begin{equation}
 G_u=(I+T^\prime \Sigma^{-1}N_u T)^{-1} \notag
 \end{equation}
-
 である。$w$の事後分布もガウス分布であることに注意すると、平均及び分散は、
 
 \begin{align}
@@ -120,7 +114,6 @@ G_u=(I+T^\prime \Sigma^{-1}N_u T)^{-1} \notag
 E[w_u] &=G_uT^\prime \Sigma^{-1}F_u, \\
 cov[w_u] &=G_u \notag
 \end{align}
-
 となる。前述のとおり、確率的潜在変数モデルのもと、i-vectorは$w$の事後分布の平均として得られる。つまり、発話$u$のi-vectorは、Baum-Welch統計量$N_u$、$F_u$及び推定済みのパラメータ$T$,$\Sigma$を用いて、式(\ref{iv4})により計算することができる。
 
 \end{itemize}
@@ -133,13 +126,11 @@ cov[w_u] &=G_u \notag
 \label{iv5}
 Q=\sum_{u=1}^{U}E[\log p(O_ww_u|\theta)]
 \end{equation}
-
 の最大化問題を解くことで求める。ここで、$\theta$はパラメータ$T$、$\Sigma$を表す。完全データの対数尤度は、
 
 \begin{equation}
 \log p(O_w w_u)=\log p(O_u|w_u,\theta)+\log p(w_u), \notag
 \end{equation}
-
 と書けるので、式 (\ref{iv2})〜(\ref{iv3}) を用いると、式(\ref{iv5})は以下のように整理できる。
 
 %\begin{equation}
@@ -170,7 +161,6 @@ Mステップでは、式(\ref{iv6})をパラメータに関して最大化す�
 \begin{equation}
 T^i=\left(\sum_{u=1}^{U}F_u^iE[w_u^\prime] \right)\left(\sum_{u=1}^{U}N_{u,c}E[w_uw_u^\prime] \right)^{-1} \notag
 \end{equation}
-
 のように得られる。ここで、$T^i$、$F_u^i$は、おのおの$T$、$F_u$の$i$行目を表し、$i=(c-1)\times D_F+f$、$1\leq f\leq D_F$である。また、$\Sigma$の推定式は、
 
 \begin{equation}

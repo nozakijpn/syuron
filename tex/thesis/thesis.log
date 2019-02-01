@@ -1,10 +1,9 @@
-This is e-pTeX, Version 3.14159265-p3.7-160201-2.6 (utf8.euc) (TeX Live 2016) (preloaded format=platex 2018.10.19)  1 FEB 2019 02:49
+This is e-pTeX, Version 3.14159265-p3.7-160201-2.6 (utf8.euc) (TeX Live 2016) (preloaded format=platex 2018.10.19)  1 FEB 2019 14:41
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/nozaki/github/syuron/tex/thesis/thesis
-(/home/nozaki/github/syuron/tex/thesis/thesis.tex
+**thesis.tex
+(./thesis.tex
 pLaTeX2e <2016/11/29> (based on LaTeX2e <2017/01/01> patch level 2)
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 (./nagasaki.cls
@@ -33,7 +32,8 @@ LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
 \@lnumwidth=\dimen119
 \bibindent=\dimen120
 \heisei=\count92
-)) (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/bm.sty
+))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/bm.sty
 Package: bm 2017/01/16 v1.2c Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup5
 \symboldletters=\mathgroup6
@@ -41,25 +41,32 @@ Package: bm 2017/01/16 v1.2c Bold Symbol Support (DPC/FMi)
 \symboldmincho=\mathgroup8
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
 LaTeX Info: Redefining \bm on input line 207.
-) (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphicx.sty
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
- (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/keyval.sty
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks15
-) (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphics.sty
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2016/10/09 v1.0u Standard LaTeX Graphics (DPC,SPQR)
- (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/trig.sty
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-) (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: dvips.def on input line 99.
- (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-def/dvips.def
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-def/dvips.def
 File: dvips.def 2016/07/10 v3.1a Driver-dependent file (DPC,SPQR)
 ))
 \Gin@req@height=\dimen121
 \Gin@req@width=\dimen122
-) (/usr/local/texlive/2016/texmf-dist/tex/latex/subfigure/subfigure.sty
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/subfigure/subfigure.sty
 Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfigtopskip=\skip43
 \subfigcapskip=\skip44
@@ -78,9 +85,11 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 (/usr/local/texlive/2016/texmf-dist/tex/latex/subfigure/subfigure.cfg)
 \subfig@top=\skip47
 \subfig@bottom=\skip48
-) (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/tabularx.sty
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2016/02/03 v2.11 `tabularx' package (DPC)
- (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/array.sty
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/array.sty
 Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
 \col@sep=\dimen125
 \extrarowheight=\dimen126
@@ -95,42 +104,50 @@ Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
 \TX@delta=\dimen131
 \TX@cols=\count97
 \TX@ftn=\toks17
-) (/usr/local/texlive/2016/texmf-dist/tex/latex/multirow/multirow.sty
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
 \multirow@colwidth=\skip51
 \multirow@cntb=\count98
 \multirow@dima=\skip52
 \bigstrutjot=\dimen132
-) (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amssymb.sty
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
- (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks18
 \symAMSa=\mathgroup9
 \symAMSb=\mathgroup10
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (/usr/local/texlive/2016/texmf-dist/tex/latex/base/latexsym.sty
+))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/latexsym.sty
 Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 \symlasy=\mathgroup11
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 (Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
-) (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsmath.sty
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2016/11/05 v2.16a AMS math features
 \@mathmargin=\skip53
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
- (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsgen.sty
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks19
 \ex@=\dimen133
-)) (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsbsy.sty
+))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 LaTeX Info: Redefining \boldsymbol on input line 28.
 \pmbraise@=\dimen134
-) (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsopn.sty
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count99
@@ -170,16 +187,20 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \mathdisplay@stack=\toks23
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
-) (/usr/local/texlive/2016/texmf-dist/tex/latex/here/here.sty) (/usr/local/texlive/2016/texmf-dist/tex/latex/float/float.sty
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/here/here.sty)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count111
 \float@exts=\toks24
 \float@box=\box43
 \@float@everytoks=\toks25
 \@floatcapt=\box44
-) (/usr/local/texlive/2016/texmf-dist/tex/latex/comment/comment.sty
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/comment/comment.sty
 \CommentStream=\write3
- Excluding comment 'comment')
+
+Excluding comment 'comment')
 
 LaTeX Warning: Unused global option(s):
     [16pt].
@@ -212,11 +233,13 @@ LaTeX Font Info:    Try loading font information for U+msa on input line 29.
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 29.
- (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Try loading font information for U+lasy on input line 29.
- (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ulasy.fd
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <20.74> not available
@@ -230,7 +253,8 @@ LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 1.
- [1
+
+[1
 
 
 ])
@@ -270,58 +294,65 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 11.
 
 Overfull \hbox (13.70119pt too wide) in paragraph at lines 12--14
-[]\JY1/mc/m/n/10 準備として 、 \OT1/cmr/m/n/10 UBM \JY1/mc/m/n/10 に対する \OT1/cmr/m/n/10 Baum-Welch \JY1/mc/m/n/10 統計量を計算することから始める 。 $\OML/cmm/m/it/10 O[] \OT1/cmr/m/n/10 = []$\JY1/mc/m/n/10 、
+[]\JY1/mc/m/n/10 準備として 、 \OT1/cmr/m/n/10 UBM \JY1/mc/m/n/10 に対する \OT1
+/cmr/m/n/10 Baum-Welch \JY1/mc/m/n/10 統計量を計算することから始める 。 $\OML/c
+mm/m/it/10 O[] \OT1/cmr/m/n/10 = []$\JY1/mc/m/n/10 、
  []
 
 [4]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 66.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 62.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 66.
- [5] [6] [7])) (./pre_research.tex [8]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 62.
+ [5] [6]))
+(./pre_research.tex [7]
 第 3 章
-(./base/pre_cos.tex [9
+(./base/pre_cos.tex [8
 
 ]
 File: ./figure/same_cos_hist.eps Graphic file (type eps)
  <./figure/same_cos_hist.eps>
 File: ./figure/same_cos_vari.eps Graphic file (type eps)
- <./figure/same_cos_vari.eps> [10]
+
+<./figure/same_cos_vari.eps> [9]
 File: ./figure/other_cos_hist.eps Graphic file (type eps)
  <./figure/other_cos_hist.eps>
 File: ./figure/other_cos_vari.eps Graphic file (type eps)
- <./figure/other_cos_vari.eps> [11]) (./base/research_news.tex [12]
+
+<./figure/other_cos_vari.eps> [10]) (./base/research_news.tex [11]
 File: ./figure/pre_same1.eps Graphic file (type eps)
- <./figure/pre_same1.eps>
+
+<./figure/pre_same1.eps>
 Overfull \hbox (44.72874pt too wide) in paragraph at lines 59--60
  [] 
  []
 
-[13]
+[12]
 File: ./figure/pre_other2.eps Graphic file (type eps)
  <./figure/pre_other2.eps>
 Overfull \hbox (44.72874pt too wide) in paragraph at lines 66--67
  [] 
  []
 
-[14]
+[13]
 File: ./figure/pre_other1.eps Graphic file (type eps)
  <./figure/pre_other1.eps>
 Overfull \hbox (44.72874pt too wide) in paragraph at lines 73--74
  [] 
  []
 
-[15])) (./base/get_anchor.tex [16]
+[14])) (./base/get_anchor.tex [15]
 第 4 章
-[17
+[16
 
 ] (./prob_method.tex
 File: ./figure/indexing2.eps Graphic file (type eps)
- <./figure/indexing2.eps> [18]) [19] [20] [21]
+ <./figure/indexing2.eps> [17]) [18] [19] [20]
 File: ./figure/baseline_r.eps Graphic file (type eps)
- <./figure/baseline_r.eps>
+
+<./figure/baseline_r.eps>
 Overfull \hbox (24.01692pt too wide) in paragraph at lines 148--149
  [][] 
  []
@@ -368,7 +399,7 @@ Overfull \hbox (24.01692pt too wide) in paragraph at lines 254--255
  [][] 
  []
 
-[22]
+[21]
 File: ./figure/prob2_r.eps Graphic file (type eps)
  <./figure/prob2_r.eps>
 Overfull \hbox (24.01692pt too wide) in paragraph at lines 285--286
@@ -393,7 +424,7 @@ Overfull \hbox (24.01692pt too wide) in paragraph at lines 322--323
  [][] 
  []
 
-[23]
+[22]
 File: ./figure/prob3_13_r.eps Graphic file (type eps)
  <./figure/prob3_13_r.eps>
 Overfull \hbox (24.01692pt too wide) in paragraph at lines 352--353
@@ -418,15 +449,22 @@ Overfull \hbox (24.01692pt too wide) in paragraph at lines 389--390
  [][] 
  []
 
-[24] [25]) (./matome.tex [26]
+[23] [24]) (./matome.tex [25]
 第 5 章
-Excluding 'comment' comment. Excluding 'comment' comment. Excluding 'comment' comment.) (./appendix.tex (./base/pre_search_speech_time.tex [27
+Excluding 'comment' comment. Excluding 'comment' comment.
+Excluding 'comment' comment.) (./ack.tex [26
 
-] [28]
+] [27]) (./ref.tex [28
+
+] [29
+
+])
+(./appendix.tex (./base/pre_search_speech_time.tex [30]
 付録 A  
-(./base/devide_audio.tex [29
+(./base/devide_audio.tex [31
 
-] [30] [31]) [32] [33] [34] Excluding 'comment' comment.) (./result_anchor_append.tex [35]
+] [32] [33]) [34] [35] [36]
+Excluding 'comment' comment.) (./result_anchor_append.tex [37]
 付録 B  
 File: ./figure/prob1_08_r.eps Graphic file (type eps)
 <./figure/prob1_08_r.eps>
@@ -476,7 +514,7 @@ Overfull \hbox (24.01692pt too wide) in paragraph at lines 106--107
  [][] 
  []
 
-[36
+[38
 
 ]
 File: ./figure/prob1_10_r.eps Graphic file (type eps)
@@ -527,7 +565,7 @@ Overfull \hbox (24.01692pt too wide) in paragraph at lines 214--215
  [][] 
  []
 
-[37]
+[39]
 File: ./figure/prob1_13_r.eps Graphic file (type eps)
  <./figure/prob1_13_r.eps>
 Overfull \hbox (24.01692pt too wide) in paragraph at lines 231--232
@@ -576,7 +614,7 @@ Overfull \hbox (24.01692pt too wide) in paragraph at lines 322--323
  [][] 
  []
 
-[38]
+[40]
 File: ./figure/prob1_15_r.eps Graphic file (type eps)
  <./figure/prob1_15_r.eps>
 Overfull \hbox (24.01692pt too wide) in paragraph at lines 339--340
@@ -625,7 +663,7 @@ Overfull \hbox (24.01692pt too wide) in paragraph at lines 431--432
  [][] 
  []
 
-[39]
+[41]
 File: ./figure/prob3_09_r.eps Graphic file (type eps)
  <./figure/prob3_09_r.eps>
 Overfull \hbox (24.01692pt too wide) in paragraph at lines 448--449
@@ -674,7 +712,7 @@ Overfull \hbox (24.01692pt too wide) in paragraph at lines 539--540
  [][] 
  []
 
-[40]
+[42]
 File: ./figure/prob3_11_r.eps Graphic file (type eps)
  <./figure/prob3_11_r.eps>
 Overfull \hbox (24.01692pt too wide) in paragraph at lines 556--557
@@ -723,7 +761,7 @@ Overfull \hbox (24.01692pt too wide) in paragraph at lines 647--648
  [][] 
  []
 
-[41]
+[43]
 File: ./figure/prob3_14_r.eps Graphic file (type eps)
  <./figure/prob3_14_r.eps>
 Overfull \hbox (24.01692pt too wide) in paragraph at lines 664--665
@@ -772,58 +810,55 @@ Overfull \hbox (24.01692pt too wide) in paragraph at lines 755--756
  [][] 
  []
 
-) (./base/speach_recog.tex [42] [43]
+) (./base/speach_recog.tex [44] [45]
 付録 C  
 (./base/speach_recognition.tex
-File: ./figure/flow_sp.eps Graphic file (type eps)
- <./figure/flow_sp.eps>
-Overfull \hbox (8.59375pt too wide) in paragraph at lines 7--8
- [] 
- []
+File: ./figure/speech_system.eps Graphic file (type eps)
+ <./figure/speech_system.eps> [46
 
-[44
-
-] [45]
+] [47]
 File: ./figure/HMM.eps Graphic file (type eps)
- <./figure/HMM.eps> [46]
+
+<./figure/HMM.eps> [48]
 File: ./figure/structure_dnn.eps Graphic file (type eps)
- <./figure/structure_dnn.eps> [47]
+ <./figure/structure_dnn.eps> [49]
 File: ./figure/train_dnn.eps Graphic file (type eps)
- <./figure/train_dnn.eps> [48])
+
+<./figure/train_dnn.eps> [50])
 File: ./figure/yoshimura.eps Graphic file (type eps)
- <./figure/yoshimura.eps> [49] [50] [51]
+ <./figure/yoshimura.eps> [51] [52] [53]
 File: ./figure/kana_onso.eps Graphic file (type eps)
- <./figure/kana_onso.eps>
+
+<./figure/kana_onso.eps>
 Overfull \hbox (7.08626pt too wide) in paragraph at lines 101--102
  [] 
  []
 
-[52] [53]
+[54] [55]
 File: ./figure/kakiokosi.eps Graphic file (type eps)
- <./figure/kakiokosi.eps> [54]
+ <./figure/kakiokosi.eps> [56]
 File: ./figure/baseline_clustering.eps Graphic file (type eps)
  <./figure/baseline_clustering.eps>
 File: ./figure/prob1_clustering.eps Graphic file (type eps)
- <./figure/prob1_clustering.eps> [55]
+
+<./figure/prob1_clustering.eps> [57]
 File: ./figure/prob2_clustering.eps Graphic file (type eps)
  <./figure/prob2_clustering.eps>
 File: ./figure/prob3_clustering.eps Graphic file (type eps)
- <./figure/prob3_clustering.eps> [56] Excluding 'comment' comment. Excluding 'comment' comment.)) [57] (./ack.tex [58]) (./ref.tex [59
 
-] [60
-
-]) [61] (./thesis.aux)
+<./figure/prob3_clustering.eps> [58] Excluding 'comment' comment.
+Excluding 'comment' comment.)) [59] [60] (./thesis.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2496 strings out of 493683
- 32524 string characters out of 6149652
- 93786 words of memory out of 5000000
+ 2495 strings out of 493683
+ 32424 string characters out of 6149652
+ 93784 words of memory out of 5000000
  5859 multiletter control sequences out of 15000+600000
  25889 words of font info for 104 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 28i,17n,26p,1147b,437s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 28i,17n,26p,1113b,437s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.dvi (67 pages, 212064 bytes).
+Output written on thesis.dvi (66 pages, 212016 bytes).
