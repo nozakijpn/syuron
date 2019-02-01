@@ -77,13 +77,13 @@ P(O_u|w_u)=\exp\left(\sum_{t=1}^{L}\sum_{c=1}^{C}\gamma_t(c)\log(2\pi )^{-\frac{
 
 \begin{align}
 D(o_t;\theta_t) &=(o_t-M_{u,c})^\prime \Sigma_{c}^{-1}(o_t-M_{u,c}), \\
-M_{u,c} &=m_c+T_cw_u.
+M_{u,c} &=m_c+T_cw_u
 \end{align}
 である。$T_c\in R^{D_F\times D_T}$は、混合要素$c$に対する$T$の部分行列である。式(\ref{iv2})のexpの内部をBaum-Welch統計量を用いて整理すると、
 
 \begin{equation}
 \begin{split}
-\sum_{t=1}^{L}\sum_{c=1}^{C}\gamma_t(c)\log(2\pi )^{-\frac{D_F}{2}}\left|\Sigma_{c}\right|^{-\frac{1}{2}}-\frac{1}{2}\sum_{t=1}^{L}\sum_{c=1}^{C}\gamma_t(c)D(o_t;\theta_c)=G_u^\Sigma+H_u^{\Sigma T}+\text{Const.}
+\sum_{t=1}^{L}\sum_{c=1}^{C}\gamma_t(c)\log(2\pi )^{-\frac{D_F}{2}}\left|\Sigma_{c}\right|^{-\frac{1}{2}}-\frac{1}{2}\sum_{t=1}^{L}\sum_{c=1}^{C}\gamma_t(c)D(o_t;\theta_c)=G_u^\Sigma+H_u^{\Sigma T}+\text{Const,}
 \end{split}
 \end{equation}
 ここで、$G_u^\Sigma$及び$H_u^{\Sigma T}$は、
@@ -98,8 +98,8 @@ $w$の事後分布は(\ref{iv2})〜(\ref{iv3})を用いると、
 \begin{align}
 %\begin{split}
 p(w_u|O_u) &\propto p(O_u|w_u)p(w_u)\propto \exp(w_u^\prime T^\prime \Sigma^\prime Tw_u-\frac{1}{2}w_u^\prime w_u) \notag \\ 
- &\propto exp(w_u^\prime T^\prime \Sigma^\prime F_u-\frac{1}{2}w_u^\prime N_u\Sigma^{-1}Tw_u-\frac{1}{2}w_u^\prime w_u) \notag \\ 
- &\propto \exp(-\frac{1}{2}(w_u-G_uT^\prime\Sigma^{-1}F_u)^\prime G_u^{-1}(w_u-G_uT^\prime \Sigma^\prime F_u)). \notag
+ &\propto \exp(w_u^\prime T^\prime \Sigma^\prime F_u-\frac{1}{2}w_u^\prime N_u\Sigma^{-1}Tw_u-\frac{1}{2}w_u^\prime w_u) \notag \\ 
+ &\propto \exp(-\frac{1}{2}(w_u-G_uT^\prime\Sigma^{-1}F_u)^\prime G_u^{-1}(w_u-G_uT^\prime \Sigma^\prime F_u)) \notag
 %\end{split}
 \end{align}
 と書ける。ここで、
@@ -129,7 +129,7 @@ Q=\sum_{u=1}^{U}E[\log p(O_ww_u|\theta)]
 の最大化問題を解くことで求める。ここで、$\theta$はパラメータ$T$、$\Sigma$を表す。完全データの対数尤度は、
 
 \begin{equation}
-\log p(O_w w_u)=\log p(O_u|w_u,\theta)+\log p(w_u), \notag
+\log p(O_w w_u)=\log p(O_u|w_u,\theta)+\log p(w_u) \notag
 \end{equation}
 と書けるので、式 (\ref{iv2})〜(\ref{iv3}) を用いると、式(\ref{iv5})は以下のように整理できる。
 
