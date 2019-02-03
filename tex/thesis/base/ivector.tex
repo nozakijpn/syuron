@@ -3,7 +3,6 @@
 \begin{equation}
 M_u=T w_u + m, \notag
 \end{equation}
-
 ここで$M_u$は大量の不特定話者の発話データから作成されるUBM（Universal Background Model）を事前情報として事後確率最大化（MAP）法により推定されたGMMを用いる。
 また$m$はUBMから得られる話者及びチャネル非依存のGMMスーパーベクトルである。
 $C$は GMM (UBM)の混合数，$D_F$は音響パラメータの次元数、$T∈R^{CD_F*D_r}$は低ランクの矩形行列$D_r \ll CD_F$で、全変動空間を張る基底ベクトルで構成される固有声行列である。$W_u \in R^{D_r}$は発話ごとに与えられる潜在変数であり、平均ベクトルが$0 \in R^{D_T}$で共分散行列行列が単位行列$I \in R^{D_T*D_T}$のガウス分布$N(w ; 0,I)$に従う。この$w$はtotal factor(全因子)と呼ばれ、各発話に対するi-vector である。つまり、i-vectorはGMM スーパーベクトル空間における平均的な話者(UBM の平均)から「差(を次元圧縮したもの)」として各話者を表現したものと言える。
@@ -52,7 +51,6 @@ S_{u,c} &=\diag\left[\sum_{t=1}^L\gamma_c(c)(o_c-m_c)(o_t-m_c)^\prime\right] \no
   \right)
 \text{  $\in R^{CD_F\times CD_F}$} \notag ,
 \end{align}
-
 ここで、$I_{D_F}\in R^{D_F\times D_F}$である。
 
 \subsection{全因子$w$の確率分布とi-vectorの抽出}

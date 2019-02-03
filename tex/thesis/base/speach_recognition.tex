@@ -40,7 +40,6 @@ $N$グラムモデルとは、与えられた単語列$\omega_1,\omega_2,\cdots,
 \begin{equation}
 P(\omega_1,\omega_2,\cdots,\omega_n)=\prod_{i=1}^{n}p(\omega_{i}\mid \omega_{i-N+1}\cdots \omega_{i-1}) \notag
 \end{equation}
-
 のような近似を行なうモデルである。$N$グラムモデルでは、$i$番目の単語$ω_i$の生成確率が、直前の$N-1$単語$ω_{i-N+1}\cdots ω_{i-2}ω_{i-1}$だけに依存すると考える。特に$N = 1$のときユニグラム（unigram）、$N = 2$のときバイグラム（bigram）、$N = 3$のときトライグラム（trigram）という。\par
 文や発話中の単語の生成確率は文脈に依存することから、$N$グラムモデルの推定確率は、$N$が大きいほど高くなる。しかし、$N$グラムモデルは語彙の$N$乗のコストがかかることから、$N$を大きくするためには、膨大な量のテキストを用意しなければならない。しかし、自由発話を記述したテキストは極めて少ない。本研究では、$N = 3$のtrigramを用いる。\par
 
@@ -59,19 +58,16 @@ m(l) &=\sum_{k=lo}^{hi}W(k;l)\mid S^\prime(k)\mid, \quad (l=1,\cdots,L) \notag \
 W(k;l) &=\begin{cases}\displaystyle\frac{k-k_{lo}(l)}{k_c(l)-k_{lo}(l)},\quad \{k_{lo}\leq k \leq k_c(l)\} \\ 
 \displaystyle\frac{k_hi(l)-k}{k_{hi}(l)-k_{l}(l)},\quad \{k_{c}\leq k \leq k_{hi}(l)\} \end{cases} \notag
 \end{align}
-
 ただし、$W(k;l)$ は重み、$k_{lo}(l)、k_c(l)、k_{hi}(l)$ はそれぞれ$l$番目のフィルタの下限、中心、上限のスペクトルチャネル番号であり、隣り合うフィルタ間で
 
 \begin{equation}
 k_c=k_{hi}(l-1)=k_{lo}(l+1) \notag
 \end{equation}
-
 なる関係がある。さらに、$k_c(l)$はメル周波数軸上で等間隔に配置される。メル周波数は
 
 \begin{equation}
 Mel(f)=2595\log_{10}\left(1+\frac{f}{700}\right) \notag
 \end{equation}
-
 により計算される。ただし、$f$の単位は[Hz]にとる。\par
 最終的にフィルタバンク分析により得られた$L$個の帯域におけるパワースペクトルを離散コサイン変換することで、式(\ref{eq:mfcc})のようにMFCCが得られる。
 
