@@ -1,0 +1,701 @@
+%ファイル名；mathtips.sty ( 高校数学用Tips Ver1.0 )
+%作成日；1999年11月21日
+%作成者；生越 茂樹(Ogose Shigeki)
+%E-mail；ogodon@mvb.biglobe.ne.jp 
+%Homepage; http://www5a.biglobe.ne.jp/~ogose/
+
+\typeout{mathtips.sty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%A.増減表%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\zogen{{k行目の式を「,」で区切って並べたもの。}(k=1,2,3…)}
+%の様に使う。斜線を引きたい時は、\Slash をおくと、\Slashの
+%入ったボックスの右上隅から左下隅に斜線を引く。
+%\Backslash{}{}%の方は、左上隅から,右下隅に斜線を引く。
+%\Crossは、\Backslash{}{}と\Slashの両方、すなわち×印を引きます。
+%デフォルトでは、斜線の幅は、そのボックスを含む列の幅の最大値、
+%斜線の高さは、そのボックスを含む行の高さの最大値になります。
+%%標準より列の幅,各行間を開けたいときは\def\zogencolsep{foo}
+%\def\zogenstretch{foo}を使ってください。\zogenstretch の方は
+%\arraystretchとは違って、伸ばしたい実際の長さを指定してください。
+%また、\Backslashの方は、斜線の上下にコメントを入れる事も出来ます。
+%\Backslashが入るボックスだけを広くしたい時は、オプションで
+%\Backslash[横の長さ][縦の長さ]{左下側コメント}{右上側コメント}
+%の様に、その幅、高さを指定できます。
+
+%∞|∞等,一つのboxを区切りたい時は、\vruleを使ってください。
+%但しこの時、\hfil で離さないと∞2個がくっ付いてしまうので注意。
+%例;\def\無限大{-\infty\hfil\vrule\hfil\infty}
+%y=1/x+xの増減表は次の様になる。
+%$$\zogen{
+%{x    , \cdots ,-1, \cdots ,  0    ,\cdots  ,1,\cdots  }
+%{f'(x),  +     , 0,  -     ,\Slash ,  -     ,0,  +     }
+%{f(x) ,\nearrow,-2,\searrow,\無限大,\searrow,2,\nearrow}
+%}$$
+
+ {\catcode`\p=12\catcode`\t=12\gdef\@jissuu#1pt{#1}}%
+ 
+ \newcount\zretu\newcount\zgyo
+%増減表の列、行を表す.
+ \newcount\retu
+%列のカウンター
+ \newcount\gyo
+%行のカウンター
+%@yoko{j}j列目の要素の幅
+%@tate{i}i行目の要素の高さ
+\def\Slash{}
+\def\Backslash{\@ifnextchar[{\@@Backslash}{\@@Backslash[0pt][0pt]}}
+\def\@@Backslash[#1][#2]#3#4{%
+\vcenter to #2{\hbox to #1{\vrule width0pt}}
+}
+\def\Cross{\Backslash[0pt][0pt]{}{}\Slash}
+\def\yutori{2pt}
+\def\zogencolsep{5pt}
+\def\zogenstretch{\z@}
+\def\zogen#1{\retu=0\gyo=0
+ \expandafter\@tfor\expandafter\@Line\expandafter:\expandafter%
+ =#1\do{%
+ \retu=0%
+ \advance \gyo by 1
+ \expandafter\edef\csname @tate\the\gyo\endcsname{8.5pt}
+ \expandafter\edef\csname @fukasa\the\gyo\endcsname{3.5pt}
+ \@for\Word:=\@Line\do{%
+ \advance\retu by 1
+ \setbox1=\hbox{$\Word$}
+ \ifdim\the\ht1>\csname @tate\the\gyo\endcsname%
+      \expandafter\edef\csname @tate\the\gyo\endcsname{\the\ht1}
+      \fi
+ \ifdim\the\dp1>\csname @fukasa\the\gyo\endcsname%
+      \expandafter\edef\csname @fukasa\the\gyo\endcsname{\the\dp1}
+      \fi
+ \ifnum\the\gyo=1 %
+ 			\expandafter\edef\csname @yoko\the\retu\endcsname{% 
+   		\the\wd1}%
+ \else%
+          \ifdim\the\wd1>\csname @yoko\the\retu\endcsname%
+               \expandafter\edef\csname @yoko\the\retu\endcsname%
+               {\the\wd1}%
+          \fi%
+ \fi%
+ }}%
+ \zgyo=0
+ \leavevmode\vbox\bgroup\hrule%
+ \expandafter\@tfor\expandafter\@Line\expandafter:\expandafter%
+ =#1\do{%
+ \advance\zgyo by 1%
+ \dimen1=\csname @tate\the\zgyo\endcsname%
+ \advance\dimen1 by \zogenstretch%
+ \edef\@zosttate{\the\dimen1}%boxの最終的な高さ
+ \dimen1=\csname @fukasa\the\zgyo\endcsname%
+ \advance\dimen1 by \zogenstretch%
+ \edef\@zostfukasa{\the\dimen1}%boxの最終的な深さ
+ \edef\@zogenstrut{\vrule width 0pt height \@zosttate%
+ depth \@zostfukasa}%
+%%%
+ \zretu=0%
+ \@for\@Word:=\@Line\do{%
+ \global\advance\zretu by 1%
+ \edef\@@haba{\csname @yoko\the\zretu\endcsname}%
+ \dimen1=\@@haba%
+ \advance \dimen1 by \zogencolsep%
+ \advance \dimen1 by \zogencolsep%
+ \edef\@retuhaba{\the\dimen1}%
+ \def\Slash{%
+ \unitlength=1pt%
+ \begin{picture}(0,0)%
+ \dimen2=\@retuhaba \dimen2=0.5\dimen2%
+ \edef\@@slgenten{\expandafter\@jissuu\the\dimen2}%
+ \dimen2=\@zosttate \advance\dimen2 by \@zostfukasa%
+ \edef\@@sltate{\expandafter\@jissuu\the\dimen2}%
+ \edef\@@slfukasa{\expandafter\@jissuu\@zostfukasa}%
+ \edef\@@slhaba{\expandafter\@jissuu\@retuhaba}%
+ \put(-\@@slgenten,-\@@slfukasa)%
+ {\path(0,0)(\@@slhaba,\@@sltate)}%
+ \end{picture}}%
+ \def\Backslash{\@ifnextchar[{\@@Backslash}{\@@Backslash[0pt][0pt]}}%
+ \def\@@Backslash[##1][##2]##3##4{%
+ \unitlength=1pt%
+ \begin{picture}(0,0)%
+ \dimen5=\@retuhaba \dimen5=0.5\dimen5%
+ \edef\@@slgenten{\expandafter\@jissuu\the\dimen5}%
+ \dimen6=\@zosttate \advance\dimen6 by \@zostfukasa%
+ \edef\@@sltate{\expandafter\@jissuu\the\dimen6}%
+ \edef\@@slfukasa{\expandafter\@jissuu\@zostfukasa}%
+ \edef\@@slhaba{\expandafter\@jissuu\@retuhaba}%
+ \put(-\@@slgenten,-\@@slfukasa)%
+ {\path(0,\@@sltate)(\@@slhaba,0)}%
+ \dimen0=\yutori\edef\@yutori{\expandafter\@jissuu\the\dimen0}%
+\setbox0=\hbox{\shortstack[l]{##3}}%
+  \put(\@yutori,\@yutori){%
+  \put(-\@@slgenten,-\@@slfukasa)%
+ {\raise\dp0\box0}}%
+ \edef\@@backslht{\expandafter\@jissuu\@zosttate}%
+ \put(-\@yutori,-\@yutori){\put(\@@slgenten,\@@backslht)%
+ {\setbox5=\hbox{\shortstack[r]{##4}}%
+ \lower\ht5%
+ \hbox{\kern-\wd5\box5}}%
+  }%
+ \end{picture}}%
+%各行の実際の出力（\vcenter\begroup からの続き。）
+ \ifnum\the\zretu=1%
+   \hbox\bgroup%
+   \vrule\hbox to \@retuhaba%
+   {$\hfil\@zogenstrut\@Word\hfil$}\vrule%
+ \else%
+ 		\ifnum\the\zretu<\the\retu%
+    \hbox to \@retuhaba{$\hfil\@zogenstrut\@Word\hfil$}%
+    \vrule% 
+    \else\hbox to \@retuhaba{$\hfil\@zogenstrut\@Word\hfil$}%
+    \vrule\egroup\hrule\fi%
+ \fi%
+ }}\egroup}
+
+ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%B.整式の筆算%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\hissan[注目する文字]{割る式}{商}{割られる式と、途中の式と、余りの式
+%を「,」 で区切って並べたもの} の様に使う。(但し、[]内の文字について
+%降べきの順に並べてください。）
+%オプションを省略すると、x について整理する事になる。
+%\frac,\sqrtなどの記号類は{\frac23 x}の様に括弧で囲むと使える。
+%例；\hissan{x+1}{x-1}{x^2,x^2+x,-x,-x-1,1}
+%例；\hissan[y]{y+x}{y}{y^2+xy+x^2,y^2+xy,x^2}
+\newcount\x \newcount\y  \newcount\tempcn
+\newcount\jisuu  \newif\if変数 \newif\if次数 \newif\if符号
+\newif\if継続
+
+\def\hissan{\@ifnextchar[{\@warizan}{\@warizan[x]}}
+\def\@warizan[#1]#2#3#4{%
+\def\@read{
+\edef\項{\項 \文字 }
+}
+\def\@アンド挿入##1{%
+\ifnum\the\y=0 \xdef\じすう{\the\jisuu} \y=1 \tempcn=##1 \fi
+\@whilenum\the\tempcn>\the\jisuu
+\do{\xdef\項{ & \項}\advance\tempcn by -1 }
+\edef\行{\行 \項 }
+\let\項=\empty
+}
+\def\@and挿入{\@ifnextchar[{\＆挿入}{\＆挿入[\じすう]}}
+ \def\＆挿入[##1]##2{%
+ \let\符号=\empty \let\項=\empty \let\行=\empty  \y=0 
+ \変数false \次数false 
+ \expandafter\@tfor\expandafter\文字\expandafter:\expandafter=##2;\do{%
+ \if\文字;
+    \if変数 \jisuu=1 \@アンド挿入{##1} 
+    \let\@tempsqrt=\sqrt\edef\sqrt{\empty}\xdef\行{\行 &}
+    \else 
+       \if符号\edef\項{\符号 \項 } \fi
+    \jisuu=0 \@アンド挿入{##1}
+    \fi
+ \else
+    \if\文字 \XXX \変数true \@read 
+    \else
+      \if変数   
+         \if\文字 ^ \次数true  \@read 
+         \else
+            \変数false 
+            \if次数    \jisuu=\文字 \次数false \@read \@アンド挿入{##1}
+            \else
+            \jisuu=1   \global\let\符号=\文字 \符号true \@アンド挿入{##1}
+            \fi
+         \fi
+      \else
+      \@read
+      \fi  
+    \fi  
+ \fi
+ }%
+ }
+\def\XXX{#1}
+\begin{array}{*{10}{r@{}}r}%
+%9次式以上のときは、{array}{*{10}の数字を 変更してください。 
+\let\sqrt=\relax\@and挿入{#3}
+\x=-1%
+\@for\@式:=#4 \do{%
+\global\advance\x by 1
+\ifnum \the\x=0%
+      \let\古い行=\行%
+      \@and挿入{\@式}%
+      \xdef\@zenjisuu{\じすう}
+      \tempcn=\@zenjisuu \advance\tempcn by 3
+      \xdef\saigo{\the\tempcn}
+      \edef\行{&\古い行\noexpand\\ \noexpand\cline{2-\saigo}%
+      {#2}\raise1pt\hbox{\kern2pt$\big)$\kern-3pt}%
+%%%%%上の行で big) を ) に代えると ) が小さくなります。
+      &\;\, \行&\;\noexpand\\}%
+      \let\sqrt=\@tsqrt\行
+      \let\sqrt=\relax
+      \else
+      \ifodd\the\x
+      \@and挿入[\@zenjisuu]{\@式}
+      \tempcn=\@zenjisuu \advance \tempcn by -\じすう
+      \advance \tempcn by 2
+      \xdef\hajime{\the\tempcn}
+      \edef\行{&\行\noexpand\\}\let\sqrt=\@tsqrt\行
+      \cline{\hajime-\saigo}\let\sqrt=\relax
+      \else 
+      \@and挿入[\@zenjisuu]{\@式}
+      \edef\行{&\行\noexpand\\}
+      \let\sqrt=\@tsqrt\行\let\sqrt=\relax
+      \fi
+\fi
+}%
+\tempcn=\@zenjisuu\edef\行{} 
+\@whilenum \the\tempcn>-1\do{%
+\edef\行{&\quad\行}
+\advance\tempcn by -1
+}%
+\行%
+\end{array}}%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%C.極形式%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\polar[絶対値]{偏角}、または\poler*[絶対値]{偏角}の形で使う。
+%但し絶対値はオプション。
+%単位;\polarは度が自動的にはいる。\polar*は単位が入らない。
+%例;\polar{60}→cos60°+isin60°,\polar{-60}→cos(-60°)+isin(-60°),
+%例；\polar*{\frac23 \pi},\polar*{-\frac23 \pi}
+%例；\polar[2]{60}→2(cos60°+isin60°)
+%【注】引数の先頭に「－」記号があるかないかを\ifで判別しているので、
+%2{cos(60°-30°)+isin(60°-30°)}などは、\polar[2]{60-30}では駄目。
+%2\{\polar*{(60^\circ-30^\circ)}\}としてください。
+
+ \newif\ifMINUS
+ \def\poler{\polar} 
+ \def \polar{\@ifstar{\RADIAN}{\DEGREE}}
+  \def \@@pmsign#1#2;{\if#1- \MINUStrue \relax \else \MINUSfalse \relax \fi}%
+  \def \@DEGREE[#1]#2{\@@pmsign#2;%
+  \if 1#1 
+  		\ifMINUS \cos\left({#2}^\circ\right)%
+  		+i\sin\left({#2}^\circ\right)% 
+  		\else%  
+  		\cos{#2}^\circ+i\sin{#2}^\circ\fi
+  \else 
+  		\ifMINUS #1\left\{\cos\left({#2}^\circ\right)%
+  		+i\sin\left({#2}^\circ\right)\right\} 
+  		\else  
+  		#1\left(\cos{#2}^\circ+i\sin{#2}^\circ\right) \fi
+  \fi}%
+  \def\DEGREE{\@ifnextchar[{\@DEGREE}{\@DEGREE[1]}}
+  \def \@RADIAN[#1]#2{\@@pmsign#2;%
+  \if 1#1 
+  		\ifMINUS \cos\left({#2}\right)%
+  		+i\sin\left({#2}\right)% 
+  		\else%  
+  		\cos{#2}+i\sin{#2}\fi
+  \else 
+  		\ifMINUS #1\left\{\cos\left({#2}\right)%
+  		+i\sin\left({#2}\right)\right\} 
+  		\else  
+  		#1\left(\cos{#2}+i\sin{#2}\right) \fi
+  \fi}%
+  \def\RADIAN{\@ifnextchar[{\@RADIAN}{\@RADIAN[1]}}
+  
+%%%%%%%%%%%%%%%%%%%%%D.各種記号･数字類%%%%%%%%%%%%%%%%%%%
+
+%%%%%%(1)上に凸、下に凸を表すときの矢印
+%\uzarrow→上に凸で増加している時。
+%\szarrow→下に凸で増加している時。
+%\ugarrow→上に凸で減少している時。
+%\sgarrow→下に凸で減少している時。
+
+\def\uzarrow{\unitlength=1pt\begin{picture}(11,11)(0,1.5)
+\put(0,0){\qbezier(0,0)(2,6)(8,8)}
+\put(8,8){\vector(3,1){2}}
+\end{picture}}
+
+\def\szarrow{\unitlength=1pt\begin{picture}(11,11)(0,1.5)
+\put(0,0){\qbezier(0,0)(5.3,1.8)(7,7)}
+\put(7.3,7){\vector(1,3){1}}
+\end{picture}}
+
+\def\sgarrow{\unitlength=1pt\begin{picture}(11,11)(-1,0)
+\put(0,0){\qbezier(0,8)(1,2)(7,0)}
+\put(7,0){\vector(3,-1){2}}
+\end{picture}}
+
+\def\ugarrow{\unitlength=1pt\begin{picture}(11,11)(-2,0.3)
+\put(0,0){\qbezier(0,8)(5.5,6.7)(7,1.3)}
+\put(7.3,1.3){\vector(1,-3){1}}
+\end{picture}}
+
+%%%%%%%%%(2)横棒の長い分数
+%分数(アスキー「LaTeXリファレンス」による) 
+\def \frac#1#2{{\,#1\,\over\,#2\,}}
+
+%%%%%%%%%(3)細かい記号達
+\def \permu#1#2{{}_{#1}{\rm P}_{#2}}%順列             例；\permu{5}{2}
+\def \combi#1#2{{}_{#1}{\rm C}_{#2}}%組み合せ         例；\combi{n}{r}
+\def\bar#1{\overline{\mathstrut{#1}}}%共役複素数      例；\bar{\alpha}
+
+%%%%%%%%%%(4)各種数字類
+%ローマ数字
+%例；\roma{2},\Roma{2} 
+\def \roma#1{{\small(\romannumeral #1)}}%ローマ数字(小文字)
+\def \Roma#1{\uppercase\expandafter{\romannumeral #1}}%大文字
+
+%丸数字(美文書による)
+%例；\maru{2}
+\def \maru#1{{\ooalign{\hfil#1\/\hfil\crcr%
+      \raise.167ex\hbox{\mathhexbox20D}}}}    
+
+%楕円の数字(bazier曲線を利用)例；\daen{2}
+\def\daen#1{\unitlength=1.4pt%
+\begin{picture}(6,7)%
+\put(3,3){%
+\put(0,0){\qbezier(2.2,3)(3.5,0)(2.2,-3)}%
+\put(0,0){\qbezier(-2.2,3)(-3.5,0)(-2.2,-3)}%
+\put(0,0){\qbezier(-2.2,3)(0,6)(2.2,3)}%
+\put(0,0){\qbezier(-2.2,-3)(0,-6)(2.2,-3)}%
+\put(0,0){\makebox(0,0){$ #1 $}}}%
+\end{picture}}
+
+%楕円の数字(eepicを利用)例；\Daen{2}
+\def\Daen#1{\unitlength=1.4pt%
+\begin{picture}(6,7)%
+\put(3,3){%
+\put(0,0){\ellipse{5.7}{8.9}}%
+\put(0,0){\makebox(0,0){$ #1 $}}}%
+\end{picture}%
+}%
+%%bazier曲線の方が綺麗ですが、TeXのメモリーを食うので
+%%1度に沢山書かせることは出来ません。したがって
+%%センター解答用紙等を作る際はeepicの方を利用してください。
+
+%%%%%%%%%%%%%%%(5) 約分 
+%例；$\yakubun{2}$で "＼"を "2"と重ねる。
+
+\def\yakubun#1{%
+\unitlength=1pt%
+\setbox0=\hbox{$#1$}%
+\def\haba{\expandafter\@jissuu\the\wd0}%
+\def\takasa{\expandafter\@jissuu\the\ht0}%
+\def\fukasa{\expandafter\@jissuu\the\dp0}%
+{\ooalign{%
+\begin{picture}(0,0)%
+\put(0,0){\path(0,\takasa)(\haba,-\fukasa)}%
+\end{picture}%
+\crcr\hfil\box0\hfil}}%
+}%
+
+%%%%%%%%%%%%%%(6)手の形
+%注釈用の手の形
+%\migite と打つだけ
+%\unitlength を代える事によって手のサイズを変える事ができる。
+
+\def\@ko[#1]#2#3{%
+\dimen1=#1pt \dimen1=2\dimen1
+\edef\@radius{\expandafter\@jissuu\the\dimen1}
+\dimen1=#3pt \dimen1=0.01745\dimen1
+\dimen2=6.2832pt \advance\dimen2 by -\the\dimen1
+\edef\@startarg{\expandafter\@jissuu\the\dimen2}
+\dimen1=#2pt \dimen1=0.01745\dimen1
+\dimen2=6.2832pt \advance\dimen2 by -\the\dimen1
+\edef\@finisharg{\expandafter\@jissuu\the\dimen2}
+\put(0,0){\arc{\@radius}{\@startarg}{\@finisharg}}}
+
+\def\migite{%
+\unitlength=0.1pt
+\begin{picture}(170,120)(-150,-40)
+\def\OVAL{%
+\put(7,4.5){\path(0,0)(-14,0)}
+\put(7,-4.5){\path(0,0)(-14,0)}
+\put(7,0){\@ko[4.5]{0}{90}}
+\put(7,0){\@ko[4.5]{270}{360}}
+\put(-7,0){\@ko[4.5]{90}{270}}
+}
+\put(0,0){\path(0,0)(0,-35)}
+\put(0,0){\path(0,0)(-8,0)}
+\put(-8,0){\path(0,0)(0,-35)}
+\put(-8,-35){\path(0,0)(8,0)}
+\put(-25,-10){\@ko[25]{270}{310}}
+\put(-25,-35){\path(0,0)(-20,0)}
+\multiput(-48,-30)(-6,8.7){3}{\OVAL}
+\put(-63,-8){\path(0,0)(-32,2)}
+\put(-95,-2){\@ko[4]{90}{270}}
+\put(-95,2){\path(0,0)(70,0)}
+\put(-25,-10){\@ko[12]{23}{90}}
+\put(-8,-8){\@ko[6]{90}{152}}
+\put(-55,2){\path(0,0)(-8,-10)}
+\put(-18,40){\@ko[59]{237}{270}}
+\put(-53,-8){\path(0,0)(-5,0)}
+\end{picture}}
+
+%%%%%%%%%%%%%%%%%%% E.様々なボックス%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%(1)タイトルボックス 
+%%タイトルのつく囲み枠(長方形)
+%%\begin{titlebox}[横の長さ]{title} foo \end{titlebox}
+%%[ ]を省くと、横の長さが linewidth になる。
+%%線の太さは\tboxline,枠と中身との間隔は\tboxstretch で変えられます。
+%%タイトルと左端との間隔は、\titlelrshiftで与えてください。
+%\titlelrshiftが-1,0,1の時,タイトルの重心が左端、中央、右端
+%と移動します。
+%%minipageの中と同様、途中で改行も出来ます。
+%\vtopを使っています。
+ 
+ \def\titlelrshift{0}
+ \def\tboxline{0.8pt}
+ \def\tboxstretch{1em}
+% 
+ \newenvironment{titlebox}[2][\the\linewidth]% 
+    {\setbox0=\hbox{\ \textbf{#2}\ }%
+    \dimen0=#1 \dimen0=0.5\dimen0
+    \dimen1=\titlelrshift\dimen0\advance\dimen0 by \the\dimen1
+    \dimen2=\the\wd0\dimen2=0.5\dimen2
+    \advance\dimen0 by -\the\dimen2
+    \edef\@hidarihaba{\the\dimen0}
+    \def \@TITLE##1{\hbox to \@hidarihaba{%
+    \leaders \hrule width .01pt height \tboxline \hss}%
+  \dimen0=\dp0\advance\dimen0 by \ht0\dimen0=0.5\dimen0%
+ \raise\tboxline\hbox{\raise\tboxline\hbox{\lower\the\dimen0\box0}}}%
+ \vrule width \tboxline height 0pt%
+ \leavevmode\vtop\bgroup\hsize=#1%
+       \hbox to #1{\@TITLE{#2}%\vtopの1行目
+       \leaders \hrule width .01pt height \tboxline \hss}%
+       \vskip1mm\noindent\leftskip\tboxstretch%
+       \rightskip\tboxstretch\parindent=0pt}%
+    {\vskip1em\hrule height \tboxline\egroup\vrule %
+    width \tboxline height 0 pt}%
+ 
+%%%%%%%%%%%%%%%%%%%%(2)ダッシュボックス  
+%%点線の囲み枠。
+%%\Dashbox[横の長さ]{foo}の様に使う。
+%%[ ]内の数字を省くと,横幅が linewidth になる。
+%%minipageの中と同様、途中で改行も出来ます。
+%%\@dunitwダッシュの線の長さの倍
+%%\dboxline線の幅
+%%\dboxstretch枠と中身の間隔
+
+\def\dboxstretch{3pt}
+\def\dashunit{1pt}
+\def\dboxline{0.4pt}
+ 
+\newdimen\@dunitw
+\def\Dashbox{%
+\@ifnextchar[{\@DASHBOX}{\@DASHBOX[\the\linewidth]}}
+\def\@DASHBOX[#1]#2{%
+\parindent=0pt
+\def\Dothline##1{
+\@dunitw=\dashunit\@dunitw=2\@dunitw
+\hbox to ##1{\xleaders \hbox to \the\@dunitw{%
+\hss\hbox to \dashunit{%
+\leaders\hrule width \dashunit height \dboxline \hfill}\hss
+}\hss%
+}}%
+\def\Dotvline##1{%
+\vbox to ##1{\hsize=\dboxline%
+\leaders\vbox to \the\@dunitw{\vrule height \dashunit \vfil}
+\vss}}%
+\setbox0=\vbox{\hsize=#1%
+\vskip3pt\vskip\dboxstretch \leftskip\dboxstretch
+\rightskip\dboxstretch
+\vfil{#2}\vfil\vskip\dboxstretch\vskip3pt }
+\dimen1=\the\dp0 \advance\dimen1 by \the\ht0
+\advance\dimen1 by \dashunit
+\leavevmode\vbox{\Dothline{#1}
+\hbox{\Dotvline{\the\dimen1}\vbox to \the\dimen1{\hsize=#1 
+\box0
+{\baselineskip=0pt
+\lineskiplimit=-\maxdimen
+\Dothline{#1}}
+}\Dotvline{\the\dimen1}}
+}}
+
+
+%%%%%%%%%%%%%%%%%%%F.三角方程式と円%%%%%%%%%%%%%%%%%%%%%
+% 
+%%%%%%%%%(1)サインの方程式と単位円
+%%\sineq[拡大率]{sinθの小数近似}{sinθの表示させたい値}
+%%[]を省くと，半径1cmの円になる。
+%%数式モードではないので注意！
+%%例；\sineq{0.5}{\frac12}sinθ=1/2の三角方程式(円の半径1cm）
+%%例；\sineq[2]{0.5}{\frac12}sinθ=1/2の三角方程式(円の半径2cm）
+
+%%%%%%%%(2)コサインの方程式と単位円
+%\coseq[拡大率]{cosθの小数近似}{cosθの表示させたい値}
+%[]を省くと，半径1cmの円になる。
+%数式モードではないので注意！
+%例；\coseq{0.5}{\frac12}cosθ=1/2の三角方程式(円の半径1cm）
+%例；\coseq[2]{0.5}{\frac12}cosθ=1/2の三角方程式(円の半径2cm）
+
+\def\sineq{\@ifnextchar[{\@sineq}{\@sineq[1]}}
+\def\@sineq[#1]#2#3{{%
+\unitlength=#1 cm%
+ \setbox0=\hbox{$\ y=#3$}\setbox1=\hbox{$x$}%
+\dimen0=\the\wd0%
+\dimen1=#1 pt\dimen1=8.5358\dimen1%
+\advance\dimen1 by \the\wd1%
+	\ifdim\the\dimen1>\the\dimen0%
+		\edef\@@delta{\the\wd1}%
+	\else%
+		\advance\dimen0 by -\the\dimen1%
+		\advance\dimen0 by \the\wd1%
+		\edef\@@delta{\the\dimen0}%
+ 	\fi%
+ 	\@Div{0.3}{#1}{\@plustate}%
+ 	\dimen0=\@plustate pt\advance\dimen0 by 3pt%
+ 	\edef\@sintate{\expandafter\@jissuu\the\dimen0}%
+ 	\dimen1=\@@delta\dimen1=0.035\dimen1
+ 	\edef\@@tempnum{\expandafter\@jissuu\the\dimen1}%
+ 	\@Div{\@@tempnum}{1}{\@plusyoko}%
+ 	\dimen1=\@plusyoko pt\advance\dimen1 by 3pt%
+ 	\edef\@sinyoko{\expandafter\@jissuu\the\dimen1}%
+\ \begin{picture}(\@sinyoko,\@sintate)(-1.5,-1.5)%
+\scriptsize%
+  \put(0,0){\@XYaxis}%
+  \put(0,0){\arc{2}{0}{6.283}}%
+  \put(0,#2){\put(0,0){\path(1.2,0)(-1.5,0)}}%
+  \@Mul{#2}{#2}{\sqofsin}%
+  \@Add{1}{-\sqofsin}{\inroot}%
+  \@Sqrt{\inroot}{\vofcos}%
+  \put(0,0){\path(0,0)(\vofcos,#2)}%
+  \put(0,0){\path(0,0)(-\vofcos,#2)}%
+  \put(1.2,#2){\hbox{$\ y=#3$}}%
+     \ifdim#2pt>0pt%
+      \put(0,0){\setbox0=\hbox{$\,0$}%
+  \dimen0=\ht0\advance\dimen0 by 2pt\lower\the\dimen0\box0}%
+    \else%
+      \put(0,0){\raise1pt\hbox{$\,0$}}%
+\fi\end{picture}%
+}%
+}%
+
+\def\coseq{\@ifnextchar[{\@coseq}{\@coseq[1]}}
+\def\@coseq[#1]#2#3{{%
+\@Div{0.3}{#1}{\@plustate}%
+ 	\dimen0=\@plustate pt\advance\dimen0 by 3pt%
+ 	\edef\@size{\expandafter\@jissuu\the\dimen0}%
+\unitlength=#1cm%
+\ \begin{picture}(\@size,\@size)(-1.5,-1.5)%
+\scriptsize%
+  \put(0,0){\@XYaxis}%
+  \put(0,0){\arc{2}{0}{6.283}}%
+  \put(#2,0){\path(0,1.3)(0,-1.5)}%
+  \@Mul{#2}{#2}{\sqofcos}%
+  \@Add{1}{-\sqofcos}{\squarofs}%
+  \@Sqrt{\squarofs}{\vofsin}%
+  \put(0,0){\path(0,0)(#2,\vofsin)}%
+  \put(0,0){\path(0,0)(#2,-\vofsin)}%
+  \ifdim#2pt<0pt%
+  	\setbox0=\hbox{$\ x=#3$}%
+  	\dimen0=0pt \advance\dimen0 by -#2pt%
+  	\dimen0=#1\dimen0\dimen0=28.453\dimen0%
+  	\ifdim\wd0>\the\dimen0%
+  		\put(#2,1.3){\setbox0=\hbox{$\ x=#3$}%
+  		\kern-\wd0\box0}%
+    \else%
+    \put(#2,1.3){\hbox{$\ x=#3$}}%
+    \fi%
+  \put(0,0){%
+      \setbox0=\hbox{$\,0$}%
+      \dimen0=\ht0\advance\dimen0 by 2pt%
+      \lower\the\dimen0\hbox{\kern1pt\box0}}%
+  \else%
+  \put(#2,1.3){\hbox{$\ x=#3$}}%
+      \put(0,0){\setbox0=\hbox{$0$}%
+      \dimen0=\ht0\advance\dimen0 by 2pt%
+      \lower\the\dimen0\hbox{\kern-1pt\hbox{\kern-\wd0\box0}}}%
+  		\fi%
+\end{picture}%
+}}%
+
+\def\@XYaxis{%
+\put(1,0){\raise1pt\hbox{$\, 1$}}%
+  \put(-1,0){\setbox0=\hbox{$-1 \,$}%
+  \raise1pt\hbox{\kern-\wd0\box0}}%
+  \put(0,1){\raise1pt\hbox{$\,1$}}%
+  \put(0,-1){\setbox0=\hbox{$\,-1$}%
+  \dimen0=\ht0\advance\dimen0 by 1pt\lower\the\dimen0\box0}%
+  \put(0,0){\vector(1,0){1.5}}%
+  \put(1.5,0){%
+  \setbox0=\hbox{$\,x$}%
+  \dimen0=\ht0\dimen0=0.5\dimen0%
+  \lower\the\dimen0\box0}%
+  \put(0,0){\line(-1,0){1.5}}%
+  \put(0,0){\vector(0,1){1.5}}%
+  \put(0,1.5){\setbox0=\hbox{$y$}%
+  \dimen0=\the\wd0\dimen0=0.5\dimen0
+  \raise2pt\hbox{\kern-\dimen0\box0}}%
+  \put(0,0){\line(0,-1){1.5}}}%
+ 
+  
+%%%%%以下の計算のマクロは、「LaTeX自由自在」による。
+%%%%%但し\@Divのみは、本に書かれたアウトラインに沿って
+%%%%%作成した。#3は全てコントロール･シークエンスが入る。
+%%%%%例えば、2+3の答が欲しければ、\@Add{2}{3}{\ans} \ans
+%%%%%と打てば良い。\ansは、未定義のCSであればなんでも良い。
+
+ \def \@Add#1#2#3{\dimen0=#1pt\advance\dimen0 by #2pt%加法
+ \edef#3{\expandafter\@jissuu\the\dimen0}}%例；\@Add{1.5}{-2}{\結果}
+
+\def \@Mul#1#2#3{\dimen0=#1pt\dimen0=#2\dimen0%乗法
+\edef#3{\expandafter\@jissuu\the\dimen0}}%例；\@Mul{1.5}{-2}{\結果}
+
+ \def\@Div#1#2#3{%除法
+  \ifdim#2pt>20pt%例；\@Div{8}{4}{\結果}
+    \@Mul{#2}{.00001}{\@tempnum}%
+    \@逆数作成{\@tempnum}\@Mul{\@inverse}{.00001}{\@inverse}%
+    \@Mul{\@inverse}{#1}{#3}%
+  \else% 
+    \ifdim#2pt<0.2pt% 
+      \@Mul{#2}{1}{\@tempnum}%
+      \@逆数作成{\@tempnum}\@Mul{\@inverse}{1}{\@inverse}%
+      \@Mul{\@inverse}{#1}{#3}%
+    \else%
+      \@Mul{#2}{0.01}{\@tempnum}%
+      \@逆数作成{\@tempnum}\@Mul{\@inverse}{0.01}{\@inverse}%
+      \@Mul{\@inverse}{#1}{#3}%
+    \fi%
+  \fi}%
+ \def\@整数化#1.#2;{#1}%
+ \def\@逆数作成#1{%
+  \@Mul{#1}{65536}{\@種}%
+  \edef\@割る数{\expandafter\@整数化\@種;}%
+  \@割算{65536}{\@割る数}{\@inverse}%
+ }%
+ \def\@割算#1#2#3{%整数の割算、#1を#2で割った商が#3
+   \x=#1 \divide\x by #2 %  \xは商の整数部分
+  \edef\r{\the\x.}% この時,\rは商の整数部分と小数点
+  \y=\x \multiply\y by #2%
+  \x=#1 \advance\x by -\y%  \xは余り
+  \multiply\x by 10 \edef\s{\the\x}%  \sは新しい被除数
+  \divide\x by #2 \edef\r{\r\the\x}%  \rは商の小数点第一位まで
+  \y=\x \multiply\y by #2
+  \x=\s \advance\x by -\y%  \xは新しい余り
+  \multiply\x by 10 \edef\s{\the\x}%  \sは新しい被除数
+  \divide\x by #2 \edef\r{\r\the\x}%  \rは商の小数点第二位まで
+   \y=\x \multiply\y by #2
+  \x=\s \advance\x by -\y%  \xは新しい余り
+  \multiply\x by 10 \edef\s{\the\x}%  \sは新しい被除数
+  \divide\x by #2 \edef\r{\r\the\x}%  \rは商の小数点第三位まで
+ \xdef#3{\r}%
+ }%
+ 
+ \def\@Sqrt#1#2{%平方根；#1の平方根を#2へ代入,例；\@Sqrt{3}{\答}
+   \edef\元の数{#1}%
+   \@Mul{\元の数}{0.5}{\元の半分}
+   \@Add{\元の半分}{1}{\古い近似値}
+   \let\近似値の差=\古い近似値
+    \@whiledim\近似値の差 pt>0.001pt\do{%
+     \@Div{\元の数}{\古い近似値}{\第二項}
+      \@Add{\古い近似値}{\第二項}{\新しい近似値の倍}
+     \@Mul{\新しい近似値の倍}{0.5}{\新しい近似値}
+      \@Add{\古い近似値}{-\新しい近似値}{\近似値の差}
+      \let\古い近似値=\新しい近似値
+      }%
+    \let#2=\新しい近似値
+   }%
+ 
+ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%参考文献%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%(1)「美文書作成入門」 奥村晴彦 技術評論社
+%(2)「LaTeX 自由自在 」磯崎秀樹 サイエンス社
+%(3)「pLaTeX2e for Windows」乙部厳己・江口庄英 SoftBank社
+
