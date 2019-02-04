@@ -136,7 +136,7 @@ Acc_{time} = \frac{検出したニュースアンカーの発話の時間数}{�
 本実験では、評価指標としてPrecision、Recall、F-measureを用いる。
 
 \section{実験結果}
-noindent{\textbf{\underline{ニュースアンカーとして検出した発話の個数による評価}}}\par
+\noindent{\textbf{\underline{ニュースアンカーとして検出した発話の個数による評価}}}\par
 $Th_{time}$を変更してニュースアンカーの発話の個数による発話検出精度が最も高いF-measureを示した条件の結果を図\ref{fig:result_anchor_baseline} $\sim$ 図\ref{fig:result_anchor_prob3}に示す。その他の条件の結果は付録\ref{other_result}で記載する。また、図\ref{baseline_fmeasure} $\sim$ 図\ref{prob3_fmeasure}に示された結果の中で、最も高いF-measureをとった$Th_{cos}$のときの各ニュース番組のニュースアンカーの発話検出精度とニュースアンカーとして検出したクラスタ数を表\ref{table:baseline_eachnews} $\sim$ 表\ref{table:prob3_eachnews}に示す。
 
 \begin{figure}[H]
@@ -398,7 +398,269 @@ $Th_{time}$を変更してニュースアンカーの発話の個数による発
 実験の結果、Baseline2を各手法を比較したとき、ニュースアンカーの検出精度の指標であるF-measureが手法1では6.5\%(図\ref{prob1_fmeasure})、手法2では2.3\%(図\ref{prob2_fmeasure})、手法3では4.7\%(図\ref{prob3_fmeasure})の向上が確認された。また、Baselineと提案手法の全てにおいてニュース2の検出精度であるPrecisionが最も低い。\par
 いずれの手法においても$Th_{cos}$が小さい時にはRecallが高く、大きい時にはPrecisionが高くなる傾向が確認された。また、$Acc_{time}$は$Th_{cos}$が大きくなると低くなる傾向にある。また、Baseline1を除く全ての手法でニュースアンカーの人数と検出したニュースアンカーの人数が同じであった。\par
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \vspace{0.2in}\noindent{\textbf{\underline{ニュースアンカーとして検出した発話の時間による評価}}}\par
+$Th_{time}$を変更してニュースアンカーの発話の時間による発話検出精度が最も高いF-measureを示した条件の結果を図\ref{fig:result_anchor_baseline_time} $\sim$ 図\ref{fig:result_anchor_prob3_time}に示す。その他の条件の結果は付録\ref{other_result}で記載する。また、図\ref{baseline_fmeasure_time} $\sim$ 図\ref{prob3_fmeasure_time}に示された結果の中で、最も高いF-measureをとった$Th_{cos}$のときの各ニュース番組のニュースアンカーの発話検出精度とニュースアンカーとして検出したクラスタ数を表\ref{table:baseline_eachnewstime} $\sim$ 表\ref{table:prob3_eachnews_time}に示す。
+
+\begin{figure}[H]
+  \centering
+    \begin{tabular}{c}
+ 
+%----- recall -----
+ 
+      \begin{minipage}{0.40\hsize}
+        \centering
+          \subfigure[Recall]{\includegraphics[keepaspectratio, scale=0.25]
+                          {./time/figure/baseline_r.eps}}
+      \end{minipage}
+
+      \begin{minipage}{0.06\hsize}
+        \hspace{0.5mm}
+      \end{minipage}
+ 
+%----- precision -----
+ 
+      \begin{minipage}{0.40\hsize}
+        \centering
+          \subfigure[Precision]{\includegraphics[keepaspectratio, scale=0.25]
+                          {./time/figure/baseline_p.eps}}
+      \end{minipage} \\
+
+      \begin{minipage}{0.06\hsize}
+        \vspace{5mm}
+      \end{minipage} \\
+ 
+ 
+%----- fmeasure -----
+ 
+      \begin{minipage}{0.40\hsize}
+        \centering
+          \subfigure[F-measure]{\includegraphics[keepaspectratio, scale=0.25]
+                          {./time/figure/baseline_f.eps} \label{baseline_fmeasure_time}}
+      \end{minipage}
+
+      \begin{minipage}{0.06\hsize}
+        \hspace{0.5mm}
+      \end{minipage}
+
+
+    \end{tabular}
+\caption{Baseline2による発話区間検出精度 \label{fig:result_anchor_baseline_time}}
+\end{figure} 
+
+
+\begin{table}[H]
+  \begin{center}
+    \caption{Baseline2による各ニュース番組音声のニュースアンカーの発話検出精度($Th_{cos}=0.5$) \label{table:baseline_eachnews_time}}
+    \begin{tabular}{|c||c|c|c|c|} \hline
+データID & Recall & Precision & F-meature & 作成したクラスタ数\\ \hline
+ニュース1 & 0.97 & 0.801 & 0.877 & 1 \\ \hline
+ニュース2 & 0.83 & 0.839 & 0.834 & 2 \\ \hline
+ニュース3 & 0.771 & 0.832 & 0.8 & 2 \\ \hline
+ニュース4 & 0.71 & 0.821 & 0.762 & 1 \\ \hline
+ニュース5 & 0.689 & 0.849 & 0.761 & 2 \\ \hline
+計 & 0.748 & 0.670 & 0.707 & \\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+%手法1の図
+\begin{figure}[H]
+  \centering
+    \begin{tabular}{c}
+ 
+%----- recall -----
+ 
+      \begin{minipage}{0.40\hsize}
+        \centering
+          \subfigure[Recall]{\includegraphics[keepaspectratio, scale=0.25]
+                          {./time/figure/prob1_12_r.eps}}
+      \end{minipage}
+
+      \begin{minipage}{0.06\hsize}
+        \hspace{0.5mm}
+      \end{minipage}
+ 
+%----- precision -----
+ 
+      \begin{minipage}{0.40\hsize}
+        \centering
+          \subfigure[Precision]{\includegraphics[keepaspectratio, scale=0.25]
+                          {./time/figure/prob1_12_p.eps}}
+      \end{minipage} \\
+
+      \begin{minipage}{0.06\hsize}
+        \vspace{5mm}
+      \end{minipage} \\
+ 
+ 
+%----- fmeasure -----
+ 
+      \begin{minipage}{0.40\hsize}
+        \centering
+          \subfigure[F-measure]{\includegraphics[keepaspectratio, scale=0.25]
+                          {./time/figure/prob1_12_f.eps} \label{prob1_fmeasure_time}}
+      \end{minipage}
+
+      \begin{minipage}{0.06\hsize}
+        \hspace{0.5mm}
+      \end{minipage}
+ 
+
+    
+    \end{tabular}
+\caption{手法1によるアンカーの発話区間検出精度 ($Th_{time}=1.2$) \label{fig:result_anchor_prob1_time}}
+\end{figure} 
+
+\begin{table}[H]
+  \begin{center}
+    \caption{手法1による各ニュース番組音声のニュースアンカーの発話検出精度($Th_{cos}=0.6,Th_{time}=1.2$) }
+    \begin{tabular}{|c||c|c|c|c|} \hline
+データID & Recall & Precision & F-meature & 作成したクラスタ数\\ \hline
+ニュース1 & 0.988 & 0.778 & 0.87 & 1 \\ \hline
+ニュース2 & 0.871 & 0.803 & 0.836 & 2 \\ \hline
+ニュース3 & 0.82 & 0.81 & 0.815 & 2 \\ \hline
+ニュース4 & 0.768 & 0.794 & 0.781 & 2 \\ \hline
+ニュース5 & 0.747 & 0.828 & 0.785 & 2 \\ \hline
+計 & 0.748 & 0.823 & 0.784 & \\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+%手法2の図
+\begin{figure}[H]
+  \centering
+    \begin{tabular}{c}
+ 
+%----- recall -----
+ 
+      \begin{minipage}{0.40\hsize}
+        \centering
+          \subfigure[Recall]{\includegraphics[keepaspectratio, scale=0.25]
+                          {./time/figure/prob2_r.eps}}
+      \end{minipage}
+
+      \begin{minipage}{0.06\hsize}
+        \hspace{0.5mm}
+      \end{minipage}
+ 
+%----- precision -----
+ 
+      \begin{minipage}{0.40\hsize}
+        \centering
+          \subfigure[Precision]{\includegraphics[keepaspectratio, scale=0.25]
+                          {./time/figure/prob2_p.eps}}
+      \end{minipage} \\
+
+      \begin{minipage}{0.06\hsize}
+        \vspace{5mm}
+      \end{minipage} \\
+ 
+ 
+%----- fmeasure -----
+ 
+      \begin{minipage}{0.40\hsize}
+        \centering
+          \subfigure[F-measure]{\includegraphics[keepaspectratio, scale=0.25]
+                          {./time/figure/prob2_f.eps} \label{prob2_fmeasure_time}}
+      \end{minipage}
+
+      \begin{minipage}{0.06\hsize}
+        \hspace{0.5mm}
+      \end{minipage}
+ 
+    \end{tabular}
+\caption{手法2によるニュースアンカーの発話検出精度 \label{fig:result_anchor_prob2_time}}
+\end{figure} 
+
+\begin{table}[H]
+  \begin{center}
+    \caption{手法2による各ニュース番組音声のニュースアンカーの発話検出精度($Th_{cos}=0.6$) }
+    \begin{tabular}{|c||c|c|c|c|} \hline
+データID & Recall & Precision & F-meature & 作成したクラスタ数\\ \hline
+ニュース1 & 0.981 & 0.689 & 0.81 & 1 \\ \hline
+ニュース2 & 0.875 & 0.668 & 0.757 & 1 \\ \hline
+ニュース3 & 0.816 & 0.718 & 0.764 & 2 \\ \hline
+ニュース4 & 0.768 & 0.722 & 0.744 & 2 \\ \hline
+ニュース5 & 0.745 & 0.761 & 0.753 & 2 \\ \hline
+計 & 0.745 & 0.761 & 0.753 & \\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+%手法3の図
+\begin{figure}[H]
+  \centering
+    \begin{tabular}{c}
+ 
+%----- recall -----
+ 
+      \begin{minipage}{0.40\hsize}
+        \centering
+          \subfigure[Recall]{\includegraphics[keepaspectratio, scale=0.25]
+                          {./time/figure/prob3_11_r.eps}}
+      \end{minipage}
+
+      \begin{minipage}{0.06\hsize}
+        \hspace{0.5mm}
+      \end{minipage}
+ 
+%----- precision -----
+ 
+      \begin{minipage}{0.40\hsize}
+        \centering
+          \subfigure[Precision]{\includegraphics[keepaspectratio, scale=0.25]
+                          {./time/figure/prob3_11_p.eps}}
+      \end{minipage} \\
+
+      \begin{minipage}{0.06\hsize}
+        \vspace{5mm}
+      \end{minipage} \\
+ 
+ 
+%----- fmeasure -----
+ 
+      \begin{minipage}{0.40\hsize}
+        \centering
+          \subfigure[F-measure]{\includegraphics[keepaspectratio, scale=0.25]
+                          {./time/figure/prob3_11_f.eps} \label{prob3_fmeasure_time}}
+      \end{minipage}
+
+      \begin{minipage}{0.06\hsize}
+        \hspace{0.5mm}
+      \end{minipage}
+ 
+%----- acc time -----
+\begin{comment}
+      \begin{minipage}{0.40\hsize}
+        \centering
+          \subfigure[$Acc_{time}$]{\includegraphics[keepaspectratio, scale=0.25]
+                          {./figure/prob3_11_acc.eps}}
+      \end{minipage}
+\end{comment}
+    \end{tabular}
+\caption{手法3によるアンカーの発話区間検出精度 ($Th_{time}=1.1$) \label{fig:result_anchor_prob3_time}}
+\end{figure} 
+
+
+\begin{table}[H]
+  \begin{center}
+    \caption{手法3による各ニュース番組音声のニュースアンカーの発話検出精度($Th_{cos}=0.6,Th_{time}=1.1$) \label{table:prob3_eachnews_time}}
+    \begin{tabular}{|c||c|c|c|c|} \hline
+データID & Recall & Precision & F-meature & 作成したクラスタ数\\ \hline
+ニュース1 & 0.988 & 0.78 & s0.872 & 1 \\ \hline
+ニュース2 & 0.873 & 0.748 & 0.806 & 2 \\ \hline
+ニュース3 & 0.823 & 0.779 & 0.8 & 2 \\ \hline
+ニュース4 & 0.767 & 0.774 & 0.771 & 2 \\ \hline
+ニュース5 & 0.744 & 0.808 & 0.775 & 2 \\ \hline
+計 & 0.744 & 0.808 & 0.775 & \\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
 
 \section{考察}
 Baselineと提案手法を比較したとき提案手法のニュースアンカーの発話検出精度が最大で6.5\%向上したことから、結合した発話区間から抽出したi-vectorをニュースアンカーの検出に用いることは有効であることを示した。これは、提案手法では発話の時間間隔、発話環境を考慮して結合した発話区間からi-vectorを抽出したことで、従来と比較してi-vectorが話者の特徴を表現できたためであると考えられる。また、Baselineにおいて、$Th_{cos}$が0.8のとき、提案手法のみニュースアンカーの発話検出を行うことが出来たことから、i-vectorの抽出精度が向上したと考えることができる。\par
