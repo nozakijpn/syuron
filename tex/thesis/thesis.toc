@@ -20,7 +20,7 @@
 \contentsline {subsection}{\numberline {3.2.2}調査方法}{12}
 \contentsline {subsection}{\numberline {3.2.3}調査結果}{12}
 \contentsline {subsection}{\numberline {3.2.4}考察}{15}
-\contentsline {chapter}{\numberline {第4章}アンカーの発話検出実験}{16}
+\contentsline {chapter}{\numberline {第4章}ニュースアンカーの発話検出実験}{16}
 \contentsline {section}{\numberline {4.1}実験条件}{16}
 \contentsline {section}{\numberline {4.2}i-vectorの抽出精度向上のための発話区間結合手法}{17}
 \contentsline {subsection}{\numberline {4.2.1}発話の時間間隔を考慮した発話区間の結合手法}{18}
@@ -30,7 +30,7 @@
 \contentsline {section}{\numberline {4.5}評価方法}{20}
 \contentsline {section}{\numberline {4.6}実験結果}{21}
 \contentsline {section}{\numberline {4.7}考察}{25}
-\contentsline {chapter}{\numberline {第5章}ニュースアンカーの発話の音声認識実験}{26}
+\contentsline {chapter}{\numberline {第5章}音声認識実験}{26}
 \contentsline {section}{\numberline {5.1}音声認識システムの概要}{26}
 \contentsline {subsection}{\numberline {5.1.1}音声認識の流れ}{26}
 \contentsline {subsection}{\numberline {5.1.2}単語辞書と言語モデル}{26}
@@ -56,3 +56,4 @@
 \contentsline {subsection}{\numberline {A.2.1}評価方法}{48}
 \contentsline {subsection}{\numberline {A.2.2}調査結果}{49}
 \contentsline {section}{\numberline {A.3}考察}{51}
+\contentsline {chapter}{\numberline {付録B }アンカーの発話検出精度}{52}
