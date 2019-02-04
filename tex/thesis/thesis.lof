@@ -11,162 +11,170 @@
 \contentsline {figure}{\numberline {3.7}{\ignorespaces 異なる話者間の発話の時間間隔 }}{15}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces 提案手法を組み込んだインデクシング手法 }}{18}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Baseline2による発話区間検出精度 }}{21}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Baseline1による発話区間検出精度 }}{21}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{21}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{21}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{21}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=1.2$) }}{22}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Baseline2による発話区間検出精度 }}{22}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{22}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{22}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{22}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces 手法2によるニュースアンカーの発話検出精度 }}{23}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=1.2$) }}{23}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{23}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{23}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{23}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=1.1$) }}{24}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces 手法2によるニュースアンカーの発話検出精度 }}{24}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{24}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{24}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{24}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Baseline2による発話区間検出精度 }}{25}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=1.1$) }}{25}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{25}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{25}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{25}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=1.2$) }}{26}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Baseline1による発話区間検出精度 }}{26}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{26}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{26}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{26}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces 手法2によるニュースアンカーの発話検出精度 }}{27}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Baseline2による発話区間検出精度}}{27}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{27}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{27}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{27}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=1.1$) }}{28}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=1.2$) }}{28}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{28}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{28}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{28}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces 手法2によるニュースアンカーの発話検出精度 }}{29}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{29}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{29}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{29}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=1.1$) }}{30}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{30}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{30}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{30}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces 音声認識の流れ}}{30}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces HMMの例}}{33}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces DNNの構造図}}{34}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces DNNを用いる際の学習の流れ }}{35}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces 各話者クラスタに含まれる発話データ数 }}{36}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces 書き起こしテキストの例 }}{40}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Baselineによる音響モデルの選択結果 }}{41}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces 手法1による音響モデルの選択結果 }}{42}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces 手法2による音響モデルの選択結果 }}{42}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces 手法3による音響モデルの選択結果 }}{42}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces 音声認識の流れ}}{32}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces HMMの例}}{35}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces DNNの構造図}}{36}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces DNNを用いる際の学習の流れ }}{37}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces 各話者クラスタに含まれる発話データ数 }}{38}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces 書き起こしテキストの例 }}{42}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Baselineによる音響モデルの選択結果 }}{43}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces 手法1による音響モデルの選択結果 }}{44}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces 手法2による音響モデルの選択結果 }}{44}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces 手法3による音響モデルの選択結果 }}{44}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {B.1}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=0.8$)}}{56}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{56}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{56}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{56}
-\contentsline {figure}{\numberline {B.2}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=0.9$)}}{57}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{57}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{57}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{57}
-\contentsline {figure}{\numberline {B.3}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=1.0$)}}{57}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{57}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{57}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{57}
-\contentsline {figure}{\numberline {B.4}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=1.1$)}}{58}
+\contentsline {figure}{\numberline {B.1}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=0.8$)}}{58}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{58}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{58}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{58}
-\contentsline {figure}{\numberline {B.5}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=1.3$)}}{58}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{58}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{58}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{58}
-\contentsline {figure}{\numberline {B.6}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=1.4$)}}{59}
+\contentsline {figure}{\numberline {B.2}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=0.9$)}}{59}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{59}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{59}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{59}
-\contentsline {figure}{\numberline {B.7}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=1.5$)}}{59}
+\contentsline {figure}{\numberline {B.3}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=1.0$)}}{59}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{59}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{59}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{59}
-\contentsline {figure}{\numberline {B.8}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=0.8$)}}{60}
+\contentsline {figure}{\numberline {B.4}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=1.1$)}}{60}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{60}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{60}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{60}
-\contentsline {figure}{\numberline {B.9}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=0.9$)}}{60}
+\contentsline {figure}{\numberline {B.5}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=1.3$)}}{60}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{60}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{60}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{60}
-\contentsline {figure}{\numberline {B.10}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=1.0$)}}{61}
+\contentsline {figure}{\numberline {B.6}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=1.4$)}}{61}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{61}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{61}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{61}
-\contentsline {figure}{\numberline {B.11}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=1.2$)}}{61}
+\contentsline {figure}{\numberline {B.7}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=1.5$)}}{61}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{61}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{61}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{61}
-\contentsline {figure}{\numberline {B.12}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=1.3$)}}{62}
+\contentsline {figure}{\numberline {B.8}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=0.8$)}}{62}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{62}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{62}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{62}
-\contentsline {figure}{\numberline {B.13}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=1.4$)}}{62}
+\contentsline {figure}{\numberline {B.9}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=0.9$)}}{62}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{62}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{62}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{62}
-\contentsline {figure}{\numberline {B.14}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=1.5$)}}{63}
+\contentsline {figure}{\numberline {B.10}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=1.0$)}}{63}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{63}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{63}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{63}
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {C.1}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=0.8$)}}{64}
+\contentsline {figure}{\numberline {B.11}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=1.2$)}}{63}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{63}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{63}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{63}
+\contentsline {figure}{\numberline {B.12}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=1.3$)}}{64}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{64}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{64}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{64}
-\contentsline {figure}{\numberline {C.2}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=0.9$)}}{65}
+\contentsline {figure}{\numberline {B.13}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=1.4$)}}{64}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{64}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{64}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{64}
+\contentsline {figure}{\numberline {B.14}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=1.5$)}}{65}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{65}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{65}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{65}
-\contentsline {figure}{\numberline {C.3}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=1.0$)}}{65}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{65}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{65}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{65}
-\contentsline {figure}{\numberline {C.4}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=1.1$)}}{66}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {C.1}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=0.8$)}}{66}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{66}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{66}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{66}
-\contentsline {figure}{\numberline {C.5}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=1.3$)}}{66}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{66}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{66}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{66}
-\contentsline {figure}{\numberline {C.6}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=1.4$)}}{67}
+\contentsline {figure}{\numberline {C.2}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=0.9$)}}{67}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{67}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{67}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{67}
-\contentsline {figure}{\numberline {C.7}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=1.5$)}}{67}
+\contentsline {figure}{\numberline {C.3}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=1.0$)}}{67}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{67}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{67}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{67}
-\contentsline {figure}{\numberline {C.8}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=0.8$)}}{68}
+\contentsline {figure}{\numberline {C.4}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=1.1$)}}{68}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{68}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{68}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{68}
-\contentsline {figure}{\numberline {C.9}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=0.9$)}}{68}
+\contentsline {figure}{\numberline {C.5}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=1.3$)}}{68}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{68}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{68}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{68}
-\contentsline {figure}{\numberline {C.10}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=1.0$)}}{69}
+\contentsline {figure}{\numberline {C.6}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=1.4$)}}{69}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{69}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{69}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{69}
-\contentsline {figure}{\numberline {C.11}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=1.2$)}}{69}
+\contentsline {figure}{\numberline {C.7}{\ignorespaces 手法1によるアンカーの発話区間検出精度 ($Th_{time}=1.5$)}}{69}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{69}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{69}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{69}
-\contentsline {figure}{\numberline {C.12}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=1.3$)}}{70}
+\contentsline {figure}{\numberline {C.8}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=0.8$)}}{70}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{70}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{70}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{70}
-\contentsline {figure}{\numberline {C.13}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=1.4$)}}{70}
+\contentsline {figure}{\numberline {C.9}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=0.9$)}}{70}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{70}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{70}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{70}
-\contentsline {figure}{\numberline {C.14}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=1.5$)}}{71}
+\contentsline {figure}{\numberline {C.10}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=1.0$)}}{71}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{71}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{71}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{71}
+\contentsline {figure}{\numberline {C.11}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=1.2$)}}{71}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{71}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{71}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{71}
+\contentsline {figure}{\numberline {C.12}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=1.3$)}}{72}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{72}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{72}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{72}
+\contentsline {figure}{\numberline {C.13}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=1.4$)}}{72}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{72}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{72}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{72}
+\contentsline {figure}{\numberline {C.14}{\ignorespaces 手法3によるアンカーの発話区間検出精度 ($Th_{time}=1.5$)}}{73}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Recall}}}{73}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Precision}}}{73}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {F-measure}}}{73}
