@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.12.11)  4 FEB 2019 21:44
+This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.12.11)  5 FEB 2019 00:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -209,21 +209,6 @@ LaTeX Warning: Unused global option(s):
 
 (./thesis.aux
 
-LaTeX Warning: Label `fig:result_anchor_baseline' multiply defined.
-
-
-LaTeX Warning: Label `table:baseline_eachnews' multiply defined.
-
-
-LaTeX Warning: Label `baseline_fmeasure' multiply defined.
-
-
-LaTeX Warning: Label `sub@baseline_fmeasure' multiply defined.
-
-
-LaTeX Warning: Label `table:baseline_eachnews' multiply defined.
-
-
 LaTeX Warning: Label `fig:HMM' multiply defined.
 
 )
@@ -278,19 +263,19 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
 \tf@toc=\write4
 \openout4 = `thesis.toc'.
 
- [2] (./thesis.lof [3
-
-])
+ [2] (./thesis.lof)
 \tf@lof=\write5
 \openout5 = `thesis.lof'.
 
- [4] (./thesis.lot [5
+ [3
+
+] (./thesis.lot [4
 
 ])
 \tf@lot=\write6
 \openout6 = `thesis.lot'.
 
- [6] (./chapter1.tex
+ [5] (./chapter1.tex
 第 1 章
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 2.
@@ -367,200 +352,203 @@ Overfull \hbox (44.72874pt too wide) in paragraph at lines 73--74
 ] (./prob_method.tex
 File: ./figure/indexing2.eps Graphic file (type eps)
  <./figure/indexing2.eps> [17]) [18] [19]
-Excluding 'comment' comment. [20]
+Excluding 'comment' comment. (./base/result_get_anchor.tex [20]
+
+LaTeX Warning: Reference `other_result' on page 21 undefined on input line 2.
+
 File: ./figure/result_kmeans_r.eps Graphic file (type eps)
- <./figure/result_kmeans_r.eps>
-Overfull \hbox (36.06055pt too wide) in paragraph at lines 151--152
+<./figure/result_kmeans_r.eps>
+Overfull \hbox (36.06055pt too wide) in paragraph at lines 13--14
  [][] 
  []
 
 File: ./figure/result_kmeans_p.eps Graphic file (type eps)
 <./figure/result_kmeans_p.eps>
-Overfull \hbox (36.06055pt too wide) in paragraph at lines 163--164
+Overfull \hbox (36.06055pt too wide) in paragraph at lines 25--26
  [][] 
  []
 
 File: ./figure/result_kmeans_f.eps Graphic file (type eps)
 <./figure/result_kmeans_f.eps>
-Overfull \hbox (39.39388pt too wide) in paragraph at lines 176--177
+Overfull \hbox (39.39388pt too wide) in paragraph at lines 38--39
  [][] 
  []
 
 File: ./figure/baseline_r.eps Graphic file (type eps)
 <./figure/baseline_r.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 215--216
+Overfull \hbox (24.01692pt too wide) in paragraph at lines 77--78
  [][] 
  []
 
 File: ./figure/baseline_p.eps Graphic file (type eps)
 <./figure/baseline_p.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 227--228
+Overfull \hbox (24.01692pt too wide) in paragraph at lines 89--90
  [][] 
  []
 
 File: ./figure/baseline_f.eps Graphic file (type eps)
 <./figure/baseline_f.eps>
-Overfull \hbox (27.35025pt too wide) in paragraph at lines 240--241
+Overfull \hbox (27.35025pt too wide) in paragraph at lines 102--103
  [][] 
  []
 
 [21]
 File: ./figure/prob1_12_r.eps Graphic file (type eps)
  <./figure/prob1_12_r.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 278--279
+Overfull \hbox (24.01692pt too wide) in paragraph at lines 140--141
  [][] 
  []
 
 File: ./figure/prob1_12_p.eps Graphic file (type eps)
 <./figure/prob1_12_p.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 290--291
+Overfull \hbox (24.01692pt too wide) in paragraph at lines 152--153
  [][] 
  []
 
 File: ./figure/prob1_12_f.eps Graphic file (type eps)
 <./figure/prob1_12_f.eps>
-Overfull \hbox (27.35025pt too wide) in paragraph at lines 303--304
+Overfull \hbox (27.35025pt too wide) in paragraph at lines 165--166
  [][] 
  []
 
 [22]
 File: ./figure/prob2_r.eps Graphic file (type eps)
  <./figure/prob2_r.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 341--342
+Overfull \hbox (24.01692pt too wide) in paragraph at lines 203--204
  [][] 
  []
 
 File: ./figure/prob2_p.eps Graphic file (type eps)
 <./figure/prob2_p.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 353--354
+Overfull \hbox (24.01692pt too wide) in paragraph at lines 215--216
  [][] 
  []
 
 File: ./figure/prob2_f.eps Graphic file (type eps)
 <./figure/prob2_f.eps>
-Overfull \hbox (27.35025pt too wide) in paragraph at lines 366--367
+Overfull \hbox (27.35025pt too wide) in paragraph at lines 228--229
  [][] 
  []
 
 [23]
 File: ./figure/prob3_11_r.eps Graphic file (type eps)
  <./figure/prob3_11_r.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 402--403
+Overfull \hbox (24.01692pt too wide) in paragraph at lines 264--265
  [][] 
  []
 
 File: ./figure/prob3_11_p.eps Graphic file (type eps)
 <./figure/prob3_11_p.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 414--415
+Overfull \hbox (24.01692pt too wide) in paragraph at lines 276--277
  [][] 
  []
 
 File: ./figure/prob3_11_f.eps Graphic file (type eps)
 <./figure/prob3_11_f.eps>
-Overfull \hbox (27.35025pt too wide) in paragraph at lines 427--428
+Overfull \hbox (27.35025pt too wide) in paragraph at lines 289--290
  [][] 
  []
 
-Excluding 'comment' comment. [24]
+Excluding 'comment' comment. [24]) (./base/result_get_anchor_time.tex
 
-LaTeX Warning: Reference `table:baseline_eachnewstime' on page 25 undefined on 
-input line 467.
+LaTeX Warning: Reference `other_result_time' on page 25 undefined on input line
+ 2.
 
+[25]
 File: ./time/figure/result_time_r.eps Graphic file (type eps)
-<./time/figure/result_time_r.eps>
-Overfull \hbox (36.51222pt too wide) in paragraph at lines 478--479
+ <./time/figure/result_time_r.eps>
+Overfull \hbox (36.51222pt too wide) in paragraph at lines 13--14
  [][] 
  []
 
 File: ./time/figure/result_time_p.eps Graphic file (type eps)
 <./time/figure/result_time_p.eps>
-Overfull \hbox (36.06055pt too wide) in paragraph at lines 490--491
+Overfull \hbox (36.06055pt too wide) in paragraph at lines 25--26
  [][] 
  []
 
 File: ./time/figure/result_time_f.eps Graphic file (type eps)
 <./time/figure/result_time_f.eps>
-Overfull \hbox (39.39388pt too wide) in paragraph at lines 503--504
+Overfull \hbox (39.39388pt too wide) in paragraph at lines 38--39
  [][] 
  []
 
-[25]
 File: ./time/figure/baseline_r.eps Graphic file (type eps)
- <./time/figure/baseline_r.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 541--542
+<./time/figure/baseline_r.eps>
+Overfull \hbox (24.01692pt too wide) in paragraph at lines 76--77
  [][] 
  []
 
 File: ./time/figure/baseline_p.eps Graphic file (type eps)
 <./time/figure/baseline_p.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 553--554
+Overfull \hbox (24.01692pt too wide) in paragraph at lines 88--89
  [][] 
  []
 
 File: ./time/figure/baseline_f.eps Graphic file (type eps)
 <./time/figure/baseline_f.eps>
-Overfull \hbox (27.35025pt too wide) in paragraph at lines 566--567
+Overfull \hbox (27.35025pt too wide) in paragraph at lines 101--102
  [][] 
  []
 
 [26]
 File: ./time/figure/prob1_12_r.eps Graphic file (type eps)
  <./time/figure/prob1_12_r.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 604--605
+Overfull \hbox (24.01692pt too wide) in paragraph at lines 139--140
  [][] 
  []
 
 File: ./time/figure/prob1_12_p.eps Graphic file (type eps)
 <./time/figure/prob1_12_p.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 616--617
+Overfull \hbox (24.01692pt too wide) in paragraph at lines 151--152
  [][] 
  []
 
 File: ./time/figure/prob1_12_f.eps Graphic file (type eps)
 <./time/figure/prob1_12_f.eps>
-Overfull \hbox (27.35025pt too wide) in paragraph at lines 629--630
+Overfull \hbox (27.35025pt too wide) in paragraph at lines 164--165
  [][] 
  []
 
 [27]
 File: ./time/figure/prob2_r.eps Graphic file (type eps)
  <./time/figure/prob2_r.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 667--668
+Overfull \hbox (24.01692pt too wide) in paragraph at lines 202--203
  [][] 
  []
 
 File: ./time/figure/prob2_p.eps Graphic file (type eps)
 <./time/figure/prob2_p.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 679--680
+Overfull \hbox (24.01692pt too wide) in paragraph at lines 214--215
  [][] 
  []
 
 File: ./time/figure/prob2_f.eps Graphic file (type eps)
 <./time/figure/prob2_f.eps>
-Overfull \hbox (27.35025pt too wide) in paragraph at lines 692--693
+Overfull \hbox (27.35025pt too wide) in paragraph at lines 227--228
  [][] 
  []
 
 [28]
 File: ./time/figure/prob3_11_r.eps Graphic file (type eps)
  <./time/figure/prob3_11_r.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 728--729
+Overfull \hbox (24.01692pt too wide) in paragraph at lines 263--264
  [][] 
  []
 
 File: ./time/figure/prob3_11_p.eps Graphic file (type eps)
 <./time/figure/prob3_11_p.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 740--741
+Overfull \hbox (24.01692pt too wide) in paragraph at lines 275--276
  [][] 
  []
 
 File: ./time/figure/prob3_11_f.eps Graphic file (type eps)
 <./time/figure/prob3_11_f.eps>
-Overfull \hbox (27.35025pt too wide) in paragraph at lines 753--754
+Overfull \hbox (27.35025pt too wide) in paragraph at lines 288--289
  [][] 
  []
 
-Excluding 'comment' comment. [29] [30] Excluding 'comment' comment.)
+Excluding 'comment' comment. [29]) [30] Excluding 'comment' comment.)
 (./base/speach_recog.tex [31]
 第 5 章
 (./base/speach_recognition.tex
@@ -614,531 +602,7 @@ Excluding 'comment' comment. Excluding 'comment' comment.) (./ack.tex [46
 (./base/devide_audio.tex [51
 
 ] [52] [53]) [54] [55] [56]
-Excluding 'comment' comment.) (./result_anchor_append.tex [57]
-付録 B  
-File: ./figure/prob1_08_r.eps Graphic file (type eps)
-<./figure/prob1_08_r.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 15--16
- [][] 
- []
-
-File: ./figure/prob1_08_p.eps Graphic file (type eps)
-<./figure/prob1_08_p.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 27--28
- [][] 
- []
-
-File: ./figure/prob1_08_f.eps Graphic file (type eps)
-<./figure/prob1_08_f.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 40--41
- [][] 
- []
-
-File: ./figure/prob1_09_r.eps Graphic file (type eps)
-<./figure/prob1_09_r.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 62--63
- [][] 
- []
-
-File: ./figure/prob1_09_p.eps Graphic file (type eps)
-<./figure/prob1_09_p.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 74--75
- [][] 
- []
-
-File: ./figure/prob1_09_f.eps Graphic file (type eps)
-<./figure/prob1_09_f.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 87--88
- [][] 
- []
-
-[58
-
-]
-File: ./figure/prob1_10_r.eps Graphic file (type eps)
- <./figure/prob1_10_r.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 110--111
- [][] 
- []
-
-File: ./figure/prob1_10_p.eps Graphic file (type eps)
-<./figure/prob1_10_p.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 122--123
- [][] 
- []
-
-File: ./figure/prob1_10_f.eps Graphic file (type eps)
-<./figure/prob1_10_f.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 135--136
- [][] 
- []
-
-File: ./figure/prob1_11_r.eps Graphic file (type eps)
-<./figure/prob1_11_r.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 158--159
- [][] 
- []
-
-File: ./figure/prob1_11_p.eps Graphic file (type eps)
-<./figure/prob1_11_p.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 170--171
- [][] 
- []
-
-File: ./figure/prob1_11_f.eps Graphic file (type eps)
-<./figure/prob1_11_f.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 183--184
- [][] 
- []
-
-[59]
-File: ./figure/prob1_13_r.eps Graphic file (type eps)
- <./figure/prob1_13_r.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 204--205
- [][] 
- []
-
-File: ./figure/prob1_13_p.eps Graphic file (type eps)
-<./figure/prob1_13_p.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 216--217
- [][] 
- []
-
-File: ./figure/prob1_13_f.eps Graphic file (type eps)
-<./figure/prob1_13_f.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 229--230
- [][] 
- []
-
-File: ./figure/prob1_14_r.eps Graphic file (type eps)
-<./figure/prob1_14_r.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 250--251
- [][] 
- []
-
-File: ./figure/prob1_14_p.eps Graphic file (type eps)
-<./figure/prob1_14_p.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 262--263
- [][] 
- []
-
-File: ./figure/prob1_14_f.eps Graphic file (type eps)
-<./figure/prob1_14_f.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 275--276
- [][] 
- []
-
-[60]
-File: ./figure/prob1_15_r.eps Graphic file (type eps)
- <./figure/prob1_15_r.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 296--297
- [][] 
- []
-
-File: ./figure/prob1_15_p.eps Graphic file (type eps)
-<./figure/prob1_15_p.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 308--309
- [][] 
- []
-
-File: ./figure/prob1_15_f.eps Graphic file (type eps)
-<./figure/prob1_15_f.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 321--322
- [][] 
- []
-
-File: ./figure/prob3_08_r.eps Graphic file (type eps)
-<./figure/prob3_08_r.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 343--344
- [][] 
- []
-
-File: ./figure/prob3_08_p.eps Graphic file (type eps)
-<./figure/prob3_08_p.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 355--356
- [][] 
- []
-
-File: ./figure/prob3_08_f.eps Graphic file (type eps)
-<./figure/prob3_08_f.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 368--369
- [][] 
- []
-
-[61]
-File: ./figure/prob3_09_r.eps Graphic file (type eps)
- <./figure/prob3_09_r.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 389--390
- [][] 
- []
-
-File: ./figure/prob3_09_p.eps Graphic file (type eps)
-<./figure/prob3_09_p.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 401--402
- [][] 
- []
-
-File: ./figure/prob3_09_f.eps Graphic file (type eps)
-<./figure/prob3_09_f.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 414--415
- [][] 
- []
-
-File: ./figure/prob3_10_r.eps Graphic file (type eps)
-<./figure/prob3_10_r.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 435--436
- [][] 
- []
-
-File: ./figure/prob3_10_p.eps Graphic file (type eps)
-<./figure/prob3_10_p.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 447--448
- [][] 
- []
-
-File: ./figure/prob3_10_f.eps Graphic file (type eps)
-<./figure/prob3_10_f.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 460--461
- [][] 
- []
-
-[62]
-File: ./figure/prob3_12_r.eps Graphic file (type eps)
- <./figure/prob3_12_r.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 481--482
- [][] 
- []
-
-File: ./figure/prob3_12_p.eps Graphic file (type eps)
-<./figure/prob3_12_p.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 493--494
- [][] 
- []
-
-File: ./figure/prob3_12_f.eps Graphic file (type eps)
-<./figure/prob3_12_f.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 506--507
- [][] 
- []
-
-File: ./figure/prob3_13_r.eps Graphic file (type eps)
-<./figure/prob3_13_r.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 527--528
- [][] 
- []
-
-File: ./figure/prob3_13_p.eps Graphic file (type eps)
-<./figure/prob3_13_p.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 539--540
- [][] 
- []
-
-File: ./figure/prob3_13_f.eps Graphic file (type eps)
-<./figure/prob3_13_f.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 552--553
- [][] 
- []
-
-[63]
-File: ./figure/prob3_14_r.eps Graphic file (type eps)
- <./figure/prob3_14_r.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 573--574
- [][] 
- []
-
-File: ./figure/prob3_14_p.eps Graphic file (type eps)
-<./figure/prob3_14_p.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 585--586
- [][] 
- []
-
-File: ./figure/prob3_14_f.eps Graphic file (type eps)
-<./figure/prob3_14_f.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 598--599
- [][] 
- []
-
-File: ./figure/prob3_15_r.eps Graphic file (type eps)
-<./figure/prob3_15_r.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 619--620
- [][] 
- []
-
-File: ./figure/prob3_15_p.eps Graphic file (type eps)
-<./figure/prob3_15_p.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 631--632
- [][] 
- []
-
-File: ./figure/prob3_15_f.eps Graphic file (type eps)
-<./figure/prob3_15_f.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 644--645
- [][] 
- []
-
-) (./time/result_anchor_append_time.tex [64] [65]
-付録 C  
-File: ./figure/prob1_08_r.eps Graphic file (type eps)
-<./figure/prob1_08_r.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 15--16
- [][] 
- []
-
-File: ./figure/prob1_08_p.eps Graphic file (type eps)
-<./figure/prob1_08_p.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 27--28
- [][] 
- []
-
-File: ./figure/prob1_08_f.eps Graphic file (type eps)
-<./figure/prob1_08_f.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 40--41
- [][] 
- []
-
-File: ./figure/prob1_09_r.eps Graphic file (type eps)
-<./figure/prob1_09_r.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 62--63
- [][] 
- []
-
-File: ./figure/prob1_09_p.eps Graphic file (type eps)
-<./figure/prob1_09_p.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 74--75
- [][] 
- []
-
-File: ./figure/prob1_09_f.eps Graphic file (type eps)
-<./figure/prob1_09_f.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 87--88
- [][] 
- []
-
-[66
-
-]
-File: ./figure/prob1_10_r.eps Graphic file (type eps)
- <./figure/prob1_10_r.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 110--111
- [][] 
- []
-
-File: ./figure/prob1_10_p.eps Graphic file (type eps)
-<./figure/prob1_10_p.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 122--123
- [][] 
- []
-
-File: ./figure/prob1_10_f.eps Graphic file (type eps)
-<./figure/prob1_10_f.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 135--136
- [][] 
- []
-
-File: ./figure/prob1_11_r.eps Graphic file (type eps)
-<./figure/prob1_11_r.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 158--159
- [][] 
- []
-
-File: ./figure/prob1_11_p.eps Graphic file (type eps)
-<./figure/prob1_11_p.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 170--171
- [][] 
- []
-
-File: ./figure/prob1_11_f.eps Graphic file (type eps)
-<./figure/prob1_11_f.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 183--184
- [][] 
- []
-
-[67]
-File: ./figure/prob1_13_r.eps Graphic file (type eps)
- <./figure/prob1_13_r.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 204--205
- [][] 
- []
-
-File: ./figure/prob1_13_p.eps Graphic file (type eps)
-<./figure/prob1_13_p.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 216--217
- [][] 
- []
-
-File: ./figure/prob1_13_f.eps Graphic file (type eps)
-<./figure/prob1_13_f.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 229--230
- [][] 
- []
-
-File: ./figure/prob1_14_r.eps Graphic file (type eps)
-<./figure/prob1_14_r.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 250--251
- [][] 
- []
-
-File: ./figure/prob1_14_p.eps Graphic file (type eps)
-<./figure/prob1_14_p.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 262--263
- [][] 
- []
-
-File: ./figure/prob1_14_f.eps Graphic file (type eps)
-<./figure/prob1_14_f.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 275--276
- [][] 
- []
-
-[68]
-File: ./figure/prob1_15_r.eps Graphic file (type eps)
- <./figure/prob1_15_r.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 296--297
- [][] 
- []
-
-File: ./figure/prob1_15_p.eps Graphic file (type eps)
-<./figure/prob1_15_p.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 308--309
- [][] 
- []
-
-File: ./figure/prob1_15_f.eps Graphic file (type eps)
-<./figure/prob1_15_f.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 321--322
- [][] 
- []
-
-File: ./figure/prob3_08_r.eps Graphic file (type eps)
-<./figure/prob3_08_r.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 343--344
- [][] 
- []
-
-File: ./figure/prob3_08_p.eps Graphic file (type eps)
-<./figure/prob3_08_p.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 355--356
- [][] 
- []
-
-File: ./figure/prob3_08_f.eps Graphic file (type eps)
-<./figure/prob3_08_f.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 368--369
- [][] 
- []
-
-[69]
-File: ./figure/prob3_09_r.eps Graphic file (type eps)
- <./figure/prob3_09_r.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 389--390
- [][] 
- []
-
-File: ./figure/prob3_09_p.eps Graphic file (type eps)
-<./figure/prob3_09_p.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 401--402
- [][] 
- []
-
-File: ./figure/prob3_09_f.eps Graphic file (type eps)
-<./figure/prob3_09_f.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 414--415
- [][] 
- []
-
-File: ./figure/prob3_10_r.eps Graphic file (type eps)
-<./figure/prob3_10_r.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 435--436
- [][] 
- []
-
-File: ./figure/prob3_10_p.eps Graphic file (type eps)
-<./figure/prob3_10_p.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 447--448
- [][] 
- []
-
-File: ./figure/prob3_10_f.eps Graphic file (type eps)
-<./figure/prob3_10_f.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 460--461
- [][] 
- []
-
-[70]
-File: ./figure/prob3_12_r.eps Graphic file (type eps)
- <./figure/prob3_12_r.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 481--482
- [][] 
- []
-
-File: ./figure/prob3_12_p.eps Graphic file (type eps)
-<./figure/prob3_12_p.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 493--494
- [][] 
- []
-
-File: ./figure/prob3_12_f.eps Graphic file (type eps)
-<./figure/prob3_12_f.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 506--507
- [][] 
- []
-
-File: ./figure/prob3_13_r.eps Graphic file (type eps)
-<./figure/prob3_13_r.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 527--528
- [][] 
- []
-
-File: ./figure/prob3_13_p.eps Graphic file (type eps)
-<./figure/prob3_13_p.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 539--540
- [][] 
- []
-
-File: ./figure/prob3_13_f.eps Graphic file (type eps)
-<./figure/prob3_13_f.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 552--553
- [][] 
- []
-
-[71]
-File: ./figure/prob3_14_r.eps Graphic file (type eps)
- <./figure/prob3_14_r.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 573--574
- [][] 
- []
-
-File: ./figure/prob3_14_p.eps Graphic file (type eps)
-<./figure/prob3_14_p.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 585--586
- [][] 
- []
-
-File: ./figure/prob3_14_f.eps Graphic file (type eps)
-<./figure/prob3_14_f.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 598--599
- [][] 
- []
-
-File: ./figure/prob3_15_r.eps Graphic file (type eps)
-<./figure/prob3_15_r.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 619--620
- [][] 
- []
-
-File: ./figure/prob3_15_p.eps Graphic file (type eps)
-<./figure/prob3_15_p.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 631--632
- [][] 
- []
-
-File: ./figure/prob3_15_f.eps Graphic file (type eps)
-<./figure/prob3_15_f.eps>
-Overfull \hbox (24.01692pt too wide) in paragraph at lines 644--645
- [][] 
- []
-
-)) [72] [73] (./thesis.aux)
+Excluding 'comment' comment.)) [57] (./thesis.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1147,12 +611,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2635 strings out of 493281
- 36853 string characters out of 6145040
- 102387 words of memory out of 5000000
- 6370 multiletter control sequences out of 15000+600000
+ 2512 strings out of 493281
+ 33902 string characters out of 6145040
+ 102426 words of memory out of 5000000
+ 6290 multiletter control sequences out of 15000+600000
  25889 words of font info for 104 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  28i,17n,27p,1113b,440s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.dvi (80 pages, 240940 bytes).
+Output written on thesis.dvi (63 pages, 216460 bytes).

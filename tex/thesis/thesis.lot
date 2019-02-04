@@ -10,12 +10,12 @@
 \contentsline {table}{\numberline {4.3}{\ignorespaces 検出した発話区間数とニュースアンカーの発話区間数 }}{17}
 \contentsline {table}{\numberline {4.4}{\ignorespaces 発話区間の結合の閾値 }}{20}
 \contentsline {table}{\numberline {4.5}{\ignorespaces ニュースアンカーの発話区間の正誤判定 }}{20}
-\contentsline {table}{\numberline {4.6}{\ignorespaces Baseline1による各ニュース番組音声のニュースアンカーの発話検出精度(クラスタの個数=14) }}{21}
+\contentsline {table}{\numberline {4.6}{\ignorespaces Baseline1による各ニュース番組音声のニュースアンカーの発話検出精度(クラスタの個数=13) }}{21}
 \contentsline {table}{\numberline {4.7}{\ignorespaces Baseline2による各ニュース番組音声のニュースアンカーの発話検出精度($Th_{cos}=0.5$) }}{22}
 \contentsline {table}{\numberline {4.8}{\ignorespaces 手法1による各ニュース番組音声のニュースアンカーの発話検出精度($Th_{cos}=0.6,Th_{time}=1.2$) }}{23}
 \contentsline {table}{\numberline {4.9}{\ignorespaces 手法2による各ニュース番組音声のニュースアンカーの発話検出精度($Th_{cos}=0.6$) }}{24}
 \contentsline {table}{\numberline {4.10}{\ignorespaces 手法3による各ニュース番組音声のニュースアンカーの発話検出精度($Th_{cos}=0.6,Th_{time}=1.1$) }}{25}
-\contentsline {table}{\numberline {4.11}{\ignorespaces Baseline1による各ニュース番組音声のニュースアンカーの発話検出精度(クラスタの個数=17) }}{26}
+\contentsline {table}{\numberline {4.11}{\ignorespaces Baseline1による各ニュース番組音声のニュースアンカーの発話検出精度(クラスタの個数=12) }}{26}
 \contentsline {table}{\numberline {4.12}{\ignorespaces Baseline2による各ニュース番組音声のニュースアンカーの発話検出精度($Th_{cos}=0.5$) }}{27}
 \contentsline {table}{\numberline {4.13}{\ignorespaces 手法1による各ニュース番組音声のニュースアンカーの発話検出精度($Th_{cos}=0.6,Th_{time}=1.2$) }}{28}
 \contentsline {table}{\numberline {4.14}{\ignorespaces 手法2による各ニュース番組音声のニュースアンカーの発話検出精度($Th_{cos}=0.6$) }}{29}
@@ -37,5 +37,3 @@
 \contentsline {table}{\numberline {A.5}{\ignorespaces 音楽区間検出精度 }}{56}
 \contentsline {table}{\numberline {A.6}{\ignorespaces 背景雑音区間検出精度 }}{56}
 \contentsline {table}{\numberline {A.7}{\ignorespaces 無音区間検出精度 }}{57}
-\addvspace {10\p@ }
-\addvspace {10\p@ }
