@@ -56,3 +56,5 @@
 \contentsline {subsection}{\numberline {A.2.1}評価方法}{54}
 \contentsline {subsection}{\numberline {A.2.2}調査結果}{55}
 \contentsline {section}{\numberline {A.3}考察}{57}
+\contentsline {chapter}{\numberline {付録B }アンカーの発話検出精度(発話の個数による評価)}{58}
+\contentsline {chapter}{\numberline {付録C }アンカーの発話検出精度(発話の時間による評価)}{66}

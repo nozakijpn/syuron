@@ -18,7 +18,15 @@
   \caption{各話者クラスタに含まれる発話データ数 \label{fig:yoshimura_kikouzou}}
 \end{figure}
 
-学習データに用いた話者のi-vectorと認識するアンカーの発話のi-vectorのコサイン類似度を求め、求めたコサイン類似度の高い上位5人の学習データを全て含んでいるクラスタを選択し、選択したクラスタに含まれる学習音声で学習された音響モデルを用いて音声認識を行う。音響モデルの選択に用いるi-vectorと認識するアンカーの発話区間は\ref{chapter:get_anchor}節で検出したアンカーの発話区間のうち、各手法でもっともF値の高い条件のものを用いる。\par
+学習データに用いた話者のi-vectorと認識するアンカーの発話のi-vectorのコサイン類似度を求め、求めたコサイン類似度の高い上位5人の学習データを全て含んでいるクラスタを選択し、選択したクラスタに含まれる学習音声で学習された音響モデルを用いて音声認識を行う。音響モデルの選択に用いるi-vectorと認識するアンカーの発話区間は\ref{chapter:get_anchor}章で検出したアンカーの発話検出精度のうち、各手法でもっともF値の高いときの条件を用いる。以下に、各手法の条件を述べる。\par
+
+\begin{itemize}
+  \item Baseline1 : k-meansにおいて、12個のクラスタを作成した時の発話検出結果
+  \item Baseline2 : $Th_{cos}$ = 0.5 のときの発話検出結果
+  \item 手法1     : $Th_{cos}$ = 0.6 , $Th{time}$ = 1.2 のときの発話検出結果
+  \item 手法2     : $Th_{cos}$ = 0.6 のときの発話検出結果
+  \item 手法3     : $Th_{cos}$ = 0.6 , $Th{time}$ = 1.1 のときの発話検出結果
+  \end{itemize}
 
 本実験で使用したコーパスについては\ref{csj}節、音響モデルの仕様は\ref{section:experiment_acoustic_model}節、言語モデルと単語辞書の仕様は\ref{section:experiment_language_model}節で述べる。
 
@@ -146,28 +154,28 @@ Acc=\frac{(W-S-D-I)}{W}. \notag
   \begin{center}
     \includegraphics[scale=0.5]{./figure/baseline_clustering.eps}
   \end{center}
-  \caption{Baselineによる音響モデルの選択結果 \label{fig:baseline_clustering}}
+  \caption{Baseline1,およびBaseline2における音響モデルの選択結果 \label{fig:baseline_clustering}}
 \end{figure}
 
 \begin{figure}[H]
   \begin{center}
     \includegraphics[scale=0.5]{./figure/prob1_clustering.eps}
   \end{center}
-  \caption{手法1による音響モデルの選択結果 \label{fig:prob1_clustering}}
+  \caption{手法1における音響モデルの選択結果 \label{fig:prob1_clustering}}
 \end{figure}
 
 \begin{figure}[H]
   \begin{center}
     \includegraphics[scale=0.5]{./figure/prob2_clustering.eps}
   \end{center}
-  \caption{手法2による音響モデルの選択結果 \label{fig:prob2_clustering}}
+  \caption{手法2における音響モデルの選択結果 \label{fig:prob2_clustering}}
 \end{figure}
 
 \begin{figure}[H]
   \begin{center}
     \includegraphics[scale=0.5]{./figure/prob3_clustering.eps}
   \end{center}
-  \caption{手法3による音響モデルの選択結果 \label{fig:prob3_clustering}}
+  \caption{手法3における音響モデルの選択結果 \label{fig:prob3_clustering}}
 \end{figure}
 
 Baselineと比較して、いずれの手法も最上位の音響モデルを選択する発話データ数が減少し、下位クラスタを選択する発話データが増えている。\\
@@ -214,7 +222,7 @@ Baselineと比較して、いずれの手法も音声認識精度のが0.1\%し�
 
 \section{考察}
 本研究で提案した手法はいずれもBaselineと比較して下位のクラスタを選択する発話データが増加した。これは発話区間を結合したことで、i-vectorが性別の違いを判別できる程度の特徴を抽出できたためであると考えられる。\par
-Baselineと比較して各手法の音声認識精度が向上した理由として、ニュースアンカー以外の発話区間で認識された単語は全て挿入誤り、ニュースアンカーの発話として検出出来なかった発話区間の単語は全て削除誤りとして計算したためである。しかし、最も音声認識精度が高い場合でも手法1における35.4\%であり、インデクス作成における要約処理を行うためには音声認識精度が十分とは言えない。そのため、音声認識精度を向上させるために、ニュースアンカーの発話区間検出精度を向上させる必要がある。
+Baselineと比較して各手法の音声認識精度が向上した理由として、ニュースアンカー以外の発話区間で認識された単語は全て挿入誤り、ニュースアンカーの発話として検出出来なかった発話区間の単語は全て削除誤りとして計算したためである。しかし、最も音声認識精度が高い場合でも手法1における35.4\%であり、インデクス作成における要約処理を行うためには音声認識精度が十分とは言えない。そのため、音声認識精度を向上させるために、更なるニュースアンカーの発話区間検出精度を向上を目指す必要がある。
 \begin{comment}
 ニュースアンカーの発話区間が既知の場合に音声認識精度がいずれも変化がなかった理由として、背景雑音、音楽の存在が考えられる。音響モデルの学習に用いたCSJは基本的に雑音が入らない環境で収録されている。このため、本実験で作成した木構造話者クラスの音響モデルのいずれも認識できない発話が多く存在してしまい、認識精度の違いがなかったと考えられる。音声認識精度の向上のために、雑音除去、もしくは雑音、音楽に頑健な音響モデルの作成が必要であると考えらえる。\par
 ニュースアンカーの発話区間が未知の場合はいずれも発話区間が既知の場合と比較して大きく音声認識精度が低下した理由として、アンカー以外の発話区間で認識された単語は全て挿入誤り、ニュースアンカーの発話として検出出来なかった発話区間の単語は全て削除誤りとして計算したためである。また、いずれの手法もBaselineと比較してニュースアンカーの発話区間検出精度が向上していたため、削除誤りと挿入誤りが少なくなり、結果として音声認識精度が向上した。しかし、最も音声認識精度が高い場合でも35.4\%であり、ニュースアンカーの発話区間が既知の場合と比較して低下したため、音声認識精度を向上させるためには、ニュースアンカーの発話区間検出精度を向上させる必要がある。
