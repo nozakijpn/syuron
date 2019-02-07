@@ -177,7 +177,7 @@
   \fi
   \vskip 0.7cm
   \ifnum\@master=1
-  {\LARGE 総合工学専攻}
+  {\LARGE 総合工学専攻 情報工学コース}
   \else
   {\LARGE 情報工学コース}
   \fi
